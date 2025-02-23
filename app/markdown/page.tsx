@@ -1,12 +1,16 @@
-// import Introduction from "@/docs/c-programming/introduction.mdx"
-// import MdxLayout from "@/components/mdx/mdx-layout"
+import Introduction from "@/docs/c-programming/introduction.mdx"
+import MdxLayout from "@/components/mdx/mdx-layout"
+import type { Metadata } from "next";
+import { seo } from "@/docs/c-programming/introduction.mdx";
 
-// const MarkDown = () => {
-//     return (
-//         <MdxLayout>
-//             <Introduction />
-//         </MdxLayout>
-//     )
-// }
+export const metadata : Metadata= seo; 
 
-// export default MarkDown;
+const MarkDown = () => {
+    return (
+        <MdxLayout>
+            <Introduction />
+        </MdxLayout>
+    )
+}
+
+export default MarkDown;
