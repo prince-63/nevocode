@@ -1,17 +1,17 @@
 import type { NextConfig } from "next";
-import createMDX from "@next/mdx";
+import { withContentlayer } from "next-contentlayer2";
+// import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
   /* config options here */
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
-  experimental: {
-    mdxRs: true,
-  }
 };
 
-const withMDX = createMDX({
-  // TODO: add markdown plugins here
-  
-});
+// const withMDX = createMDX({
+//   // TODO: add markdown plugins here
 
-export default withMDX(nextConfig);
+// });
+
+// export default withMDX(nextConfig);
+
+export default withContentlayer(nextConfig);

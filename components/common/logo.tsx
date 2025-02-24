@@ -1,10 +1,6 @@
 "use client";
 const Logo = () => {
-    return (
-        <>
-            CSExplore
-        </>
-    )
-}
+  return <>CSExplore</>;
+};
 
 export default Logo;

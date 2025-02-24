@@ -1,0 +1,192 @@
+---
+title: "C Variables and Data Types"
+description: "Learn about variables, data types, and memory usage in C programming."
+date: 2023-10-2
+---
+
+import CodeBlock from "@/components/mdx/code-block";
+import Quiz from "@/components/mdx/quiz";
+
+# C Variables and Data Types 📝
+
+## What are Variables? 🤔
+A **variable** in C is a name given to a memory location where data is stored. Every variable has a **data type**, which determines the kind of value it can store.
+
+### **Declaring and Initializing Variables**
+Variables in C must be declared before use. The general syntax is:
+
+<CodeBlock language="c">
+{
+`data_type variable_name = value;`
+}
+</CodeBlock>
+
+**Example:**
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    int age = 25;
+    float pi = 3.14;
+    char grade = 'A';
+    
+    printf("Age: %d", age);
+    printf("Pi: %f", pi);
+    printf("Grade: %c", grade);
+    
+    return 0;
+}`
+}
+</CodeBlock>
+
+**Output:**
+
+```
+Age: 25
+Pi: 3.140000
+Grade: A
+```
+
+### **Multiple Variable Declarations**
+You can declare multiple variables of the same type in a single line:
+
+<CodeBlock language="c">
+{
+`int a = 10, b = 20, c = 30;
+float x = 5.5, y = 10.5;`
+}
+</CodeBlock>
+
+## Data Types in C 📊
+C provides several built-in data types:
+- `int`: The Integer use to store `numerical/number` type of value it use 4 byte of memory size in 32-bit systems and in 64-bit system it use 8 byte. there is also a `long long int` that use to store 16 byte of numberical values;
+- `float`: The float used to store a deciamal point values it consume 4 byte.
+- `char`: The character data type use to store the value of character, it use 1 byte of memory space
+- `void`: The void is the data type that say noting mean `No values`, it mostly use in the `function` where no need to return anything, here is a example of void:
+<CodeBlock language="c">
+{
+`void sum(int a, int b) {
+    int result = a + b; // here we adding two variables values
+    cout << result << endl;
+}`
+}
+</CodeBlock>
+This function doesn't return anything, it calculate the value of a and b and display it. it looks like what happening is there, don't worry i will explain in the next section about the operator, then you can able to understandable easly.
+
+### **Example Usage:**
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    int num = 10;
+    float percentage = 99.5;
+    char letter = 'B';
+    
+    printf("Integer: %d\n", num);
+    printf("Float: %f\n", percentage);
+    printf("Character: %c\n", letter);
+    
+    return 0;
+}`
+}
+</CodeBlock>
+
+**Output:**
+
+```
+Integer: 10
+Float: 99.500000
+Character: B
+```
+
+### **Size of Different Data Types**
+The `sizeof` operator can be used to determine the memory size of any data type:
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    printf("Size of int: %lu bytes\n", sizeof(int));
+    printf("Size of float: %lu bytes\n", sizeof(float));
+    printf("Size of double: %lu bytes\n", sizeof(double));
+    printf("Size of char: %lu bytes\n", sizeof(char));
+    return 0;
+}`
+}
+</CodeBlock>
+
+**Output:**
+
+```
+Size of int: 4 bytes
+Size of float: 4 bytes
+Size of double: 8 bytes
+Size of char: 1 byte
+```
+
+## Constants and Keywords 🔒
+- **Constants**: Values that do not change during program execution.
+- **Keywords**: Reserved words in C (e.g., `int`, `return`, `char`).
+
+Example of **constant declaration**:
+
+<CodeBlock language="c">
+{
+`#define PI 3.1415
+const int MAX_LIMIT = 100;`
+}
+</CodeBlock>
+
+### **Using Constants in a Program**
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+#define PI 3.1415
+
+int main() {
+    const int radius = 5;
+    float area = PI * radius * radius;
+    
+    printf("The area of the circle is: %f\n", area);
+    return 0;
+}`
+}
+</CodeBlock>
+
+**Output:**
+
+```
+The area of the circle is: 78.537500
+```
+
+## Quick Quiz 🧠
+<Quiz question="Which data type is used to store decimal values in C?"
+      options={{
+        a: "int",
+        b: "char",
+        c: "float",
+        d: "void"
+      }}
+      answer="c"
+/>
+
+<Quiz question="What is the keyword to declare a constant in C?"
+      options={{
+        a: "final",
+        b: "constant",
+        c: "const",
+        d: "define"
+      }}
+      answer="c"
+/>
+
+---
+
+Next up: **Operators in C! 🚀**

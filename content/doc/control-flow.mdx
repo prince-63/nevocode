@@ -1,0 +1,166 @@
+---
+title: "Control Flow in C"
+description: "Learn how to control the execution flow in C using conditional statements and loops."
+date: 2023-10-2
+---
+
+
+import CodeBlock from "@/components/mdx/code-block";
+import Quiz from "@/components/mdx/quiz";
+
+# Control Flow in C 🚦
+
+Programming is all about making decisions and repeating tasks efficiently. Imagine you're planning a road trip. You decide when to take a turn, whether to stop for fuel, or if you need to keep driving based on different conditions. Similarly, in C, we use **control flow statements** to make decisions and repeat actions.
+
+## Conditional Statements 🌟
+Conditional statements allow your program to take different actions based on conditions.
+
+## The if Statement Making Decisions
+The `if` statement helps the program decide whether to execute a block of code.
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    int fuel = 10;
+    if (fuel > 5) {
+        printf("Enough fuel, let's keep driving!");
+    }
+    return 0;
+}`
+}
+</CodeBlock>
+
+**Explanation:** If `fuel` is greater than 5, the message "Enough fuel, let's keep driving!" is printed.
+
+## The if-else Statement Choosing Between Two Options
+What if the fuel is low? We use `if-else` to handle both situations.
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    int fuel = 3;
+    if (fuel > 5) {
+        printf("Enough fuel, let's keep driving!");
+    } else {
+        printf("Low fuel! Time to refuel.");
+    }
+    return 0;
+}`
+}
+</CodeBlock>
+
+## The if-else-if Ladder Multiple Conditions
+Sometimes, we need to check multiple conditions before deciding.
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    int temperature = 25;
+    if (temperature > 30) {
+        printf("It's too hot!");
+    } else if (temperature > 20) {
+        printf("Nice and warm.");
+    } else {
+        printf("It's cold! Wear a jacket.");
+    }
+    return 0;
+}`
+}
+</CodeBlock>
+
+## The switch Statement Handling Multiple Cases
+If you have multiple choices (like a restaurant menu), `switch` makes it cleaner.
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    int day = 3;
+    switch (day) {
+        case 1: printf("Monday"); break;
+        case 2: printf("Tuesday"); break;
+        case 3: printf("Wednesday"); break;
+        default: printf("Invalid day!");
+    }
+    return 0;
+}`
+}
+</CodeBlock>
+
+## Loops 🔁 Repeating Tasks
+Loops help repeat a block of code multiple times without writing it manually.
+
+## The for Loop Counting Repetitions
+Imagine counting 1 to 5:
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        printf("Counting: %d", i);
+    }
+    return 0;
+}`
+}
+</CodeBlock>
+
+## The while Loop Repeat Until a Condition is Met
+Think of a car moving until it runs out of fuel.
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    int fuel = 5;
+    while (fuel > 0) {
+        printf("Driving... Fuel left: %d", fuel);
+        fuel--;
+    }
+    printf("Out of fuel!");
+    return 0;
+}`
+}
+</CodeBlock>
+
+## The `do-while` Loop – Run at Least Once
+A vending machine always gives one attempt before checking if money was inserted.
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    int attempts = 1;
+    do {
+        printf("Attempt %d: Trying to enter the password...", attempts);
+        attempts++;
+    } while (attempts <= 3);
+    return 0;
+}`
+}
+</CodeBlock>
+
+## Quick Quiz 🧠
+<Quiz question="Which loop always executes at least once?"
+      options={{
+        a: "for loop",
+        b: "while loop",
+        c: "do-while loop",
+        d: "switch statement"
+      }}
+      answer="c"
+/>
+
+---
+
+Now you understand how to control the flow of execution in C! 🚀 Next, we'll explore **Functions in C** to organize your code efficiently.
