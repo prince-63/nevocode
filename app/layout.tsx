@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
-import { Karla } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import theme from "@/utils/theme";
 import { ThemeProvider } from "@mui/material/styles";
 import Header from "@/components/navigation/header";
 import Footer from "@/components/navigation/footer";
-
-const karla = Karla({
-  weight: ["300", "400", "500", "700", "800"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
+import { karla } from "@/utils/common/fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${karla.variable} bg-slate-50`}>
+      <body className={`${karla.variable} bg-slate-50 scroll-smooth`}>
         <AppRouterCacheProvider options={{ key: "css", enableCssLayer: true }}>
           <ThemeProvider theme={theme}>
             <Header />
