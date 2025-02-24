@@ -18,7 +18,7 @@ const NavBar = () => {
   return (
     <div className="w-full flex items-center justify-between px-5">
       {/* FEAT: LOGO */}
-      <div className="bg-red-200 p-2">
+      <div className="p-2">
         <Logo />
       </div>
       {/* FEAT: NAV LINKS */}
