@@ -3,6 +3,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
+import type { Element } from "hast";
 
 export const Doc = defineDocumentType(() => ({
   name: "Doc",
@@ -18,7 +19,7 @@ export const Doc = defineDocumentType(() => ({
     },
     date: {
       type: "date",
-      required: true,
+      required: false,
     },
     published: {
       type: "boolean",
@@ -55,7 +56,7 @@ export const Programming = defineDocumentType(() => ({
     },
     date: {
       type: "date",
-      required: true,
+      required: false,
     },
     published: {
       type: "boolean",
@@ -89,15 +90,20 @@ export default makeSource({
         rehypePrettyCode,
         {
           theme: "github-dark",
-          onVisitLine(node) {
-            if (node.children.length === 0) {
+          onVisitLine(node: Element) {
+            if (!node.children || node.children.length === 0) {
               node.children = [{ type: "text", value: " " }];
             }
           },
-          onVisitHighlightedLine(node) {
+          onVisitHighlightedLine(node: Element) {
+            node.properties = node.properties || {};
+            if (!Array.isArray(node.properties.className)) {
+              node.properties.className = [];
+            }
             node.properties.className.push("line-highlighted");
           },
-          onVisitHighlightedWord(node) {
+          onVisitHighlightedWord(node: Element) {
+            node.properties = node.properties || {};
             node.properties.className = ["word-highlighted"];
           },
         },
