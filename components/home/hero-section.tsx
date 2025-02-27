@@ -8,7 +8,7 @@ const HeroSection = () => {
   const router = useRouter();
 
   function exploreNow() {
-    router.push("/courses");
+    router.push("/learn");
   }
 
   return (

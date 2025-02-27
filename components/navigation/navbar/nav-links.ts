@@ -4,11 +4,7 @@ export const NavLinks = [
     href: "/",
   },
   {
-    label: "Courses",
-    href: "/courses",
-  },
-  {
-    label: "Blogs",
-    href: "/blogs",
+    label: "Learn",
+    href: "/learn",
   },
 ];
