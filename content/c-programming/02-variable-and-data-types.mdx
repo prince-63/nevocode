@@ -29,22 +29,14 @@ int main() {
     float pi = 3.14;
     char grade = 'A';
     
-    printf("Age: %d", age);
-    printf("Pi: %f", pi);
-    printf("Grade: %c", grade);
+    printf("Age: %d", age);     // output-> Age: 25
+    printf("Pi: %f", pi);       // output-> Pi: 3.14
+    printf("Grade: %c", grade);     // output-> Grade: A
     
     return 0;
 }`
 }
 </CodeBlock>
-
-**Output:**
-
-```
-Age: 25
-Pi: 3.140000
-Grade: A
-```
 
 ### **Multiple Variable Declarations**
 You can declare multiple variables of the same type in a single line:
@@ -57,11 +49,21 @@ float x = 5.5, y = 10.5;`
 </CodeBlock>
 
 ## Data Types in C 📊
+
 C provides several built-in data types:
-- `int`: The Integer use to store `numerical/number` type of value it use 4 byte of memory size in 32-bit systems and in 64-bit system it use 8 byte. there is also a `long long int` that use to store 16 byte of numberical values;
-- `float`: The float used to store a deciamal point values it consume 4 byte.
-- `char`: The character data type use to store the value of character, it use 1 byte of memory space
-- `void`: The void is the data type that say noting mean `No values`, it mostly use in the `function` where no need to return anything, here is a example of void:
+
+| Data Type      | Description                              | Size (32-bit) | Size (64-bit) |
+|---------------|--------------------------------------|--------------|--------------|
+| `int`         | Stores whole numbers                 | 4 bytes      | 8 bytes      |
+| `float`       | Stores decimal numbers (single-precision) | 4 bytes  | 4 bytes  |
+| `double`      | Stores double-precision floating-point numbers | 8 bytes  | 8 bytes  |
+| `char`        | Stores a single character            | 1 byte       | 1 byte       |
+| `void`        | Represents an absence of data        | N/A          | N/A          |
+| `long`        | Extended size for integer values     | 8 bytes      | 8 bytes      |
+| `long long`   | Stores larger integer values        | 16 bytes     | 16 bytes     |
+
+Here is a example of `void`: 
+
 <CodeBlock language="c">
 {
 `void sum(int a, int b) {
@@ -83,22 +85,14 @@ int main() {
     float percentage = 99.5;
     char letter = 'B';
     
-    printf("Integer: %d\n", num);
-    printf("Float: %f\n", percentage);
-    printf("Character: %c\n", letter);
+    printf("Integer: %d", num); // output-> Integer: 10
+    printf("Float: %f", percentage); // output-> Float: 99.500000
+    printf("Character: %c", letter); // output-> Character: B
     
     return 0;
 }`
 }
 </CodeBlock>
-
-**Output:**
-
-```
-Integer: 10
-Float: 99.500000
-Character: B
-```
 
 ### **Size of Different Data Types**
 The `sizeof` operator can be used to determine the memory size of any data type:
@@ -108,23 +102,14 @@ The `sizeof` operator can be used to determine the memory size of any data type:
 `#include <stdio.h>
 
 int main() {
-    printf("Size of int: %lu bytes\n", sizeof(int));
-    printf("Size of float: %lu bytes\n", sizeof(float));
-    printf("Size of double: %lu bytes\n", sizeof(double));
-    printf("Size of char: %lu bytes\n", sizeof(char));
+    printf("Size of int: %lu bytes", sizeof(int)); // output-> Size of int: 4 bytes
+    printf("Size of float: %lu bytes", sizeof(float)); // output-> Size of float: 4 bytes
+    printf("Size of double: %lu bytes", sizeof(double)); // output-> Size of double: 8 bytes
+    printf("Size of char: %lu bytes", sizeof(char)); // output-> Size of char: 1 byte
     return 0;
 }`
 }
 </CodeBlock>
-
-**Output:**
-
-```
-Size of int: 4 bytes
-Size of float: 4 bytes
-Size of double: 8 bytes
-Size of char: 1 byte
-```
 
 ## Constants and Keywords 🔒
 - **Constants**: Values that do not change during program execution.
@@ -151,17 +136,11 @@ int main() {
     const int radius = 5;
     float area = PI * radius * radius;
     
-    printf("The area of the circle is: %f\n", area);
+    printf("The area of the circle is: %f", area); // output-> The area of the circle is: 78.537500
     return 0;
 }`
 }
 </CodeBlock>
-
-**Output:**
-
-```
-The area of the circle is: 78.537500
-```
 
 ---
 

@@ -1,6 +1,6 @@
 import * as React from "react";
 import type { Metadata } from "next";
-import { allDocs } from "@/.contentlayer/generated";
+import { allCProgrammings } from "@/.contentlayer/generated";
 import { notFound } from "next/navigation";
 import RenderContent from "@/components/mdx/render-content";
 
@@ -11,7 +11,7 @@ interface PageParams {
 // Function to fetch the article based on slug
 const extractArticle = async ({ params }: PageParams) => {
   const { slug } = await params;
-  return allDocs.find((doc) => doc.slugAsParams === slug);
+  return allCProgrammings.find((doc) => doc.slugAsParams === slug);
 };
 
 export default async function Page({ params }: PageParams) {

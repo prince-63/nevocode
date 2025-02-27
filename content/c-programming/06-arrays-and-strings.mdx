@@ -1,0 +1,248 @@
+---
+title: Arrays & Strings in C
+description: Explore the world of arrays and strings in C, understand their memory layout, and master string functions.
+author: CSExplore Team
+---
+
+# 📦 Arrays & Strings  
+
+## A Tale of Arrays and Strings 🚀  
+
+Welcome, young coder, to the fascinating world of **Arrays & Strings** in C! Imagine you are a librarian organizing books. Each book has a designated slot, just like **arrays** store multiple values in a sequential order. But what if these books had words instead of numbers? That’s where **strings** come into play!  
+
+Today, we embark on a journey to uncover these fundamental concepts.  
+
+## 🏗️ Introduction to Arrays  
+
+An **array** is a collection of elements of the same data type, stored in **contiguous memory locations**. Instead of declaring multiple individual variables, an array helps us store and manage a large set of data efficiently.  
+
+### **Declaring an Array**  
+
+The syntax for declaring an array is:  
+
+<CodeBlock language="c">
+{
+`data_type array_name[array_size];`
+}
+</CodeBlock>  
+
+For example, let's declare an array to store marks of 5 students:  
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    int marks[5] = {90, 85, 78, 92, 88};
+    printf("First student's marks: %d", marks[0]);  // Output: 90
+    return 0;
+}`
+}
+</CodeBlock>  
+
+### **Accessing Array Elements**  
+
+We can access elements in an array using their **index** (starting from 0).  
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    int numbers[3] = {10, 20, 30};
+    
+    printf("First element: %d", numbers[0]); // 10
+    printf("Second element: %d", numbers[1]); // 20
+    printf("Third element: %d", numbers[2]); // 30
+    
+    return 0;
+}`
+}
+</CodeBlock>  
+
+## 🏢 Multidimensional Arrays  
+
+What if we had **rows and columns** instead of a simple list? Welcome to **2D arrays**—they are like spreadsheets in memory!  
+
+### **Declaring a 2D Array**  
+
+<CodeBlock language="c">
+{
+`int matrix[3][3];`
+}
+</CodeBlock>  
+
+Let's store and print a **3x3 matrix**:  
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    int matrix[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    printf("Element at (2,1): %d", matrix[2][1]); // Output: 8
+    return 0;
+}`
+}
+</CodeBlock>  
+
+### **Looping Through a 2D Array**  
+
+We can use **nested loops** to traverse a 2D array:  
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    int matrix[2][2] = {{1, 2}, {3, 4}};
+
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\\n");
+    }
+    return 0;
+}`
+}
+</CodeBlock>  
+
+Run the above code in your local machine and see what it's printing.
+
+## 📜 Strings & String Functions  
+
+A **string** in C is an **array of characters**, ending with a special `\0` (null character).  
+
+### **Declaring Strings**  
+
+<CodeBlock language="c">
+{
+`char name[] = "Prince";`
+}
+</CodeBlock>  
+
+or  
+
+<CodeBlock language="c">
+{
+`char name[7] = {'P', 'r', 'i', 'n', 'c', 'e', '\\0'};`
+}
+</CodeBlock>  
+
+### **Taking User Input in Strings**  
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    char name[50];
+    printf("Enter your name: ");
+    scanf("%s", name); // Reads a single word
+    printf("Hello, %s!", name);
+    return 0;
+}`
+}
+</CodeBlock>  
+
+But `scanf()` stops at **spaces**! To read a full line, we use `gets()`:  
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    char sentence[100];
+    printf("Enter a sentence: ");
+    gets(sentence);  // Reads a full line
+    printf("You entered: %s", sentence);
+    return 0;
+}`
+}
+</CodeBlock>  
+
+## 🔧 String Functions in C  
+
+C provides useful functions to manipulate strings (available in `<string.h>`).  
+
+### **Finding String Length (`strlen`)**  
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char word[] = "Programming";
+    printf("Length: %d", strlen(word)); // Output: 11
+    return 0;
+}`
+}
+</CodeBlock>  
+
+### **Copying a String (`strcpy`)**  
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char src[] = "Hello";
+    char dest[10];
+    
+    strcpy(dest, src);
+    printf("Copied string: %s", dest);
+    return 0;
+}`
+}
+</CodeBlock>  
+
+### **Concatenating Strings (`strcat`)**  
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char first[20] = "Hello, ";
+    char last[] = "World!";
+    
+    strcat(first, last);
+    printf("%s", first); // Output: Hello, World!
+    return 0;
+}`
+}
+</CodeBlock>  
+
+### **Comparing Strings (`strcmp`)**  
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[] = "apple";
+    char str2[] = "banana";
+
+    if (strcmp(str1, str2) == 0)
+        printf("Strings are equal");
+    else
+        printf("Strings are different");
+
+    return 0;
+}`
+}
+</CodeBlock>  
+
+📍Try all the above function by your own and see what happening.
+
+Next up: **Pointers & Memory Management! 🔥**  

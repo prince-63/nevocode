@@ -1,5 +1,5 @@
 import { CourseTopicTypes, CoursesContentTypes } from "@/utils/types";
-import { allDocs, allProgrammings } from "@/.contentlayer/generated";
+import { allCProgrammings, allProgrammings } from "@/.contentlayer/generated";
 
 export const courseTopics: CourseTopicTypes[] = [
   {
@@ -32,7 +32,7 @@ export const CoursesContent: CoursesContentTypes[] = [
   {
     title: "Learn C Programming",
     name: "c-programming",
-    docs: allDocs,
+    docs: allCProgrammings,
     slug: "c",
   },
   {

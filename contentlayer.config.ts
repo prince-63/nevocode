@@ -2,9 +2,9 @@ import { defineDocumentType, makeSource } from "contentlayer2/source-files";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import remarkGfm from "remark-gfm";
 
-export const Doc = defineDocumentType(() => ({
-  name: "Doc",
-  filePathPattern: "doc/**/*.mdx",
+export const CProgramming = defineDocumentType(() => ({
+  name: "CProgramming",
+  filePathPattern: "c-programming/**/*.mdx",
   contentType: "mdx",
   fields: {
     title: {
@@ -20,7 +20,7 @@ export const Doc = defineDocumentType(() => ({
     },
     author: {
       type: "string",
-      required: false
+      required: false,
     },
     published: {
       type: "boolean",
@@ -86,7 +86,7 @@ export const Programming = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "content",
-  documentTypes: [Doc, Programming],
+  documentTypes: [CProgramming, Programming],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [

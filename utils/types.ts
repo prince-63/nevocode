@@ -1,4 +1,4 @@
-import { Doc, Programming } from "@/.contentlayer/generated"
+import { CProgramming, Programming } from "@/.contentlayer/generated"
 
 export interface CourseTopicTypes {
     title: string,
@@ -7,8 +7,8 @@ export interface CourseTopicTypes {
 }
 
 export interface CoursesContentTypes {
-    title: string,
-    name: string,
-    docs: Doc[] | Programming[],
-    slug: string
+  title: string;
+  name: string;
+  docs: CProgramming[] | Programming[];
+  slug: string;
 }

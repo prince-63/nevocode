@@ -39,11 +39,11 @@ Imagine you're splitting a pizza 🍕 with friends. You need to divide slices eq
 
 int main() {
     int a = 10, b = 3;
-    printf("Sum: %d", a + b);
-    printf("Difference: %d", a - b);
-    printf("Product: %d", a * b);
-    printf("Quotient: %d", a / b);
-    printf("Remainder: %d", a % b);
+    printf("Sum: %d", a + b); // output-> Sum: 13
+    printf("Difference: %d", a - b); // output-> Difference: 7
+    printf("Product: %d", a * b); // output-> Product: 30
+    printf("Quotient: %d", a / b); // output-> Quotient: 3
+    printf("Remainder: %d", a % b); // output-> Remainder: 1
     return 0;
 }`
 }
@@ -76,9 +76,9 @@ Imagine setting up a security system. The alarm should ring if **either** the fr
 
 int main() {
     int a = 1, b = 0;
-    printf("AND: %d", a && b);
-    printf("OR: %d", a || b);
-    printf("NOT: %d", !a);
+    printf("AND: %d", a && b); // output-> AND: 0
+    printf("OR: %d", a || b); // output-> OR: 1
+    printf("NOT: %d", !a);  // output-> NOT: 0
     return 0;
 }`
 }
@@ -123,9 +123,9 @@ Unary operators work on a **single value**, modifying it:
 
 int main() {
     int a = 5;
-    printf("Pre-increment: %d", ++a);
-    printf("Post-increment: %d", a++);
-    printf("Value after post-increment: %d", a);
+    printf("Pre-increment: %d", ++a); // output-> Pre-increment: 6
+    printf("Post-increment: %d", a++); // output-> Post-increment: 6 
+    printf("Value after post-increment: %d", a); // output-> Value after post-increment: 7
     return 0;
 }`
 }
@@ -152,7 +152,7 @@ Think of a shortcut for making decisions. The ternary operator works like an `if
 int main() {
     int a = 10, b = 20;
     int max = (a > b) ? a : b;
-    printf("Max value is: %d", max);
+    printf("Max value is: %d", max); // output-> Max value is: 20
     return 0;
 }`
 }
