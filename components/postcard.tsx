@@ -1,18 +1,23 @@
-import { Doc } from "@/.contentlayer/generated";
+import { Doc, Programming } from "@/.contentlayer/generated";
 import Link from "next/link";
+import Typography from "./common/typography";
 
-export default function PostCard(post: Doc) {
+interface PostCardProps {
+  post: Doc | Programming;
+}
+
+export default function PostCard({ post }: PostCardProps) {
   return (
-    <div className="mb-8">
+    <div className="">
       <h2 className="mb-1 text-xl">
-        <Link
-          href={post.url}
-          className="text-blue-700 hover:text-blue-900 dark:text-blue-400"
-        >
-          {post.title}
+        <Link href={post.url}>
+          <Typography
+            variant="body1"
+            className="transition delay-150 duration-300 ease-in-out hover:text-green-700 font-medium"
+          >{`➡️ ${post.title}`}</Typography>
         </Link>
       </h2>
-      <h5>{post.description}</h5>
+      <Typography variant="body2">{post.description}</Typography>
     </div>
   );
 }
