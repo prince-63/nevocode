@@ -13,9 +13,6 @@ export default function PostCard(post: Doc) {
         </Link>
       </h2>
       <h5>{post.description}</h5>
-      {/* <time dateTime={post.date} className="mb-2 block text-xs text-gray-600">
-        {new Intl.DateTimeFormat("en-US").format(new Date(post.date))}
-      </time> */}
     </div>
   );
 }

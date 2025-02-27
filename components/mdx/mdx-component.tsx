@@ -2,14 +2,6 @@ import type { MDXComponents } from "mdx/types";
 import CodeBlock from "./code-block";
 import Quiz from "./quiz";
 import {
-  Button,
-  Radio,
-  FormControl,
-  FormControlLabel,
-  FormLabel,
-  RadioGroup,
-  Card,
-  CardContent,
   Typography,
 } from "@mui/material";
 
@@ -17,14 +9,6 @@ export const mdxComponent: MDXComponents = {
   CodeBlock,
   Quiz,
   Typography,
-  Button,
-  Radio,
-  FormControl,
-  FormControlLabel,
-  FormLabel,
-  RadioGroup,
-  Card,
-  CardContent,
   h1: ({ children }) => (
     <Typography
       variant="h1"
