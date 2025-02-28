@@ -1,5 +1,5 @@
+import LineItem from "@/components/common/line-item";
 import Typography from "@/components/common/typography";
-import PostCard from "@/components/postcard";
 import { CoursesContent } from "@/lib/data";
 import { lilita_one } from "@/utils/common/fonts";
 import { notFound } from "next/navigation";
@@ -27,9 +27,15 @@ export default async function Home({ params }: PageParams) {
         {content.title}
       </Typography>
       <div className="flex flex-col gap-3">
-        {content.docs.map((post, idx) => (
-          <PostCard key={idx} post={post} />
-        ))}
+        <div>
+          {content.docs.length > 0 &&
+            content.docs.map((item, idx) => (
+              <LineItem
+                key={idx}
+                post={item}
+              />
+            ))}
+        </div>
       </div>
     </div>
   );

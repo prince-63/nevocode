@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${karla.variable} bg-slate-50 scroll-smooth`}>
+      <body className={`${karla.variable} bg-slate-50`}>
         <AppRouterCacheProvider options={{ key: "css", enableCssLayer: true }}>
           <ThemeProvider theme={theme}>
             <Header />

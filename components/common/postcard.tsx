@@ -1,9 +1,9 @@
-import { CProgramming, Programming } from "@/.contentlayer/generated";
+import { DocumentTypes } from "@/.contentlayer/generated";
 import Link from "next/link";
-import Typography from "./common/typography";
+import Typography from "./typography";
 
 interface PostCardProps {
-  post: CProgramming | Programming;
+  post: DocumentTypes;
 }
 
 export default function PostCard({ post }: PostCardProps) {

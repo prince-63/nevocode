@@ -1,5 +1,5 @@
 import { CourseTopicTypes, CoursesContentTypes } from "@/utils/types";
-import { allCProgrammings, allProgrammings } from "@/.contentlayer/generated";
+import { allCProgrammings, allDbms } from "@/.contentlayer/generated";
 
 export const courseTopics: CourseTopicTypes[] = [
   {
@@ -9,22 +9,10 @@ export const courseTopics: CourseTopicTypes[] = [
     link: "/learn/c",
   },
   {
-    title: "C++ Programming",
+    title: "Database Management System (DBMS)",
     description:
-      "Master C++ programming, STL, object-oriented design, and advanced problem-solving techniques in depth.",
-    link: "/learn/cpp",
-  },
-  {
-    title: "Java Programming",
-    description:
-      "Understand Java, OOP, multithreading, backend development, and build scalable applications efficiently.",
-    link: "/learn/java",
-  },
-  {
-    title: "Java Programming",
-    description:
-      "Understand Java, OOP, multithreading, backend development, and build scalable applications efficiently.",
-    link: "/learn/java",
+      "Learn DBMS fundamentals, SQL, ACID properties, normalization, NoSQL, and advanced database techniques with hands-on projects.",
+    link: "/learn/dbms",
   },
 ];
 
@@ -36,9 +24,9 @@ export const CoursesContent: CoursesContentTypes[] = [
     slug: "c",
   },
   {
-    title: "Learn Java Programming",
-    name: "java",
-    docs: allProgrammings,
-    slug: "java",
+    title: "Learn Database Management System (DBMS)",
+    name: "dbms",
+    docs: allDbms,
+    slug: "dbms",
   },
 ];

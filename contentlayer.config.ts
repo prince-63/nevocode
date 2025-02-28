@@ -43,9 +43,9 @@ export const CProgramming = defineDocumentType(() => ({
   },
 }));
 
-export const Programming = defineDocumentType(() => ({
-  name: "Programming",
-  filePathPattern: "programming/**/*.mdx",
+export const DBMS = defineDocumentType(() => ({
+  name: "Dbms",
+  filePathPattern: "dbms/**/*.mdx",
   contentType: "mdx",
   fields: {
     title: {
@@ -86,7 +86,7 @@ export const Programming = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "content",
-  documentTypes: [CProgramming, Programming],
+  documentTypes: [CProgramming, DBMS],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
