@@ -20,7 +20,7 @@ export default async function Page({ params }: PageParams) {
   if (!article) notFound();
 
   return (
-    <article className="px-2 sm:px-0 mx-auto max-w-xl py-4">
+    <article className="px-2 sm:px-0 mx-auto max-w-2xl py-4">
       <RenderContent mdxContent={article.body.code} />
     </article>
   );

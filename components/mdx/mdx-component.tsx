@@ -1,9 +1,7 @@
 import type { MDXComponents } from "mdx/types";
 import CodeBlock from "./code-block";
 import Quiz from "./quiz";
-import {
-  Typography,
-} from "@mui/material";
+import { Typography } from "@mui/material";
 
 export const mdxComponent: MDXComponents = {
   CodeBlock,
@@ -59,9 +57,7 @@ export const mdxComponent: MDXComponents = {
     </blockquote>
   ),
   pre: ({ children }) => (
-    <pre className="text-gray-900 p-4 rounded-lg overflow-x-auto">
-      {children}
-    </pre>
+    <pre className="bg-gray-300 p-4 rounded-lg overflow-x-auto">{children}</pre>
   ),
   code: ({ children }) => (
     <code className="bg-gray-300 px-[8px] py-0.5 rounded-sm">{children}</code>

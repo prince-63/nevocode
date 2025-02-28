@@ -1,0 +1,196 @@
+---
+title: Structures & Unions in C
+description: Master structures, unions, and pointers to structures in C.
+author: CSExplore Team
+---
+
+# Structures & Unions  
+
+## 📖 The Tale of Blueprints and Flexible Storage  
+
+Imagine you're an **architect** designing houses. Every house has a **blueprint** defining its structure: the number of rooms, the type of materials, and its dimensions. Similarly, in C programming, when we need to group different types of data under a single entity, we use **structures**.  
+
+But what if you want to optimize **memory usage**? Instead of storing **all** data fields at once, what if you only need **one field at a time**? This is where **unions** come into play!  
+
+In this article, we will **design and use structures**, explore the **differences between structures and unions**, and learn **how to use pointers with structures**. 🚀  
+
+## 🔹 Defining and Using Structures  
+
+A **structure** in C is a user-defined data type that allows us to **group different types of data** under a single name.  
+
+### **Declaring a Structure**  
+
+We use the `struct` keyword to define a structure:  
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+// Define a structure named Student
+struct Student {
+    char name[50];
+    int age;
+    float marks;
+};
+
+int main() {
+    // Declare a structure variable
+    struct Student s1 = {"Alice", 20, 85.5};
+
+    // Access structure members using dot (.)
+    printf("Name: %s\\n", s1.name);
+    printf("Age: %d\\n", s1.age);
+    printf("Marks: %.2f\\n", s1.marks);
+
+    return 0;
+}`
+}
+</CodeBlock>  
+
+### **Initializing a Structure**  
+
+We can initialize a structure in multiple ways:  
+
+<CodeBlock language="c">
+{
+`struct Student s1 = {"Alice", 20, 85.5}; // Method 1
+
+struct Student s2; // Declare first, assign later
+s2.age = 22;
+s2.marks = 90.2;
+strcpy(s2.name, "Bob"); // Use strcpy for strings`
+}
+</CodeBlock>  
+
+## ⚔️ Structures vs Unions  
+
+While **structures** store **all members at once**, **unions** allow storing **only one value at a time**, **sharing the same memory location**. This makes **unions memory-efficient** but **less flexible** than structures.  
+
+### **Understanding Unions**  
+
+A **union** is declared using the `union` keyword:  
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+union Data {
+    int i;
+    float f;
+    char str[20];
+};
+
+int main() {
+    union Data data;
+
+    data.i = 10;  // Store integer
+    printf("Integer: %d\\n", data.i);
+
+    data.f = 20.5;  // Store float (overwrites integer)
+    printf("Float: %.2f\\n", data.f);
+
+    strcpy(data.str, "Hello");  // Store string (overwrites float)
+    printf("String: %s\\n", data.str);
+
+    return 0;
+}`
+}
+</CodeBlock>  
+
+### **Key Differences: Structures vs. Unions**  
+
+| Feature       | Structures | Unions |
+|--------------|-----------|--------|
+| Memory Usage | Stores all members separately | Stores only one member at a time |
+| Access       | All members can be accessed simultaneously | Only the most recently assigned member is valid |
+| Use Case     | When you need multiple fields to exist together | When you need only one value at a time |
+
+💡 **Tip:** Use **structures** when you need multiple values simultaneously and **unions** when you want to **save memory** by storing only one value at a time.  
+
+## 🎯 Pointers to Structures  
+
+To **efficiently handle structures**, we use **pointers to structures**. This avoids copying large amounts of data and speeds up processing.  
+
+### **Declaring a Pointer to a Structure**  
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+struct Student {
+    char name[50];
+    int age;
+    float marks;
+};
+
+int main() {
+    struct Student s1 = {"Alice", 20, 85.5};
+    struct Student *ptr = &s1; // Pointer to structure
+
+    // Access members using '->' (arrow operator)
+    printf("Name: %s\\n", ptr->name);
+    printf("Age: %d\\n", ptr->age);
+    printf("Marks: %.2f\\n", ptr->marks);
+
+    return 0;
+}`
+}
+</CodeBlock>  
+
+### **Accessing Members Using Arrow (`->`) Operator**  
+
+When using a structure pointer, we use `->` instead of `.` to access members:  
+
+<CodeBlock language="c">
+{
+`ptr->age = 22;  // Equivalent to (*ptr).age = 22;`
+}
+</CodeBlock>  
+
+This is crucial when working with **dynamic memory allocation**, which we’ll see next!  
+
+## 🚀 Dynamic Memory Allocation for Structures  
+
+Just like arrays, we can allocate memory dynamically for structures using `malloc()`.  
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+#include <stdlib.h>
+
+struct Student {
+    char name[50];
+    int age;
+    float marks;
+};
+
+int main() {
+    struct Student *ptr;
+
+    // Allocate memory for one structure
+    ptr = (struct Student *)malloc(sizeof(struct Student));
+
+    if (ptr == NULL) {
+        printf("Memory allocation failed");
+        return 1;
+    }
+
+    // Assign values dynamically
+    ptr->age = 21;
+    ptr->marks = 88.5;
+    strcpy(ptr->name, "Charlie");
+
+    printf("Name: %s\\n", ptr->name);
+    printf("Age: %d\\n", ptr->age);
+    printf("Marks: %.2f\\n", ptr->marks);
+
+    free(ptr); // Free allocated memory
+
+    return 0;
+}`
+}
+</CodeBlock>  
+
+With this knowledge, you're now ready to **build complex data structures** in C! 🚀  
+
+🛠️ **Next up:** **File Handling in C!** 📂  
