@@ -1,24 +1,21 @@
 "use client";
 
-import { Typography } from "@mui/material";
-import { lilita_one } from "@/utils/common/fonts";
+import { lilita_one } from "@/utils/general/fonts";
 import AboutCard from "./about-card";
+import { H1, P } from "../ui/typography";
 const AboutSection = () => {
   return (
     <section className="h-max bg-gray-100 flex flex-col items-center justify-center px-3 py-10">
       <div className="max-w-4xl mx-auto text-center flex flex-col gap-3">
-        <Typography
-          variant="h1"
-          className={`text-3xl text-gray-700 ${lilita_one.className}`}
-        >
+        <H1 className={`text-3xl text-gray-700 ${lilita_one.className}`}>
           What&apos;s CSExplore?
-        </Typography>
-        <Typography variant="body1" className="text-sm sm:text-base text-gray-700">
+        </H1>
+        <P className="text-sm sm:text-base text-gray-700">
           CSExplore is a platform designed to make learning Computer Science
           simple, engaging, and effective. Whether you&apos;re a student, a
           self-learner, or a professional, our in-depth articles and structured
           courses help you understand CS fundamentals with ease.
-        </Typography>
+        </P>
       </div>
 
       {/* Target Audience */}
@@ -38,7 +35,7 @@ const AboutSection = () => {
           icon="👨‍💻"
           description="Refresh core concepts and stay updated with CS trends."
         />
-        </div>
+      </div>
     </section>
   );
 };

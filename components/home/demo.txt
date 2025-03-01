@@ -1,0 +1,617 @@
+import Link from "next/link";
+import Image from "next/image";
+import {
+  BookOpen,
+  Code,
+  Database,
+  Layers,
+  Server,
+  Terminal,
+  Users,
+  Star,
+} from "lucide-react";
+
+export default function LandingPage() {
+  return (
+    <div className="flex min-h-screen flex-col">
+      <header className="sticky top-0 z-40 border-b bg-white">
+        <div className="container mx-auto flex h-16 items-center justify-between px-4 py-4">
+          <div className="flex items-center gap-2">
+            <Terminal className="h-6 w-6 text-green-700" />
+            <span className="text-xl font-bold">CSExplore</span>
+          </div>
+          <nav className="hidden md:flex items-center gap-6">
+            <Link
+              href="#"
+              className="text-sm font-medium hover:text-green-700 transition-colors"
+            >
+              Home
+            </Link>
+            <Link
+              href="#courses"
+              className="text-sm font-medium hover:text-green-700 transition-colors"
+            >
+              Courses
+            </Link>
+            <Link
+              href="#topics"
+              className="text-sm font-medium hover:text-green-700 transition-colors"
+            >
+              Topics
+            </Link>
+            <Link
+              href="#about"
+              className="text-sm font-medium hover:text-green-700 transition-colors"
+            >
+              About
+            </Link>
+          </nav>
+          <div className="flex items-center gap-4">
+            <Link href="#get-started">
+              <button className="px-4 py-2 rounded-md bg-green-700 text-white text-sm font-medium hover:bg-green-800 transition-colors">
+                Get Started
+              </button>
+            </Link>
+          </div>
+        </div>
+      </header>
+      <main className="flex-1">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-green-700 text-white">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_500px]">
+              <div className="flex flex-col justify-center space-y-4">
+                <div className="space-y-2">
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                    Master Computer Science at Your Own Pace
+                  </h1>
+                  <p className="max-w-[600px] text-gray-200 md:text-xl">
+                    Self-paced, structured learning paths for programming,
+                    algorithms, system design, and more. Build your CS
+                    foundation from the ground up.
+                  </p>
+                </div>
+                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                  <Link href="#courses">
+                    <button className="px-6 py-3 rounded-md bg-white text-green-700 text-sm font-medium hover:bg-gray-100 transition-colors">
+                      Explore Courses
+                    </button>
+                  </Link>
+                  <Link href="#topics">
+                    <button className="px-6 py-3 rounded-md border border-white text-white text-sm font-medium hover:bg-green-800 transition-colors">
+                      Browse Topics
+                    </button>
+                  </Link>
+                </div>
+              </div>
+              <div className="flex items-center justify-center">
+                <Image
+                  src="/images/hero-student.jpg"
+                  width={500}
+                  height={500}
+                  alt="Student learning computer science concepts on a laptop"
+                  className="rounded-lg object-cover shadow-lg"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          className="w-full py-12 md:py-24 lg:py-32 bg-gray-50"
+          id="features"
+        >
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-green-100 px-3 py-1 text-sm text-green-700">
+                  Why CSExplore?
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-green-700">
+                  Learn CS the Right Way
+                </h2>
+                <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Our structured approach helps you build a solid foundation in
+                  computer science concepts, from basic programming to advanced
+                  system design.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
+              <div className="rounded-lg border-2 border-green-100 p-6 hover:border-green-700 transition-all hover:shadow-md">
+                <div className="mb-4">
+                  <BookOpen className="h-10 w-10 text-green-700" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Structured Learning</h3>
+                <p className="text-gray-600">
+                  Follow carefully designed learning paths that build on each
+                  other, ensuring you develop a comprehensive understanding.
+                </p>
+              </div>
+              <div className="rounded-lg border-2 border-green-100 p-6 hover:border-green-700 transition-all hover:shadow-md">
+                <div className="mb-4">
+                  <Code className="h-10 w-10 text-green-700" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Practical Coding</h3>
+                <p className="text-gray-600">
+                  Apply what you learn with hands-on coding exercises and
+                  projects that reinforce theoretical concepts.
+                </p>
+              </div>
+              <div className="rounded-lg border-2 border-green-100 p-6 hover:border-green-700 transition-all hover:shadow-md">
+                <div className="mb-4">
+                  <Users className="h-10 w-10 text-green-700" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Self-Paced</h3>
+                <p className="text-gray-600">
+                  Learn at your own pace, revisit concepts as needed, and
+                  progress when you're ready to move forward.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full py-12 md:py-24 lg:py-32" id="topics">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-green-700">
+                  Explore CS Topics
+                </h2>
+                <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Dive into a wide range of computer science topics, from
+                  programming fundamentals to advanced system design.
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-4">
+              <div className="rounded-lg border border-gray-200 p-6 hover:border-green-700 transition-all hover:shadow-md">
+                <div className="mb-2">
+                  <Terminal className="h-8 w-8 text-green-700" />
+                </div>
+                <h3 className="text-lg font-bold mb-2">
+                  Programming Fundamentals
+                </h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  Master the basics of programming with Python, JavaScript, and
+                  more.
+                </p>
+                <Link
+                  href="#"
+                  className="text-sm text-green-700 hover:underline"
+                >
+                  Explore →
+                </Link>
+              </div>
+              <div className="rounded-lg border border-gray-200 p-6 hover:border-green-700 transition-all hover:shadow-md">
+                <div className="mb-2">
+                  <Layers className="h-8 w-8 text-green-700" />
+                </div>
+                <h3 className="text-lg font-bold mb-2">
+                  Data Structures & Algorithms
+                </h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  Learn essential data structures and algorithms for efficient
+                  problem-solving.
+                </p>
+                <Link
+                  href="#"
+                  className="text-sm text-green-700 hover:underline"
+                >
+                  Explore →
+                </Link>
+              </div>
+              <div className="rounded-lg border border-gray-200 p-6 hover:border-green-700 transition-all hover:shadow-md">
+                <div className="mb-2">
+                  <Server className="h-8 w-8 text-green-700" />
+                </div>
+                <h3 className="text-lg font-bold mb-2">System Design</h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  Design scalable systems and understand architectural patterns.
+                </p>
+                <Link
+                  href="#"
+                  className="text-sm text-green-700 hover:underline"
+                >
+                  Explore →
+                </Link>
+              </div>
+              <div className="rounded-lg border border-gray-200 p-6 hover:border-green-700 transition-all hover:shadow-md">
+                <div className="mb-2">
+                  <Database className="h-8 w-8 text-green-700" />
+                </div>
+                <h3 className="text-lg font-bold mb-2">Databases</h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  Understand relational and NoSQL databases, query optimization,
+                  and more.
+                </p>
+                <Link
+                  href="#"
+                  className="text-sm text-green-700 hover:underline"
+                >
+                  Explore →
+                </Link>
+              </div>
+            </div>
+            <div className="flex justify-center mt-8">
+              <Link href="#all-topics">
+                <button className="px-6 py-2 rounded-md border border-green-700 text-green-700 text-sm font-medium hover:bg-green-50 transition-colors">
+                  View All Topics
+                </button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section
+          className="w-full py-12 md:py-24 lg:py-32 bg-gray-50"
+          id="courses"
+        >
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-green-700">
+                  Featured Courses
+                </h2>
+                <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Start your learning journey with our most popular computer
+                  science courses.
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
+              <div className="rounded-lg overflow-hidden bg-white shadow-md">
+                <div className="h-48 w-full relative">
+                  <Image
+                    src="/images/python-course.jpg"
+                    fill
+                    alt="Python programming course showing code editor with Python syntax"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-1">
+                    Python Programming from Zero to Hero
+                  </h3>
+                  <p className="text-sm text-gray-500 mb-4">
+                    Beginner Friendly • 24 Lessons
+                  </p>
+                  <p className="text-sm text-gray-600 mb-6">
+                    Start your programming journey with Python, one of the most
+                    beginner-friendly languages.
+                  </p>
+                  <div className="flex justify-between">
+                    <Link href="#">
+                      <button className="px-4 py-2 rounded-md border border-green-700 text-green-700 text-sm font-medium hover:bg-green-50 transition-colors">
+                        Preview
+                      </button>
+                    </Link>
+                    <Link href="#">
+                      <button className="px-4 py-2 rounded-md bg-green-700 text-white text-sm font-medium hover:bg-green-800 transition-colors">
+                        Start Learning
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-lg overflow-hidden bg-white shadow-md">
+                <div className="h-48 w-full relative">
+                  <Image
+                    src="/images/data-structures.jpg"
+                    fill
+                    alt="Data structures visualization showing tree and graph structures"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-1">
+                    Data Structures Fundamentals
+                  </h3>
+                  <p className="text-sm text-gray-500 mb-4">
+                    Intermediate • 18 Lessons
+                  </p>
+                  <p className="text-sm text-gray-600 mb-6">
+                    Learn essential data structures like arrays, linked lists,
+                    trees, and graphs.
+                  </p>
+                  <div className="flex justify-between">
+                    <Link href="#">
+                      <button className="px-4 py-2 rounded-md border border-green-700 text-green-700 text-sm font-medium hover:bg-green-50 transition-colors">
+                        Preview
+                      </button>
+                    </Link>
+                    <Link href="#">
+                      <button className="px-4 py-2 rounded-md bg-green-700 text-white text-sm font-medium hover:bg-green-800 transition-colors">
+                        Start Learning
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-lg overflow-hidden bg-white shadow-md">
+                <div className="h-48 w-full relative">
+                  <Image
+                    src="/images/system-design.jpg"
+                    fill
+                    alt="System design diagram showing architecture of a distributed system"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-1">
+                    System Design for Beginners
+                  </h3>
+                  <p className="text-sm text-gray-500 mb-4">
+                    Advanced • 15 Lessons
+                  </p>
+                  <p className="text-sm text-gray-600 mb-6">
+                    Learn how to design scalable systems and understand
+                    architectural patterns.
+                  </p>
+                  <div className="flex justify-between">
+                    <Link href="#">
+                      <button className="px-4 py-2 rounded-md border border-green-700 text-green-700 text-sm font-medium hover:bg-green-50 transition-colors">
+                        Preview
+                      </button>
+                    </Link>
+                    <Link href="#">
+                      <button className="px-4 py-2 rounded-md bg-green-700 text-white text-sm font-medium hover:bg-green-800 transition-colors">
+                        Start Learning
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-center mt-8">
+              <Link href="#all-courses">
+                <button className="px-6 py-2 rounded-md bg-green-700 text-white text-sm font-medium hover:bg-green-800 transition-colors">
+                  Browse All Courses
+                </button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full py-12 md:py-24 lg:py-32" id="testimonials">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-green-700">
+                  What Our Students Say
+                </h2>
+                <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Hear from our community of learners who have transformed their
+                  careers with CSExplore.
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
+              <div className="rounded-lg bg-white p-6 shadow-md">
+                <div className="flex items-center mb-4">
+                  <Image
+                    src="/images/testimonial-1.jpg"
+                    width={50}
+                    height={50}
+                    alt="Sarah Johnson"
+                    className="rounded-full mr-4"
+                  />
+                  <div>
+                    <h4 className="font-bold">Sarah Johnson</h4>
+                    <p className="text-sm text-gray-500">Software Engineer</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  "CSExplore's structured approach helped me transition from a
+                  non-tech background to a successful software engineering
+                  career. The courses are comprehensive and practical."
+                </p>
+                <div className="flex text-yellow-400">
+                  <Star className="w-5 h-5 fill-current" />
+                  <Star className="w-5 h-5 fill-current" />
+                  <Star className="w-5 h-5 fill-current" />
+                  <Star className="w-5 h-5 fill-current" />
+                  <Star className="w-5 h-5 fill-current" />
+                </div>
+              </div>
+              <div className="rounded-lg bg-white p-6 shadow-md">
+                <div className="flex items-center mb-4">
+                  <Image
+                    src="/images/testimonial-2.jpg"
+                    width={50}
+                    height={50}
+                    alt="Michael Chen"
+                    className="rounded-full mr-4"
+                  />
+                  <div>
+                    <h4 className="font-bold">Michael Chen</h4>
+                    <p className="text-sm text-gray-500">Data Scientist</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  "The algorithms and data structures courses on CSExplore were
+                  instrumental in helping me ace technical interviews. The
+                  platform's self-paced nature allowed me to learn while working
+                  full-time."
+                </p>
+                <div className="flex text-yellow-400">
+                  <Star className="w-5 h-5 fill-current" />
+                  <Star className="w-5 h-5 fill-current" />
+                  <Star className="w-5 h-5 fill-current" />
+                  <Star className="w-5 h-5 fill-current" />
+                  <Star className="w-5 h-5 fill-current" />
+                </div>
+              </div>
+              <div className="rounded-lg bg-white p-6 shadow-md">
+                <div className="flex items-center mb-4">
+                  <Image
+                    src="/images/testimonial-3.jpg"
+                    width={50}
+                    height={50}
+                    alt="Emily Rodriguez"
+                    className="rounded-full mr-4"
+                  />
+                  <div>
+                    <h4 className="font-bold">Emily Rodriguez</h4>
+                    <p className="text-sm text-gray-500">
+                      Full-stack Developer
+                    </p>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  "CSExplore's project-based learning approach gave me the
+                  confidence to build real-world applications. The community
+                  support and code reviews were invaluable in my learning
+                  journey."
+                </p>
+                <div className="flex text-yellow-400">
+                  <Star className="w-5 h-5 fill-current" />
+                  <Star className="w-5 h-5 fill-current" />
+                  <Star className="w-5 h-5 fill-current" />
+                  <Star className="w-5 h-5 fill-current" />
+                  <Star className="w-5 h-5 fill-current" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer className="w-full border-t bg-gray-50 py-6 md:py-12">
+        <div className="container mx-auto flex flex-col gap-6 px-4 md:flex-row md:items-center md:px-6">
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-2">
+              <Terminal className="h-5 w-5 text-green-700" />
+              <span className="text-lg font-bold">CSExplore</span>
+            </div>
+            <p className="text-sm text-gray-600">
+              Master computer science at your own pace.
+            </p>
+            <p className="text-sm text-gray-600">
+              © {new Date().getFullYear()} CSExplore. All rights reserved.
+            </p>
+          </div>
+          <div className="flex-1 md:flex md:justify-end">
+            <div className="grid grid-cols-2 gap-10 sm:grid-cols-4">
+              <div className="space-y-3">
+                <h4 className="text-sm font-medium">Platform</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-sm text-gray-600 hover:text-green-700"
+                    >
+                      Courses
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-sm text-gray-600 hover:text-green-700"
+                    >
+                      Learning Paths
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-sm text-gray-600 hover:text-green-700"
+                    >
+                      Pricing
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="space-y-3">
+                <h4 className="text-sm font-medium">Resources</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-sm text-gray-600 hover:text-green-700"
+                    >
+                      Blog
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-sm text-gray-600 hover:text-green-700"
+                    >
+                      Tutorials
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-sm text-gray-600 hover:text-green-700"
+                    >
+                      Documentation
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="space-y-3">
+                <h4 className="text-sm font-medium">Company</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-sm text-gray-600 hover:text-green-700"
+                    >
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-sm text-gray-600 hover:text-green-700"
+                    >
+                      Careers
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-sm text-gray-600 hover:text-green-700"
+                    >
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="space-y-3">
+                <h4 className="text-sm font-medium">Legal</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-sm text-gray-600 hover:text-green-700"
+                    >
+                      Privacy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-sm text-gray-600 hover:text-green-700"
+                    >
+                      Terms
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-sm text-gray-600 hover:text-green-700"
+                    >
+                      Cookie Policy
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
