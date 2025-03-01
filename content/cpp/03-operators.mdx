@@ -1,16 +1,16 @@
 ---
-title: Operators in C
-description: Learn about different types of operators in C programming and how they are used in expressions.
+title: Operators in C++
+description: Learn about different types of operators in C++ programming and how they are used in expressions.
 author: CSExplore Team
 ---
 
-# Operators in C ⚡
+# Operators in C++ ⚡
 
-Operators in C are **symbols** that perform operations on variables and values. Think of them as the tools a programmer uses to manipulate data and perform calculations.
+Operators in C++ are **symbols** that perform operations on variables and values. Think of them as the tools a programmer uses to manipulate data and perform calculations.
 
-## Types of Operators in C 🛠️
+## Types of Operators in C++ 🛠️
 
-C provides several types of operators, each serving a unique purpose:
+C++ provides several types of operators, each serving a unique purpose:
 
 - **Arithmetic Operators** 🧮 (For mathematical calculations)
 - **Relational Operators** 🔄 (To compare values)
@@ -35,19 +35,31 @@ Imagine you're splitting a pizza 🍕 with friends. You need to divide slices eq
 
 <CodeBlock language="c">
 {
-`#include <stdio.h>
+`#include <iostream>
+usign namespace std;
 
 int main() {
     int a = 10, b = 3;
-    printf("Sum: %d", a + b); // output-> Sum: 13
-    printf("Difference: %d", a - b); // output-> Difference: 7
-    printf("Product: %d", a * b); // output-> Product: 30
-    printf("Quotient: %d", a / b); // output-> Quotient: 3
-    printf("Remainder: %d", a % b); // output-> Remainder: 1
+
+    cout << "Sum: " << a + b << endl;
+    cout << "Difference: " << a - b << endl;
+    cout << "Multiply: " << a * b << endl;
+    cout << "Divide: " << a / b << endl;
+    cout << "Remainder: " << a % b << endl;
+
     return 0;
 }`
 }
 </CodeBlock>
+
+📌 **Output:**  
+```c
+Sum: 13
+ Difference: 7
+ Multiply: 30
+ Divide: 3
+ Remainder: 1
+```
 
 ### **2. Relational Operators 🔄**
 
@@ -72,17 +84,27 @@ Imagine setting up a security system. The alarm should ring if **either** the fr
 
 <CodeBlock language="c">
 {
-`#include <stdio.h>
+`#include <iostream>
+using namespace std;
 
 int main() {
     int a = 1, b = 0;
-    printf("AND: %d", a && b); // output-> AND: 0
-    printf("OR: %d", a || b); // output-> OR: 1
-    printf("NOT: %d", !a);  // output-> NOT: 0
+
+    cout << "AND: " << (a && b) << endl;  // Logical AND
+    cout << "OR: " << (a || b) << endl;   // Logical OR
+    cout << "NOT: " << (!a) << endl;      // Logical NOT
+
     return 0;
 }`
 }
 </CodeBlock>
+
+📌 **Output:**  
+```c
+AND: 0
+ OR: 1
+ NOT: 0
+```
 
 ### **4. Bitwise Operators ⚡**
 
@@ -119,17 +141,27 @@ Unary operators work on a **single value**, modifying it:
 
 <CodeBlock language="c">
 {
-`#include <stdio.h>
+`#include <iostream>
+using namespace std;
 
 int main() {
     int a = 5;
-    printf("Pre-increment: %d", ++a); // output-> Pre-increment: 6
-    printf("Post-increment: %d", a++); // output-> Post-increment: 6 
-    printf("Value after post-increment: %d", a); // output-> Value after post-increment: 7
+
+    cout << "Pre-increment: " << ++a << endl;
+    cout << "Post-increment: " << a++ << endl;
+    cout << "Value after post-increment: " << a << endl; 
+
     return 0;
 }`
 }
 </CodeBlock>
+
+📌 **Output:**  
+```c
+Pre-increment: 6
+ Post-increment: 6
+ Value after post-increment: 7
+```
 
 ### **7. Ternary Operator 🎭**
 
@@ -147,17 +179,25 @@ Think of a shortcut for making decisions. The ternary operator works like an `if
 
 <CodeBlock language="c">
 {
-`#include <stdio.h>
+`#include <iostream>
+using namespace std;
 
 int main() {
     int a = 10, b = 20;
     int max = (a > b) ? a : b;
-    printf("Max value is: %d", max); // output-> Max value is: 20
+
+    cout << "Max value is: " << max << endl;
+
     return 0;
 }`
 }
 </CodeBlock>
 
+📌 **Output:**  
+```c
+Max value is: 20
+```
+
 ---
 
-Next up: **Control Flow in C! 🚀**
+Next up: **Control Flow in C++! 🚀**

@@ -1,0 +1,163 @@
+---
+title: Operators in C
+description: Learn about different types of operators in C programming and how they are used in expressions.
+author: CSExplore Team
+---
+
+# Operators in C ⚡
+
+Operators in C are **symbols** that perform operations on variables and values. Think of them as the tools a programmer uses to manipulate data and perform calculations.
+
+## Types of Operators in C 🛠️
+
+C provides several types of operators, each serving a unique purpose:
+
+- **Arithmetic Operators** 🧮 (For mathematical calculations)
+- **Relational Operators** 🔄 (To compare values)
+- **Logical Operators** 🔍 (To combine conditions)
+- **Bitwise Operators** ⚡ (To work at the bit level)
+- **Assignment Operators** 📝 (To assign values)
+- **Unary Operators** (To modify a single value)
+- **Ternary Operator** 🎭 (A shortcut for conditions)
+- **Increment and Decrement Operators** (To increase or decrease values)
+
+### **1. Arithmetic Operators 🧮**
+
+Imagine you're splitting a pizza 🍕 with friends. You need to divide slices equally, check how many remain, or multiply orders. Arithmetic operators help with such tasks:
+
+- `+` Addition: Combines two values → `a + b`
+- `-` Subtraction: Finds the difference → `a - b`
+- `*` Multiplication: Multiplies numbers → `a * b`
+- `/` Division: Divides values → `a / b`
+- `%` Modulus: Gives the remainder → `a % b`
+
+**Example:**
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    int a = 10, b = 3;
+    printf("Sum: %d", a + b); // output-> Sum: 13
+    printf("Difference: %d", a - b); // output-> Difference: 7
+    printf("Product: %d", a * b); // output-> Product: 30
+    printf("Quotient: %d", a / b); // output-> Quotient: 3
+    printf("Remainder: %d", a % b); // output-> Remainder: 1
+    return 0;
+}`
+}
+</CodeBlock>
+
+### **2. Relational Operators 🔄**
+
+Think of a race 🏁. You need to check who finished first, whether two players had the same time, or if one took longer. Relational operators help with comparisons:
+
+- `==` Equal to → `a == b` (Checks if values are the same)
+- `!=` Not equal to → `a != b` (Checks if values are different)
+- `>` Greater than → `a > b`
+- `<` Less than → `a < b`
+- `>=` Greater than or equal to → `a >= b`
+- `<=` Less than or equal to → `a <= b`
+
+### **3. Logical Operators 🔍**
+
+Imagine setting up a security system. The alarm should ring if **either** the front door or back door is open, but only if someone is inside. Logical operators help handle such conditions:
+
+- `&&` Logical AND → `a && b` (Both must be true)
+- `||` Logical OR → `a || b` (At least one must be true)
+- `!` Logical NOT → `!a` (Reverses the condition)
+
+**Example:**
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    int a = 1, b = 0;
+    printf("AND: %d", a & b); // output-> AND: 0
+    printf("OR: %d", a | b); // output-> OR: 1
+    printf("NOT: %d", !a);  // output-> NOT: 0
+    return 0;
+}`
+}
+</CodeBlock>
+
+### **4. Bitwise Operators ⚡**
+
+Bitwise operators work at the **bit level**, meaning they operate directly on binary values (0s and 1s). Think of them like electrical switches. Useful in low-level programming, they include:
+
+- `&` Bitwise AND → `a & b`
+- `|` Bitwise OR → `a | b`
+- `^` Bitwise XOR → `a ^ b`
+- `~` Bitwise NOT → `~a`
+- `<<` Left Shift → `a << 2`
+- `>>` Right Shift → `a >> 2`
+
+### **5. Assignment Operators 📝**
+
+Assignment operators are like a **delivery service**—they take a value and store it in a variable.
+
+- `=` Assigns → `a = 10`
+- `+=` Adds and assigns → `a += 5` (same as `a = a + 5`)
+- `-=` Subtracts and assigns → `a -= 5`
+- `*=` Multiplies and assigns → `a *= 5`
+- `/=` Divides and assigns → `a /= 5`
+- `%=` Modulus and assigns → `a %= 5`
+
+### **6. Unary Operators**
+
+Unary operators work on a **single value**, modifying it:
+
+- `+` Unary plus → `+a`
+- `-` Unary minus → `-a`
+- `++` Increment → `++a` or `a++`
+- `--` Decrement → `--a` or `a--`
+
+**Example:**
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    int a = 5;
+    printf("Pre-increment: %d", ++a); // output-> Pre-increment: 6
+    printf("Post-increment: %d", a++); // output-> Post-increment: 6 
+    printf("Value after post-increment: %d", a); // output-> Value after post-increment: 7
+    return 0;
+}`
+}
+</CodeBlock>
+
+### **7. Ternary Operator 🎭**
+
+Think of a shortcut for making decisions. The ternary operator works like an `if-else` but in one line:
+
+**Syntax:**
+
+<CodeBlock language="c">
+{
+`condition ? expression_if_true : expression_if_false;`
+}
+</CodeBlock>
+
+**Example:**
+
+<CodeBlock language="c">
+{
+`#include <stdio.h>
+
+int main() {
+    int a = 10, b = 20;
+    int max = (a > b) ? a : b;
+    printf("Max value is: %d", max); // output-> Max value is: 20
+    return 0;
+}`
+}
+</CodeBlock>
+
+---
+
+Next up: **Control Flow in C! 🚀**

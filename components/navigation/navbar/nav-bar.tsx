@@ -28,7 +28,7 @@ const NavBar = () => {
             <Link key={index} href={link.href}>
               <Typography
                 className="text-gray-700 transition delay-150 duration-300 ease-in-out hover:text-green-600 font-medium"
-                variant="body2"
+                variant="body1"
               >
                 {link.label}
               </Typography>
@@ -73,7 +73,7 @@ const NavBar = () => {
                   >
                     <Typography
                       className="text-gray-700 transition delay-150 duration-300 ease-in-out hover:text-green-600 font-medium"
-                      variant="body2"
+                      variant="body1"
                     >
                       {link.label}
                     </Typography>

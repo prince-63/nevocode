@@ -73,7 +73,7 @@ export const mdxComponent: MDXComponents = {
   em: ({ children }) => <em className="italic text-gray-800">{children}</em>,
   hr: () => <hr className="my-4 border-gray-300" />,
   a: ({ children, href }) => (
-    <a href={href} className=" font-medium">
+    <a href={href} className="text-blue-500 font-medium">
       {children}
     </a>
   ),
@@ -97,5 +97,5 @@ export const mdxComponent: MDXComponents = {
   td: ({ children }) => (
     <td className="border border-gray-300 px-4 py-2">{children}</td>
   ),
-  br: ({ children }) => <br className="h-2">{children}</br>,
+  br: ({ children }) => <br className="h-1">{children}</br>,
 };

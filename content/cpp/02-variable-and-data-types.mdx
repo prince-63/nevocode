@@ -1,16 +1,16 @@
 ---
-title: C Variables and Data Types
-description: Learn about variables, data types, and memory usage in C programming.
+title: C++ Variables and Data Types
+description: Learn about variables, data types, and memory usage in C++ programming.
 author: CSExplore Team
 ---
 
-# C Variables and Data Types 📝
+# C++ Variable and Data Types 📝
 
 ## What are Variables? 🤔
-A **variable** in C is a name given to a memory location where data is stored. Every variable has a **data type**, which determines the kind of value it can store.
+A **variable** in C++ is a name given to a memory location where data is stored. Every variable has a **data type**, which determines the kind of value it can store.
 
-### **Declaring and Initializing Variables**
-Variables in C must be declared before use. The general syntax is:
+## **Declaring and Initializing Variables**
+Variables in C++ must be declared before use. The general syntax is: 
 
 <CodeBlock language="c">
 {
@@ -22,21 +22,32 @@ Variables in C must be declared before use. The general syntax is:
 
 <CodeBlock language="c">
 {
-`#include <stdio.h>
+`#include <iostream>
+using namespace std;
 
 int main() {
     int age = 25;
     float pi = 3.14;
     char grade = 'A';
-    
-    printf("Age: %d", age);     // output-> Age: 25
-    printf("Pi: %f", pi);       // output-> Pi: 3.14
-    printf("Grade: %c", grade);     // output-> Grade: A
-    
+    string name = "prince";
+
+    cout << "Age: " << age << endl;
+    cout << "PI: " << pi << endl;
+    cout << "Grade: " << grade << endl;
+    cout << "Name: " << name << endl;
+
     return 0;
 }`
 }
 </CodeBlock>
+
+📌 **Output:**  
+```c
+Age: 25
+ PI: 3.14
+ Grade: A
+ Name: prince
+```
 
 ### **Multiple Variable Declarations**
 You can declare multiple variables of the same type in a single line:
@@ -48,9 +59,9 @@ float x = 5.5, y = 10.5;`
 }
 </CodeBlock>
 
-## Data Types in C 📊
+## Data Types in C++ 📊
 
-C provides several built-in data types:
+C++ provides several built-in data types:
 
 | Data Type      | Description                              | Size (32-bit) | Size (64-bit) |
 |---------------|--------------------------------------|--------------|--------------|
@@ -58,11 +69,14 @@ C provides several built-in data types:
 | `float`       | Stores decimal numbers (single-precision) | 4 bytes  | 4 bytes  |
 | `double`      | Stores double-precision floating-point numbers | 8 bytes  | 8 bytes  |
 | `char`        | Stores a single character            | 1 byte       | 1 byte       |
+| `string`      | Stores multiple characters (dynamic size) | Varies | Varies | 
 | `void`        | Represents an absence of data        | N/A          | N/A          |
 | `long`        | Extended size for integer values     | 8 bytes      | 8 bytes      |
 | `long long`   | Stores larger integer values        | 16 bytes     | 16 bytes     |
 
-Here is a example of `void`: 
+<br />
+
+### Here is a example of `void`: 
 
 <CodeBlock language="c">
 {
@@ -78,38 +92,70 @@ This function doesn't return anything, it calculate the value of a and b and dis
 
 <CodeBlock language="c">
 {
-`#include <stdio.h>
+`#include <iostream>
+using namespace std;
 
 int main() {
     int num = 10;
     float percentage = 99.5;
     char letter = 'B';
+    string name = "prince";
+    long long int long_value = 10;
+    double double_value = 10.239192;
     
-    printf("Integer: %d", num); // output-> Integer: 10
-    printf("Float: %f", percentage); // output-> Float: 99.500000
-    printf("Character: %c", letter); // output-> Character: B
+    cout << "Num: " << num << endl;
+    cout << "Percentage: " << percentage << endl;
+    cout << "Letter: " << letter << endl;
+    cout << "Name: " << name << endl;
+    cout << "Long value: " << long_value << endl;
+    cout << "Double value: " << double_value << endl;
     
     return 0;
 }`
 }
 </CodeBlock>
+
+📌 **Output:**  
+```c
+Num: 10
+ Percentage: 99.5
+ Letter: B
+ Name: prince
+ Long value: 10
+ Double value: 10.239192
+```
 
 ### **Size of Different Data Types**
 The `sizeof` operator can be used to determine the memory size of any data type:
 
 <CodeBlock language="c">
 {
-`#include <stdio.h>
+`#include <iostream>
+using namespace std;
 
 int main() {
-    printf("Size of int: %lu bytes", sizeof(int)); // output-> Size of int: 4 bytes
-    printf("Size of float: %lu bytes", sizeof(float)); // output-> Size of float: 4 bytes
-    printf("Size of double: %lu bytes", sizeof(double)); // output-> Size of double: 8 bytes
-    printf("Size of char: %lu bytes", sizeof(char)); // output-> Size of char: 1 byte
+
+    cout << "Size of int: " <<  sizeof(int) << endl;
+    cout << "Size of float: " <<  sizeof(float) << endl;
+    cout << "Size of char: " <<  sizeof(char) << endl;
+    cout << "Size of long long int: " <<  sizeof(long long int) << endl;
+    cout << "Size of double: " <<  sizeof(double) << endl;
+    cout << "Size of string: " <<  sizeof(string) << endl;
+
     return 0;
 }`
 }
 </CodeBlock>
+
+📌 **Output:**  
+```c
+Size of int: 4
+ Size of float: 4
+ Size of char: 1
+ Size of long long int: 8
+ Size of double: 8
+ Size of string: 32
+```
 
 ## Constants and Keywords 🔒
 - **Constants**: Values that do not change during program execution.
@@ -128,20 +174,28 @@ const int MAX_LIMIT = 100;`
 
 <CodeBlock language="c">
 {
-`#include <stdio.h>
+`#include <iostream>
+using namespace std;
 
-#define PI 3.1415
+#define PI 3.14
 
 int main() {
+
     const int radius = 5;
     float area = PI * radius * radius;
     
-    printf("The area of the circle is: %f", area); // output-> The area of the circle is: 78.537500
+    cout << "The area of the circle is:" <<  area << endl;
+
     return 0;
 }`
 }
 </CodeBlock>
 
+📌 **Output:**  
+```c
+The area of the circle is: 78.5
+```
+
 ---
 
-Next up: **Operators in C! 🚀**
+Next up: **Operators in C++! 🚀**
