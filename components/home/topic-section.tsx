@@ -65,7 +65,7 @@ const TopicSection = () => {
             return (
               <div
                 key={index}
-                className="w-[300px] sm:w-[260px] min-h-max flex flex-col rounded-lg border border-gray-200 p-6 hover:border-green-700 transition-all hover:shadow-md"
+                className="w-full  sm:w-[260px] min-h-max flex flex-col rounded-lg border border-gray-200 p-6 hover:border-green-700 transition-all hover:shadow-md"
               >
                 <div className="mb-3">{topic.icon}</div>
                 <H3 className="text-lg font-bold mb-2">{topic.title}</H3>
