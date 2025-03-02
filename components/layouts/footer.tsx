@@ -1,14 +1,98 @@
-import { P } from "../ui/typography";
+import Link from "../navigation/link";
+import { H4, P } from "../ui/typography";
+import Logo from "../general/logo";
+import {
+  companyList,
+  LegalList,
+  platformLinkList,
+  resourcesList,
+} from "@/lib/footer-data";
 
 const Footer = () => {
   return (
-    <>
-      <footer className="bg-slate-100 h-[55px] w-full flex items-center justify-center text-center">
-        <P className="text-gray-700">
-          &copy; 2025 CSExplore. All rights reserved.
-        </P>
-      </footer>
-    </>
+    <footer className="w-full border-t py-6 md:py-12 bg-lightBg dark:bg-darkBg">
+      <div className="container mx-auto flex flex-col gap-6 px-4 md:flex-row md:items-center md:px-6">
+        <div className="flex flex-col gap-2">
+          <Logo />
+          <P className="text-sm">Master computer science at your own pace.</P>
+          <P className="text-sm opacity-80">
+            © {new Date().getFullYear()} CSExplore. All rights reserved.
+          </P>
+        </div>
+        <div className="flex-1 md:flex md:justify-end">
+          <div className="grid grid-cols-2 gap-10 sm:grid-cols-4">
+            <div className="space-y-3">
+              <H4 className="text-sm font-medium">Platform</H4>
+              <ul className="space-y-2">
+                {platformLinkList.map((platform, index) => {
+                  return (
+                    <li key={index}>
+                      <Link
+                        href={platform.href}
+                        className="text-sm text-gray-600 hover:text-green-700"
+                      >
+                        {platform.name}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className="space-y-3">
+              <h4 className="text-sm font-medium">Resources</h4>
+              <ul className="space-y-2">
+                {resourcesList.map((resource, index) => {
+                  return (
+                    <li key={index}>
+                      <Link
+                        href={resource.href}
+                        className="text-sm text-gray-600 hover:text-green-700"
+                      >
+                        {resource.name}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className="space-y-3">
+              <h4 className="text-sm font-medium">Company</h4>
+              <ul className="space-y-2">
+                {companyList.map((company, index) => {
+                  return (
+                    <li key={index}>
+                      <Link
+                        href={company.href}
+                        className="text-sm text-gray-600 hover:text-green-700"
+                      >
+                        {company.name}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className="space-y-3">
+              <h4 className="text-sm font-medium">Legal</h4>
+              <ul className="space-y-2">
+                {LegalList.map((legalItems, index) => {
+                  return (
+                    <li key={index}>
+                      <Link
+                        href={legalItems.href}
+                        className="text-sm text-gray-600 hover:text-green-700"
+                      >
+                        {legalItems.name}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 };
 

@@ -24,7 +24,9 @@ export default function RootLayout({
       <body className={`${karla.className} `}>
         <Providers>
           <Header />
-          <main className="flex bg-lightBg dark:bg-darkBg text-textLight dark:text-textDark w-full flex-col">{children}</main>
+          <main className="flex bg-lightBg dark:bg-darkBg text-textLight dark:text-textDark w-full flex-col">
+            {children}
+          </main>
           <Footer />
         </Providers>
       </body>

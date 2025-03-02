@@ -25,7 +25,7 @@ export const H1 = createComponent<HTMLHeadingElement>(
 
 export const H2 = createComponent<HTMLHeadingElement>(
   "h2",
-  "scroll-m-20 border-b py-2 text-3xl font-semibold tracking-tight first:mt-0 text-textLight dark:text-textDark",
+  "py-2 text-3xl tracking-tight font-semibold text-textLight dark:text-textDark",
   "H2",
 );
 
