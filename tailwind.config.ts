@@ -12,7 +12,7 @@ const tailwindConfig = {
   theme: {
     extend: {
       colors: {
-        primary: "#2563EB", // Deep blue for CTAs
+        primary: "#388E3C", // Deep blue for CTAs
         secondary: "#F59E0B", // Muted orange for highlights
         darkBg: "#0F172A", // Dark mode background
         lightBg: "#F9FAFB", // Light mode background

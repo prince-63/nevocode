@@ -21,10 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
-      <body className={`${karla.variable} `}>
+      <body className={`${karla.className} `}>
         <Providers>
           <Header />
-          <main className="flex bg-lightBg dark:bg-darkBg text-textLight dark:text-textDark min-h-screen w-full flex-col">{children}</main>
+          <main className="flex bg-lightBg dark:bg-darkBg text-textLight dark:text-textDark w-full flex-col">{children}</main>
           <Footer />
         </Providers>
       </body>

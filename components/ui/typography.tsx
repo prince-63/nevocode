@@ -49,7 +49,7 @@ export const Lead = createComponent<HTMLParagraphElement>(
 
 export const P = createComponent<HTMLParagraphElement>(
   "p",
-  "leading-7 [&:not(:first-child)]:mt-6 text-textLight dark:text-textDark",
+  `text-textLight dark:text-textDark`,
   "P",
 );
 
