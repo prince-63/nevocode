@@ -45,7 +45,7 @@ const topicList: TopicListTypes[] = [
 const TopicSection = () => {
   return (
     <section
-      className="min-h-screen flex flex-col items-center justify-center w-full py-8 sm:py-2"
+      className="flex flex-col items-center justify-center w-full pt-8  py-2 sm:py-8 md:py-12 lg:py-16"
       id="topics"
     >
       <div className="mx-auto px-4 md:px-6">

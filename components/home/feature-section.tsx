@@ -5,7 +5,7 @@ import { H1, H3, P } from "../ui/typography";
 const FeatureSection = () => {
   return (
     <section
-      className="min-h-screen flex flex-col items-center justify-center w-full py-2"
+      className="flex flex-col items-center justify-center w-full  py-2 sm:py-8 md:py-12 lg:py-16"
       id="features"
     >
       <div className="container mx-auto px-4 md:px-6">
