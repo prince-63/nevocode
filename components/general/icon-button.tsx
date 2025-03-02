@@ -32,7 +32,6 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
     {
       className,
       size,
-      asChild = false,
       showTooltip = false,
       tooltipText = "",
       children,
