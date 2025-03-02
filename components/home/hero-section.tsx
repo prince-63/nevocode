@@ -6,7 +6,7 @@ import { H1, P } from "../ui/typography";
 import { lilita_one } from "@/utils/general/fonts";
 const HeroSection = () => {
   return (
-    <section className="min-h-screen w-full flex items-center justify-center">
+    <section className="h-[700px] sm:h-[600px] bg-red-200 w-full flex items-center justify-center">
       <div className="container flex flex-col gap-3 items-center justify-center mx-auto px-4 md:px-6">
         <H1 className={`${lilita_one.className} text-primary text-center`}>
           Unlock Your Full Coding Potential
