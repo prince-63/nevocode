@@ -1,5 +1,5 @@
 import { CourseTopicTypes, CoursesContentTypes } from "@/utils/types";
-import { allCProgrammings, allDbms } from "@/.contentlayer/generated";
+import { allCProgrammings, allDbms, allCpps } from "@/.contentlayer/generated";
 
 export const courseTopics: CourseTopicTypes[] = [
   {
@@ -7,6 +7,12 @@ export const courseTopics: CourseTopicTypes[] = [
     description:
       "Learn C programming, data structures, memory management, and pointers with real-world applications.",
     link: "/learn/c",
+  },
+  {
+    title: "C++ Programming",
+    description:
+      "Learn C++ programming, data structures, memory management, and pointers with real-world applications.",
+    link: "/learn/cpp",
   },
   {
     title: "Database Management System (DBMS)",
@@ -19,7 +25,7 @@ export const courseTopics: CourseTopicTypes[] = [
 export const CoursesContent: CoursesContentTypes[] = [
   {
     title: "Learn C Programming",
-    name: "c-programming",
+    name: "c",
     docs: allCProgrammings,
     slug: "c",
   },
@@ -28,5 +34,11 @@ export const CoursesContent: CoursesContentTypes[] = [
     name: "dbms",
     docs: allDbms,
     slug: "dbms",
+  },
+  {
+    title: "Learn C++ Programming",
+    name: "cpp",
+    docs: allCpps,
+    slug: "cpp",
   },
 ];

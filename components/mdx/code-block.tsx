@@ -4,14 +4,13 @@ import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { darcula } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Copy } from "lucide-react";
-import { copyTextToClipboard } from "@/utils/common/copy-text-clipboard";
+import { copyTextToClipboard } from "@/utils/general/copy-text-clipboard";
 interface CodeBlockProps {
   language: string;
   children: React.ReactNode;
 }
 
 const CodeBlock: React.FC<CodeBlockProps> = ({ language, children }) => {
-
   const handleCopyClick = async (text: string) => {
     await copyTextToClipboard(text);
   };

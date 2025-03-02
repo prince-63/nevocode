@@ -1,6 +1,6 @@
 import { DocumentTypes } from "@/.contentlayer/generated";
 import Link from "next/link";
-import Typography from "./typography";
+import { H2, P } from "../ui/typography";
 
 interface PostCardProps {
   post: DocumentTypes;
@@ -11,13 +11,10 @@ export default function PostCard({ post }: PostCardProps) {
     <div className="">
       <h2 className="mb-1 text-xl">
         <Link href={post.url}>
-          <Typography
-            variant="body1"
-            className="transition delay-150 duration-300 ease-in-out hover:text-green-700 font-medium"
-          >{`➡️ ${post.title}`}</Typography>
+          <H2 className="transition delay-150 duration-300 ease-in-out hover:text-green-700 font-medium">{`➡️ ${post.title}`}</H2>
         </Link>
       </h2>
-      <Typography variant="body2">{post.description}</Typography>
+      <P>{post.description}</P>
     </div>
   );
 }

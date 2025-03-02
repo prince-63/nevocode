@@ -1,10 +1,9 @@
-import { Container } from "@mui/material";
 
 const MdxLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Container className="my-4" maxWidth="md">
+    <div className="my-4 max-w-md">
       {children}
-    </Container>
+    </div>
   );
 };
 

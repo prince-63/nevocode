@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
-import theme from "@/utils/theme";
-import { ThemeProvider } from "@mui/material/styles";
-import Header from "@/components/navigation/header";
-import Footer from "@/components/navigation/footer";
-import { karla } from "@/utils/common/fonts";
+import Header from "@/components/layouts/header";
+import Footer from "@/components/layouts/footer";
+import { karla } from "@/utils/general/fonts";
+import { Providers } from "@/lib/providers";
 
 export const metadata: Metadata = {
   title: {
@@ -22,15 +20,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${karla.variable} bg-slate-50`}>
-        <AppRouterCacheProvider options={{ key: "css", enableCssLayer: true }}>
-          <ThemeProvider theme={theme}>
-            <Header />
-            <div>{children}</div>
-            <Footer />
-          </ThemeProvider>
-        </AppRouterCacheProvider>
+    <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
+      <body className={`${karla.className} `}>
+        <Providers>
+          <Header />
+          <main className="flex bg-lightBg dark:bg-darkBg text-textLight dark:text-textDark w-full flex-col">
+            {children}
+          </main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

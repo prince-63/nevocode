@@ -1,0 +1,83 @@
+---
+title: Database Models & Architecture
+description: Learn about different database architectures, models, and the importance of ACID properties in transactions.
+author: CSExplore Team
+---
+
+# 📌 Database Models & Architecture  
+
+A **database system** follows a structured approach to store, retrieve, and manage data efficiently. This module covers **different architectures**, **database models**, and the crucial **ACID properties** for maintaining data integrity.  
+
+## 📖 Topics Covered  
+✅ **Database Architecture (1-tier, 2-tier, 3-tier)**  
+✅ **Database Models (Hierarchical, Network, Relational, Object-Oriented)**  
+✅ **ACID Properties & Transactions**  
+✅ **Exercise: Research real-world database architectures used by companies**  
+
+## 🏗️ Database Architecture  
+
+A **DBMS architecture** defines how databases are structured and how users interact with them. There are **three main types**:  
+
+| Architecture | Description | Example |
+|-------------|------------|---------|
+| **1-Tier**  | Directly interacts with the database, used for development & testing. | SQL Shell, SQLite |
+| **2-Tier**  | Client-server model where the application interacts with the DBMS. | MySQL with a desktop app |
+| **3-Tier**  | Separates **Presentation (UI)**, **Application (Logic)**, and **Database (Storage)** layers. | Web apps like Amazon, Netflix |
+
+### 🔍 **Real-World Example:**  
+🔹 **1-Tier**: A student testing SQL queries in **SQLite**.  
+🔹 **2-Tier**: A banking application where the **front-end** interacts with a **MySQL** database.  
+🔹 **3-Tier**: An e-commerce website where:  
+  - UI is in **React.js** (Client)  
+  - Backend in **Node.js** (Server)  
+  - Database in **PostgreSQL** (Storage)  
+
+## 🗂️ Database Models  
+
+A **database model** determines how data is **organized, stored, and managed**. Let’s explore the major models:
+
+| Model | Structure | Used For | Examples |
+|-------|----------|----------|----------|
+| **Hierarchical** | Tree-like structure, parent-child relationships | Legacy systems | IBM IMS, Windows Registry |
+| **Network** | Complex graph structure, multiple relationships per record | Telecom databases | CODASYL DBMS |
+| **Relational (SQL)** | Data stored in tables with rows & columns, follows normalization | Most web applications | MySQL, PostgreSQL, Oracle |
+| **Object-Oriented** | Stores data as objects, like OOP | Multimedia & AI applications | db4o, ObjectDB |
+
+> **Analogy 🧐**  
+- **Hierarchical**: Like a family tree. 👨‍👩‍👧‍👦  
+- **Network**: Like a subway map with multiple connections. 🚇  
+- **Relational**: Like an Excel spreadsheet. 📊  
+- **Object-Oriented**: Like a blueprint of real-world objects. 🏠  
+
+### **🔎 When to Use Which Model?**  
+✅ **Use Relational** when data is structured (e.g., banking, e-commerce).  
+✅ **Use NoSQL (Hierarchical/Network)** for **big data, flexible schemas**.  
+✅ **Use Object-Oriented** when working with **AI, multimedia, CAD**.  
+
+## ⚡ ACID Properties & Transactions  
+
+A **transaction** is a sequence of operations performed on a database. To ensure **data integrity**, transactions follow **ACID properties**:
+
+| Property | Meaning | Ensures |
+|----------|---------|---------|
+| **A - Atomicity** | "All or nothing" - entire transaction succeeds or fails | No partial updates |
+| **C - Consistency** | Data must follow all integrity rules | No corruption |
+| **I - Isolation** | Concurrent transactions do not interfere | No dirty reads |
+| **D - Durability** | Data remains even after crashes | No loss after commit |
+
+### 🔥 **Real-World Example (Banking 🏦)**  
+Imagine transferring **₹1000** from **Account A → Account B**:  
+- **Atomicity:** If system crashes, money isn't deducted without being credited.  
+- **Consistency:** The total balance remains unchanged.  
+- **Isolation:** If multiple users transfer money, transactions remain independent.  
+- **Durability:** After confirmation, the transaction persists even after a power failure.  
+
+
+## 🏁 **Summary & Next Steps**  
+
+### ✅ **Key Takeaways**  
+🔹 **1-tier, 2-tier, 3-tier architectures** define how data flows.  
+🔹 **Different database models** exist for different use cases.  
+🔹 **ACID properties** ensure transactions are safe & reliable.  
+
+### 🚀 **Next up: SQL Basics & Querying Data**  

@@ -1,7 +1,7 @@
-import LineItem from "@/components/common/line-item";
-import Typography from "@/components/common/typography";
+import LineItem from "@/components/general/line-item";
+import { H1 } from "@/components/ui/typography";
 import { CoursesContent } from "@/lib/data";
-import { lilita_one } from "@/utils/common/fonts";
+import { lilita_one } from "@/utils/general/fonts";
 import { notFound } from "next/navigation";
 
 interface PageParams {
@@ -20,21 +20,15 @@ export default async function Home({ params }: PageParams) {
 
   return (
     <div className="min-h-screen mx-auto max-w-xl py-8 px-2">
-      <Typography
-        variant="h1"
+      <H1
         className={`${lilita_one.className} mb-6 text-center text-3xl font-extrabold `}
       >
         {content.title}
-      </Typography>
+      </H1>
       <div className="flex flex-col gap-3">
         <div>
           {content.docs.length > 0 &&
-            content.docs.map((item, idx) => (
-              <LineItem
-                key={idx}
-                post={item}
-              />
-            ))}
+            content.docs.map((item, idx) => <LineItem key={idx} post={item} />)}
         </div>
       </div>
     </div>

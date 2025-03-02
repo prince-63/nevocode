@@ -1,8 +1,8 @@
 "use client";
 
 import { DocumentTypes } from "@/.contentlayer/generated";
-import { Typography } from "@mui/material";
 import Link from "next/link";
+import { H2, P } from "../ui/typography";
 
 interface PostCardProps {
   post: DocumentTypes;
@@ -18,13 +18,10 @@ const LineItem = ({ post }: PostCardProps) => {
         <div className="pt-[2px]">
           <h2 className="text-xl">
             <Link href={post.url}>
-              <Typography
-                variant="body1"
-                className="transition delay-150 duration-300 ease-in-out hover:text-green-700 font-medium"
-              >{`➡️ ${post.title}`}</Typography>
+              <H2 className="transition delay-150 duration-300 ease-in-out hover:text-green-700 font-medium">{`➡️ ${post.title}`}</H2>
             </Link>
           </h2>
-          <Typography variant="body2">{post.description}</Typography>
+          <P>{post.description}</P>
         </div>
       </div>
     </div>
