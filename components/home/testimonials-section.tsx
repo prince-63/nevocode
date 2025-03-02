@@ -6,7 +6,7 @@ import { lilita_one } from "@/utils/general/fonts";
 const TestimonialsSection = () => {
   return (
     <section
-      className="min-h-screen flex flex-col items-center justify-center w-full py-8 sm:py-2"
+      className="flex flex-col items-center justify-center w-full pt-12  py-2 sm:py-8 md:py-12 lg:py-16"
       id="testimonials"
     >
       <div className="container mx-auto px-4 md:px-6">
