@@ -37,7 +37,7 @@ export const H3 = createComponent<HTMLHeadingElement>(
 
 export const H4 = createComponent<HTMLHeadingElement>(
   "h4",
-  "scroll-m-20 text-xl font-semibold tracking-tight text-textLight dark:text-textDark",
+  "scroll-m-20 text-md sm:text-lg md:text-xl font-semibold tracking-tight text-textLight dark:text-textDark",
   "H4",
 );
 
@@ -85,7 +85,7 @@ export const MultilineCode = createComponent<HTMLPreElement>(
 
 export const List = createComponent<HTMLUListElement>(
   "ul",
-  "my-6 ml-6 list-disc [&>li]:mt-2 text-textLight dark:text-textDark",
+  "my-1 ml-4 list-disc [&>li]:mt-1 text-textLight dark:text-textDark",
   "List",
 );
 

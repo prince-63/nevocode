@@ -53,7 +53,7 @@ export const companyList: CompanyType[] = [
 export const LegalList: LegalType[] = [
   {
     name: "Privacy",
-    href: "/privacy",
+    href: "/home/privacy",
   },
   {
     name: "Terms",
