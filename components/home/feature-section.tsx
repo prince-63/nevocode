@@ -59,8 +59,8 @@ const FeatureSection = () => {
                 className="rounded-lg border border-gray-200 hover:border-primary p-6 transition-all hover:shadow-md"
               >
                 <div className="mb-4">{feature.icon}</div>
-                <H3 className="text-xl font-bold mb-2">{feature.title}</H3>
-                <P className="text-gray-600">{feature.description}</P>
+                <H3 className="text-lg font-bold mb-2">{feature.title}</H3>
+                <P className="text-sm text-gray-600">{feature.description}</P>
               </div>
             );
           })}

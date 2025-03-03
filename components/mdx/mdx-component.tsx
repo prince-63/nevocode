@@ -19,10 +19,14 @@ export const mdxComponent: MDXComponents = {
     </h3>
   ),
   p: ({ children }) => (
-    <p className="py-2 text-wrap text-textLight dark:text-textDark">{children}</p>
+    <p className="py-2 text-wrap text-textLight dark:text-textDark">
+      {children}
+    </p>
   ),
   ul: ({ children }) => (
-    <ul className="text-textLight dark:text-textDark list-disc px-3">{children}</ul>
+    <ul className="text-textLight dark:text-textDark list-disc px-3">
+      {children}
+    </ul>
   ),
   ol: ({ children }) => (
     <ol className="font-normal text-base text-textLight dark:text-textDark">

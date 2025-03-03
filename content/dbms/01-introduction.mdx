@@ -8,87 +8,92 @@ author: CSExplore Team
 
 A **Database Management System (DBMS)** is the backbone of modern applications, storing and managing vast amounts of data efficiently. This module introduces databases, explains why we need DBMS, and compares database types.
 
-## 📖 Topics Covered  
+## 📖 Topics Covered
+
 ✅ **What is a Database?**  
 ✅ **Why do we need DBMS?**  
 ✅ **DBMS vs File System**  
 ✅ **Types of Databases (Relational, NoSQL, NewSQL, etc.)**  
-✅ **Popular DBMS Software (MySQL, PostgreSQL, MongoDB, etc.)**  
+✅ **Popular DBMS Software (MySQL, PostgreSQL, MongoDB, etc.)**
 
-## 🧐 What is a Database?  
+## 🧐 What is a Database?
 
-A **database** is an **organized collection of data** that allows easy access, retrieval, management, and updating of information.  
+A **database** is an **organized collection of data** that allows easy access, retrieval, management, and updating of information.
 
-### **Example**  
-Think of a **library catalog** 📚—it stores book records so you can search, borrow, and return books without confusion.  
+### **Example**
 
-| Term          | Meaning |
-|--------------|---------|
-| **Data**      | Raw facts (e.g., "John", "25", "New York") |
-| **Database**  | Organized collection of data |
-| **DBMS**      | Software that manages a database (e.g., MySQL) |
+Think of a **library catalog** 📚—it stores book records so you can search, borrow, and return books without confusion.
 
-## 🔥 Why Do We Need DBMS?  
+| Term         | Meaning                                        |
+| ------------ | ---------------------------------------------- |
+| **Data**     | Raw facts (e.g., "John", "25", "New York")     |
+| **Database** | Organized collection of data                   |
+| **DBMS**     | Software that manages a database (e.g., MySQL) |
 
-A **DBMS (Database Management System)** makes handling data easier, safer, and more efficient.  
+## 🔥 Why Do We Need DBMS?
 
-### **Problems with Traditional File Systems**  
+A **DBMS (Database Management System)** makes handling data easier, safer, and more efficient.
+
+### **Problems with Traditional File Systems**
+
 ❌ **Slow Data Access** – Searching millions of records in a file is inefficient.  
 ❌ **Data Redundancy** – Same data stored multiple times increases storage costs.  
 ❌ **No Security** – Anyone can access, edit, or delete files without control.  
-❌ **No Multi-user Access** – Difficult to manage concurrent users.  
+❌ **No Multi-user Access** – Difficult to manage concurrent users.
 
-### **How DBMS Solves These Problems**  
+### **How DBMS Solves These Problems**
+
 ✅ **Faster Access** – Uses indexes and optimized queries.  
 ✅ **Reduces Redundancy** – Follows normalization techniques.  
 ✅ **Ensures Security** – Role-based authentication & encryption.  
-✅ **Supports Multiple Users** – Handles concurrent requests with ACID transactions.  
+✅ **Supports Multiple Users** – Handles concurrent requests with ACID transactions.
 
 > **Real-World Example** 🏦: Banks use DBMS to securely store transactions and ensure data consistency across millions of accounts.
 
-## 📂 DBMS vs File System  
+## 📂 DBMS vs File System
 
-A **file system** stores data in raw files, whereas a **DBMS** structures data systematically.  
+A **file system** stores data in raw files, whereas a **DBMS** structures data systematically.
 
-| Feature        | File System 📁 | DBMS 🗄️ |
-|---------------|---------------|---------|
-| **Data Access** | Slower, requires reading entire file | Optimized with indexing |
-| **Data Security** | No security, anyone can access | Role-based security & encryption |
-| **Concurrency** | No multi-user access | Handles multiple users efficiently |
-| **Redundancy** | High, data duplication is common | Reduced using normalization |
+| Feature           | File System 📁                       | DBMS 🗄️                            |
+| ----------------- | ------------------------------------ | ---------------------------------- |
+| **Data Access**   | Slower, requires reading entire file | Optimized with indexing            |
+| **Data Security** | No security, anyone can access       | Role-based security & encryption   |
+| **Concurrency**   | No multi-user access                 | Handles multiple users efficiently |
+| **Redundancy**    | High, data duplication is common     | Reduced using normalization        |
 
 > **Analogy 🧐**: A **file system** is like a messy notebook 📝, while a **DBMS** is like a well-organized Excel sheet 📊.
 
-## 🔄 Types of Databases  
+## 🔄 Types of Databases
 
 Different applications require different database models. Let's explore the major types:
 
-| Type | Description | Examples |
-|------|------------|----------|
-| **Relational (SQL)** | Stores structured data in tables with relationships | MySQL, PostgreSQL, SQL Server |
-| **NoSQL** | Handles unstructured/semi-structured data; flexible schema | MongoDB, Cassandra, Redis |
-| **NewSQL** | Combines SQL features with NoSQL scalability | CockroachDB, Google Spanner |
-| **Graph DB** | Stores data as nodes & relationships, best for social networks | Neo4j, ArangoDB |
+| Type                 | Description                                                    | Examples                      |
+| -------------------- | -------------------------------------------------------------- | ----------------------------- |
+| **Relational (SQL)** | Stores structured data in tables with relationships            | MySQL, PostgreSQL, SQL Server |
+| **NoSQL**            | Handles unstructured/semi-structured data; flexible schema     | MongoDB, Cassandra, Redis     |
+| **NewSQL**           | Combines SQL features with NoSQL scalability                   | CockroachDB, Google Spanner   |
+| **Graph DB**         | Stores data as nodes & relationships, best for social networks | Neo4j, ArangoDB               |
 
-## 💡 Popular DBMS Software  
+## 💡 Popular DBMS Software
 
-| DBMS | Type | Used For |
-|------|------|---------|
-| **MySQL** | Relational | Web applications (e.g., WordPress, Shopify) |
-| **PostgreSQL** | Relational | High-performance databases (e.g., Instagram) |
-| **MongoDB** | NoSQL | JSON-based document storage (e.g., Netflix, Uber) |
-| **Redis** | NoSQL (Key-Value) | Caching & real-time analytics |
-| **Oracle DB** | Relational | Enterprise applications |
+| DBMS           | Type              | Used For                                          |
+| -------------- | ----------------- | ------------------------------------------------- |
+| **MySQL**      | Relational        | Web applications (e.g., WordPress, Shopify)       |
+| **PostgreSQL** | Relational        | High-performance databases (e.g., Instagram)      |
+| **MongoDB**    | NoSQL             | JSON-based document storage (e.g., Netflix, Uber) |
+| **Redis**      | NoSQL (Key-Value) | Caching & real-time analytics                     |
+| **Oracle DB**  | Relational        | Enterprise applications                           |
 
 > **Fun Fact** 🧠: Facebook started with **MySQL**, but later scaled with **NoSQL (Cassandra, RocksDB)** for performance!
 
-## 🏁 **Summary & Next Steps**  
+## 🏁 **Summary & Next Steps**
 
-### ✅ **Key Takeaways**  
+### ✅ **Key Takeaways**
+
 🔹 A **Database** is an organized collection of data.  
 🔹 **DBMS** makes data handling more **efficient, secure, and scalable**.  
 🔹 **File Systems** are outdated for complex data handling.  
 🔹 **SQL vs NoSQL** databases serve different purposes.  
-🔹 Popular DBMS software includes **MySQL, PostgreSQL, MongoDB, etc.**  
+🔹 Popular DBMS software includes **MySQL, PostgreSQL, MongoDB, etc.**
 
-### ✅ **Next up: Database Architecture & Models** 
+### ✅ **Next up: Database Architecture & Models**

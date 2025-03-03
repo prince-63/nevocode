@@ -39,7 +39,7 @@ Imagine you're splitting a pizza 🍕 with friends. You need to divide slices eq
 usign namespace std;
 
 int main() {
-    int a = 10, b = 3;
+int a = 10, b = 3;
 
     cout << "Sum: " << a + b << endl;
     cout << "Difference: " << a - b << endl;
@@ -48,11 +48,14 @@ int main() {
     cout << "Remainder: " << a % b << endl;
 
     return 0;
+
 }`
 }
+
 </CodeBlock>
 
-📌 **Output:**  
+📌 **Output:**
+
 ```c
 Sum: 13
  Difference: 7
@@ -88,18 +91,21 @@ Imagine setting up a security system. The alarm should ring if **either** the fr
 using namespace std;
 
 int main() {
-    int a = 1, b = 0;
+int a = 1, b = 0;
 
     cout << "AND: " << (a && b) << endl;  // Logical AND
     cout << "OR: " << (a || b) << endl;   // Logical OR
     cout << "NOT: " << (!a) << endl;      // Logical NOT
 
     return 0;
+
 }`
 }
+
 </CodeBlock>
 
-📌 **Output:**  
+📌 **Output:**
+
 ```c
 AND: 0
 OR: 1
@@ -145,18 +151,21 @@ Unary operators work on a **single value**, modifying it:
 using namespace std;
 
 int main() {
-    int a = 5;
+int a = 5;
 
     cout << "Pre-increment: " << ++a << endl;
     cout << "Post-increment: " << a++ << endl;
-    cout << "Value after post-increment: " << a << endl; 
+    cout << "Value after post-increment: " << a << endl;
 
     return 0;
+
 }`
 }
+
 </CodeBlock>
 
-📌 **Output:**  
+📌 **Output:**
+
 ```c
 Pre-increment: 6
  Post-increment: 6
@@ -170,9 +179,7 @@ Think of a shortcut for making decisions. The ternary operator works like an `if
 **Syntax:**
 
 <CodeBlock language="c">
-{
-`condition ? expression_if_true : expression_if_false;`
-}
+  {`condition ? expression_if_true : expression_if_false;`}
 </CodeBlock>
 
 **Example:**
@@ -183,17 +190,20 @@ Think of a shortcut for making decisions. The ternary operator works like an `if
 using namespace std;
 
 int main() {
-    int a = 10, b = 20;
-    int max = (a > b) ? a : b;
+int a = 10, b = 20;
+int max = (a > b) ? a : b;
 
     cout << "Max value is: " << max << endl;
 
     return 0;
+
 }`
 }
+
 </CodeBlock>
 
-📌 **Output:**  
+📌 **Output:**
+
 ```c
 Max value is: 20
 ```

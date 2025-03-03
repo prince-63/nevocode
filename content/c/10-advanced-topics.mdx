@@ -1,108 +1,114 @@
 ---
-title: Advanced Topics in C
+title: Advanced Topics
 description: Learn about command-line arguments, preprocessors, macros, and the basics of linked lists in C.
 author: CSExplore Team
 ---
 
-# 🚀 Advanced Topics in C  
+# 🚀 Advanced Topics in C
 
-## 🌟 Entering the Advanced Realm  
+## 🌟 Entering the Advanced Realm
 
-Now that you've mastered functions, pointers, and file handling, it's time to **explore advanced concepts** that make C even more powerful.  
+Now that you've mastered functions, pointers, and file handling, it's time to **explore advanced concepts** that make C even more powerful.
 
-Imagine you're working on a **command-line tool**, writing **optimized macros**, or **managing dynamic data structures**. These topics will help you **write efficient and flexible C programs**.  
+Imagine you're working on a **command-line tool**, writing **optimized macros**, or **managing dynamic data structures**. These topics will help you **write efficient and flexible C programs**.
 
-In this module, we'll cover:  
-- ✔️ **Command Line Arguments**: Making programs interactive.  
-- ✔️ **Preprocessors & Macros**: Writing optimized code.  
-- ✔️ **Linked Lists**: Understanding dynamic data structures.  
+In this module, we'll cover:
 
+- ✔️ **Command Line Arguments**: Making programs interactive.
+- ✔️ **Preprocessors & Macros**: Writing optimized code.
+- ✔️ **Linked Lists**: Understanding dynamic data structures.
 
-## 🎤 Command Line Arguments  
+## 🎤 Command Line Arguments
 
-### **What are Command Line Arguments?**  
+### **What are Command Line Arguments?**
 
-Ever wondered how programs take inputs **directly from the terminal**? That's where **command-line arguments** come in!  
+Ever wondered how programs take inputs **directly from the terminal**? That's where **command-line arguments** come in!
 
-These allow users to **pass data to a program while executing it**, making it more **dynamic and flexible**.  
+These allow users to **pass data to a program while executing it**, making it more **dynamic and flexible**.
 
-### **How They Work in C**  
+### **How They Work in C**
 
-In C, command-line arguments are handled by:  
+In C, command-line arguments are handled by:
 
 <CodeBlock langauge="c">
-{`int main(int argc, char *argv[])
-`} 
+  {`int main(int argc, char *argv[])
+`}
 </CodeBlock>
 
-- `argc` (argument count) holds the **number of arguments** passed.  
-- `argv` (argument vector) is an **array of strings** storing these arguments.  
+- `argc` (argument count) holds the **number of arguments** passed.
+- `argv` (argument vector) is an **array of strings** storing these arguments.
 
-### **Example: Printing Command-Line Arguments**  
+### **Example: Printing Command-Line Arguments**
 
 <CodeBlock language="c">
 {
 `#include <stdio.h>
 
-int main(int argc, char *argv[]) {
-    printf("Total arguments: %d\\n", argc);
+int main(int argc, char \*argv[]) {
+printf("Total arguments: %d\\n", argc);
 
     for (int i = 0; i < argc; i++) {
         printf("Argument %d: %s\\n", i, argv[i]);
     }
 
     return 0;
+
 }`
 }
-</CodeBlock>  
 
-📌 **Run this in the terminal:**  
-<CodeBlock langauge="bash">
-{`./program Hello World
-`} 
 </CodeBlock>
 
-📌 **Output:**  
+📌 **Run this in the terminal:**
+
+<CodeBlock langauge="bash">
+  {`./program Hello World
+`}
+</CodeBlock>
+
+📌 **Output:**
+
 ```bash
-Total arguments: 3  
- Argument 0: ./program  
- Argument 1: Hello  
- Argument 2: World  
+Total arguments: 3
+ Argument 0: ./program
+ Argument 1: Hello
+ Argument 2: World
 ```
 
-## 🔧 Preprocessors & Macros  
+## 🔧 Preprocessors & Macros
 
-### **The Power of Preprocessors**  
+### **The Power of Preprocessors**
 
-The **preprocessor** is the **first phase** of C compilation, handling directives that start with `#`.  
+The **preprocessor** is the **first phase** of C compilation, handling directives that start with `#`.
 
-**Common directives:**  
-- ✔️ `#include` → Includes header files.  
-- ✔️ `#define` → Creates macros.  
-- ✔️ `#ifdef`, `#ifndef` → Conditional compilation.  
+**Common directives:**
 
-### **Using Macros for Code Optimization**  
+- ✔️ `#include` → Includes header files.
+- ✔️ `#define` → Creates macros.
+- ✔️ `#ifdef`, `#ifndef` → Conditional compilation.
 
-Macros are **predefined instructions** that replace code **before compilation**.  
+### **Using Macros for Code Optimization**
 
-#### **Example: Defining Constants with `#define`**  
+Macros are **predefined instructions** that replace code **before compilation**.
+
+#### **Example: Defining Constants with `#define`**
 
 <CodeBlock language="c">
 {
 `#include <stdio.h>
 
-#define PI 3.14159  // Macro definition
+#define PI 3.14159 // Macro definition
 
 int main() {
-    printf("Value of PI: %.5f\\n", PI);
-    return 0;
+printf("Value of PI: %.5f\\n", PI);
+return 0;
 }`
 }
-</CodeBlock>  
+
+</CodeBlock>
 
 💡 **Benefit:** Macros make code **more readable and efficient**.
 
-### **Parameterized Macros: Writing Inline Functions**  
+### **Parameterized Macros: Writing Inline Functions**
 
 You can define macros with parameters for **function-like behavior**.
 
@@ -110,47 +116,51 @@ You can define macros with parameters for **function-like behavior**.
 {
 `#include <stdio.h>
 
-#define SQUARE(x) ((x) * (x)) // Macro for squaring a number
+#define SQUARE(x) ((x) \* (x)) // Macro for squaring a number
 
 int main() {
-    printf("Square of 5: %d\\n", SQUARE(5));
-    return 0;
+printf("Square of 5: %d\\n", SQUARE(5));
+return 0;
 }`
 }
-</CodeBlock>  
 
-📌 **Output:**  
+</CodeBlock>
+
+📌 **Output:**
+
 ```
 Square of 5: 25
 ```
 
-📌 **Why Use Macros?**  
-- ✔️ **Faster than functions** (no function calls).  
-- ✔️ **Useful for small, repetitive operations**.  
+📌 **Why Use Macros?**
 
-## 🔗 Introduction to Linked Lists  
+- ✔️ **Faster than functions** (no function calls).
+- ✔️ **Useful for small, repetitive operations**.
 
-### **Why Linked Lists?**  
+## 🔗 Introduction to Linked Lists
 
-Imagine you’re **managing a dynamic list of students**. Using arrays is inefficient since:  
-- ❌ You need a **fixed size**.  
-- ❌ Inserting/deleting requires **shifting elements**.  
+### **Why Linked Lists?**
+
+Imagine you’re **managing a dynamic list of students**. Using arrays is inefficient since:
+
+- ❌ You need a **fixed size**.
+- ❌ Inserting/deleting requires **shifting elements**.
 
 Linked lists solve this by **dynamically allocating memory**.-
 
-### **Understanding a Node**  
+### **Understanding a Node**
 
 A **linked list** is made of **nodes**, where **each node stores data and a pointer to the next node**.
 
 <CodeBlock language="c">
-{`struct Node {
+  {`struct Node {
     int data;
     struct Node *next;
 };
-`} 
+`}
 </CodeBlock>
 
-### **Creating a Linked List in C**  
+### **Creating a Linked List in C**
 
 Let’s create a simple **linked list** with three nodes.
 
@@ -161,13 +171,13 @@ Let’s create a simple **linked list** with three nodes.
 
 // Define a Node structure
 struct Node {
-    int data;
-    struct Node *next;
+int data;
+struct Node \*next;
 };
 
 int main() {
-    // Create nodes
-    struct Node *head = NULL, *second = NULL, *third = NULL;
+// Create nodes
+struct Node *head = NULL, *second = NULL, \*third = NULL;
 
     // Allocate memory
     head = (struct Node*)malloc(sizeof(struct Node));
@@ -175,13 +185,13 @@ int main() {
     third = (struct Node*)malloc(sizeof(struct Node));
 
     // Assign data & link nodes
-    head->data = 10; 
+    head->data = 10;
     head->next = second;
 
-    second->data = 20; 
+    second->data = 20;
     second->next = third;
 
-    third->data = 30; 
+    third->data = 30;
     third->next = NULL;
 
     // Print list
@@ -193,15 +203,18 @@ int main() {
     printf("NULL\\n");
 
     return 0;
+
 }`
 }
-</CodeBlock>  
 
-📌 **Output:**  
+</CodeBlock>
+
+📌 **Output:**
+
 ```
 10 -> 20 -> 30 -> NULL
 ```
 
-You’re now ready to build **efficient, flexible, and interactive C programs!** 🚀  
+You’re now ready to build **efficient, flexible, and interactive C programs!** 🚀
 
-🛠️ **Next up:** **Mastering Data Structures in C!** 📊  
+🛠️ **Next up:** **Mastering Data Structures in C!** 📊

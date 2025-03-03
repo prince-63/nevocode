@@ -1,5 +1,5 @@
 ---
-title: Operators in C
+title: Operators
 description: Learn about different types of operators in C programming and how they are used in expressions.
 author: CSExplore Team
 ---
@@ -38,15 +38,16 @@ Imagine you're splitting a pizza 🍕 with friends. You need to divide slices eq
 `#include <stdio.h>
 
 int main() {
-    int a = 10, b = 3;
-    printf("Sum: %d", a + b); // output-> Sum: 13
-    printf("Difference: %d", a - b); // output-> Difference: 7
-    printf("Product: %d", a * b); // output-> Product: 30
-    printf("Quotient: %d", a / b); // output-> Quotient: 3
-    printf("Remainder: %d", a % b); // output-> Remainder: 1
-    return 0;
+int a = 10, b = 3;
+printf("Sum: %d", a + b); // output-> Sum: 13
+printf("Difference: %d", a - b); // output-> Difference: 7
+printf("Product: %d", a \* b); // output-> Product: 30
+printf("Quotient: %d", a / b); // output-> Quotient: 3
+printf("Remainder: %d", a % b); // output-> Remainder: 1
+return 0;
 }`
 }
+
 </CodeBlock>
 
 ### **2. Relational Operators 🔄**
@@ -75,13 +76,14 @@ Imagine setting up a security system. The alarm should ring if **either** the fr
 `#include <stdio.h>
 
 int main() {
-    int a = 1, b = 0;
-    printf("AND: %d", a & b); // output-> AND: 0
-    printf("OR: %d", a | b); // output-> OR: 1
-    printf("NOT: %d", !a);  // output-> NOT: 0
-    return 0;
+int a = 1, b = 0;
+printf("AND: %d", a & b); // output-> AND: 0
+printf("OR: %d", a | b); // output-> OR: 1
+printf("NOT: %d", !a); // output-> NOT: 0
+return 0;
 }`
 }
+
 </CodeBlock>
 
 ### **4. Bitwise Operators ⚡**
@@ -122,13 +124,14 @@ Unary operators work on a **single value**, modifying it:
 `#include <stdio.h>
 
 int main() {
-    int a = 5;
-    printf("Pre-increment: %d", ++a); // output-> Pre-increment: 6
-    printf("Post-increment: %d", a++); // output-> Post-increment: 6 
-    printf("Value after post-increment: %d", a); // output-> Value after post-increment: 7
-    return 0;
+int a = 5;
+printf("Pre-increment: %d", ++a); // output-> Pre-increment: 6
+printf("Post-increment: %d", a++); // output-> Post-increment: 6
+printf("Value after post-increment: %d", a); // output-> Value after post-increment: 7
+return 0;
 }`
 }
+
 </CodeBlock>
 
 ### **7. Ternary Operator 🎭**
@@ -138,9 +141,7 @@ Think of a shortcut for making decisions. The ternary operator works like an `if
 **Syntax:**
 
 <CodeBlock language="c">
-{
-`condition ? expression_if_true : expression_if_false;`
-}
+  {`condition ? expression_if_true : expression_if_false;`}
 </CodeBlock>
 
 **Example:**
@@ -150,12 +151,13 @@ Think of a shortcut for making decisions. The ternary operator works like an `if
 `#include <stdio.h>
 
 int main() {
-    int a = 10, b = 20;
-    int max = (a > b) ? a : b;
-    printf("Max value is: %d", max); // output-> Max value is: 20
-    return 0;
+int a = 10, b = 20;
+int max = (a > b) ? a : b;
+printf("Max value is: %d", max); // output-> Max value is: 20
+return 0;
 }`
 }
+
 </CodeBlock>
 
 ---

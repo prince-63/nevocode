@@ -68,10 +68,12 @@ const TopicSection = () => {
               >
                 <div className="mb-3">{topic.icon}</div>
                 <H3 className="text-lg font-bold mb-2">{topic.title}</H3>
-                <P className="text-sm mb-4">{topic.description}</P>
+                <P className="text-sm mb-4">
+                  {topic.description.slice(0, 100)}
+                </P>
                 <Link
                   href={topic.href}
-                  className="text-sm text-primary hover:underline"
+                  className="text-sm text-primary dark:text-primary dark:hover:text-textDark hover:text-textLight transition-all"
                 >
                   Explore →
                 </Link>

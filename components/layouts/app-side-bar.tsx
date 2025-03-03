@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import { SquareChevronLeft } from "lucide-react";
 
 import {
   Sidebar,
@@ -6,60 +6,54 @@ import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
+  SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarTrigger,
 } from "@/components/ui/sidebar";
 import Logo from "../general/logo";
 import { Separator } from "../ui/separator";
+import { GuideType } from "@/utils/types";
+import Link from "../navigation/link";
+import { H4 } from "../ui/typography";
+import ThemeSwitcher from "../general/theme-switcher";
+import { lilita_one } from "@/utils/general/fonts";
 
-// Menu items.
-const items = [
-  {
-    title: "Home",
-    url: "#",
-    icon: Home,
-  },
-  {
-    title: "Inbox",
-    url: "#",
-    icon: Inbox,
-  },
-  {
-    title: "Calendar",
-    url: "#",
-    icon: Calendar,
-  },
-  {
-    title: "Search",
-    url: "#",
-    icon: Search,
-  },
-  {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
-  },
-];
+interface AppSidebarProps {
+  content: GuideType;
+}
 
-export function AppSidebar() {
+export async function AppSidebar({ content }: AppSidebarProps) {
   return (
-    <Sidebar className="static">
+    <Sidebar className="relative h-full left-0">
       <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupLabel className="h-12">
+        <SidebarGroup className="p-0">
+          <SidebarGroupLabel className="flex items-center justify-between h-12">
             <Logo />
+            <div className="flex items-center gap-2">
+              <ThemeSwitcher />
+              <SidebarTrigger className="md:hidden flex justify-center items-center hover:bg-gray-300 dark:hover:bg-gray-100 d active:bg-gray-200 rounded-lg p-1.5 transition-colors duration-200 [&_svg]:stroke-gray-800 dark:[&_svg]:stroke-gray-200 [&_svg]:hover:stroke-gray-700 dark:[&_svg]:hover:stroke-gray-900 [&_svg]:w-6 [&_svg]:h-6">
+                <SquareChevronLeft className="w-8 h-8" />
+              </SidebarTrigger>
+            </div>
           </SidebarGroupLabel>
-          <Separator className="bg-white mb-2" />
+          <Separator className="dark:bg-white bg-gray-200" />
           <SidebarGroupContent>
+            <SidebarHeader>
+              <H4
+                className={`${lilita_one.className} text-primary text-center dark:text-primary`}
+              >
+                {content.title}
+              </H4>
+            </SidebarHeader>
             <SidebarMenu>
-              {items.map((item) => (
+              {content.docs.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </a>
+                    <Link href={`/learn/${item.url}`} className="text-wrap">
+                      {item.title}
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}

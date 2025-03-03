@@ -4,7 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const iconButtonVariants = cva(
-  "flex justify-center items-center hover:bg-gray-300 dark:hover:bg-gray-200 active:bg-gray-200 rounded-lg p-1.5 transition-colors duration-200 [&_svg]:stroke-gray-600 [&_svg]:hover:stroke-gray-700",
+  "flex justify-center items-center hover:bg-gray-300 dark:hover:bg-gray-100 d active:bg-gray-200 rounded-lg p-1.5 transition-colors duration-200 [&_svg]:stroke-gray-800 dark:[&_svg]:stroke-gray-200 [&_svg]:hover:stroke-gray-700 dark:[&_svg]:hover:stroke-gray-900",
   {
     variants: {
       size: {

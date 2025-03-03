@@ -20,8 +20,13 @@ import Link from "@/components/navigation/link";
 import IconButton from "@/components/general/icon-button";
 import Logo from "@/components/general/logo";
 import ThemeSwitcher from "@/components/general/theme-switcher";
+import React from "react";
 
-const Header = () => {
+interface HeaderProps {
+  className?: string | "";
+}
+
+const Header = ({ className }: HeaderProps) => {
   const scrolled = useScroll(40);
   const [isOpen, setIsOpen] = useState(false);
   const size = useWindowSize();
@@ -36,6 +41,7 @@ const Header = () => {
     <header
       className={cn(
         "sticky top-0 z-30 h-[60px] flex items-center justify-center w-full bg-lightBg dark:bg-darkBg border-b border-transparent border-lightBg dark:border-darkBg",
+        className,
         scrolled
           ? "dark:border-lightBg/40 border-darkBg/40 backdrop-blur-xl"
           : "",

@@ -7,16 +7,14 @@ author: CSExplore Team
 # C++ Variable and Data Types 📝
 
 ## What are Variables? 🤔
+
 A **variable** in C++ is a name given to a memory location where data is stored. Every variable has a **data type**, which determines the kind of value it can store.
 
 ## **Declaring and Initializing Variables**
-Variables in C++ must be declared before use. The general syntax is: 
 
-<CodeBlock language="c">
-{
-`data_type variable_name = value;`
-}
-</CodeBlock>
+Variables in C++ must be declared before use. The general syntax is:
+
+<CodeBlock language="c">{`data_type variable_name = value;`}</CodeBlock>
 
 **Example:**
 
@@ -26,10 +24,10 @@ Variables in C++ must be declared before use. The general syntax is:
 using namespace std;
 
 int main() {
-    int age = 25;
-    float pi = 3.14;
-    char grade = 'A';
-    string name = "prince";
+int age = 25;
+float pi = 3.14;
+char grade = 'A';
+string name = "prince";
 
     cout << "Age: " << age << endl;
     cout << "PI: " << pi << endl;
@@ -37,11 +35,14 @@ int main() {
     cout << "Name: " << name << endl;
 
     return 0;
+
 }`
 }
+
 </CodeBlock>
 
-📌 **Output:**  
+📌 **Output:**
+
 ```c
 Age: 25
  PI: 3.14
@@ -50,43 +51,42 @@ Age: 25
 ```
 
 ### **Multiple Variable Declarations**
+
 You can declare multiple variables of the same type in a single line:
 
 <CodeBlock language="c">
-{
-`int a = 10, b = 20, c = 30;
-float x = 5.5, y = 10.5;`
-}
+  {`int a = 10, b = 20, c = 30;
+float x = 5.5, y = 10.5;`}
 </CodeBlock>
 
 ## Data Types in C++ 📊
 
 C++ provides several built-in data types:
 
-| Data Type      | Description                              | Size (32-bit) | Size (64-bit) |
-|---------------|--------------------------------------|--------------|--------------|
-| `int`         | Stores whole numbers                 | 4 bytes      | 8 bytes      |
-| `float`       | Stores decimal numbers (single-precision) | 4 bytes  | 4 bytes  |
-| `double`      | Stores double-precision floating-point numbers | 8 bytes  | 8 bytes  |
-| `char`        | Stores a single character            | 1 byte       | 1 byte       |
-| `string`      | Stores multiple characters (dynamic size) | Varies | Varies | 
-| `void`        | Represents an absence of data        | N/A          | N/A          |
-| `long`        | Extended size for integer values     | 8 bytes      | 8 bytes      |
-| `long long`   | Stores larger integer values        | 16 bytes     | 16 bytes     |
+| Data Type   | Description                                    | Size (32-bit) | Size (64-bit) |
+| ----------- | ---------------------------------------------- | ------------- | ------------- |
+| `int`       | Stores whole numbers                           | 4 bytes       | 8 bytes       |
+| `float`     | Stores decimal numbers (single-precision)      | 4 bytes       | 4 bytes       |
+| `double`    | Stores double-precision floating-point numbers | 8 bytes       | 8 bytes       |
+| `char`      | Stores a single character                      | 1 byte        | 1 byte        |
+| `string`    | Stores multiple characters (dynamic size)      | Varies        | Varies        |
+| `void`      | Represents an absence of data                  | N/A           | N/A           |
+| `long`      | Extended size for integer values               | 8 bytes       | 8 bytes       |
+| `long long` | Stores larger integer values                   | 16 bytes      | 16 bytes      |
 
 <br />
 
-### Here is a example of `void`: 
+### Here is a example of `void`:
 
 <CodeBlock language="c">
-{
-`void sum(int a, int b) {
+  {`void sum(int a, int b) {
     int result = a + b; // here we adding two variables values
     cout << result << endl;
-}`
-}
+}`}
 </CodeBlock>
-This function doesn't return anything, it calculate the value of a and b and display it. it looks like what happening is there, don't worry i will explain in the next section about the operator, then you can able to understandable easly.
+This function doesn't return anything, it calculate the value of a and b and
+display it. it looks like what happening is there, don't worry i will explain in
+the next section about the operator, then you can able to understandable easly.
 
 ### **Example Usage:**
 
@@ -96,26 +96,29 @@ This function doesn't return anything, it calculate the value of a and b and dis
 using namespace std;
 
 int main() {
-    int num = 10;
-    float percentage = 99.5;
-    char letter = 'B';
-    string name = "prince";
-    long long int long_value = 10;
-    double double_value = 10.239192;
-    
+int num = 10;
+float percentage = 99.5;
+char letter = 'B';
+string name = "prince";
+long long int long_value = 10;
+double double_value = 10.239192;
+
     cout << "Num: " << num << endl;
     cout << "Percentage: " << percentage << endl;
     cout << "Letter: " << letter << endl;
     cout << "Name: " << name << endl;
     cout << "Long value: " << long_value << endl;
     cout << "Double value: " << double_value << endl;
-    
+
     return 0;
+
 }`
 }
+
 </CodeBlock>
 
-📌 **Output:**  
+📌 **Output:**
+
 ```c
 Num: 10
  Percentage: 99.5
@@ -126,6 +129,7 @@ Num: 10
 ```
 
 ### **Size of Different Data Types**
+
 The `sizeof` operator can be used to determine the memory size of any data type:
 
 <CodeBlock language="c">
@@ -143,11 +147,14 @@ int main() {
     cout << "Size of string: " <<  sizeof(string) << endl;
 
     return 0;
+
 }`
 }
+
 </CodeBlock>
 
-📌 **Output:**  
+📌 **Output:**
+
 ```c
 Size of int: 4
  Size of float: 4
@@ -158,16 +165,15 @@ Size of int: 4
 ```
 
 ## Constants and Keywords 🔒
+
 - **Constants**: Values that do not change during program execution.
 - **Keywords**: Reserved words in C (e.g., `int`, `return`, `char`).
 
 Example of **constant declaration**:
 
 <CodeBlock language="c">
-{
-`#define PI 3.1415
-const int MAX_LIMIT = 100;`
-}
+  {`#define PI 3.1415
+const int MAX_LIMIT = 100;`}
 </CodeBlock>
 
 ### **Using Constants in a Program**
@@ -183,15 +189,18 @@ int main() {
 
     const int radius = 5;
     float area = PI * radius * radius;
-    
+
     cout << "The area of the circle is:" <<  area << endl;
 
     return 0;
+
 }`
 }
+
 </CodeBlock>
 
-📌 **Output:**  
+📌 **Output:**
+
 ```c
 The area of the circle is: 78.5
 ```

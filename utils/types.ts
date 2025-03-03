@@ -34,15 +34,11 @@ export interface NavLinkType {
   href: string;
 }
 
-export interface CourseTopicTypes {
+export interface GuideType {
   title: string;
   description: string;
-  link: string;
-}
-
-export interface CoursesContentTypes {
-  title: string;
-  name: string;
+  icon: React.ReactNode;
   docs: DocumentTypes[];
   slug: string;
+  href: string;
 }

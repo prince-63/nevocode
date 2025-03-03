@@ -65,7 +65,11 @@ const DrawerContent = React.forwardRef<
     <DrawerOverlay />
     <DrawerPrimitive.Content
       ref={ref}
-      className={cn(drawerVariants({side} ), "bg-lightBg dark:bg-darkBg", className)}
+      className={cn(
+        drawerVariants({ side }),
+        "bg-lightBg dark:bg-darkBg",
+        className,
+      )}
       {...props}
     >
       {children}

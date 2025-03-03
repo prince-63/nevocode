@@ -8,7 +8,7 @@ export default async function RootLayout({
 }>) {
   return (
     <div>
-      <Header/>
+      <Header />
       <main>{children}</main>
       <Footer />
     </div>
