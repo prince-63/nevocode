@@ -5,3 +5,4 @@ node_modules
 .contentlayer
 .next
 package-lock.json
+content
