@@ -32,3 +32,25 @@ body {
 .dark ::-webkit-scrollbar-track {
   background: white;
 } */
+
+:root {
+  --sidebar-background: 240 5.9% 98%; /* lightBg */
+  --sidebar-foreground: 240 5.3% 26.1%; /* textLight */
+  --sidebar-primary: 142 50% 39%; /* primary */
+  --sidebar-primary-foreground: 0 0% 98%; /* light text for contrast */
+  --sidebar-accent: 42 97% 56%; /* secondary */
+  --sidebar-accent-foreground: 240 5.9% 10%; /* dark text */
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+.dark {
+  --sidebar-background: 222 47% 15%; /* darkBg */
+  --sidebar-foreground: 220 13% 91%; /* textDark */
+  --sidebar-primary: 142 50% 39%; /* primary */
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 42 97% 56%; /* secondary */
+  --sidebar-accent-foreground: 220 13% 91%; /* textDark */
+  --sidebar-border: 240 3.7% 15.9%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}

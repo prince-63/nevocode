@@ -2,9 +2,10 @@
 
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { darcula } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { coldarkCold } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Copy } from "lucide-react";
 import { copyTextToClipboard } from "@/utils/general/copy-text-clipboard";
+import IconButton from "../general/icon-button";
 interface CodeBlockProps {
   language: string;
   children: React.ReactNode;
@@ -19,16 +20,17 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ language, children }) => {
 
   return (
     <div className="relative rounded-lg">
-      <button
+      <IconButton
         onClick={() => handleCopyClick(codeString)}
-        className="flex items-center justify-center w-8 h-8 p-1 bg-gray-100 rounded-md absolute right-2 top-2 hover:bg-gray-300"
+        className="rounded-md absolute right-2 top-2 hover:bg-gray-300 border border-1"
+        size="sm"
       >
-        <Copy width={18} />
-      </button>
+        <Copy />
+      </IconButton>
       <SyntaxHighlighter
         language={language}
-        style={darcula}
-        className="rounded-lg border border-gray-300 p-3"
+        className="rounded-lg p-3"
+        style={coldarkCold}
       >
         {codeString}
       </SyntaxHighlighter>

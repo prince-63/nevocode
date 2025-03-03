@@ -10,34 +10,44 @@ const tailwindConfig = {
     "./content/**/*.{js,ts,jsx,tsx,mdx,md}",
   ],
   theme: {
-    extend: {
-      colors: {
-        primary: "#388E3C", // Deep blue for CTAs
-        secondary: "#F59E0B", // Muted orange for highlights
-        darkBg: "#0F172A", // Dark mode background
-        lightBg: "#F9FAFB", // Light mode background
-        textLight: "#1F2937", // Dark gray text
-        textDark: "#E2E8F0", // Light gray text for dark mode
-      },
-      keyframes: {
-        open: {
-          "0%": {
-            opacity: "1",
-            transform: "translateX(100%)",
-          },
-        },
-        close: {
-          to: {
-            opacity: "0",
-            transform: "translateX(100%)",
-          },
-        },
-      },
-      animation: {
-        "drawer-open": "open 0.3s ease-in-out",
-        "drawer-close": "close 0.3s ease-in-out",
-      },
-    },
+  	extend: {
+  		colors: {
+  			primary: '#388E3C',
+  			secondary: '#F59E0B',
+  			darkBg: '#0F172A',
+  			lightBg: '#F9FAFB',
+  			textLight: '#1F2937',
+  			textDark: '#E2E8F0',
+  			sidebar: {
+  				DEFAULT: 'hsl(var(--sidebar-background))',
+  				foreground: 'hsl(var(--sidebar-foreground))',
+  				primary: 'hsl(var(--sidebar-primary))',
+  				'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
+  				accent: 'hsl(var(--sidebar-accent))',
+  				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+  				border: 'hsl(var(--sidebar-border))',
+  				ring: 'hsl(var(--sidebar-ring))'
+  			}
+  		},
+  		keyframes: {
+  			open: {
+  				'0%': {
+  					opacity: '1',
+  					transform: 'translateX(100%)'
+  				}
+  			},
+  			close: {
+  				to: {
+  					opacity: '0',
+  					transform: 'translateX(100%)'
+  				}
+  			}
+  		},
+  		animation: {
+  			'drawer-open': 'open 0.3s ease-in-out',
+  			'drawer-close': 'close 0.3s ease-in-out'
+  		}
+  	}
   },
   plugins: [tailwindAnimate],
 } satisfies Config;

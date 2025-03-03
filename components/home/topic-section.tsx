@@ -2,7 +2,6 @@ import { Database, Layers, Server, Terminal } from "lucide-react";
 import Link from "../navigation/link";
 import { H1, H3, P } from "../ui/typography";
 import { lilita_one } from "@/utils/general/fonts";
-import { Button } from "../ui/button";
 
 interface TopicListTypes {
   title: string;
@@ -65,7 +64,7 @@ const TopicSection = () => {
             return (
               <div
                 key={index}
-                className="w-full  sm:w-[260px] min-h-max flex flex-col rounded-lg border border-gray-200 p-6 hover:border-green-700 transition-all hover:shadow-md"
+                className="w-full  sm:w-[260px] min-h-max flex flex-col rounded-lg border border-gray-200 p-6 hover:border-primary transition-all hover:shadow-md"
               >
                 <div className="mb-3">{topic.icon}</div>
                 <H3 className="text-lg font-bold mb-2">{topic.title}</H3>
@@ -79,11 +78,6 @@ const TopicSection = () => {
               </div>
             );
           })}
-        </div>
-        <div className="flex justify-center">
-          <Link href="/all-topics">
-            <Button size="lg">View All Topics</Button>
-          </Link>
         </div>
       </div>
     </section>

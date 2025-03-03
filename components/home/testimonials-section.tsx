@@ -26,7 +26,7 @@ const TestimonialsSection = () => {
             return (
               <div
                 key={index}
-                className="min-h-max flex flex-col rounded-lg border border-gray-200 hover:border-green-700 transition-all p-6"
+                className="min-h-max flex flex-col rounded-lg border border-gray-200 hover:border-primary transition-all p-6"
               >
                 <div className="flex items-center mb-4">
                   <Image
