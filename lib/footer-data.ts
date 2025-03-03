@@ -52,15 +52,15 @@ export const companyList: CompanyType[] = [
 
 export const LegalList: LegalType[] = [
   {
-    name: "Privacy",
+    name: "Privacy Policy",
     href: "/home/privacy",
   },
   {
-    name: "Terms",
-    href: "/terms",
+    name: "Terms of Service",
+    href: "/home/terms",
   },
   {
     name: "Cookie Policy",
-    href: "cookie-policy",
+    href: "/home/cookie",
   },
 ];
