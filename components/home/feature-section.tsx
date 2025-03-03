@@ -2,6 +2,33 @@ import { lilita_one } from "@/utils/general/fonts";
 import { BookOpen, Code, Users } from "lucide-react";
 import { H1, H3, P } from "../ui/typography";
 
+interface FeatureType {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+const featureList: FeatureType[] = [
+  {
+    icon: <BookOpen className="h-10 w-10 text-primary" />,
+    title: "Structured Learning",
+    description:
+      "Follow carefully designed learning paths that build on each other, ensuring you develop a comprehensive understanding.",
+  },
+  {
+    icon: <Code className="h-10 w-10 text-primary" />,
+    title: "Practical Coding",
+    description:
+      "Apply what you learn with hands-on coding exercises and projects that reinforce theoretical concepts.",
+  },
+  {
+    icon: <Users className="h-10 w-10 text-primary" />,
+    title: "Self-Paced",
+    description:
+      "Learn at your own pace, revisit concepts as needed, and progress when you're ready to move forward.",
+  },
+];
+
 const FeatureSection = () => {
   return (
     <section
@@ -25,36 +52,18 @@ const FeatureSection = () => {
           </div>
         </div>
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
-          <div className="rounded-lg border-2 border-primary/10 p-6 hover:border-primary transition-all hover:shadow-md">
-            <div className="mb-4">
-              <BookOpen className="h-10 w-10 text-primary" />
-            </div>
-            <h3 className="text-xl font-bold mb-2">Structured Learning</h3>
-            <P className="text-gray-600">
-              Follow carefully designed learning paths that build on each other,
-              ensuring you develop a comprehensive understanding.
-            </P>
-          </div>
-          <div className="rounded-lg border-2 border-primary/10 p-6 hover:border-primary transition-all hover:shadow-md">
-            <div className="mb-4">
-              <Code className="h-10 w-10 text-primary" />
-            </div>
-            <H3 className="text-xl font-bold mb-2">Practical Coding</H3>
-            <P className="text-gray-600">
-              Apply what you learn with hands-on coding exercises and projects
-              that reinforce theoretical concepts.
-            </P>
-          </div>
-          <div className="rounded-lg border-2 border-primary/10 p-6 hover:border-primary transition-all hover:shadow-md">
-            <div className="mb-4">
-              <Users className="h-10 w-10 text-primary" />
-            </div>
-            <H3 className="text-xl font-bold mb-2">Self-Paced</H3>
-            <P className="text-gray-600">
-              Learn at your own pace, revisit concepts as needed, and progress
-              when you&apos;re ready to move forward.
-            </P>
-          </div>
+          {featureList.map((feature, index) => {
+            return (
+              <div
+                key={index}
+                className="rounded-lg border border-gray-200 hover:border-primary p-6 transition-all hover:shadow-md"
+              >
+                <div className="mb-4">{feature.icon}</div>
+                <H3 className="text-xl font-bold mb-2">{feature.title}</H3>
+                <P className="text-gray-600">{feature.description}</P>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -15,12 +15,12 @@ const HeroSection = () => {
           Structured learning for programming, algorithms, and system design.
         </P>
         <div className="w-full flex flex-col mt-2 gap-4 px-4 sm:flex-row sm:items-center sm:w-min">
-          <Link href="/courses">
+          <Link href="/home/guides">
             <Button className="w-full" size="lg" variant="outline">
-              Explore Courses
+              Explore Guides
             </Button>
           </Link>
-          <Link href="/topics">
+          <Link href="/home/topics">
             <Button className="w-full" size="lg">
               Browse Topics
             </Button>

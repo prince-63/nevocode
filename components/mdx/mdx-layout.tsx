@@ -1,7 +1,7 @@
 
 const MdxLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="my-4 max-w-md">
+    <div className="my-4">
       {children}
     </div>
   );
