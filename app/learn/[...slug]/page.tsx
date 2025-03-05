@@ -4,6 +4,7 @@ import { guides } from "@/lib/guides-data";
 import { GuideType } from "@/utils/types";
 import RenderContent from "@/components/mdx/render-content";
 import ContentMobileHeader from "@/components/layouts/content-mobile-header";
+import { Metadata } from "next";
 
 interface PageParams {
   params: Promise<{ slug: string }>;
@@ -50,4 +51,24 @@ export default async function Home({ params }: PageParams) {
       </div>
     </div>
   );
+}
+
+export async function generateMetadata({
+  params,
+}: PageParams): Promise<Metadata> {
+  const data = await extractArticle({ params });
+
+  if (!data?.content) {
+    return {
+      title: "Article Not Found - CSExplore",
+      description: "The requested article could not be found on CSExplore.",
+    };
+  }
+
+  const renderContent = await filterRenderContent(data);
+
+  return {
+    title: renderContent?.title,
+    description: renderContent?.description,
+  };
 }
