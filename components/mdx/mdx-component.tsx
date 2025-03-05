@@ -57,7 +57,7 @@ export const mdxComponent: MDXComponents = {
   p: ({ className, ...props }) => (
     <p
       className={cn(
-        "leading-7 text-md font-normal [&:not(:first-child)]:my-1",
+        "leading-7 text-md font-normal dark:font-light [&:not(:first-child)]:my-1",
         className,
       )}
       {...props}

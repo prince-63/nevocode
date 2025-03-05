@@ -49,7 +49,7 @@ export const Lead = createComponent<HTMLParagraphElement>(
 
 export const P = createComponent<HTMLParagraphElement>(
   "p",
-  `text-textLight dark:text-textDark`,
+  `text-textLight dark:text-textDark dark:font-light`,
   "P",
 );
 

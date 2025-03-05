@@ -26,7 +26,7 @@ export default function GuidesPage() {
                 {guide.icon}
                 <H3 className="text-lg font-bold ml-4">{guide.title}</H3>
               </div>
-              <P className="text-sm mb-4">{guide.description.slice(0, 150)}</P>
+              <P className="text-md mb-4">{guide.description.slice(0, 150)}</P>
               <Link
                 href={guide.href}
                 className="flex items-center gap-1 text-sm text-primary dark:text-primary dark:hover:text-textDark hover:text-textLight transition-all"

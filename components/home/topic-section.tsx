@@ -68,7 +68,7 @@ const TopicSection = () => {
               >
                 <div className="mb-3">{topic.icon}</div>
                 <H3 className="text-lg font-bold mb-2">{topic.title}</H3>
-                <P className="text-sm mb-4">
+                <P className="text-md mb-4">
                   {topic.description.slice(0, 100)}
                 </P>
                 <Link

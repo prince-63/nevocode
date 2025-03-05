@@ -8,7 +8,6 @@ import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
-  SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -18,7 +17,6 @@ import Logo from "../general/logo";
 import { Separator } from "../ui/separator";
 import { GuideType } from "@/utils/types";
 import Link from "../navigation/link";
-import { H2 } from "../ui/typography";
 import ThemeSwitcher from "../general/theme-switcher";
 import IconButton from "../general/icon-button";
 import { Checkbox } from "../ui/checkbox";
@@ -45,19 +43,19 @@ export function AppSidebar({ content }: AppSidebarProps) {
           </SidebarGroupLabel>
           <Separator className="dark:bg-white/10 bg-gray-200" />
           <SidebarGroupContent>
-            <SidebarHeader className="bg-lightBg/10 dark:bg-darkBg/10 py-0">
-              <H2 className="pl-1 text-lg font-medium">{content.title}</H2>
-            </SidebarHeader>
             <Separator className="dark:bg-white/10 bg-gray-200 mb-1" />
             <SidebarMenu>
               {content.docs.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton className="px-3" asChild>
+                  <SidebarMenuButton
+                    className="px-3 hover:text-primary"
+                    asChild
+                  >
                     <div>
-                      <Checkbox />
+                      <Checkbox className="w-5 h-5" />
                       <Link
                         href={`/learn/${item.url}`}
-                        className="text-md text-wrap"
+                        className="font-normal w-full text-wrap"
                       >
                         {item.title}
                       </Link>

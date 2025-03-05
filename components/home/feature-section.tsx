@@ -60,7 +60,7 @@ const FeatureSection = () => {
               >
                 <div className="mb-4">{feature.icon}</div>
                 <H3 className="text-lg font-bold mb-2">{feature.title}</H3>
-                <P className="text-sm text-gray-600">{feature.description}</P>
+                <P className="text-md text-gray-600">{feature.description}</P>
               </div>
             );
           })}
