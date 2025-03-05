@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/style/globals.css";
 import { karla } from "@/utils/general/fonts";
 import { Providers } from "@/lib/providers";
+import { Provider } from "./provider";
 
 export const metadata: Metadata = {
   title: {
@@ -19,13 +20,15 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
-      <body className={`${karla.className} `}>
-        <Providers>
-          <main className="relative flex bg-lightBg dark:bg-darkBg text-textLight dark:text-textDark w-full flex-col">
-            {children}
-          </main>
-        </Providers>
-      </body>
+      <Provider>
+        <body className={`${karla.className} `}>
+          <Providers>
+            <main className="relative flex bg-lightBg dark:bg-darkBg text-textLight dark:text-textDark w-full flex-col">
+              {children}
+            </main>
+          </Providers>
+        </body>
+      </Provider>
     </html>
   );
 }
