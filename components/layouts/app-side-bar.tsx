@@ -1,4 +1,6 @@
-import { SquareChevronLeft } from "lucide-react";
+"use client";
+
+import { ChevronsLeft } from "lucide-react";
 
 import {
   Sidebar,
@@ -10,21 +12,24 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarTrigger,
+  useSidebar,
 } from "@/components/ui/sidebar";
 import Logo from "../general/logo";
 import { Separator } from "../ui/separator";
 import { GuideType } from "@/utils/types";
 import Link from "../navigation/link";
-import { H4 } from "../ui/typography";
+import { H2 } from "../ui/typography";
 import ThemeSwitcher from "../general/theme-switcher";
-import { lilita_one } from "@/utils/general/fonts";
+import IconButton from "../general/icon-button";
+import { Checkbox } from "../ui/checkbox";
 
 interface AppSidebarProps {
   content: GuideType;
 }
 
-export async function AppSidebar({ content }: AppSidebarProps) {
+export function AppSidebar({ content }: AppSidebarProps) {
+  const { toggleSidebar } = useSidebar();
+
   return (
     <Sidebar className="relative h-full left-0">
       <SidebarContent>
@@ -33,27 +38,30 @@ export async function AppSidebar({ content }: AppSidebarProps) {
             <Logo />
             <div className="flex items-center gap-2">
               <ThemeSwitcher />
-              <SidebarTrigger className="md:hidden flex justify-center items-center hover:bg-gray-300 dark:hover:bg-gray-100 d active:bg-gray-200 rounded-lg p-1.5 transition-colors duration-200 [&_svg]:stroke-gray-800 dark:[&_svg]:stroke-gray-200 [&_svg]:hover:stroke-gray-700 dark:[&_svg]:hover:stroke-gray-900 [&_svg]:w-6 [&_svg]:h-6">
-                <SquareChevronLeft className="w-8 h-8" />
-              </SidebarTrigger>
+              <IconButton className="md:hidden" onClick={() => toggleSidebar()}>
+                <ChevronsLeft />
+              </IconButton>
             </div>
           </SidebarGroupLabel>
-          <Separator className="dark:bg-white bg-gray-200" />
+          <Separator className="dark:bg-white/10 bg-gray-200" />
           <SidebarGroupContent>
-            <SidebarHeader>
-              <H4
-                className={`${lilita_one.className} text-primary text-center dark:text-primary`}
-              >
-                {content.title}
-              </H4>
+            <SidebarHeader className="bg-lightBg/10 dark:bg-darkBg/10 py-0">
+              <H2 className="pl-1 text-lg font-medium">{content.title}</H2>
             </SidebarHeader>
+            <Separator className="dark:bg-white/10 bg-gray-200 mb-1" />
             <SidebarMenu>
               {content.docs.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <Link href={`/learn/${item.url}`} className="text-wrap">
-                      {item.title}
-                    </Link>
+                  <SidebarMenuButton className="px-3" asChild>
+                    <div>
+                      <Checkbox />
+                      <Link
+                        href={`/learn/${item.url}`}
+                        className="text-md text-wrap"
+                      >
+                        {item.title}
+                      </Link>
+                    </div>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}

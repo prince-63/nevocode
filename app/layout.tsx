@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/style/globals.css";
 import { karla } from "@/utils/general/fonts";
 import { Providers } from "@/lib/providers";
 

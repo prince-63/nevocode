@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1280px;
+  margin: 0px auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(231, 231, 231);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(186, 186, 186);
+  border: 3px solid rgba(var(--app-gray-200), 1);
+  border-radius: 50px 50px 50px 50px;
+}
+
+/* .dark ::-webkit-scrollbar-thumb {
+  background-color: rgb(55, 65, 81);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: white;
+} */
+
+:root {
+  --sidebar-background: 210 20% 98%;
+  --sidebar-foreground: 220 28% 17%;
+  --sidebar-primary: 123 45% 39%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 210 20% 98%;
+  --sidebar-accent-foreground: 220 28% 17%;
+  --sidebar-border: 220 20% 92%;
+  --sidebar-ring: 217 73% 50%;
+  --sidebar-hover: 220 20% 92%;
+}
+
+.dark {
+  --sidebar-background: 216, 18%, 16%;
+  --sidebar-foreground: 0 0% 88%;
+  --sidebar-primary: 123 45% 39%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 0 0% 7%;
+  --sidebar-accent-foreground: 0 0% 7%;
+  --sidebar-border: 220 14% 17%;
+  --sidebar-ring: 220 14% 19%;
+  --sidebar-hover: 0 0% 12%;
+}
+
+/* mdx style */
+strong {
+  font-weight: 500;
+}

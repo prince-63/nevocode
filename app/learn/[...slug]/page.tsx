@@ -40,10 +40,12 @@ export default async function Home({ params }: PageParams) {
   return (
     <div className="h-screen flex">
       <AppSidebar content={data.content} />
-      <div className="h-screen w-full overflow-y-auto" id="main_side_view_area">
-        <ContentMobileHeader />
-        <div className="px-4">
-          <RenderContent mdxContent={renderContent?.body.code ?? ""} />
+      <div className="h-screen flex-1 overflow-y-auto" id="main_side_view_area">
+        <div>
+          <ContentMobileHeader />
+          <div className="px-4">
+            <RenderContent mdxContent={renderContent?.body.code ?? ""} />
+          </div>
         </div>
       </div>
     </div>

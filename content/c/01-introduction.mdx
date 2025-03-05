@@ -10,6 +10,8 @@ Have you ever wondered how your mobile phone works? How do communication network
 
 ## What is C?
 
+![image](/images/data-structure.png)
+
 C is a **general-purpose, procedural programming language** developed by **Dennis Ritchie** in **1972** at Bell Labs. It remains one of the most influential programming languages, known for its efficiency, portability, and direct access to system hardware. C is widely used for **system programming, operating systems, embedded systems, and high-performance applications**.
 
 ## Why Learn C? 🧐
@@ -28,22 +30,19 @@ To start writing programs in C, you'll need a **compiler** and a **code editor**
 
 Let's write a simple **Hello, World!** program in C.
 
-<CodeBlock language="c">
-{
-`#include <stdio.h>
+```c
+#include <stdio.h>
 
 int main() {
-printf("Hello, World!");
-return 0;
-}`
+    printf("Hello, World!");
+    return 0;
 }
-
-</CodeBlock>
+```
 
 📌 **Output:**
 
 ```
-Hello World!
+Hello, World!
 ```
 
 ## **Explanation:**
@@ -55,17 +54,17 @@ Hello World!
 
 ## **Compiling & Running the Program For Windows:**
 
-<CodeBlock language="bash">
-  {`gcc hello.c -o hello.exe
-hello.exe`}
-</CodeBlock>
+```bash
+gcc hello.c -o hello.exe
+hello.exe
+```
 
 ## **Compiling & Running the Program For macOS/Linux:**
 
-<CodeBlock language="bash">
-  {`gcc hello.c -o hello
-./hello`}
-</CodeBlock>
+```bash
+gcc hello.c -o hello
+./hello
+```
 
 ## Understanding C Compilation Process ⚙️
 
@@ -76,6 +75,19 @@ The C compilation process consists of several steps. First, **preprocessing** ta
 Unlike interpreted languages like Python, which execute code line by line at runtime, **C requires compilation** to convert source code into machine-executable code before running the program. This compilation process makes C much faster in execution since the code is already translated into a format that the computer can directly understand.
 
 Understanding how compilation works is crucial for effective debugging and optimization. Since errors are detected during the compilation phase, fixing them early prevents runtime failures. Additionally, optimizing compiled code allows programs to run more efficiently, making better use of system resources. This is especially important in performance-critical applications such as operating systems, game engines, and embedded systems.
+
+
+| Data Type   | Description                                    | Size (32-bit) | Size (64-bit) |
+| ----------- | ---------------------------------------------- | ------------- | ------------- |
+| `int`       | Stores whole numbers                           | 4 bytes       | 8 bytes       |
+| `float`     | Stores decimal numbers (single-precision)      | 4 bytes       | 4 bytes       |
+| `double`    | Stores double-precision floating-point numbers | 8 bytes       | 8 bytes       |
+| `char`      | Stores a single character                      | 1 byte        | 1 byte        |
+| `void`      | Represents an absence of data                  | N/A           | N/A           |
+| `long`      | Extended size for integer values               | 8 bytes       | 8 bytes       |
+| `long long` | Stores larger integer values                   | 16 bytes      | 16 bytes      |
+
+> Hello World
 
 ---
 

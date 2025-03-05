@@ -9,5 +9,6 @@ export const karla = Karla({
   weight: ["300", "400", "500", "700", "800"],
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-karla",
 });
+

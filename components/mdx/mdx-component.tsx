@@ -1,87 +1,158 @@
+import { cn } from "@/lib/utils";
 import type { MDXComponents } from "mdx/types";
-import CodeBlock from "./code-block";
+import Image from "next/image";
+import Link from "next/link";
 
 export const mdxComponent: MDXComponents = {
-  CodeBlock,
-  h1: ({ children }) => (
-    <h1 className="text-lg sm:text-xl justify-center text-center font-bold text-textLight dark:text-textDark py-4">
-      {children}
-    </h1>
+  h1: ({ className, ...props }) => (
+    <h1
+      className={cn(
+        "scroll-m-20 font-medium tracking-tight text-lg justify-center text-center py-4",
+        className,
+      )}
+      {...props}
+    />
   ),
-  h2: ({ children }) => (
-    <h2 className="py-1 text-textLight dark:text-textDark   font-bold">
-      {children}
-    </h2>
+  h2: ({ className, ...props }) => (
+    <h2
+      className={cn("my-2 text-md scroll-m-20 font-medium ", className)}
+      {...props}
+    />
   ),
-  h3: ({ children }) => (
-    <h3 className="py-1 text-textLight dark:text-textDark  font-bold">
-      {children}
-    </h3>
+  h3: ({ className, ...props }) => (
+    <h3
+      className={cn("my-1 text-md scroll-m-20 font-medium ", className)}
+      {...props}
+    />
   ),
-  p: ({ children }) => (
-    <p className="py-2 text-wrap text-textLight dark:text-textDark">
-      {children}
-    </p>
+  h4: ({ className, ...props }) => (
+    <h4 className={cn("scroll-m-20 font-normal", className)} {...props} />
   ),
-  ul: ({ children }) => (
-    <ul className="text-textLight dark:text-textDark list-disc px-3">
-      {children}
-    </ul>
+  a: ({ href, className, ...props }) => {
+    const customClassName = "text-blue-500 hover:text-blue-700";
+    if (href?.startsWith("/")) {
+      return (
+        <Link
+          ref={href}
+          className={cn(customClassName, className)}
+          {...props}
+        />
+      );
+    }
+    if (href?.startsWith("#")) {
+      return (
+        <a href={href} className={cn(customClassName, className)} {...props} />
+      );
+    }
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={cn(customClassName, className)}
+        {...props}
+      />
+    );
+  },
+  p: ({ className, ...props }) => (
+    <p
+      className={cn(
+        "leading-7 text-md font-normal [&:not(:first-child)]:my-1",
+        className,
+      )}
+      {...props}
+    />
   ),
-  ol: ({ children }) => (
-    <ol className="font-normal text-base text-textLight dark:text-textDark">
-      {children}
-    </ol>
+  ul: ({ className, ...props }) => (
+    <ul className={cn("ml-3.5 list-disc", className)} {...props} />
   ),
-  li: ({ children }) => (
-    <li className="my-1 text-textLight dark:text-textDark">{children}</li>
+  ol: ({ className, ...props }) => (
+    <ol className={cn("ml-3.5 list-decimal", className)} {...props} />
   ),
-  blockquote: ({ children }) => (
-    <blockquote className="my-1 border-l-2 border-blue-500 p-2 italic bg-lightBg/80 dark:bg-darkBg/90 text-textLight dark:text-textDark">
-      {children}
-    </blockquote>
+  li: ({ className, ...props }) => (
+    <li className={cn("text-md", className)} {...props} />
   ),
-  pre: ({ children }) => (
-    <pre className="bg-slate-200 rounded-sm p-4 overflow-x-auto">
-      {children}
-    </pre>
-    // <MultilineCode>{children}</MultilineCode>
+  blockquote: ({ className, ...props }) => (
+    <blockquote
+      className={cn(
+        "my-1 border-l-2 pl-2 italic [&>*]:text-muted-foreground",
+        className,
+      )}
+      {...props}
+    />
   ),
-  code: ({ children }) => (
-    // <InlineCode>{children}</InlineCode>
-    <code className="bg-slate-200 text-textLight">{children}</code>
-  ),
-  strong: ({ children }) => (
-    <strong className="text-textLight dark:text-textDark font-medium">
-      {children}
-    </strong>
-  ),
-  em: ({ children }) => <em className="italic text-gray-800">{children}</em>,
-  hr: () => <hr className="my-4 border-gray-300" />,
-  a: ({ children, href }) => (
-    <a href={href} className="text-blue-500 font-medium">
-      {children}
-    </a>
-  ),
-  table: ({ children }) => (
-    <div className="overflow-x-auto">
-      <table className="w-full border-collapse border border-gray-300">
-        {children}
-      </table>
+  img: ({
+    src,
+    alt,
+    width,
+    height,
+    ...props
+  }: React.ImgHTMLAttributes<HTMLImageElement>) => {
+    // conversion of width string to number
+    const newWidth = width?.toString() || "759";
+    const widthInNumber = parseInt(newWidth, 10);
+
+    // conversion of height string to number
+    const newHeight = height?.toString() || "759";
+    const heightInNumber = parseInt(newHeight, 10);
+    return (
+      <Image
+        {...props}
+        layout="responsive"
+        loading="lazy"
+        alt={`${alt}`}
+        src={`${src}`}
+        width={widthInNumber}
+        height={heightInNumber}
+      />
+    );
+  },
+  table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
+    <div className="my-6 w-full overflow-y-auto">
+      <table className={cn("w-full", className)} {...props} />
     </div>
   ),
-  thead: ({ children }) => <thead>{children}</thead>,
-  tbody: ({ children }) => (
-    <tbody className="divide-y divide-gray-200">{children}</tbody>
+  tr: ({ className, ...props }: React.HTMLAttributes<HTMLTableRowElement>) => (
+    <tr
+      className={cn("m-0 border-t p-0 even:bg-muted", className)}
+      {...props}
+    />
   ),
-  tr: ({ children }) => <tr>{children}</tr>,
-  th: ({ children }) => (
-    <th className="border border-gray-300 px-4 py-2 text-left font-medium">
-      {children}
-    </th>
+  th: ({ className, ...props }) => (
+    <th
+      className={cn(
+        "border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
+        className,
+      )}
+      {...props}
+    />
   ),
-  td: ({ children }) => (
-    <td className="border border-gray-300 px-4 py-2">{children}</td>
+  td: ({ className, ...props }) => (
+    <td
+      className={cn(
+        "border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
+        className,
+      )}
+      {...props}
+    />
   ),
-  br: ({ children }) => <br className="h-1">{children}</br>,
+  pre: ({ className, ...props }) => (
+    <pre
+      className={cn("w-full bg-slate-300 dark:bg-slate-700 overflow-auto rounded-md p-2", className)}
+      {...props}
+    />
+  ),
+  code: ({ className, ...props }) => (
+    <code
+      className={cn("relative rounded font-mono text-md", className)}
+      {...props}
+    />
+  ),
+  figure: ({ className, ...props }) => (
+    <figure className={cn("overflow-x-auto border dark:border-gray-600 rounded-md", className)} {...props} />
+  ),
+  span: ({ className, ...props }) => (
+    <span className={cn("text-wrap", className)} {...props} />
+  ),
+  Image,
 };

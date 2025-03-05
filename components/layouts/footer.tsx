@@ -1,5 +1,5 @@
 import Link from "../navigation/link";
-import { H4, P } from "../ui/typography";
+import { P } from "../ui/typography";
 import Logo from "../general/logo";
 import {
   companyList,
@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="flex-1 md:flex md:justify-end">
           <div className="grid grid-cols-2 gap-10 sm:grid-cols-4">
             <div className="space-y-3">
-              <H4 className="text-sm font-medium">Platform</H4>
+              <h4 className="text-sm font-medium">Platform</h4>
               <ul className="space-y-2">
                 {platformLinkList.map((platform, index) => {
                   return (
