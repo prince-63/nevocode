@@ -55,6 +55,14 @@ export const DBMS = defineDocumentType(() => ({
   filePathPattern: "dbms/**/*.mdx",
   contentType: "mdx",
   fields: {
+    guideId: {
+      type: "string",
+      required: true,
+    },
+    moduleId: {
+      type: "string",
+      required: true
+    },
     title: {
       type: "string",
       required: true,
