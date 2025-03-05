@@ -46,7 +46,7 @@ body {
 }
 
 .dark {
-  --sidebar-background: 216, 18%, 16%;
+  --sidebar-background: 180, 33%, 9%;
   --sidebar-foreground: 0 0% 88%;
   --sidebar-primary: 123 45% 39%;
   --sidebar-primary-foreground: 0 0% 100%;

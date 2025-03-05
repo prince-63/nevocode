@@ -14,10 +14,10 @@ const tailwindConfig = {
       colors: {
         primary: "#388E3C",
         secondary: "#F59E0B",
-        darkBg: "#222831",
+        darkBg: "#102020",
         lightBg: "#F9FAFB",
         textLight: "#1F2937",
-        textDark: "#E0E0E0",
+        textDark: "#F5F5F5",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
