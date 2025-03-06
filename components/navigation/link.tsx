@@ -30,7 +30,7 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
         ref={ref}
         className={cn(
           noCustomization ??
-            "text-base font-medium text-gray-700 dark:text-gray-50 transition-all hover:text-green-700 dark:hover:text-green-500",
+            "text-base font-normal text-gray-700 dark:text-gray-50 transition-all hover:text-green-700 dark:hover:text-green-500",
           withUnderline
             ? "underline underline-offset-4 transition-all text-gray-700 dark:text-gray-50 hover:text-green-700 dark:hover:text-green-500"
             : "",

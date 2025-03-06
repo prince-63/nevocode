@@ -1,6 +1,5 @@
-import { lilita_one } from "@/utils/general/fonts";
 import { BookOpen, Code, Users } from "lucide-react";
-import { H1, H3, P } from "../ui/typography";
+import { H1, Lead, P } from "../ui/typography";
 
 interface FeatureType {
   icon: React.ReactNode;
@@ -41,7 +40,7 @@ const FeatureSection = () => {
             <P className="inline-block rounded-lg bg-green-100/70 dark:text-textLight px-3 py-1 text-sm ">
               Why CSExplore?
             </P>
-            <H1 className={`${lilita_one.className} text-primary text-center`}>
+            <H1 className={` text-primary text-center`}>
               Learn CS the Right Way
             </H1>
             <P>
@@ -58,9 +57,9 @@ const FeatureSection = () => {
                 key={index}
                 className="rounded-lg border border-gray-200 hover:border-primary p-6 transition-all hover:shadow-md"
               >
-                <div className="mb-4">{feature.icon}</div>
-                <H3 className="text-lg font-bold mb-2">{feature.title}</H3>
-                <P className="text-md text-gray-600">{feature.description}</P>
+                <div className="mb-3">{feature.icon}</div>
+                <Lead className="font-medium">{feature.title}</Lead>
+                <P>{feature.description}</P>
               </div>
             );
           })}

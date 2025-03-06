@@ -1,5 +1,5 @@
 import Link from "../navigation/link";
-import { P } from "../ui/typography";
+import { Muted } from "../ui/typography";
 import Logo from "../general/logo";
 import {
   companyList,
@@ -14,10 +14,10 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col gap-6 px-4 md:flex-row md:items-center md:px-6">
         <div className="flex flex-col gap-2">
           <Logo />
-          <P className="text-sm">Master computer science at your own pace.</P>
-          <P className="text-sm opacity-80">
+          <Muted>Master computer science at your own pace.</Muted>
+          <Muted className="opacity-80">
             © {new Date().getFullYear()} CSExplore. All rights reserved.
-          </P>
+          </Muted>
         </div>
         <div className="flex-1 md:flex md:justify-end">
           <div className="grid grid-cols-2 gap-10 sm:grid-cols-4">
@@ -29,7 +29,7 @@ const Footer = () => {
                     <li key={index}>
                       <Link
                         href={platform.href}
-                        className="text-sm text-gray-600 hover:text-green-700"
+                        className="text-sm dark:font-light text-gray-600 hover:text-green-700"
                       >
                         {platform.name}
                       </Link>
@@ -46,7 +46,7 @@ const Footer = () => {
                     <li key={index}>
                       <Link
                         href={resource.href}
-                        className="text-sm text-gray-600 hover:text-green-700"
+                        className="text-sm dark:font-light text-gray-600 hover:text-green-700"
                       >
                         {resource.name}
                       </Link>
@@ -63,7 +63,7 @@ const Footer = () => {
                     <li key={index}>
                       <Link
                         href={company.href}
-                        className="text-sm text-gray-600 hover:text-green-700"
+                        className="text-sm dark:font-light text-gray-600 hover:text-green-700"
                       >
                         {company.name}
                       </Link>
@@ -80,7 +80,7 @@ const Footer = () => {
                     <li key={index}>
                       <Link
                         href={legalItems.href}
-                        className="text-sm text-gray-600 hover:text-green-700"
+                        className="text-sm dark:font-light text-gray-600 hover:text-green-700"
                       >
                         {legalItems.name}
                       </Link>

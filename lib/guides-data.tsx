@@ -33,7 +33,7 @@ export const guides: GuideType[] = [
     icon: <Database className="h-8 w-8 text-primary" />,
     docs: allDbms,
     slug: "dbms",
-    href: "/learn/dbms/01-introduction",
+    href: "/learn/dbms/01-introduction-to-dbms",
   },
   // {
   //   title: "Machine Learning",

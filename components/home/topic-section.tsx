@@ -1,7 +1,6 @@
 import { Database, Layers, Server, Terminal } from "lucide-react";
 import Link from "../navigation/link";
-import { H1, H3, P } from "../ui/typography";
-import { lilita_one } from "@/utils/general/fonts";
+import { H1, Lead, P } from "../ui/typography";
 
 interface TopicListTypes {
   title: string;
@@ -50,9 +49,7 @@ const TopicSection = () => {
       <div className="mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <H1 className={`${lilita_one.className} text-primary text-center`}>
-              Explore CS Topics
-            </H1>
+            <H1 className={` text-primary text-center`}>Explore CS Topics</H1>
             <P>
               Dive into a wide range of computer science topics, from
               programming fundamentals to advanced system design.
@@ -64,16 +61,14 @@ const TopicSection = () => {
             return (
               <div
                 key={index}
-                className="w-full  sm:w-[260px] min-h-max flex flex-col rounded-lg border border-gray-200 p-6 hover:border-primary transition-all hover:shadow-md"
+                className="w-full sm:w-[260px] min-h-max flex flex-col gap-1 rounded-lg border border-gray-200 p-6 hover:border-primary transition-all hover:shadow-md"
               >
                 <div className="mb-3">{topic.icon}</div>
-                <H3 className="text-lg font-bold mb-2">{topic.title}</H3>
-                <P className="text-md mb-4">
-                  {topic.description.slice(0, 100)}
-                </P>
+                <Lead>{topic.title}</Lead>
+                <P>{topic.description.slice(0, 100)}</P>
                 <Link
                   href={topic.href}
-                  className="text-sm text-primary dark:text-primary dark:hover:text-textDark hover:text-textLight transition-all"
+                  className="flex items-center gap-1 text-primary dark:text-primary dark:hover:text-textDark transition-all"
                 >
                   Explore →
                 </Link>

@@ -1,12 +1,11 @@
-import { H2, H4, List, Muted, P } from "@/components/ui/typography";
-import { lilita_one } from "@/utils/general/fonts";
+import { H3, Lead, List, Muted, P } from "@/components/ui/typography";
 
 export default function Page() {
   return (
-    <main className="flex-1 container mx-auto px-4 py-8 md:px-6 lg:px-8">
-      <H2 className={`${lilita_one.className} text-primary mb-8 text-center`}>
-        Terms of Service
-      </H2>
+    <main className="container mx-auto px-4 py-8 md:px-6 lg:px-8">
+      <H3 className={` text-primary mb-2 `}>
+        Cookie Policy
+      </H3>
       <div className="prose max-w-none">
         <P className="font-medium mb-1">
           Last updated: {new Date().toLocaleDateString()}
@@ -18,14 +17,14 @@ export default function Page() {
           what these technologies are and why we use them, as well as your
           rights to control our use of them.
         </P>
-        <H4 className="my-1">What are cookies?</H4>
+        <Lead className="my-1">What are cookies?</Lead>
         <P>
           Cookies are small data files that are placed on your computer or
           mobile device when you visit a website. Cookies are widely used by
           website owners in order to make their websites work, or to work more
           efficiently, as well as to provide reporting information.
         </P>
-        <H4 className="my-1"> Why do we use cookies?</H4>
+        <Lead className="my-1"> Why do we use cookies?</Lead>
         <P>
           We use first-party and third-party cookies for several reasons. Some
           cookies are required for technical reasons in order for our website to
@@ -35,7 +34,7 @@ export default function Page() {
           on our website. Third parties serve cookies through our website for
           advertising, analytics, and other purposes.
         </P>
-        <H4 className="my-1">Types of cookies we use</H4>
+        <Lead className="my-1">Types of cookies we use</Lead>
         <List>
           <li>
             <strong>Essential cookies:</strong> These cookies are strictly
@@ -62,7 +61,7 @@ export default function Page() {
             selecting advertisements that are based on your interests.
           </li>
         </List>
-        <H4 className="my-1">How can you control cookies?</H4>
+        <Lead className="my-1">How can you control cookies?</Lead>
         <P>
           You have the right to decide whether to accept or reject cookies. You
           can exercise your cookie rights by setting your preferences in the
@@ -77,7 +76,7 @@ export default function Page() {
           website though your access to some functionality and areas of our
           website may be restricted.
         </P>
-        <H4 className="my-1">Changes to this Cookie Policy</H4>
+        <Lead className="my-1">Changes to this Cookie Policy</Lead>
         <P>
           We may update this Cookie Policy from time to time in order to
           reflect, for example, changes to the cookies we use or for other
@@ -85,7 +84,7 @@ export default function Page() {
           this Cookie Policy regularly to stay informed about our use of cookies
           and related technologies.
         </P>
-        <H4 className="my-1">Contact us</H4>
+        <Lead className="my-1">Contact us</Lead>
         <P>
           If you have any questions about our use of cookies or other
           technologies, please email us at{" "}

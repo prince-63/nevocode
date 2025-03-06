@@ -4,7 +4,7 @@ import PythonImage from "@/assets/images/python.png";
 import DataStructureImage from "@/assets/images/data-structure.png";
 import SystemDesignImage from "@/assets/images/system-design.png";
 import { H1, H4, P } from "../ui/typography";
-import { lilita_one } from "@/utils/general/fonts";
+import { karla } from "@/utils/general/fonts";
 import { Button } from "../ui/button";
 
 interface CourseListType {
@@ -56,7 +56,7 @@ const CourseSection = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <H1 className={`${lilita_one.className} text-primary text-center`}>
+            <H1 className={`${karla.className} text-primary text-center`}>
               Featured Courses
             </H1>
             <P>

@@ -38,15 +38,15 @@ export const resourcesList: ResourcesType[] = [
 export const companyList: CompanyType[] = [
   {
     name: "About",
-    href: "/about",
+    href: "/home/about",
   },
   {
     name: "Careers",
-    href: "/careers",
+    href: "/home/careers",
   },
   {
     name: "Contact",
-    href: "/contact",
+    href: "/home/contact",
   },
 ];
 

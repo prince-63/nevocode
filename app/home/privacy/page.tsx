@@ -1,12 +1,9 @@
-import { H2, H4, List, Muted, P } from "@/components/ui/typography";
-import { lilita_one } from "@/utils/general/fonts";
+import { H3, Lead, List, Muted, P } from "@/components/ui/typography";
 
 export default function Page() {
   return (
-    <main className="flex flex-col items-center justify-center container mx-auto px-4 py-8 md:px-6 lg:px-8">
-      <H2 className={`${lilita_one.className} text-primary mb-8 text-center`}>
-        Privacy Policy
-      </H2>
+    <main className="container mx-auto px-4 py-8 md:px-6 lg:px-8">
+      <H3 className={`text-primary mb-2`}>Privacy Policy</H3>
       <div className="prose max-w-none">
         <P className="font-medium mb-1">
           Last updated: {new Date().toLocaleDateString()}
@@ -17,7 +14,7 @@ export default function Page() {
           we collect, use, disclose, and safeguard your information when you
           visit our website or use our services.
         </P>
-        <H4 className="my-1">Information We Collect</H4>
+        <Lead className="my-1">Information We Collect</Lead>
         <P>
           We collect information that you provide directly to us, such as when
           you create an account, enroll in a course, or contact us for support.
@@ -29,7 +26,7 @@ export default function Page() {
           <li>Payment information</li>
           <li>Course progress and completion data</li>
         </List>
-        <H4 className="my-1">How We Use Your Information</H4>
+        <Lead className="my-1">How We Use Your Information</Lead>
         <P>We use the information we collect to:</P>
         <List>
           <li>Provide, maintain, and improve our services</li>
@@ -38,20 +35,20 @@ export default function Page() {
           <li>Respond to your comments and questions</li>
           <li>Analyze usage patterns and improve our website and services</li>
         </List>
-        <H4 className="my-1">Data Security</H4>
+        <Lead className="my-1">Data Security</Lead>
         <P>
           We implement appropriate technical and organizational measures to
           protect the security of your personal information. However, please
           note that no method of transmission over the Internet or electronic
           storage is 100% secure.
         </P>
-        <H4 className="my-1">Changes to This Privacy Policy</H4>
+        <Lead className="my-1">Changes to This Privacy Policy</Lead>
         <P>
           We may update our Privacy Policy from time to time. We will notify you
           of any changes by posting the new Privacy Policy on this page and
           updating the &quot;Last updated&quot; date.
         </P>
-        <H4 className="my-1">Contact Us</H4>
+        <Lead className="my-1">Contact Us</Lead>
         <P>
           If you have any questions about this Privacy Policy, please contact us
           at{" "}

@@ -1,7 +1,7 @@
 import { testmonialsList } from "@/lib/testmonial-data";
 import Image from "next/image";
 import { H1, H4, P } from "../ui/typography";
-import { lilita_one } from "@/utils/general/fonts";
+import { karla } from "@/utils/general/fonts";
 
 const TestimonialsSection = () => {
   return (
@@ -12,7 +12,7 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <H1 className={`${lilita_one.className} text-primary text-center`}>
+            <H1 className={`${karla.className} text-primary text-center`}>
               What Our Learners Say
             </H1>
             <P>
