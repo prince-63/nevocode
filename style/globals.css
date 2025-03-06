@@ -50,7 +50,7 @@ body {
   --sidebar-foreground: 0 0% 88%;
   --sidebar-primary: 123 45% 39%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 0 0% 7%;
+  --sidebar-accent: 180, 33%, 9%;
   --sidebar-accent-foreground: 0 0% 7%;
   --sidebar-border: 220 14% 17%;
   --sidebar-ring: 220 14% 19%;

@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronsLeft } from "lucide-react";
+import { BookmarkCheck, ChevronsLeft } from "lucide-react";
 
 import {
   Sidebar,
@@ -19,7 +19,7 @@ import { GuideType } from "@/utils/types";
 import Link from "../navigation/link";
 import ThemeSwitcher from "../general/theme-switcher";
 import IconButton from "../general/icon-button";
-import { Checkbox } from "../ui/checkbox";
+import { Muted } from "../ui/typography";
 
 interface AppSidebarProps {
   content: GuideType;
@@ -45,21 +45,19 @@ export function AppSidebar({ content }: AppSidebarProps) {
           <SidebarGroupContent>
             <Separator className="dark:bg-white/10 bg-gray-200 mb-1" />
             <SidebarMenu>
-              {content.docs.map((item) => (
-                <SidebarMenuItem key={item.title}>
+              {content.docs.map((item, index) => (
+                <SidebarMenuItem key={index}>
                   <SidebarMenuButton
-                    className="px-3 hover:text-primary"
+                    className="flex items-start px-3 hover:text-primary h-max"
                     asChild
                   >
-                    <div>
-                      <Checkbox className="w-5 h-5" />
-                      <Link
-                        href={`/learn/${item.url}`}
-                        className="font-normal w-full text-wrap"
-                      >
-                        {item.title}
-                      </Link>
-                    </div>
+                    <Link
+                      href={`/learn/${item.url}`}
+                      className="flex items-center w-full"
+                    >
+                      <BookmarkCheck className="dark:text-textDark text-textLight dark:hover:text-textDark" />
+                      <Muted>{index + 1 + ". " + item.title}</Muted>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
