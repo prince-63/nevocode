@@ -8,7 +8,7 @@ export const mdxComponent: MDXComponents = {
   h1: ({ className, ...props }) => (
     <h1
       className={cn(
-        "scroll-m-20 font-bold tracking-wide text-lg justify-center text-center py-4",
+        "scroll-m-20 font-bold tracking-wide text-2xl justify-center my-4",
         pt_sans.className,
         className,
       )}
@@ -18,7 +18,7 @@ export const mdxComponent: MDXComponents = {
   h2: ({ className, ...props }) => (
     <h2
       className={cn(
-        "my-2 text-md font-bold tracking-wide scroll-m-20",
+        "my-3 text-xl font-bold tracking-wide scroll-m-20",
         pt_sans.className,
         className,
       )}
@@ -28,7 +28,7 @@ export const mdxComponent: MDXComponents = {
   h3: ({ className, ...props }) => (
     <h3
       className={cn(
-        "my-1 text-md scroll-m-20 font-medium ",
+        "my-2 text-lg tracking-wide scroll-m-20 font-bold",
         pt_sans.className,
         className,
       )}
@@ -37,7 +37,11 @@ export const mdxComponent: MDXComponents = {
   ),
   h4: ({ className, ...props }) => (
     <h4
-      className={cn("scroll-m-20 font-normal", pt_sans.className, className)}
+      className={cn(
+        "my-1 scroll-m-20 tracking-wide text-base font-bold",
+        pt_sans.className,
+        className,
+      )}
       {...props}
     />
   ),
@@ -74,7 +78,7 @@ export const mdxComponent: MDXComponents = {
   p: ({ className, ...props }) => (
     <p
       className={cn(
-        "leading-7 text-md font-normal dark:font-light [&:not(:first-child)]:my-1",
+        "leading-7 text-base tracking-wide font-normal [&:not(:first-child)]:my-1",
         pt_sans.className,
         className,
       )}
@@ -83,18 +87,18 @@ export const mdxComponent: MDXComponents = {
   ),
   ul: ({ className, ...props }) => (
     <ul
-      className={cn("ml-3.5 list-disc", pt_sans.className, className)}
+      className={cn("ml-4 list-disc", pt_sans.className, className)}
       {...props}
     />
   ),
   ol: ({ className, ...props }) => (
     <ol
-      className={cn("ml-3.5 list-decimal", pt_sans.className, className)}
+      className={cn("ml-4 list-decimal", pt_sans.className, className)}
       {...props}
     />
   ),
   li: ({ className, ...props }) => (
-    <li className={cn("text-md", pt_sans.className, className)} {...props} />
+    <li className={cn(pt_sans.className, className)} {...props} />
   ),
   blockquote: ({ className, ...props }) => (
     <blockquote
@@ -171,36 +175,28 @@ export const mdxComponent: MDXComponents = {
   pre: ({ className, ...props }) => (
     <pre
       className={cn(
-        "w-full bg-slate-300 dark:bg-slate-700 overflow-auto rounded-md p-2",
-        
+        "w-full overflow-auto",
+
         className,
       )}
       {...props}
     />
   ),
   code: ({ className, ...props }) => (
-    <code
-      className={cn(
-        "relative rounded font-mono text-md",
-        className,
-      )}
-      {...props}
-    />
+    <code className={cn("relative font-mono", className)} {...props} />
   ),
   figure: ({ className, ...props }) => (
     <figure
+      data-theme="github-dark-dimmed github-light"
       className={cn(
-        "overflow-x-auto border dark:border-gray-600 rounded-md",
+        "overflow-x-auto rounded-md p-2 dark:bg-[#22272e] bg-[#24292e]",
         className,
       )}
       {...props}
     />
   ),
   span: ({ className, ...props }) => (
-    <span
-      className={cn("text-wrap",  className)}
-      {...props}
-    />
+    <span className={cn("text-wrap", className)} {...props} />
   ),
   Image,
 };

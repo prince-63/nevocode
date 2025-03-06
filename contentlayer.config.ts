@@ -7,6 +7,7 @@ import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 // import { transformerCopyButton } from "@rehype-pretty/transformers";
+import { transformerNotationDiff } from "@shikijs/transformers";
 import imageSize from "rehype-img-size";
 
 export const CProgramming = defineDocumentType(() => ({
@@ -153,7 +154,16 @@ export default makeSource({
       [
         rehypePrettyCode,
         {
-          theme: "one-dark-pro",
+          theme: {
+            dark: "github-dark-dimmed",
+            light: "github-light",
+          },
+          bypassInlineCode: false,
+          keepBackground: true,
+          defaultLang: {
+            block: "plaintext",
+            inline: "plaintext",
+          },
           onVisiteLine(node: LineElement) {
             // Prevent lines from collapsing in `display: grid` mode, and allow empty
             // lines to be copy/pasted
@@ -167,12 +177,13 @@ export default makeSource({
           onVisitHighlightedWord(node: LineElement) {
             node.properties.className = ["word--highlighted"];
           },
-          // transformers: [
-          //   transformerCopyButton({
-          //     visibility: "always",
-          //     feedbackDuration: 3000,
-          //   }),
-          // ],
+          transformers: [
+            // transformerCopyButton({
+            //   visibility: "always",
+            //   feedbackDuration: 3000,
+            // }),
+            transformerNotationDiff(),
+          ],
         },
       ],
       [
