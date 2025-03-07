@@ -21,6 +21,7 @@ import IconButton from "@/components/general/icon-button";
 import Logo from "@/components/general/logo";
 import ThemeSwitcher from "@/components/general/theme-switcher";
 import React from "react";
+import AuthDialog from "./auth-dialog";
 
 interface HeaderProps {
   className?: string | "";
@@ -61,6 +62,7 @@ const Header = ({ className }: HeaderProps) => {
           <div className="h-6 w-0.5 bg-slate-600 dark:bg-gray-100"></div>
           <div className="flex items-center gap-4">
             <ThemeSwitcher />
+            <AuthDialog />
           </div>
         </div>
 
@@ -68,6 +70,9 @@ const Header = ({ className }: HeaderProps) => {
           <div className="md:hidden flex items-center gap-4">
             <div className="md:hidden">
               <ThemeSwitcher />
+            </div>
+            <div className="md:hidden">
+              <AuthDialog />
             </div>
             <DrawerTrigger asChild className="flex md:hidden">
               <IconButton>
