@@ -21,14 +21,14 @@ const AuthDialog = () => {
           <LogIn />
         </IconButton>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent>
         <DialogHeader>
           <DialogTitle className="text-center">Sign In</DialogTitle>
           <DialogDescription className="text-center">
-            Unlock Your CS Journey! 🚀
+            Unlock Your Productive Journey! 🚀
           </DialogDescription>
         </DialogHeader>
-        <div className="w-64 flex flex-col gap-1">
+        <div className="w-full flex flex-col gap-2">
           <Button variant="outline" size="lg" onClick={() => signIn("google")}>
             <Chrome /> Google
           </Button>
@@ -38,7 +38,7 @@ const AuthDialog = () => {
           </Button>
         </div>
         <DialogFooter>
-          <Muted className="w-64 text-center text-xs text-wrap">
+          <Muted className="w-full text-center text-xs text-wrap">
             By signing in, you agree to CSExplore terms of service and privacy
             policy.
           </Muted>
