@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { LogOut, Menu, X } from "lucide-react";
 
 import {
   Drawer,
@@ -22,6 +22,7 @@ import Logo from "@/components/general/logo";
 import ThemeSwitcher from "@/components/general/theme-switcher";
 import React from "react";
 import AuthDialog from "./auth-dialog";
+import { signOut, useSession } from "next-auth/react";
 
 interface HeaderProps {
   className?: string | "";
@@ -31,6 +32,7 @@ const Header = ({ className }: HeaderProps) => {
   const scrolled = useScroll(40);
   const [isOpen, setIsOpen] = useState(false);
   const size = useWindowSize();
+  const { status } = useSession();
 
   useEffect(() => {
     if (size?.width && size?.width > 767 && isOpen) {
@@ -62,7 +64,13 @@ const Header = ({ className }: HeaderProps) => {
           <div className="h-6 w-0.5 bg-slate-600 dark:bg-gray-100"></div>
           <div className="flex items-center gap-4">
             <ThemeSwitcher />
-            <AuthDialog />
+            {status === "authenticated" ? (
+              <IconButton onClick={() => signOut()}>
+                <LogOut />
+              </IconButton>
+            ) : (
+              <AuthDialog />
+            )}
           </div>
         </div>
 
@@ -72,7 +80,13 @@ const Header = ({ className }: HeaderProps) => {
               <ThemeSwitcher />
             </div>
             <div className="md:hidden">
-              <AuthDialog />
+              {status === "authenticated" ? (
+                <IconButton onClick={() => signOut()}>
+                  <LogOut />
+                </IconButton>
+              ) : (
+                <AuthDialog />
+              )}
             </div>
             <DrawerTrigger asChild className="flex md:hidden">
               <IconButton>
