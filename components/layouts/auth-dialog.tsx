@@ -21,7 +21,7 @@ const AuthDialog = () => {
           <LogIn />
         </IconButton>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className="h-72">
         <DialogHeader>
           <DialogTitle className="text-center">Sign In</DialogTitle>
           <DialogDescription className="text-center">
