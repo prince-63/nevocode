@@ -32,7 +32,7 @@ const AuthDialog = () => {
           <Button variant="outline" size="lg" onClick={() => signIn("google")}>
             <Chrome /> Google
           </Button>
-          <Button variant="outline" size="lg">
+          <Button variant="outline" size="lg" onClick={() => signIn("github")}>
             <Github />
             GitHub
           </Button>
