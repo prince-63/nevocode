@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  email     String    @unique
+  name      String?
+  image     String?
+  accounts  Account[] // One user can have multiple OAuth accounts
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Account {
+  id                String  @id @default(auto()) @map("_id") @db.ObjectId
+  userId            String  @db.ObjectId
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  provider          String
+  guides            Guide[]
+  providerAccountId String
+  accessToken       String?
+  expiresAt         Int?
+
+  @@unique([provider, providerAccountId])
+}
+
+model Guide {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  guideId          String   @unique
+  account          Account  @relation(fields: [accountId], references: [id])
+  accountId        String   @db.ObjectId
+  completedModules String[]
+}
