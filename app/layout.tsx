@@ -6,11 +6,45 @@ import { Provider } from "./provider";
 
 export const metadata: Metadata = {
   title: {
-    default: "CSExplore - Master Competitive Programming & System Design",
-    template: "%s - CSExplore",
+    default: "CSExplore - Master Programming & System Design",
+    template: "%s | CSExplore",
   },
   description:
-    "CSExplore helps you master competitive programming, system design, and computer science concepts through expert tutorials, coding challenges, and real-world problem-solving strategies. Elevate your coding skills and stay ahead in tech!",
+    "CSExplore empowers you to understand programming, design patterns, system design, and core computer science concepts through expert guides, in-depth coding explanations, and real-world problem-solving strategies. Level up your coding skills and stay ahead in tech and productivity!",
+  keywords: [
+    "programming tutorials",
+    "system design",
+    "competitive programming",
+    "coding challenges",
+    "software development",
+    "computer science",
+    "CSExplore",
+    "design patterns",
+    "data structures and algorithms",
+  ],
+  openGraph: {
+    title: "CSExplore - Master Programming & System Design",
+    description:
+      "Learn programming, system design, and computer science with structured guides, coding explanations, and real-world problem-solving strategies.",
+    url: "https://csexplore.org",
+    type: "website",
+    images: [
+      {
+        url: "https://csexplore.org/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "CSExplore - Master Programming & System Design",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@CSExplore",
+    title: "CSExplore - Master Programming & System Design",
+    description:
+      "Explore programming, system design, and computer science through expert guides, coding explanations, and hands-on problem-solving.",
+    images: ["https://csexplore.com/og-image.jpg"],
+  },
 };
 
 export default async function RootLayout({
