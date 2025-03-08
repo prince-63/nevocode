@@ -6,7 +6,9 @@ const HeroSection = () => {
   return (
     <section className="h-[700px] sm:h-[600px] w-full flex items-center justify-center">
       <div className="container flex flex-col gap-2 items-center justify-center mx-auto px-4 md:px-6">
-        <H1 className={`text-primary text-center`}>Understand. Build. Succeed.</H1>
+        <H1 className={`text-primary text-center`}>
+          Understand. Build. Succeed.
+        </H1>
         <P className="max-w-xl text-wrap text-center">
           Structured learning for programming, algorithms, and system design.
         </P>

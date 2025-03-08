@@ -3,10 +3,10 @@ import { ourImpactData, ourValueData } from "@/lib/about-data";
 
 export default function Page() {
   return (
-    <main className="container mx-auto px-4 py-8 md:px-6 lg:px-8">
+    <main className="container mx-auto px-4 mb-8">
       <section>
         <div className="mb-8">
-          <H3 className="text-primary mb-2">Our Story</H3>
+          <H3 className="text-primary text-center py-8">Our Story</H3>
           <P>
             In 2025, CSExplore was born from a simple yet powerful idea, to make
             learning programming and system design clear, distraction-free, and

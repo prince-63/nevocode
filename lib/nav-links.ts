@@ -13,5 +13,3 @@ export const NAV_LINKS: NavLinkType[] = [
     href: "/home/guides",
   },
 ];
-
-

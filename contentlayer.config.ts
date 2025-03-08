@@ -62,7 +62,7 @@ export const DBMS = defineDocumentType(() => ({
     },
     moduleId: {
       type: "string",
-      required: true
+      required: true,
     },
     title: {
       type: "string",

@@ -2,9 +2,9 @@ import { H3, Lead, List, Muted, P } from "@/components/ui/typography";
 
 export default function Page() {
   return (
-    <main className="container mx-auto px-4 py-8 md:px-6 lg:px-8">
-      <H3 className={`text-primary mb-2`}>Privacy Policy</H3>
-      <div className="prose max-w-none">
+    <main className="container mx-auto px-4 mb-8">
+      <H3 className={`text-primary text-center mb-2 py-8`}>Privacy Policy</H3>
+      <div className="prose border border-gray-200 dark:border-green-100 dark:border-opacity-20 rounded-md p-4">
         <P className="font-medium mb-1">
           Last updated: {new Date().toLocaleDateString()}
         </P>
@@ -53,7 +53,7 @@ export default function Page() {
           If you have any questions about this Privacy Policy, please contact us
           at{" "}
           <Muted className="text-md text-primary dark:text-primary">
-            privacy@csexplore.com
+            hello@csexplore.com
           </Muted>
           .
         </P>
