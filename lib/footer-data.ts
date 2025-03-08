@@ -7,31 +7,23 @@ import {
 
 export const platformLinkList: PlatformLinkType[] = [
   {
-    name: "Courses",
-    href: "/courses",
+    name: "Guides",
+    href: "/home/guides",
   },
   {
-    name: "Learning Paths",
-    href: "/learning-paths",
-  },
-  {
-    name: "Pricing",
-    href: "/pricing",
+    name: "Topics",
+    href: "/home/topics",
   },
 ];
 
 export const resourcesList: ResourcesType[] = [
   {
-    name: "Blogs",
-    href: "/blogs",
+    name: "DBMS",
+    href: "/learn/dbms/01-introduction-to-dbms",
   },
   {
-    name: "Tutorials",
-    href: "/tutorials",
-  },
-  {
-    name: "Documentation",
-    href: "/documentation",
+    name: "C Programming",
+    href: "/learn/c/01-introduction",
   },
 ];
 
