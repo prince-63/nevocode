@@ -1,9 +1,22 @@
-import {
-  CompanyType,
-  LegalType,
-  PlatformLinkType,
-  ResourcesType,
-} from "@/utils/types";
+export interface PlatformLinkType {
+  name: string;
+  href: string;
+}
+
+export interface ResourcesType {
+  name: string;
+  href: string;
+}
+
+export interface CompanyType {
+  name: string;
+  href: string;
+}
+
+export interface LegalType {
+  name: string;
+  href: string;
+}
 
 export const platformLinkList: PlatformLinkType[] = [
   {

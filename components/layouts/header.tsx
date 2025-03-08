@@ -12,7 +12,7 @@ import {
   DrawerTitle,
   DrawerDescription,
 } from "@/components/ui/drawer";
-import NAV_LINKS from "@/lib/nav-links";
+import { NAV_LINKS } from "@/lib/nav-links";
 import { cn } from "@/lib/utils";
 import useWindowSize from "@/hooks/use-window-size";
 import useScroll from "@/hooks/use-scroll";

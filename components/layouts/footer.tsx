@@ -29,6 +29,7 @@ const Footer = () => {
                     <li key={index}>
                       <Link
                         href={platform.href}
+                        prefetch={false}
                         className="text-sm dark:font-light text-gray-600 hover:text-green-700"
                       >
                         {platform.name}
@@ -46,6 +47,7 @@ const Footer = () => {
                     <li key={index}>
                       <Link
                         href={resource.href}
+                        prefetch={false}
                         className="text-sm dark:font-light text-gray-600 hover:text-green-700"
                       >
                         {resource.name}
@@ -63,6 +65,7 @@ const Footer = () => {
                     <li key={index}>
                       <Link
                         href={company.href}
+                        prefetch={false}
                         className="text-sm dark:font-light text-gray-600 hover:text-green-700"
                       >
                         {company.name}
@@ -80,6 +83,7 @@ const Footer = () => {
                     <li key={index}>
                       <Link
                         href={legalItems.href}
+                        prefetch={false}
                         className="text-sm dark:font-light text-gray-600 hover:text-green-700"
                       >
                         {legalItems.name}

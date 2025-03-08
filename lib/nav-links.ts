@@ -1,6 +1,9 @@
-import { NavLinkType } from "@/utils/types";
+export interface NavLinkType {
+  label: string;
+  href: string;
+}
 
-const NAV_LINKS: NavLinkType[] = [
+export const NAV_LINKS: NavLinkType[] = [
   {
     label: "Home",
     href: "/home",
@@ -11,4 +14,4 @@ const NAV_LINKS: NavLinkType[] = [
   },
 ];
 
-export default NAV_LINKS;
+

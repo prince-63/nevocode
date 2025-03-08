@@ -1,5 +1,3 @@
-"use client";
-
 import { karla } from "@/utils/general/fonts";
 import { Terminal } from "lucide-react";
 import Link from "../navigation/link";

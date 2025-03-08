@@ -1,109 +1,75 @@
-import Link from "@/components/navigation/link";
-import { Award, Globe, Users } from "lucide-react";
+import { H3, Lead, P, Small } from "@/components/ui/typography";
+import { ourImpactData, ourValueData } from "@/lib/about-data";
 
 export default function Page() {
   return (
-    <main className="flex-1">
-      {/* About Header */}
-      <section className="bg-[#102020] text-[#F5F5F5] py-12">
-        <div className="container mx-auto px-4 md:px-6">
-          <h1 className="text-3xl font-bold mb-4 text-center">
-            About CSExplore
-          </h1>
-          <p className="text-lg max-w-3xl mx-auto text-center">
-            Making computer science education accessible to everyone, regardless
-            of background or experience.
-          </p>
+    <main className="container mx-auto px-4 py-8 md:px-6 lg:px-8">
+      <section>
+        <div className="mb-8">
+          <H3 className="text-primary mb-2">Our Story</H3>
+          <P>
+            In 2025, CSExplore was born from a simple yet powerful idea, to make
+            learning programming and system design clear, distraction-free, and
+            deeply impactful. As aspiring developers ourselves, we saw students
+            struggling, not just with what to learn, but also why it matters and
+            how to apply it in the real world. The vast sea of information,
+            combined with constant distractions, made focused learning
+            incredibly hard. That&apos;s why we built CSExplore, a platform
+            designed to cut through the noise and provide structured,
+            no-nonsense explanations of programming, system design, and core
+            computer science concepts. Our mission is to help students grow
+            faster by making learning engaging, practical, and distraction-free.
+          </P>
+          <P className="mt-1">
+            Behind CSExplore is a team of passionate, experienced, and highly
+            productive minds, committed to creating the best possible learning
+            experience. Whether you&apos;re a beginner or an advanced developer,
+            we&apos;re here to simplify complex topics, provide real-world
+            insights, and help you stay ahead in tech. Because learning should
+            be simple. Growth should be unstoppable. And your journey in tech
+            should be one without limits. 🚀
+          </P>
         </div>
-      </section>
 
-      {/* Main Content */}
-      <section className="py-12 bg-[#F9FAFB]">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
-            <div>
-              <h2 className="text-2xl font-bold mb-4 text-[#1F2937]">
-                Our Story
-              </h2>
-              <p className="text-[#1F2937] mb-4">
-                CSExplore was founded in 2020 with a simple mission: to make
-                high-quality computer science education accessible to everyone.
-                We believe that understanding computer science is crucial in
-                today&apos;s digital world.
-              </p>
-              <p className="text-[#1F2937]">
-                Our team consists of passionate educators and experienced
-                software engineers who work together to create engaging,
-                practical, and up-to-date learning experiences.
-              </p>
-            </div>
+        {/* Stats */}
+        <div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {ourImpactData.map((data, index) => {
+              return (
+                <div
+                  key={index}
+                  className="p-6 border rounded-lg border-gray-200 hover:border-primary text-center hover:shadow-md"
+                >
+                  <data.icon className="h-10 w-10 text-primary mx-auto mb-3" />
+                  <Lead>{data.value}</Lead>
+                  <P>{data.title}</P>
+                  <Small className="opacity-80 mt-1">{data.subtitle}</Small>
+                </div>
+              );
+            })}
           </div>
+        </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <Users className="h-10 w-10 text-[#388E3C] mx-auto mb-3" />
-              <h3 className="text-2xl font-bold mb-1 text-[#1F2937]">
-                50,000+
-              </h3>
-              <p className="text-[#1F2937]">Students Enrolled</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <Award className="h-10 w-10 text-[#388E3C] mx-auto mb-3" />
-              <h3 className="text-2xl font-bold mb-1 text-[#1F2937]">200+</h3>
-              <p className="text-[#1F2937]">Courses Offered</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <Globe className="h-10 w-10 text-[#388E3C] mx-auto mb-3" />
-              <h3 className="text-2xl font-bold mb-1 text-[#1F2937]">100+</h3>
-              <p className="text-[#1F2937]">Countries Reached</p>
-            </div>
-          </div>
-
-          {/* Values */}
-          <div>
-            <h2 className="text-2xl font-bold mb-6 text-[#1F2937]">
-              Our Values
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-white p-5 rounded-lg shadow-sm border-l-4 border-[#388E3C]">
-                <h3 className="font-semibold mb-2 text-[#1F2937]">
-                  Accessibility
-                </h3>
-                <p className="text-[#1F2937]">
-                  We strive to make our courses available to learners from all
-                  backgrounds and skill levels.
-                </p>
-              </div>
-              <div className="bg-white p-5 rounded-lg shadow-sm border-l-4 border-[#388E3C]">
-                <h3 className="font-semibold mb-2 text-[#1F2937]">Quality</h3>
-                <p className="text-[#1F2937]">
-                  We are committed to delivering the highest standard of
-                  education through rigorous curriculum development.
-                </p>
-              </div>
-              <div className="bg-white p-5 rounded-lg shadow-sm border-l-4 border-[#388E3C]">
-                <h3 className="font-semibold mb-2 text-[#1F2937]">
-                  Innovation
-                </h3>
-                <p className="text-[#1F2937]">
-                  We continuously adapt our teaching methods and content to keep
-                  pace with the rapidly evolving tech industry.
-                </p>
-              </div>
-              <div className="bg-white p-5 rounded-lg shadow-sm border-l-4 border-[#388E3C]">
-                <h3 className="font-semibold mb-2 text-[#1F2937]">Community</h3>
-                <p className="text-[#1F2937]">
-                  We foster a supportive learning environment where students can
-                  collaborate, share ideas, and grow together.
-                </p>
-              </div>
-            </div>
+        {/* Values */}
+        <div>
+          <H3 className="text-primary mb-4">Our Values</H3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {ourValueData.map((data, index) => {
+              return (
+                <div
+                  key={index}
+                  className="p-5 border rounded-lg border-gray-200 hover:border-primary hover:shadow-md"
+                >
+                  <Lead className="mb-2">{data.title}</Lead>
+                  <P>{data.description}</P>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA
       <section className="py-10 bg-[#388E3C] text-[#F5F5F5]">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-2xl font-bold mb-4">
@@ -119,7 +85,7 @@ export default function Page() {
             </button>
           </Link>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

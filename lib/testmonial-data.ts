@@ -1,5 +1,13 @@
-import { TestmonialType } from "@/utils/types";
 import Image from "@/assets/testmonials/testmonials.png";
+import { StaticImageData } from "next/image";
+
+export interface TestmonialType {
+  name: string;
+  subtitle: string;
+  description: string;
+  image: StaticImageData;
+  linkedInUrl: string;
+}
 
 export const testmonialsList: TestmonialType[] = [
   {
