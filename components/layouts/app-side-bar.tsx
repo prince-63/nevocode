@@ -15,11 +15,11 @@ import {
 } from "@/components/ui/sidebar";
 import Logo from "../general/logo";
 import { Separator } from "../ui/separator";
-import { GuideType } from "@/utils/types";
 import Link from "../navigation/link";
 import ThemeSwitcher from "../general/theme-switcher";
 import IconButton from "../general/icon-button";
 import { Muted } from "../ui/typography";
+import { GuideType } from "@/lib/guides-data";
 
 interface AppSidebarProps {
   content: GuideType;

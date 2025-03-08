@@ -46,10 +46,6 @@ export const companyList: CompanyType[] = [
     href: "/home/about",
   },
   {
-    name: "Careers",
-    href: "/home/careers",
-  },
-  {
     name: "Contact",
     href: "/home/contact",
   },
