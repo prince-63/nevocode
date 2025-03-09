@@ -5,3 +5,112 @@ title: Indexing & Hashing
 description: Understand indexing methods, B-trees, and hashing techniques to optimize database performance.
 author: CSExplore Team
 ---
+
+# Indexing & Hashing
+Indexing and hashing are essential techniques used in database systems to optimize data retrieval and query performance. By organizing data efficiently and creating data structures like indexes and hash tables, databases can quickly locate and access the required information.
+
+## Indexing in Databases
+An index is a data structure that improves the speed of data retrieval operations on a database table at the cost of additional space and decreased performance on data modification operations. Indexes are created on columns in database tables to facilitate faster data access, especially when querying large datasets.
+
+## Why Use Indexing?
+Indexing is essential in database systems for the following reasons:
+
+- Indexes allow databases to quickly locate and retrieve data without scanning the entire table.
+- Indexes speed up query execution by providing faster access paths to the data.
+- Unique indexes enforce data integrity by ensuring the uniqueness of values in the indexed columns.
+- Indexes can improve the performance of join operations by providing efficient access paths to related data.
+- Indexes reduce the number of disk I/O operations required to fetch data, improving overall system performance.
+- Indexes can speed up sorting and grouping operations by providing pre-sorted data access paths.
+
+## Types of Indexes
+There are several types of indexes used in database systems, each with its own advantages and use cases:
+
+#### 1. Ordered Index
+An ordered index is an index that stores the data in sorted order based on the index key. It allows for efficient range queries and prefix searches but may require periodic maintenance to keep the index sorted.
+
+{/* Image */}
+
+#### 2. Primary Index
+A primary index is an ordered file that organizes the data based on the primary key of the table. It is typically created automatically when the table is defined with a primary key constraint.
+
+{/* Image */}
+
+- **Sparse Index:** A sparse index contains an entry for each block of the data file, reducing the size of the index.
+
+{/* Image of sparse Index */}
+
+- **Dense Index:** A dense index contains an entry for each record in the data file, making it larger but faster for data retrieval.
+
+{/* Image of Dense Index */}
+
+#### 3. Secondary Index
+A secondary index is an index created on a non-primary key column to improve the performance of queries that do not use the primary key for data retrieval.
+
+{/* Image */}
+
+#### 4. Clustered Index
+A clustered index is a type of index that reorders the way records in the table are physically stored to match the order of the index. In a clustered index, the rows of the table are stored in the order of the index key.
+
+{/* Image */}
+
+## Indexing Methods
+There are several methods used to implement indexes in database systems, each with its own advantages and trade-offs:
+
+### 1. B-Tree Index
+A B-tree index is a balanced tree data structure that keeps data sorted and allows searches, sequential access, insertions, and deletions in logarithmic time. B-tree indexes are commonly used in database systems to implement indexes efficiently.
+
+{/* Image of B-Tree Index */}
+
+- **B+ Tree Index:** A B+ tree index is a variant of the B-tree index that stores data only in the leaf nodes, improving the efficiency of range queries and sequential access.
+
+{/* Image of B+ Tree Index */}
+
+- **B\* Tree Index:** A B\* tree index is another variant of the B-tree index that balances the tree more aggressively, reducing the height of the tree and improving query performance.
+
+{/* Image of B* Tree Index */}
+
+### 2. Bitmap Index
+A bitmap index is a special type of index that uses bit arrays (bitmaps) to represent the indexed values. It is particularly useful for columns with a low cardinality (few distinct values) and is efficient for operations like **AND**, **OR**, and **NOT**.
+
+### 3. Hash Index
+A hash index is a data structure that uses a hash function to map keys to values. Hash indexes are efficient for point lookups but do not support range queries or prefix searches.
+
+### 4. Inverted Index
+An inverted index is a data structure that maps content to its location in a database or document. It is commonly used in full-text search engines to quickly locate documents containing specific keywords.
+
+## What is Hashing?
+Hashing is a technique used to map data of arbitrary size to fixed-size values. It is commonly used in database systems to quickly locate data in hash tables based on a key value. Hashing involves applying a hash function to the key value to generate a hash code, which is used to index the data in the hash table.
+
+## Why Use Hashing?
+Hashing is beneficial in database systems for the following reasons:
+- Hashing allows databases to quickly locate data based on key values without scanning the entire dataset.
+- Hash indexes provide fast access paths to data entries based on hash codes.
+- Hashing techniques like extendible hashing and linear hashing efficiently handle collisions and dynamically resize hash tables.
+- Hashing techniques optimize storage space by mapping data to fixed-size hash codes.
+- Hashing techniques like extendible hashing and linear hashing support dynamic resizing of hash tables to accommodate data growth.
+
+## Types of Hashing
+There are two main types of hashing techniques used in database systems:
+
+### 1. Static Hashing
+Static hashing involves dividing the hash table into a fixed number of buckets or slots, each of which can store one or more data entries. The hash function determines the bucket where the data should be stored or retrieved.
+
+{/* Image */}
+
+### 2. Dynamic Hashing
+Dynamic hashing is a technique that allows the hash table to grow or shrink dynamically as the number of entries changes. It uses an extendible or linear hashing algorithm to handle collisions and efficiently manage the hash table size.
+
+### 3. Extendible Hashing
+Extendible hashing is a dynamic hashing technique that uses a directory structure to manage the hash table. It allows the hash table to grow or shrink dynamically by splitting or merging buckets based on the number of entries.
+
+### 4. Linear Hashing
+Linear hashing is another dynamic hashing technique that uses a linear function to map keys to hash table buckets. It is designed to handle collisions efficiently and allows the hash table to grow incrementally without requiring a complete reorganization.
+
+## Indexing vs Hashing: When to use What?
+| Indexing | Hashing |
+|----------|---------|
+| Indexing is suitable for range queries, sorting, and grouping operations. | Hashing is suitable for point lookups and exact match queries. |
+| Indexing is efficient for columns with high cardinality (many distinct values). | Hashing is efficient for columns with low cardinality (few distinct values). |
+| Indexing supports range queries, prefix searches, and sorting operations. | Hashing supports point lookups but does not support range queries or prefix searches. |
+| Indexing is beneficial for queries that involve join operations and complex conditions. | Hashing is beneficial for queries that involve simple equality conditions and exact match lookups. |
+| Indexing is commonly used in relational databases to optimize query performance. | Hashing is commonly used in NoSQL databases and full-text search engines for fast data retrieval. |
