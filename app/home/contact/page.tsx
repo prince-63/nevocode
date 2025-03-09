@@ -33,7 +33,7 @@ export default function Page() {
                     <Mail className="mr-4" />
                     <div>
                       <Lead>Email</Lead>
-                      <Muted>hello@csexplore.com</Muted>
+                      <Muted>hello@systemnode.dev</Muted>
                     </div>
                   </div>
 

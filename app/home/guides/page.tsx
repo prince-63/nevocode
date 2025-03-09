@@ -14,11 +14,11 @@ const iconMap: Record<string, LucideIcon> = {
 export default function GuidesPage() {
   return (
     <main className="flex-1 container mx-auto px-4 py-8 md:px-6 lg:px-8">
-      <H3 className={`text-primary text-center`}>CSExplore Learning Guides</H3>
+      <H3 className={`text-primary text-center`}>Learning Guides</H3>
       <div className="max-w-4xl mx-auto">
         <P className="text-center">
-          Explore our comprehensive guides to master various aspects of computer
-          science and software engineering.
+          Master key concepts in software engineering and system design with our
+          in-depth guides.
         </P>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
           {guides.map((guide, index) => {

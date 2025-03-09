@@ -16,7 +16,7 @@ const Footer = () => {
           <Logo />
           <Muted>Master computer science at your own pace.</Muted>
           <Muted className="opacity-80">
-            © {new Date().getFullYear()} CSExplore. All rights reserved.
+            © {new Date().getFullYear()} System Node. All rights reserved.
           </Muted>
         </div>
         <div className="flex-1 md:flex md:justify-end">

@@ -1,52 +1,52 @@
-import { BookOpen, Code, Users } from "lucide-react";
+import { BookOpen, Code, LucideIcon, Users } from "lucide-react";
 import { H1, Lead, P } from "../ui/typography";
 
 interface FeatureType {
-  icon: React.ReactNode;
+  icon: LucideIcon;
   title: string;
   description: string;
 }
 
 const featureList: FeatureType[] = [
   {
-    icon: <BookOpen className="h-10 w-10 text-primary" />,
+    icon: BookOpen,
     title: "Structured Learning",
     description:
-      "Follow carefully designed learning paths that build on each other, ensuring you develop a comprehensive understanding.",
+      "Follow a well-crafted roadmap that ensures a deep and progressive understanding of key concepts.",
   },
   {
-    icon: <Code className="h-10 w-10 text-primary" />,
-    title: "Practical Coding",
+    icon: Code,
+    title: "Hands-on Practice",
     description:
-      "Apply what you learn with hands-on coding exercises and projects that reinforce theoretical concepts.",
+      "Reinforce your knowledge with real-world coding challenges, projects, and interactive exercises.",
   },
   {
-    icon: <Users className="h-10 w-10 text-primary" />,
-    title: "Self-Paced",
+    icon: Users,
+    title: "Learn at Your Pace",
     description:
-      "Learn at your own pace, revisit concepts as needed, and progress when you're ready to move forward.",
+      "Advance at your own speed, revisit concepts anytime, and strengthen your foundation without pressure.",
   },
 ];
 
 const FeatureSection = () => {
   return (
     <section
-      className="flex flex-col items-center justify-center w-full  py-2 sm:py-8 md:py-12 lg:py-16"
+      className="flex flex-col items-center justify-center w-full  py-2 sm:py-8 md:py-12 lg:py-10"
       id="features"
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <P className="inline-block rounded-lg bg-green-100/70 dark:text-textLight px-3 py-1 text-sm ">
-              Why CSExplore?
+              Why SystemNode?
             </P>
             <H1 className={` text-primary text-center`}>
-              Learn CS the Right Way
+              Architect Your Skills
             </H1>
             <P>
-              Our structured approach helps you build a solid foundation in
-              computer science concepts, from basic programming to advanced
-              system design.
+              Gain expertise in system design, programming, and algorithms with
+              a structured approach that helps you build scalable and efficient
+              solutions.
             </P>
           </div>
         </div>
@@ -57,7 +57,9 @@ const FeatureSection = () => {
                 key={index}
                 className="rounded-lg border border-gray-200 hover:border-primary p-6 transition-all hover:shadow-md"
               >
-                <div className="mb-3">{feature.icon}</div>
+                <div className="mb-3">
+                  <feature.icon className="text-primary w-10 h-10" />
+                </div>
                 <Lead className="font-medium">{feature.title}</Lead>
                 <P>{feature.description}</P>
               </div>

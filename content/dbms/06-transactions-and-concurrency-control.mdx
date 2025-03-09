@@ -3,7 +3,7 @@ guideId: DBMS-101
 moduleId: DBMS-06
 title: Transactions & Concurrency Control
 description: Learn about ACID properties, transaction states, and concurrency control mechanisms.
-author: CSExplore Team
+author: SystemNode Team
 ---
 
 # Transactions & Concurrency Control
@@ -69,7 +69,7 @@ Optimistic Concurrency Control is a technique that assumes conflicts between tra
 ### 5. Multi-Version Concurrency Control (MVCC)
 Multi-Version Concurrency Control is a technique that maintains multiple versions of data to allow concurrent read and write operations. Each transaction sees a consistent snapshot of the database based on its start time, ensuring that transactions do not interfere with each other. This technique is commonly used in databases like PostgreSQL and Oracle.
 
-## Problem Caused by concurrency
+## Problem Caused by Concurrency
 Concurrent transactions can lead to several problems in a database system, including:
 
 - When two transactions update the same data concurrently, one transaction's changes may be lost if the other transaction commits first.

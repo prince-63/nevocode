@@ -12,8 +12,8 @@ export default function Page() {
         </P>
         <P>
           Please read these Terms of Service (&quot;Terms&quot;, &quot;Terms of
-          Service&quot;) carefully before using the CSExplore website (the
-          &quot;Service&quot;) operated by CSExplore (&quot;us&quot;,
+          Service&quot;) carefully before using the System Node website (the
+          &quot;Service&quot;) operated by System Node (&quot;us&quot;,
           &quot;we&quot;, or &quot;our&quot;).
         </P>
         <Lead className="my-1">1. Acceptance of Terms</Lead>
@@ -38,9 +38,9 @@ export default function Page() {
         <Lead className="my-1">4. Intellectual Property</Lead>
         <P>
           The Service and its original content, features, and functionality are
-          and will remain the exclusive property of CSExplore and its licensors.
-          The Service is protected by copyright, trademark, and other laws of
-          both the United States and foreign countries.
+          and will remain the exclusive property of System Node and its
+          licensors. The Service is protected by copyright, trademark, and other
+          laws of both the United States and foreign countries.
         </P>
         <Lead className="my-1">5. Termination</Lead>
         <P>
@@ -50,7 +50,7 @@ export default function Page() {
         </P>
         <Lead className="my-1">6. Limitation of Liability</Lead>
         <P>
-          In no event shall CSExplore, nor its directors, employees, partners,
+          In no event shall System Node, nor its directors, employees, partners,
           agents, suppliers, or affiliates, be liable for any indirect,
           incidental, special, consequential or punitive damages, including
           without limitation, loss of profits, data, use, goodwill, or other
@@ -67,7 +67,7 @@ export default function Page() {
         <P>
           If you have any questions about these Terms, please contact us at{" "}
           <Muted className="text-md text-primary dark:text-primary">
-            hello@csexplore.com
+            hello@systemnode.dev
           </Muted>
           .
         </P>

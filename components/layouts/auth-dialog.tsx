@@ -39,7 +39,7 @@ const AuthDialog = () => {
         </div>
         <DialogFooter>
           <Muted className="w-full text-center text-xs text-wrap">
-            By signing in, you agree to CSExplore terms of service and privacy
+            By signing in, you agree to System Node terms of service and privacy
             policy.
           </Muted>
         </DialogFooter>

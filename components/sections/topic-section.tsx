@@ -1,11 +1,11 @@
-import { Database, Layers, Server, Terminal } from "lucide-react";
+import { Database, Layers, LucideIcon, Server, Terminal } from "lucide-react";
 import Link from "../navigation/link";
 import { H1, Lead, P } from "../ui/typography";
 
 interface TopicListTypes {
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon: LucideIcon;
   href: string;
 }
 
@@ -13,32 +13,33 @@ const topicList: TopicListTypes[] = [
   {
     title: "Programming Fundamentals",
     description:
-      "Master the basics of programming with Python, JavaScript, and more.",
-    icon: <Terminal className="h-8 w-8 text-primary" />,
+      "Build a strong foundation in programming with Python, JavaScript, and more.",
+    icon: Terminal,
     href: "/learn/programming-fundamentals",
   },
   {
     title: "Data Structures & Algorithms",
     description:
-      "Learn essential data structures and algorithms for efficient problem-solving.",
+      "Master essential data structures and algorithms to solve complex problems efficiently.",
+    icon: Layers,
     href: "/learn/data-structure-and-algorithms",
-    icon: <Layers className="h-8 w-8 text-primary" />,
   },
   {
     title: "System Design",
     description:
-      "Design scalable systems and understand architectural patterns.",
+      "Learn to design scalable and high-performance systems with real-world examples.",
+    icon: Server,
     href: "/learn/system-design",
-    icon: <Server className="h-8 w-8 text-primary" />,
   },
   {
     title: "Databases",
     description:
-      "Understand relational and NoSQL databases, query optimization, and more.",
+      "Explore relational and NoSQL databases, indexing, and query optimization.",
+    icon: Database,
     href: "/learn/databases",
-    icon: <Database className="h-8 w-8 text-primary" />,
   },
 ];
+
 
 const TopicSection = () => {
   return (
@@ -49,10 +50,10 @@ const TopicSection = () => {
       <div className="mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <H1 className={` text-primary text-center`}>Explore CS Topics</H1>
+            <H1 className={` text-primary text-center`}>Explore Key Topics</H1>
             <P>
-              Dive into a wide range of computer science topics, from
-              programming fundamentals to advanced system design.
+              Master essential concepts in programming, data structures,
+              algorithms, and system design through a structured learning path.
             </P>
           </div>
         </div>
@@ -63,7 +64,9 @@ const TopicSection = () => {
                 key={index}
                 className="w-full sm:w-[260px] min-h-max flex flex-col gap-1 rounded-lg border border-gray-200 p-6 hover:border-primary transition-all hover:shadow-md"
               >
-                <div className="mb-3">{topic.icon}</div>
+                <div className="mb-3">
+                  <topic.icon className="text-primary w-10 h-10" />
+                </div>
                 <Lead>{topic.title}</Lead>
                 <P>{topic.description.slice(0, 100)}</P>
                 <Link

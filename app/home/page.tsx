@@ -6,7 +6,7 @@ import { cookies } from "next/headers";
 export default async function Home() {
   const cookieStore = await cookies();
 
-  console.log(cookieStore.getAll());
+  // console.log(cookieStore.getAll());
   return (
     <>
       <HeroSection />

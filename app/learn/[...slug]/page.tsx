@@ -59,8 +59,8 @@ export async function generateMetadata({
 
   if (!data?.content) {
     return {
-      title: "Article Not Found - CSExplore",
-      description: "The requested article could not be found on CSExplore.",
+      title: "Article Not Found - System Node",
+      description: "The requested article could not be found on System Node.",
     };
   }
 

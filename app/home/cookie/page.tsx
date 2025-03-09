@@ -9,7 +9,7 @@ export default function Page() {
           Last updated: {new Date().toLocaleDateString()}
         </P>
         <P>
-          This Cookie Policy explains how CSExplore (&quot;we&quot;,
+          This Cookie Policy explains how System Node (&quot;we&quot;,
           &quot;us&quot;, or &quot;our&quot;) uses cookies and similar
           technologies to recognize you when you visit our website. It explains
           what these technologies are and why we use them, as well as your
@@ -87,7 +87,7 @@ export default function Page() {
           If you have any questions about our use of cookies or other
           technologies, please email us at{" "}
           <Muted className="text-md text-primary dark:text-primary">
-            hello@csexplore.com
+            hello@systemnode.dev
           </Muted>
           .
         </P>
