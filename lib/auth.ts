@@ -2,6 +2,7 @@ import type { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import GitHubProvider from "next-auth/providers/github";
 import prisma from "@/lib/prisma";
+import { cookies } from "next/headers";
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -19,6 +20,7 @@ export const authOptions: NextAuthOptions = {
   },
   callbacks: {
     async signIn({ user, account }) {
+      const cookieStore = await cookies();
       // console.log(user, account, profile);
       try {
         const existingUser = await prisma.user.findUnique({
@@ -43,6 +45,12 @@ export const authOptions: NextAuthOptions = {
                 accessToken: account?.access_token ?? null,
               },
             });
+
+            cookieStore.set("provider", account?.provider || "");
+            cookieStore.set(
+              "providerAccountId",
+              account?.providerAccountId || "",
+            );
             return true;
           }
 
@@ -55,6 +63,12 @@ export const authOptions: NextAuthOptions = {
               },
             });
           }
+
+          cookieStore.set("provider", account?.provider || "");
+          cookieStore.set(
+            "providerAccountId",
+            account?.providerAccountId || "",
+          );
           return true;
         }
 
@@ -75,6 +89,8 @@ export const authOptions: NextAuthOptions = {
           },
         });
 
+        cookieStore.set("provider", account?.provider || "");
+        cookieStore.set("providerAccountId", account?.providerAccountId || "");
         return true;
       } catch (error) {
         console.error(error);

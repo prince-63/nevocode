@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { AppSidebar } from "@/components/layouts/app-side-bar";
+import { AppSidebar } from "@/components/general/app-side-bar";
 import { guides, GuideType } from "@/lib/guides-data";
 import RenderContent from "@/components/mdx/render-content";
 import ContentMobileHeader from "@/components/layouts/content-mobile-header";
@@ -14,7 +14,6 @@ const extractArticle = async ({ params }: PageParams) => {
 
   const content = guides.find((guide) => guide.slug === slug[0]);
 
-  console.log(content);
   if (!content) return null;
 
   return { content, slug };

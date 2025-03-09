@@ -5,3 +5,174 @@ title: Relational Model & Keys in DBMS
 description: Learn about relations, attributes, primary keys, foreign keys, and referential integrity in databases.
 author: CSExplore Team
 ---
+
+# Relational Model & Keys in DBMS
+The Relational Model is the foundation of modern databases, organizing data into structured tables called relations. Each table consists of rows (tuples) representing records and columns (attributes) representing properties of the data. This model ensures data integrity, consistency, and efficient retrieval using structured query language (SQL).
+
+A crucial aspect of relational databases is the concept of keys, which uniquely identify records and establish relationships between tables. Keys play a vital role in enforcing referential integrity, preventing duplicate or inconsistent data.
+
+## Components of the Relational Model
+
+The Relational Model is the foundation of modern databases, organizing data into structured tables called relations. Here are the key components of the relational model:
+
+**Relations (Table)**: A relation, commonly referred to as a table, is a collection of data organized into rows and columns. Each table represents an entity or a concept in the database. 
+
+**Attributes (Columns)**: Attributes are the properties or characteristics of the data stored in a table. Each column in a table represents an attribute. 
+
+**Tuples (Rows)**: Tuples are the individual records in a table. Each row in a table represents a single tuple, containing data for one instance of the entity. 
+
+Let's consider an example to understand these components better. 
+
+> Consider a table called _Students_:
+
+| StudentID | Name   | Age |
+|-----------|--------|-----|
+| 101       | Alice  | 20  |
+| 102       | Bob    | 21  |
+| 103       | Charlie| 22  |
+| ...       | ...    | ... |
+
+> Consider a table called _Courses_:
+
+| CourseID | Title       | Credits | StudentID |
+|----------|-------------|---------|-----------|
+| 201      | Math        | 3       | 101       |
+| 202      | Science     | 4       | 102       |
+| 203      | History     | 3       | 103       |
+| ...      | ...         | ...     | ...       |
+
+- In the Students table, StudentID, Name, and Age are attributes.
+- Each row in the Students table represents a student record (tuple).
+- In the Courses table, CourseID, Title, Credits, and StudentID are attributes.
+- The StudentID attribute in the Courses table establishes a relationship with the Students table.
+- The StudentID attribute in the Courses table is a foreign key that references the primary key StudentID in the Students table.
+
+## Keys in Relational Databases
+
+Keys are a fundamental concept in relational databases. They uniquely identify records and establish relationships between tables, ensuring data integrity and consistency. Here are the main types of keys used in relational databases:
+
+### 1. Primary Key
+A primary key is a unique identifier for each record in a table. It ensures that no two rows have the same value in the primary key column(s). A table can have only one primary key, which can consist of a single column or a combination of columns (composite key).
+
+```sql
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Age INT
+);
+```
+In a Students table, the StudentID column can be the primary key, uniquely identifying each student.
+
+### 2. Foreign Key
+A foreign key is a column or a set of columns in one table that references the primary key in another table. It establishes a relationship between the two tables, enforcing referential integrity by ensuring that the value in the foreign key column(s) matches a value in the referenced primary key column(s).
+
+```sql
+CREATE TABLE Courses (
+    CourseID INT PRIMARY KEY,
+    Title VARCHAR(100),
+    Credits INT,
+    StudentID INT,
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+);
+```
+
+In a Courses table, the StudentID column can be a foreign key that references the StudentID primary key in the Students table, indicating which student is enrolled in which course.
+
+### 3. Candidate Key
+A candidate key is a column or a set of columns that can uniquely identify any record in a table. A table can have multiple candidate keys, but one of them is chosen as the primary key.
+
+```sql
+CREATE TABLE Students (
+    StudentID INT,
+    Email VARCHAR(100),
+    Name VARCHAR(100),
+    Age INT,
+    PRIMARY KEY (StudentID),
+    UNIQUE (Email)
+);
+```
+In a Students table, both StudentID and Email could be candidate keys, as both can uniquely identify a student.
+
+### 4. Alternate Key
+An alternate key is any candidate key that is not chosen as the primary key. It is an alternative way to identify records uniquely.
+
+```sql
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Email VARCHAR(100) UNIQUE,
+    Name VARCHAR(100),
+    Age INT
+);
+```
+In a Students table, if StudentID is the primary key, then Email can be an alternate key.
+
+### 5. Composite Key
+A composite key is a primary key that consists of two or more columns. It is used when a single column is not sufficient to uniquely identify records.
+
+```sql
+CREATE TABLE Enrollments (
+    StudentID INT,
+    CourseID INT,
+    EnrollmentDate DATE,
+    PRIMARY KEY (StudentID, CourseID),
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
+    FOREIGN KEY (CourseID) REFERENCES Courses(CourseID)
+);
+```
+
+In an Enrollments table that tracks which students are enrolled in which courses, a composite key could consist of StudentID and CourseID.
+
+### 6. Super Key
+A super key is a set of one or more columns that can uniquely identify any record in a table. It includes the primary key and any additional columns.
+
+```sql
+CREATE TABLE Students (
+    StudentID INT,
+    Name VARCHAR(100),
+    Age INT,
+    PRIMARY KEY (StudentID)
+);
+```
+In a Students table, the combination of StudentID and Name could be a super key, although StudentID alone is sufficient as the primary key.
+
+## Referential Integrity in Databases
+
+Referential integrity is a crucial concept in relational databases that ensures the consistency and accuracy of data across related tables. It enforces rules that maintain the defined relationships between tables, preventing actions that would lead to invalid or inconsistent data.
+
+### Key Aspects of Referential Integrity:
+
+**Foreign Keys**: I explained earlier, foreign keys establish relationships between tables by referencing the primary key in another table. They ensure that the values in the foreign key column(s) exist in the referenced primary key column(s).
+
+**Cascading Actions**: Referential integrity can enforce cascading actions to maintain consistency when data is updated or deleted. Common cascading actions include:
+- **CASCADE**: Automatically updates or deletes related rows in the child table when a row in the parent table is updated or deleted.
+- **SET NULL**: Sets the foreign key column(s) to NULL in the child table when the referenced row in the parent table is deleted.
+- **SET DEFAULT**: Sets the foreign key column(s) to a default value in the child table when the referenced row in the parent table is deleted.
+- **RESTRICT**: Prevents the deletion or update of a row in the parent table if related rows exist in the child table.
+- **NO ACTION**: Similar to RESTRICT, but the check is deferred until the end of the transaction.
+
+### Example of Referential Integrity in SQL:
+
+```sql
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Age INT
+);
+
+CREATE TABLE Courses (
+    CourseID INT PRIMARY KEY,
+    Title VARCHAR(100),
+    Credits INT,
+    StudentID INT,
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID) 
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
+```
+
+In this example:
+- The StudentID column in the Courses table is a foreign key that references the StudentID primary key in the Students table.
+- The ON DELETE CASCADE clause ensures that if a student is deleted from the Students table, all related courses in the Courses table are also deleted.
+- The ON UPDATE CASCADE clause ensures that if the StudentID in the Students table is updated, the corresponding StudentID in the Courses table is also updated.
+
+By enforcing referential integrity, relational databases maintain accurate and consistent data, ensuring that relationships between tables are preserved and preventing orphaned records or invalid references.

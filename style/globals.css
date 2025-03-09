@@ -58,9 +58,9 @@ body {
 }
 
 /* mdx style */
-strong {
+/* strong {
   font-weight: 500;
-}
+} */
 
 code[data-line-numbers] {
   counter-reset: line;
