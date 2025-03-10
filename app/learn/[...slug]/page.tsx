@@ -55,7 +55,7 @@ export default async function Home({ params }: PageParams) {
           <div className="px-4">
             <RenderContent mdxContent={renderContent.content.body.code ?? ""} />
           </div>
-          <div className="sm:hidden">
+          <div className="sm:hidden mb-3">
             {data && (
               <GuidePagination
                 contentIndex={renderContent.contentIndex}
