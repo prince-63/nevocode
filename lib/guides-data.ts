@@ -1,6 +1,8 @@
 import {
-  allCProgrammings,
+  allCleanCodes,
   allDbms,
+  allDesignPatterns,
+  allSqls,
   DocumentTypes,
 } from "@/.contentlayer/generated";
 
@@ -15,34 +17,7 @@ export interface GuideType {
 
 export const guides: GuideType[] = [
   {
-    title: "C Programming",
-    description:
-      "Learn C++ programming, data structures, memory management, and pointers with real-world applications.",
-    icon: "Code",
-    docs: allCProgrammings,
-    slug: "c",
-    href: "/learn/c/01-introduction",
-  },
-  {
-    title: "Data Structures and Algorithms",
-    description:
-      "Master the fundamentals of DSA to excel in coding interviews and problem-solving.",
-    icon: "Code",
-    docs: allCProgrammings,
-    slug: "c",
-    href: "/learn/dsa/01-introduction",
-  },
-  {
-    title: "System Design",
-    description:
-      "Learn how to design scalable systems and tackle complex architectural challenges.",
-    icon: "Server",
-    docs: allCProgrammings,
-    slug: "system-design",
-    href: "/learn/system-design/01-introduction",
-  },
-  {
-    title: "Database Management",
+    title: "Database Management System",
     description:
       "Explore relational and NoSQL databases, query optimization, and data modeling.",
     icon: "Database",
@@ -51,21 +26,29 @@ export const guides: GuideType[] = [
     href: "/learn/dbms/01-introduction-to-dbms",
   },
   {
-    title: "Machine Learning",
+    title: "Structured Query Language",
     description:
-      "Dive into the world of AI and machine learning algorithms and applications.",
-    icon: "Cpu",
-    docs: allCProgrammings,
-    slug: "machine-learning",
-    href: "/learn/machine-learning/01-introduction",
+      "Master SQL, the standard language for storing, manipulating, and retrieving data in databases.",
+    icon: "Database",
+    docs: allSqls,
+    slug: "sql",
+    href: "/learn/sql/01-introduction-to-sql",
   },
   {
-    title: "Web Development",
+    title: "Clean Code",
+    description: "Learn how to write clean, maintainable, and efficient code.",
+    icon: "Code",
+    docs: allCleanCodes,
+    slug: "clean-code",
+    href: "/learn/clean-code/01-introduction-to-clean-code",
+  },
+  {
+    title: "Design Patterns",
     description:
-      "Build modern, responsive web applications using the latest technologies.",
-    icon: "Network",
-    docs: allCProgrammings,
-    slug: "web-development",
-    href: "/learn/web-development/01-introduction",
+      "Discover reusable solutions to common problems in software design.",
+    icon: "Code",
+    docs: allDesignPatterns,
+    slug: "design-pattern",
+    href: "/learn/design-pattern/01-introduction-to-design-patterns",
   },
 ];

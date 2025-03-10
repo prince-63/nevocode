@@ -78,7 +78,7 @@ export const mdxComponent: MDXComponents = {
   p: ({ className, ...props }) => (
     <p
       className={cn(
-        "leading-7 text-base tracking-wide font-normal [&:not(:first-child)]:my-1",
+        "leading-7 text-base tracking-wide font-normal [&:not(:first-child)]:my-2",
         pt_sans.className,
         className,
       )}
@@ -87,18 +87,18 @@ export const mdxComponent: MDXComponents = {
   ),
   ul: ({ className, ...props }) => (
     <ul
-      className={cn("ml-4 list-disc", pt_sans.className, className)}
+      className={cn("ml-4 my-2 list-disc", pt_sans.className, className)}
       {...props}
     />
   ),
   ol: ({ className, ...props }) => (
     <ol
-      className={cn("ml-4 list-decimal", pt_sans.className, className)}
+      className={cn("ml-4 my-1 list-decimal", pt_sans.className, className)}
       {...props}
     />
   ),
   li: ({ className, ...props }) => (
-    <li className={cn(pt_sans.className, className)} {...props} />
+    <li className={cn(pt_sans.className, className, "my-1")} {...props} />
   ),
   blockquote: ({ className, ...props }) => (
     <blockquote

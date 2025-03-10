@@ -110,20 +110,20 @@ Let's look at an example of an Entity-Relationship (ER) diagram to understand ho
 
 Imagine we are designing a database for a university. The key entities in this database might include **Students**, **Courses**, and **Professors**. Here's how we can represent these entities and their relationships in an ER diagram:
 
-> _Entity: Student_
-- Attributes: StudentID, Name, Email, DateOfBirth
+1. **Entity**: Student
+    - Attributes: StudentID, Name, Email, DateOfBirth
 
-> _Entity: Course_
-  - Attributes: CourseID, CourseName, Credits
+1. **Entity**: Course
+    - Attributes: CourseID, CourseName, Credits
 
-> _Entity: Professor_
-  - Attributes: ProfessorID, Name, Department
+1. **Entity**: Professor_
+    - Attributes: ProfessorID, Name, Department
 
 #### Relationships:
-> _Enrollment_: A relationship between Students and Courses, indicating which students are enrolled in which courses.
-  - Cardinality: One student can enroll in many courses, and one course can have many students (many-to-many).
-> _Teaching_: A relationship between Professors and Courses, indicating which professors teach which courses.
-  - Cardinality: One professor can teach many courses, and one course can be taught by many professors (many-to-many).
+1. **Enrollment**: A relationship between Students and Courses, indicating which students are enrolled in which courses.
+    - Cardinality: One student can enroll in many courses, and one course can have many students (many-to-many).
+1. **Teaching**: A relationship between Professors and Courses, indicating which professors teach which courses.
+    - Cardinality: One professor can teach many courses, and one course can be taught by many professors (many-to-many).
 
 {/* Here is a simplified visual representation of this ER diagram: */}
 

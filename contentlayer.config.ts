@@ -10,47 +10,6 @@ import rehypeStringify from "rehype-stringify";
 import { transformerNotationDiff } from "@shikijs/transformers";
 import imageSize from "rehype-img-size";
 
-export const CProgramming = defineDocumentType(() => ({
-  name: "CProgramming",
-  filePathPattern: "c/**/*.mdx",
-  contentType: "mdx",
-  fields: {
-    title: {
-      type: "string",
-      required: true,
-    },
-    description: {
-      type: "string",
-    },
-    date: {
-      type: "date",
-      required: false,
-    },
-    author: {
-      type: "string",
-      required: false,
-    },
-    published: {
-      type: "boolean",
-      default: true,
-    },
-  },
-  computedFields: {
-    url: {
-      type: "string",
-      resolve: (post) => `/${post._raw.flattenedPath}`,
-    },
-    slug: {
-      type: "string",
-      resolve: (doc) => `/${doc._raw.flattenedPath}`,
-    },
-    slugAsParams: {
-      type: "string",
-      resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
-    },
-  },
-}));
-
 export const DBMS = defineDocumentType(() => ({
   name: "Dbms",
   filePathPattern: "dbms/**/*.mdx",
@@ -100,11 +59,117 @@ export const DBMS = defineDocumentType(() => ({
   },
 }));
 
-export const Cpp = defineDocumentType(() => ({
-  name: "Cpp",
-  filePathPattern: "cpp/**/*.mdx",
+export const SQL = defineDocumentType(() => ({
+  name: "Sql",
+  filePathPattern: "sql/**/*.mdx",
   contentType: "mdx",
   fields: {
+    guideId: {
+      type: "string",
+      required: true,
+    },
+    moduleId: {
+      type: "string",
+      required: true,
+    },
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+    },
+    date: {
+      type: "date",
+      required: false,
+    },
+    author: {
+      type: "string",
+      required: false,
+    },
+    published: {
+      type: "boolean",
+      default: true,
+    },
+  },
+  computedFields: {
+    url: {
+      type: "string",
+      resolve: (post) => `/${post._raw.flattenedPath}`,
+    },
+    slug: {
+      type: "string",
+      resolve: (doc) => `/${doc._raw.flattenedPath}`,
+    },
+    slugAsParams: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
+    },
+  },
+}));
+
+export const CLEAN_CODE = defineDocumentType(() => ({
+  name: "CleanCode",
+  filePathPattern: "clean-code/**/*.mdx",
+  contentType: "mdx",
+  fields: {
+    guideId: {
+      type: "string",
+      required: true,
+    },
+    moduleId: {
+      type: "string",
+      required: true,
+    },
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+    },
+    date: {
+      type: "date",
+      required: false,
+    },
+    author: {
+      type: "string",
+      required: false,
+    },
+    published: {
+      type: "boolean",
+      default: true,
+    },
+  },
+  computedFields: {
+    url: {
+      type: "string",
+      resolve: (post) => `/${post._raw.flattenedPath}`,
+    },
+    slug: {
+      type: "string",
+      resolve: (doc) => `/${doc._raw.flattenedPath}`,
+    },
+    slugAsParams: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
+    },
+  },
+}));
+
+export const DESIGN_PATTERN = defineDocumentType(() => ({
+  name: "DesignPattern",
+  filePathPattern: "design-pattern/**/*.mdx",
+  contentType: "mdx",
+  fields: {
+    guideId: {
+      type: "string",
+      required: true,
+    },
+    moduleId: {
+      type: "string",
+      required: true,
+    },
     title: {
       type: "string",
       required: true,
@@ -143,7 +208,7 @@ export const Cpp = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "content",
-  documentTypes: [CProgramming, DBMS, Cpp],
+  documentTypes: [DBMS, SQL, CLEAN_CODE, DESIGN_PATTERN],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [

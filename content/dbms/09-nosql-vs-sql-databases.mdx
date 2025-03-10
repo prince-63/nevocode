@@ -5,3 +5,71 @@ title: NoSQL vs SQL Databases
 description: Compare SQL and NoSQL databases and learn when to use each.
 author: SystemNode Team
 ---
+
+# NoSQL vs SQL Databases
+
+When it comes to databases, there are two main types: SQL and NoSQL. Both have their own strengths and weaknesses, and the choice between them depends on the specific requirements of your project.
+
+## SQL Databases
+The SQL database is a traditional type of database that uses structured query language (SQL) for defining and manipulating data. It is a relational database that stores data in tables with rows and columns. SQL databases are known for their strong consistency, ACID compliance, and support for complex queries.
+
+> Some popular SQL databases include MySQL, PostgreSQL, and Oracle.
+
+## Types of SQL Databases
+There are several types of SQL databases, including:
+
+1. **Relational Databases**: Store data in tables with rows and columns and are designed to maintain relationships between data.
+2. **OLTP Databases**: Online transaction processing databases that are optimized for handling transactions and queries.
+3. **OLAP Databases**: Online analytical processing databases that are optimized for handling complex queries and analytics.
+4. **In-Memory Databases**: Store data in memory rather than on disk and are designed for high performance and low latency.
+
+## When to Use SQL Databases
+SQL databases are use when comes these types of senarious:
+
+- The project requires strong consistency and data integrity.
+- The project needs to support complex queries and transactions.
+- The project requires ACID compliance for data transactions.
+- The project needs to maintain relationships between data.
+- The project needs to ensure data integrity and enforce constraints.
+
+## NoSQL Databases
+NoSQL databases, on the other hand, are non-relational databases that do not use SQL for querying data. They are designed to handle large volumes of unstructured data and are highly scalable and flexible. NoSQL databases are known for their eventual consistency, BASE compliance, and support for distributed data.
+
+> Some popular NoSQL databases include MongoDB, Cassandra, and Redis.
+
+## Types of NoSQL Databases
+There are four main types of NoSQL databases:
+
+1. **Document-Oriented Databases**: Store data in documents, such as JSON or XML, and are designed to handle semi-structured data.
+2. **Key-Value Stores**: Store data as key-value pairs and are designed for high scalability and performance.
+3. **Column-Family Stores**: Store data in columns rather than rows and are designed for storing and retrieving large amounts of data.
+4. **Graph Databases**: Store data in nodes and edges and are designed for handling complex relationships between data.
+
+## When to Use NoSQL Databases
+NoSQL databases are use when comes these types of senarious:
+
+- The project requires high scalability and flexibility.
+- The project needs to handle large volumes of unstructured data.
+- The project needs to support distributed data processing.
+- The project requires eventual consistency for data transactions.
+- The project needs to support real-time analytics and Internet of Things (IoT) applications.
+
+## Hybrid Databases
+In some cases, a hybrid approach that combines SQL and NoSQL databases may be the best solution. This approach allows you to take advantage of the strengths of both types of databases and address the specific requirements of your project.
+
+> Some popular hybrid databases include Google Cloud Spanner, CockroachDB, and NuoDB.
+
+## Differences Between SQL and NoSQL Databases
+Here are some key differences between SQL and NoSQL databases:
+
+| SQL Databases | NoSQL Databases |
+|--------------|----------------|
+| Relational database | Non-relational database |
+| Structured data | Unstructured data |
+| Strong consistency | Eventual consistency |
+| ACID compliance | BASE compliance |
+| Support for complex queries | Support for distributed data |
+| Data integrity and constraints | High scalability and flexibility |
+| Relationships between data | Large volumes of unstructured data |
+| Transactions and rollbacks | Real-time analytics and IoT applications |
+| E-commerce platforms, financial systems | Social media platforms, real-time analytics |

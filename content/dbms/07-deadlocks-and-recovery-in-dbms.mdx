@@ -5,3 +5,55 @@ title: Deadlocks & Recovery in DBMS
 description: Understand deadlocks, detection techniques, and database recovery mechanisms.
 author: SystemNode Team
 ---
+
+# Deadlocks and Recovery in DBMS
+
+Have you ever been stuck in traffic, waiting for the car ahead to move—only to realize they’re waiting for you too? Frustrating, right? That’s exactly how **deadlocks** happen in databases.
+
+## Deadlocks in Database Systems
+
+In a database system, a deadlock occurs when two or more transactions are unable to proceed because each is waiting for the other to release a resource. Think of it like two people trying to complete their work, but they both need the same limited resources. They can't finish their tasks because they are waiting for each other to release the resources. This situation is called a deadlock.
+
+### Real-World Example
+Imagine you and a friend are both trying to use a printer and a scanner. You have the printer, and your friend has the scanner. You need the scanner to finish your task, and your friend needs the printer. Neither of you can proceed because you're each waiting for the other to release the resource. This is a deadlock.
+
+## Why Deadlocks Occur
+
+Deadlocks occur in database systems for several reasons:
+- **Resource Contention**: Multiple transactions compete for the same resources.
+- **Circular Wait**: Transactions form a cycle where each transaction is waiting for a resource held by the next transaction in the cycle.
+- **Hold and Wait**: Transactions hold onto resources while waiting for additional resources.
+- **No Preemption**: Resources cannot be forcibly taken from a transaction; they must be released voluntarily.
+
+## Deadlock Detection Techniques
+
+To manage deadlocks, database systems use various detection techniques:
+
+### 1. Wait-For Graph
+A wait-for graph is a directed graph used to detect cycles that indicate deadlocks. Each node represents a transaction, and an edge from node T1 to node T2 indicates that T1 is waiting for a resource held by T2. If the graph contains a cycle, a deadlock exists.
+
+### 2. Timeout
+The system sets a timeout for each transaction. If a transaction waits too long for a resource, it is aborted to break the deadlock. This approach is less efficient than other detection techniques.
+
+## Deadlock Recovery Mechanisms
+
+Once a deadlock is detected, the system must recover from it. Here are some common recovery mechanisms:
+
+### 1. Transaction Rollback
+The system rolls back one or more transactions to break the deadlock cycle. The choice of which transaction to roll back can be based on factors like transaction priority or the amount of work done.
+
+### 2. Resource Preemption
+The system forcibly takes resources from some transactions and reallocates them to others to resolve the deadlock. This approach is less common due to its complexity and potential for data inconsistency.
+
+## Database Recovery Techniques
+
+In addition to handling deadlocks, database systems must also recover from other types of failures. Here are some common recovery techniques:
+
+### 1. Checkpointing
+The system periodically saves the state of the database to a stable storage. In the event of a failure, the system can restore the database to the last checkpoint and replay transactions from the log to recover.
+
+### 2. Log-Based Recovery
+The system maintains a log of all transactions and their changes. In the event of a failure, the system uses the log to redo committed transactions and undo uncommitted transactions to restore the database to a consistent state.
+
+### 3. Shadow Paging
+The system maintains two copies of the database: the current copy and a shadow copy. Changes are made to the current copy, and the shadow copy remains unchanged. In the event of a failure, the system can revert to the shadow copy.

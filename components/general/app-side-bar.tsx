@@ -52,7 +52,7 @@ export function AppSidebar({ content }: AppSidebarProps) {
                     asChild
                   >
                     <Link
-                      href={`/learn/${item.url}`}
+                      href={`/learn${item.url}`}
                       className="flex items-center w-full"
                     >
                       <BookmarkCheck className="dark:text-textDark text-textLight dark:hover:text-textDark" />
