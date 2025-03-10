@@ -4,6 +4,7 @@ import { guides, GuideType } from "@/lib/guides-data";
 import RenderContent from "@/components/mdx/render-content";
 import ContentMobileHeader from "@/components/layouts/content-mobile-header";
 import { Metadata } from "next";
+import GuidePagination from "@/components/general/guide-pagination";
 
 interface PageParams {
   params: Promise<{ slug: string }>;
@@ -26,8 +27,15 @@ const filterRenderContent = async (data: {
   // Generate combinedSlug
   const combinedSlug = "/" + data.slug[0] + "/" + data.slug[1];
 
-  // Find the article directly
-  return data.content.docs.find((doc) => doc.url === combinedSlug);
+  // Find the guide index
+  const contentIndex = data.content.docs.findIndex(
+    (doc) => doc.url === combinedSlug,
+  );
+
+  const content = data.content.docs[contentIndex];
+
+  // returning the guide index with there actual guide content
+  return { content, contentIndex };
 };
 
 export default async function Home({ params }: PageParams) {
@@ -35,6 +43,7 @@ export default async function Home({ params }: PageParams) {
 
   if (!data) return notFound();
 
+  // Get the guide for rendering and index of the guide for pagination use cases
   const renderContent = await filterRenderContent(data);
 
   return (
@@ -44,7 +53,15 @@ export default async function Home({ params }: PageParams) {
         <div>
           <ContentMobileHeader />
           <div className="px-4">
-            <RenderContent mdxContent={renderContent?.body.code ?? ""} />
+            <RenderContent mdxContent={renderContent.content.body.code ?? ""} />
+          </div>
+          <div className="sm:hidden">
+            {data && (
+              <GuidePagination
+                contentIndex={renderContent.contentIndex}
+                guide={data.content}
+              />
+            )}
           </div>
         </div>
       </div>
@@ -67,7 +84,7 @@ export async function generateMetadata({
   const renderContent = await filterRenderContent(data);
 
   return {
-    title: renderContent?.title,
-    description: renderContent?.description,
+    title: renderContent?.content.title,
+    description: renderContent?.content.description,
   };
 }

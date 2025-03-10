@@ -14,9 +14,9 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col gap-6 px-4 md:flex-row md:items-center md:px-6">
         <div className="flex flex-col gap-2">
           <Logo />
-          <Muted>Master computer science at your own pace.</Muted>
+          <Muted>Understand. Build. Succeed.</Muted>
           <Muted className="opacity-80">
-            © {new Date().getFullYear()} System Node. All rights reserved.
+            © 2025 - {new Date().getFullYear()} SystemNode.dev. All rights reserved.
           </Muted>
         </div>
         <div className="flex-1 md:flex md:justify-end">
