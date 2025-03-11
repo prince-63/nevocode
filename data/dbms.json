@@ -1,0 +1,79 @@
+{
+  "courseId": "DBMS-101",
+  "guideId": "CSExplore-Team",
+  "title": "DBMS Mastery: Complete Guide",
+  "modules": [
+    {
+      "moduleId": "DBMS-1",
+      "title": "Introduction to DBMS",
+      "description": "Learn the fundamentals of DBMS, its history, features, and types of databases.",
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DBMS-2",
+      "title": "Database Models & ER Diagrams",
+      "description": "Understand different database models and learn to design ER diagrams for real-world applications.",
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DBMS-3",
+      "title": "Relational Model & Keys",
+      "description": "Learn about relations, attributes, primary keys, foreign keys, and referential integrity in databases.",
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DBMS-4",
+      "title": "Database Normalization & Schema Design",
+      "description": "Explore normalization techniques (1NF - 5NF) and how to design efficient database schemas.",
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DBMS-5",
+      "title": "Indexing & Hashing",
+      "description": "Understand indexing methods, B-trees, and hashing techniques to optimize database performance.",
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DBMS-6",
+      "title": "Transactions & Concurrency Control",
+      "description": "Learn about ACID properties, transaction states, and concurrency control mechanisms.",
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DBMS-7",
+      "title": "Deadlocks & Recovery in DBMS",
+      "description": "Understand deadlocks, detection techniques, and database recovery mechanisms.",
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DBMS-8",
+      "title": "Storage Management & File Organization",
+      "description": "Explore storage hierarchy, file organization techniques, and RAID storage.",
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DBMS-9",
+      "title": "Sharding & Replication Strategies",
+      "description": "Learn database partitioning, replication strategies, and distributed databases.",
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DBMS-10",
+      "title": "Database Security & Encryption",
+      "description": "Understand authentication, authorization, and encryption techniques in databases.",
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DBMS-11",
+      "title": "Backup & Disaster Recovery",
+      "description": "Learn strategies for database backup and disaster recovery planning.",
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DBMS-12",
+      "title": "Capstone Project: Designing a Scalable Database System",
+      "description": "Apply all DBMS concepts to design a scalable database system for a real-world use case.",
+      "author": "CSExplore Team"
+    }
+  ]
+}

@@ -206,9 +206,58 @@ export const DESIGN_PATTERN = defineDocumentType(() => ({
   },
 }));
 
+export const DATA_STRUCTURE = defineDocumentType(() => ({
+  name: "DataStructure",
+  filePathPattern: "data-structure/**/*.mdx",
+  contentType: "mdx",
+  fields: {
+    guideId: {
+      type: "string",
+      required: true,
+    },
+    moduleId: {
+      type: "string",
+      required: true,
+    },
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+    },
+    date: {
+      type: "date",
+      required: false,
+    },
+    author: {
+      type: "string",
+      required: false,
+    },
+    published: {
+      type: "boolean",
+      default: true,
+    },
+  },
+  computedFields: {
+    url: {
+      type: "string",
+      resolve: (post) => `/${post._raw.flattenedPath}`,
+    },
+    slug: {
+      type: "string",
+      resolve: (doc) => `/${doc._raw.flattenedPath}`,
+    },
+    slugAsParams: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
+    },
+  },
+}));
+
 export default makeSource({
   contentDirPath: "content",
-  documentTypes: [DBMS, SQL, CLEAN_CODE, DESIGN_PATTERN],
+  documentTypes: [DBMS, SQL, CLEAN_CODE, DESIGN_PATTERN, DATA_STRUCTURE],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [

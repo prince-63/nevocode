@@ -1,0 +1,191 @@
+{
+  "courseId": "CLEAN-CODE-101",
+  "guideId": "CSExplore-Team",
+  "title": "Mastering Clean Code: Write Readable & Maintainable Code",
+  "modules": [
+    {
+      "moduleId": "CLEAN-CODE-1",
+      "guideId": "CSExplore-Team",
+      "title": "Introduction to Clean Code",
+      "description": "Understand the importance of clean code, how it improves software maintainability, and industry standards.",
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "CLEAN-CODE-2",
+      "guideId": "CSExplore-Team",
+      "title": "Naming Conventions & Meaningful Names",
+      "description": "Learn best practices for naming variables, functions, classes, and files to enhance code readability.",
+      "topicsCovered": [
+        "Why Naming Matters",
+        "Rules for Naming Variables & Constants",
+        "How to Name Functions Clearly",
+        "Class & Object Naming Conventions",
+        "Avoiding Ambiguous Names",
+        "Industry Standards & Examples"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "CLEAN-CODE-3",
+      "guideId": "CSExplore-Team",
+      "title": "Writing Small & Focused Functions",
+      "description": "Break down large functions into small, reusable units that follow the Single Responsibility Principle.",
+      "topicsCovered": [
+        "Understanding Function Size",
+        "Single Responsibility Principle (SRP)",
+        "Avoiding Side Effects in Functions",
+        "Returning Values vs Modifying State",
+        "Refactoring Large Functions"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "CLEAN-CODE-4",
+      "guideId": "CSExplore-Team",
+      "title": "Code Formatting & Readability",
+      "description": "Explore indentation, spacing, consistent formatting, and structuring best practices for better readability.",
+      "topicsCovered": [
+        "Consistent Indentation & Spacing",
+        "Line Length Guidelines",
+        "Code Block Formatting",
+        "Proper Use of Comments & Documentation",
+        "Automatic Formatters & Linters"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "CLEAN-CODE-5",
+      "guideId": "CSExplore-Team",
+      "title": "Eliminating Code Smells",
+      "description": "Identify and fix common bad coding patterns that make code harder to maintain.",
+      "topicsCovered": [
+        "What Are Code Smells?",
+        "Long Methods & Large Classes",
+        "Duplicated Code",
+        "Magic Numbers & String Literals",
+        "Overcomplicated Logic"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "CLEAN-CODE-6",
+      "guideId": "CSExplore-Team",
+      "title": "Reducing Complexity & Writing Simple Code",
+      "description": "Learn techniques to simplify complex code and avoid unnecessary abstractions.",
+      "topicsCovered": [
+        "Keeping Functions Short & Simple",
+        "Avoiding Deep Nesting",
+        "Reducing Conditional Complexity",
+        "Using Early Returns & Guard Clauses",
+        "Refactoring Complex Code Blocks"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "CLEAN-CODE-7",
+      "guideId": "CSExplore-Team",
+      "title": "Writing Self-Documenting Code",
+      "description": "Understand how to write code that requires minimal external documentation.",
+      "topicsCovered": [
+        "Code That Explains Itself",
+        "Eliminating the Need for Excessive Comments",
+        "Using Descriptive Variable & Function Names",
+        "Writing Intuitive Conditionals & Loops"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "CLEAN-CODE-8",
+      "guideId": "CSExplore-Team",
+      "title": "Error Handling & Exception Management",
+      "description": "Implement structured error handling for more robust and reliable applications.",
+      "topicsCovered": [
+        "Error Handling Best Practices",
+        "Checked vs Unchecked Exceptions",
+        "Avoiding Empty Catch Blocks",
+        "Using Custom Error Messages",
+        "Logging & Debugging"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "CLEAN-CODE-9",
+      "guideId": "CSExplore-Team",
+      "title": "Consistent Coding Style & Standards",
+      "description": "Follow industry-standard coding practices to maintain consistency across projects.",
+      "topicsCovered": [
+        "Following Language-Specific Style Guides",
+        "Setting Up Linting Tools",
+        "Ensuring Consistency in Teams",
+        "Writing Clean Commit Messages",
+        "Documenting Code Changes"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "CLEAN-CODE-10",
+      "guideId": "CSExplore-Team",
+      "title": "Avoiding Over-Engineering & Keeping It Simple",
+      "description": "Avoid unnecessary complexity and build solutions that are simple and effective.",
+      "topicsCovered": [
+        "When Not to Use Design Patterns",
+        "Avoiding Premature Optimization",
+        "Keeping Dependencies Minimal",
+        "Using the KISS Principle (Keep It Simple, Stupid)"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "CLEAN-CODE-11",
+      "guideId": "CSExplore-Team",
+      "title": "Writing Unit Tests for Clean Code",
+      "description": "Ensure code reliability through automated testing and Test-Driven Development (TDD).",
+      "topicsCovered": [
+        "Basics of Unit Testing",
+        "Writing Meaningful Test Cases",
+        "Mocking & Dependency Injection",
+        "Using TDD for Better Code Quality"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "CLEAN-CODE-12",
+      "guideId": "CSExplore-Team",
+      "title": "Refactoring for Clean Code",
+      "description": "Improve existing code structure while maintaining functionality.",
+      "topicsCovered": [
+        "Refactoring Without Breaking Functionality",
+        "Common Refactoring Techniques",
+        "Using Design Patterns for Better Structure",
+        "Refactoring Large Codebases"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "CLEAN-CODE-13",
+      "guideId": "CSExplore-Team",
+      "title": "Capstone: Clean Code Review & Improvement Project",
+      "description": "Analyze a poorly written codebase and refactor it to improve readability and structure.",
+      "topicsCovered": [
+        "Reviewing a Sample Codebase",
+        "Identifying Problematic Code",
+        "Applying Clean Code Principles",
+        "Finalizing & Documenting Changes"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "CLEAN-CODE-14",
+      "guideId": "CSExplore-Team",
+      "title": "Top 50 Clean Code Interview Questions",
+      "description": "Prepare for interviews with the most common clean code questions and scenarios.",
+      "topicsCovered": [
+        "Common Clean Code Questions",
+        "Scenario-Based Code Improvements",
+        "Live Coding & Refactoring Challenges",
+        "Best Resources for Continued Learning"
+      ],
+      "author": "CSExplore Team"
+    }
+  ]
+}

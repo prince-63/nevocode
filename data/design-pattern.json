@@ -1,0 +1,216 @@
+{
+  "courseId": "DESIGN-PATTERNS-101",
+  "guideId": "CSExplore-Team",
+  "title": "Mastering Design Patterns: Write Scalable & Maintainable Code",
+  "modules": [
+    {
+      "moduleId": "DESIGN-PATTERNS-1",
+      "guideId": "CSExplore-Team",
+      "title": "Introduction to Design Patterns",
+      "description": "Understand what design patterns are, why they are important, and how they improve code reusability and maintainability.",
+      "topicsCovered": [
+        "What Are Design Patterns?",
+        "Benefits of Using Design Patterns",
+        "Types of Design Patterns (Creational, Structural, Behavioral)",
+        "When and Where to Use Design Patterns?",
+        "Common Mistakes While Using Design Patterns"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DESIGN-PATTERNS-2",
+      "guideId": "CSExplore-Team",
+      "title": "Creational Design Patterns Overview",
+      "description": "Learn about patterns that deal with object creation, improving flexibility and code reuse.",
+      "topicsCovered": [
+        "What Are Creational Patterns?",
+        "Advantages of Creational Patterns",
+        "Comparison of Different Creational Patterns"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DESIGN-PATTERNS-3",
+      "guideId": "CSExplore-Team",
+      "title": "Singleton Pattern",
+      "description": "Ensure a class has only one instance and provides a global access point.",
+      "topicsCovered": [
+        "Understanding the Singleton Pattern",
+        "Implementing Singleton in Different Programming Languages",
+        "Thread-Safety & Best Practices",
+        "Pros and Cons of Singleton",
+        "Use Cases in Real-World Applications"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DESIGN-PATTERNS-4",
+      "guideId": "CSExplore-Team",
+      "title": "Factory Pattern",
+      "description": "Encapsulate object creation logic inside a dedicated factory class.",
+      "topicsCovered": [
+        "Understanding the Factory Pattern",
+        "Factory Method vs. Simple Factory",
+        "Implementing Factory Pattern",
+        "When to Use Factory Pattern?",
+        "Factory Pattern in Real-World Applications"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DESIGN-PATTERNS-5",
+      "guideId": "CSExplore-Team",
+      "title": "Abstract Factory Pattern",
+      "description": "Provide an interface for creating families of related objects without specifying concrete classes.",
+      "topicsCovered": [
+        "Understanding Abstract Factory Pattern",
+        "Difference Between Factory and Abstract Factory",
+        "Implementation with Real Examples",
+        "Advantages & Limitations"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DESIGN-PATTERNS-6",
+      "guideId": "CSExplore-Team",
+      "title": "Builder Pattern",
+      "description": "Simplify the creation of complex objects step by step.",
+      "topicsCovered": [
+        "Understanding the Builder Pattern",
+        "Step-by-Step Implementation",
+        "When to Use Builder Pattern?",
+        "Comparison with Factory Pattern"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DESIGN-PATTERNS-7",
+      "guideId": "CSExplore-Team",
+      "title": "Prototype Pattern",
+      "description": "Clone existing objects instead of creating new ones from scratch.",
+      "topicsCovered": [
+        "Understanding the Prototype Pattern",
+        "Shallow vs. Deep Copy",
+        "Real-World Use Cases",
+        "Performance Considerations"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DESIGN-PATTERNS-8",
+      "guideId": "CSExplore-Team",
+      "title": "Structural Design Patterns Overview",
+      "description": "Learn patterns that define object relationships to ensure a flexible and efficient structure.",
+      "topicsCovered": [
+        "What Are Structural Patterns?",
+        "How They Improve Code Maintainability",
+        "Comparison of Different Structural Patterns"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DESIGN-PATTERNS-9",
+      "guideId": "CSExplore-Team",
+      "title": "Adapter Pattern",
+      "description": "Convert an existing interface into another interface clients expect.",
+      "topicsCovered": [
+        "Understanding the Adapter Pattern",
+        "Class Adapter vs. Object Adapter",
+        "Use Cases and Real-World Examples"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DESIGN-PATTERNS-10",
+      "guideId": "CSExplore-Team",
+      "title": "Decorator Pattern",
+      "description": "Dynamically add behavior to objects at runtime.",
+      "topicsCovered": [
+        "Understanding the Decorator Pattern",
+        "Comparison with Inheritance",
+        "Implementing Decorator in Real Applications"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DESIGN-PATTERNS-11",
+      "guideId": "CSExplore-Team",
+      "title": "Proxy Pattern",
+      "description": "Control access to objects through proxy classes.",
+      "topicsCovered": [
+        "Understanding the Proxy Pattern",
+        "Virtual Proxy, Remote Proxy, and Protection Proxy",
+        "Implementing Proxy with Real Examples"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DESIGN-PATTERNS-12",
+      "guideId": "CSExplore-Team",
+      "title": "Behavioral Design Patterns Overview",
+      "description": "Learn patterns that focus on object communication and behavior.",
+      "topicsCovered": [
+        "What Are Behavioral Patterns?",
+        "How They Simplify Object Interaction",
+        "Comparison of Different Behavioral Patterns"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DESIGN-PATTERNS-13",
+      "guideId": "CSExplore-Team",
+      "title": "Observer Pattern",
+      "description": "Establish a one-to-many dependency between objects.",
+      "topicsCovered": [
+        "Understanding the Observer Pattern",
+        "Push vs. Pull Notification Models",
+        "Real-World Applications"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DESIGN-PATTERNS-14",
+      "guideId": "CSExplore-Team",
+      "title": "Strategy Pattern",
+      "description": "Encapsulate algorithms inside interchangeable classes.",
+      "topicsCovered": [
+        "Understanding the Strategy Pattern",
+        "How to Implement Strategy Pattern?",
+        "Comparison with State Pattern"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DESIGN-PATTERNS-15",
+      "guideId": "CSExplore-Team",
+      "title": "Command Pattern",
+      "description": "Encapsulate commands as objects to enable undo/redo functionalities.",
+      "topicsCovered": [
+        "Understanding the Command Pattern",
+        "Implementing Undo & Redo",
+        "Comparison with Observer Pattern"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DESIGN-PATTERNS-16",
+      "guideId": "CSExplore-Team",
+      "title": "Capstone: Applying Design Patterns in a Project",
+      "description": "Work on a real-world project using multiple design patterns.",
+      "topicsCovered": [
+        "Analyzing a Complex Project",
+        "Choosing the Right Patterns",
+        "Refactoring for Better Design",
+        "Final Code Review & Optimization"
+      ],
+      "author": "CSExplore Team"
+    },
+    {
+      "moduleId": "DESIGN-PATTERNS-17",
+      "guideId": "CSExplore-Team",
+      "title": "Top 50 Design Patterns Interview Questions",
+      "description": "Prepare for job interviews with commonly asked design pattern questions.",
+      "author": "CSExplore Team"
+    }
+  ]
+}

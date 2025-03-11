@@ -1,5 +1,6 @@
 import {
   allCleanCodes,
+  allDataStructures,
   allDbms,
   allDesignPatterns,
   allSqls,
@@ -33,6 +34,15 @@ export const guides: GuideType[] = [
     docs: allSqls,
     slug: "sql",
     href: "/learn/sql/01-introduction-to-sql",
+  },
+  {
+    title: "Data Structure",
+    description:
+      "Learn how to organize, store, and manage data efficiently using data structures.",
+    icon: "Database",
+    docs: allDataStructures,
+    slug: "data-structure",
+    href: "/learn/data-structure/01-introduction-to-data-structures",
   },
   {
     title: "Clean Code",
