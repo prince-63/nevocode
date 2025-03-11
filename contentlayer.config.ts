@@ -6,7 +6,6 @@ import rehypeSlug from "rehype-slug";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
-// import { transformerCopyButton } from "@rehype-pretty/transformers";
 import { transformerNotationDiff } from "@shikijs/transformers";
 import imageSize from "rehype-img-size";
 

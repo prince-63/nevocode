@@ -42,7 +42,7 @@ export const guides: GuideType[] = [
     icon: "Database",
     docs: allDataStructures,
     slug: "data-structure",
-    href: "/learn/data-structure/01-introduction-to-data-structures",
+    href: "/learn/data-structure/01-introduction-to-data-structure",
   },
   {
     title: "Clean Code",
