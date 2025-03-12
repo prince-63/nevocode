@@ -4,16 +4,12 @@ export interface DSASheetProblemType {
   description: string;
   link: string;
   guideLink: string;
-  videoLink: string;
-  deficultyLevel: string;
-  tags?: string[];
-  cotegoriy: number[];
-  company?: string[];
+  difficultyLevel: string;
 }
 
 export interface DSASheetType {
   topicId: string;
   topicName: string;
-  topicDescription: string;
+  description: string;
   problems: DSASheetProblemType[];
 }

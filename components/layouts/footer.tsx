@@ -16,7 +16,8 @@ const Footer = () => {
           <Logo />
           <Muted>Understand. Build. Succeed.</Muted>
           <Muted className="opacity-80">
-            © 2025 - {new Date().getFullYear()} SystemNode.dev. All rights reserved.
+            © 2025 - {new Date().getFullYear()} SystemNode.dev. All rights
+            reserved.
           </Muted>
         </div>
         <div className="flex-1 md:flex md:justify-end">

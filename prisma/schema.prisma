@@ -37,3 +37,28 @@ model Guide {
   accountId        String   @db.ObjectId
   completedModules String[]
 }
+
+model DSAProblem {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  name           String
+  description    String
+  link           String
+  guideLink      String
+  videoLink      String
+  deficultyLevel String
+  tags           String[]
+  categories     String[]
+  companies      String[]
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  dsasheetId String?             @db.ObjectId
+  dsasheet   DSAProblemCategory? @relation(fields: [dsasheetId], references: [topicId])
+}
+
+model DSAProblemCategory {
+  topicId          String       @id @default(auto()) @map("_id") @db.ObjectId
+  topicName        String
+  TopicDescription String
+  problems         DSAProblem[]
+}

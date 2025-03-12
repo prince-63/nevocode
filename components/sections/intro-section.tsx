@@ -5,7 +5,11 @@ const IntroSection = () => {
   return (
     <section className="intro-section">
       <div className="mx-8 my-12 sm:my-24 sm:mx-16 md:mx-32 md:my-28">
-        <H1 className={`${pt_sans.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl`}>Hello World!</H1>
+        <H1
+          className={`${pt_sans.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl`}
+        >
+          Hello World!
+        </H1>
         <Lead className={`${pt_sans.className} py-2`}>
           I spent countless hours watching tutorials, only to realize I still
           couldn’t apply what I learned. Frustrated and on the verge of giving
