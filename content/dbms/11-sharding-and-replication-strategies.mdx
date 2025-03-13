@@ -2,7 +2,7 @@
 guideId: DBMS-101
 moduleId: DBMS-11
 title: Sharding & Replication Strategies
-description: Learn database partitioning, replication strategies, and distributed databases.
+description: Learn database partitioning, replication strategies.
 author: SystemNode Team
 ---
 
@@ -125,28 +125,8 @@ When implementing replication in a database, several challenges arise:
 - Scaling replication to handle large volumes of data can be challenging.
 - Monitoring replication processes and ensuring data integrity can be difficult.
 
-## Distributed Databases
-
-Distributed databases are databases stored on multiple computers or servers connected to each other. Each server has its own database and can perform operations independently.
-
-Distributed databases can be sharded or replicated to improve performance, availability, and fault tolerance.
-
-They can store and manage large volumes of data, support high transaction throughput, and provide real-time access to critical data.
-
-## CAP Theorem and Trade-offs
-
-The CAP theorem states that it is impossible for a distributed system to simultaneously provide **consistency, availability, and partition tolerance**.
-
-A distributed database system can only provide two out of the three guarantees:
-
-- **Consistency**: Every read receives the most recent write or an error.
-- **Availability**: Every request receives a response, without a guarantee that it contains the most recent write.
-- **Partition Tolerance**: The system continues to operate despite network partitions.
-
-When designing a distributed database system, trade-offs must be made between consistency, availability, and partition tolerance based on application requirements.
 
 ## When to Use?
 
 - Use **sharding** when you need to scale the database horizontally to handle large volumes of data and high transaction throughput.
 - Use **replication** when you need high availability, fault tolerance, and data recovery in case of a disaster.
-- Use **distributed databases** when you need to store and manage large volumes of data, support high transaction throughput, and provide real-time access to critical data.
