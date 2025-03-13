@@ -1,7 +1,152 @@
 ---
 guideId: DBMS-101
-moduleId: DBMS-18
+moduleId: DBMS-11
 title: Sharding & Replication Strategies
 description: Learn database partitioning, replication strategies, and distributed databases.
 author: SystemNode Team
 ---
+
+# Sharding & Replication Strategies
+
+Imagine you are developing a WhatsApp-like application where you need to store the messages of all users. As more users start using your application, the data grows rapidly.
+
+You have to store the messages of all users in a single database. As the data becomes huge, your database is unable to handle the load. You need to find a way to manage the load.
+
+One way to handle the load is by using sharding and replication strategies. Let's understand what sharding and replication are.
+
+## What is Sharding?
+
+Sharding is a method of dividing or partitioning large data into smaller parts, where each part is called a shard. Each shard is stored in a separate database server instance to distribute the load.
+
+## Process of Sharding
+
+In sharding, data is divided based on specific criteria such as user ID, location, or other logical divisions. Each shard is assigned to a different database server, allowing efficient data retrieval and reducing bottlenecks.
+
+When a user requests data, the application first determines which shard contains the required information and then retrieves it from the corresponding server.
+
+## Example of Sharding
+
+Imagine a database with 1,000 users. To optimize performance, you decide to shard the data based on user ID, creating 10 shards, each containing 100 users. 
+
+If a user with ID 123 needs access, the application quickly identifies that this ID belongs to shard 2 and fetches the relevant data from there. This approach ensures better scalability, load balancing, and faster query execution.
+
+## Types of Sharding
+
+There are mainly two types of sharding:
+
+### 1. Horizontal Sharding
+
+In horizontal sharding, data is divided into smaller parts based on rows. Each shard contains a subset of rows.
+
+| Shard 1 | Shard 2 | Shard 3 |
+|---------|---------|---------|
+| 1-100   | 101-200 | 201-300 |
+
+In the example above, data is divided into three shards based on rows. Each shard has 100 rows: Shard 1 contains rows 1 to 100, Shard 2 contains rows 101 to 200, and Shard 3 contains rows 201 to 300.
+
+### 2. Vertical Sharding
+
+In vertical sharding, data is divided into smaller parts based on columns. Each shard contains a subset of columns.
+
+| Shard 1 | Shard 2 | Shard 3 |
+|---------|---------|---------|
+| Name    | Age     | Address |
+| John    | 25      | NY      |
+| Alice   | 30      | LA      |
+
+In the example above, data is divided into three shards based on columns. Shard 1 contains the Name column, Shard 2 contains the Age column, and Shard 3 contains the Address column.
+
+## Why Sharding?
+
+- Sharding helps scale the database horizontally by distributing data across multiple servers.
+- Sharding improves database performance by reducing the load on a single server.
+- Sharding increases database availability by spreading the load across multiple servers.
+- Sharding provides data isolation by storing related data in the same shard.
+
+## Challenges of Sharding
+
+When implementing sharding in a database, several challenges arise:
+
+- Distributing data across multiple shards can be complex and challenging.
+- Ensuring data consistency across multiple shards can be difficult.
+- Routing queries to the correct shard can be complex and challenging.
+- Handling failures in a sharded environment can be complex.
+- Migrating data between shards can be difficult.
+
+## What is Replication?
+
+As previously discussed, in a WhatsApp-like application where messages from all users are stored, data grows rapidly. Now, imagine an error occurs in the database server where the data is stored. You could lose all user messages and important data. To prevent this, you can use replication.
+
+Replication is a technique where a copy of the original data is created and stored in another database server. This copy is called a replica. When the original data is lost, the replica can be used to recover the data.
+
+## Types of Replication
+
+There are mainly two types of replication:
+
+### 1. Master-Slave Replication
+
+In master-slave replication, one server acts as the master, responsible for writing data or transactions to the database. The master server's data is then replicated to multiple replica servers called slave servers.
+
+> When a user wants to read data, the slave servers or replicas help retrieve it.
+
+### 2. Master-Master Replication
+
+In master-master replication, multiple servers are responsible for writing data or transactions to the database. Each server can read and write data.
+
+> When a user wants to read data, the master servers help retrieve it.
+
+## Synchronous vs Asynchronous Replication
+
+### 1. Synchronous Replication
+
+In synchronous replication, data is copied from the master server to the replica server in real time. The master server waits for the replica server to confirm that the data has been copied before committing the transaction.
+
+> You have likely used a banking application where you transfer money from one account to another. In this case, banks use synchronous replication to ensure the money transfer is successful.
+
+### 2. Asynchronous Replication
+
+In asynchronous replication, data is copied from the master server to the replica server in near real time. The master server does not wait for the replica server to confirm before committing the transaction.
+
+> You have likely used a social media application where you post a status or photo. Social media platforms use asynchronous replication to ensure the post is published successfully.
+
+## Why Replication?
+
+- Replication provides high availability by creating multiple copies of data.
+- Replication ensures fault tolerance by maintaining multiple copies of data.
+- Replication helps distribute the load across multiple servers.
+- Replication allows data recovery in case of a disaster.
+
+## Challenges of Replication
+
+When implementing replication in a database, several challenges arise:
+
+- Ensuring data consistency across multiple replicas can be difficult.
+- Handling conflicts in replicated data can be complex.
+- Scaling replication to handle large volumes of data can be challenging.
+- Monitoring replication processes and ensuring data integrity can be difficult.
+
+## Distributed Databases
+
+Distributed databases are databases stored on multiple computers or servers connected to each other. Each server has its own database and can perform operations independently.
+
+Distributed databases can be sharded or replicated to improve performance, availability, and fault tolerance.
+
+They can store and manage large volumes of data, support high transaction throughput, and provide real-time access to critical data.
+
+## CAP Theorem and Trade-offs
+
+The CAP theorem states that it is impossible for a distributed system to simultaneously provide **consistency, availability, and partition tolerance**.
+
+A distributed database system can only provide two out of the three guarantees:
+
+- **Consistency**: Every read receives the most recent write or an error.
+- **Availability**: Every request receives a response, without a guarantee that it contains the most recent write.
+- **Partition Tolerance**: The system continues to operate despite network partitions.
+
+When designing a distributed database system, trade-offs must be made between consistency, availability, and partition tolerance based on application requirements.
+
+## When to Use?
+
+- Use **sharding** when you need to scale the database horizontally to handle large volumes of data and high transaction throughput.
+- Use **replication** when you need high availability, fault tolerance, and data recovery in case of a disaster.
+- Use **distributed databases** when you need to store and manage large volumes of data, support high transaction throughput, and provide real-time access to critical data.
