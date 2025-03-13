@@ -1,5 +1,5 @@
-import { H3, Lead, P, Small } from "@/components/ui/typography";
-import { ourImpactData, ourValueData } from "@/lib/about-data";
+import { H3, Lead, P } from "@/components/ui/typography";
+import { ourValueData } from "@/lib/about-data";
 
 export default function Page() {
   return (
@@ -32,7 +32,7 @@ export default function Page() {
         </div>
 
         {/* Stats */}
-        <div>
+        {/* <div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             {ourImpactData.map((data, index) => {
               return (
@@ -48,7 +48,7 @@ export default function Page() {
               );
             })}
           </div>
-        </div>
+        </div> */}
 
         {/* Values */}
         <div>

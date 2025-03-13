@@ -21,11 +21,11 @@ export interface LegalType {
 export const platformLinkList: PlatformLinkType[] = [
   {
     name: "Guides",
-    href: "/home/guides",
+    href: "/home",
   },
   {
     name: "Topics",
-    href: "/home/topics",
+    href: "/home",
   },
 ];
 
@@ -34,10 +34,10 @@ export const resourcesList: ResourcesType[] = [
     name: "DBMS",
     href: "/learn/dbms/01-introduction-to-dbms",
   },
-  {
-    name: "C Programming",
-    href: "/learn/c/01-introduction",
-  },
+  // {
+  //   name: "SQL",
+  //   href: "sql/01-introduction-to-sql",
+  // },
 ];
 
 export const companyList: CompanyType[] = [
