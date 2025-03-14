@@ -131,6 +131,7 @@ export const mdxComponent: MDXComponents = {
         src={`${src}`}
         width={widthInNumber}
         height={heightInNumber}
+        className="rounded-md"
       />
     );
   },

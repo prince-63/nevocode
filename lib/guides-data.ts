@@ -2,7 +2,7 @@ import {
   // allCleanCodes,
   // allDataStructures,
   // allDesignPatterns,
-  // allSqls,
+  allSqls,
   allDbms,
   DocumentTypes,
 } from "@/.contentlayer/generated";
@@ -26,15 +26,15 @@ export const guides: GuideType[] = [
     slug: "dbms",
     href: "/learn/dbms/01-introduction-to-dbms",
   },
-  // {
-  //   title: "Structured Query Language",
-  //   description:
-  //     "Master SQL, the standard language for storing, manipulating, and retrieving data in databases.",
-  //   icon: "Database",
-  //   docs: allSqls,
-  //   slug: "sql",
-  //   href: "/learn/sql/01-introduction-to-sql",
-  // },
+  {
+    title: "Structured Query Language",
+    description:
+      "Master SQL, the standard language for storing, manipulating, and retrieving data in databases.",
+    icon: "Database",
+    docs: allSqls,
+    slug: "sql",
+    href: "/learn/sql/01-introduction-to-sql",
+  },
   // {
   //   title: "Data Structure",
   //   description:

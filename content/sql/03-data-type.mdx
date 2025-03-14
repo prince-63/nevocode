@@ -3,5 +3,107 @@ guideId: SQL-101
 moduleId: SQL-03
 title: SQL Data Types
 description: Understand different data types in SQL, including numeric, string, date/time, and special types.
-author: SystemNode Team
+author: Prince Kumar Prasad
+author_url: https://www.linkedin.com/in/prince63/
 ---
+
+# SQL Data Types
+
+In SQL, data types are used to define the type of data that can be stored in a column of a table. Each column in a table is associated with a specific data type that determines the kind of values that can be stored in that column. Understanding data types is essential for designing efficient and well-structured databases.
+
+## Common Data Types in SQL
+
+SQL supports a wide range of data types that can be broadly categorized into the following groups:
+
+- **Numeric Data Types**: Used to store numeric values such as integers, decimals, and floating-point numbers.
+- **String Data Types**: Used to store character strings such as text and alphanumeric values.
+- **Date/Time Data Types**: Used to store date and time values.
+- **Special Data Types**: Used to store special values such as binary data, JSON, and XML.
+
+Let's explore each of these data types in more detail.
+
+## Numeric Data Types
+
+Numeric data types are used to store numeric values such as integers, decimals, and floating-point numbers. The most common numeric data types in SQL include:
+
+- **INT**: Used to store whole numbers (integers) within a specific range.
+- **DECIMAL**: Used to store fixed-point numbers with a specified precision and scale.
+- **FLOAT**: Used to store floating-point numbers with a specified precision.
+- **DOUBLE**: Used to store double-precision floating-point numbers.
+
+Here is an example of defining a column with a numeric data type in SQL:
+
+```sql
+CREATE TABLE products (
+    id INT PRIMARY KEY,
+    price DECIMAL(10, 2),
+    quantity INT
+);
+```
+
+In this example, the `price` column is defined as a `DECIMAL` data type with a precision of 10 digits and a scale of 2 decimal places, while the `quantity` column is defined as an `INT` data type to store whole numbers.
+
+## String Data types
+
+String data types are used to store character strings such as text and alphanumeric values. The most common string data types in SQL include:
+
+- **CHAR**: Used to store fixed-length character strings.
+- **VARCHAR**: Used to store variable-length character strings.
+- **TEXT**: Used to store large text values.
+
+Here is an example of defining a column with a string data type in SQL:
+
+```sql
+CREATE TABLE customers (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    email VARCHAR(100),
+    address TEXT
+);
+```
+
+In this example, the `name` and `email` columns are defined as `VARCHAR` data types with a maximum length of 50 and 100 characters, respectively, while the `address` column is defined as a `TEXT` data type to store large text values.
+
+## Date/Time Data types
+
+Date/Time data types are used to store date and time values. The most common date/time data types in SQL include:
+
+- **DATE**: Used to store date values in the format `YYYY-MM-DD`.
+
+- **TIME**: Used to store time values in the format `HH:MM:SS`.
+
+- **DATETIME**: Used to store date and time values in the format `YYYY-MM-DD HH:MM:SS`.
+
+Here is an example of defining a column with a date/time data type in SQL:
+
+```sql
+CREATE TABLE orders (
+    id INT PRIMARY KEY,
+    order_date DATE,
+    delivery_time TIME,
+    created_at DATETIME
+);
+```
+
+In this example, the `order_date` column is defined as a `DATE` data type to store date values, the `delivery_time` column is defined as a `TIME` data type to store time values, and the `created_at` column is defined as a `DATETIME` data type to store date and time values.
+
+## Special Data types
+
+Special data types are used to store special values such as binary data, JSON, and XML. Some common special data types in SQL include:
+
+- **BLOB**: Used to store binary large objects such as images and multimedia files.
+- **JSON**: Used to store JSON (JavaScript Object Notation) data.
+- **XML**: Used to store XML (eXtensible Markup Language) data.
+
+Here is an example of defining a column with a special data type in SQL:
+
+```sql
+CREATE TABLE documents (
+    id INT PRIMARY KEY,
+    content BLOB,
+    metadata JSON,
+    config XML
+);
+```
+
+In this example, the `content` column is defined as a `BLOB` data type to store binary data, the `metadata` column is defined as a `JSON` data type to store JSON data, and the `config` column is defined as an `XML` data type to store XML data.

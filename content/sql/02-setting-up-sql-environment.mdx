@@ -3,5 +3,88 @@ guideId: SQL-101
 moduleId: SQL-02
 title: Setting Up SQL Environment
 description: Install and configure MySQL/PostgreSQL and set up a sample database.
-author: SystemNode Team
+author: Prince Kumar Prasad
+author_url: https://www.linkedin.com/in/prince63/
 ---
+
+# Setting Up SQL Environment
+
+Before you can start working with SQL, you need to set up your SQL environment. This involves installing and configuring a database management system (DBMS) such as MySQL or PostgreSQL and creating a sample database to work with.
+
+## Installing MySQL or PostgreSQL
+
+The first step in setting up your SQL environment is to install a DBMS such as MySQL or PostgreSQL on your local machine. Both MySQL and PostgreSQL are popular open-source database management systems that are widely used in the industry.
+
+### Installing MySQL
+
+To install MySQL on your local machine, follow these steps:
+
+1. Download the MySQL Community Server from the [official MySQL website](https://dev.mysql.com/downloads/mysql/).
+2. Run the installer and follow the on-screen instructions to install MySQL on your machine.
+3. During the installation process, you will be prompted to set a root password for the MySQL server. Make sure to choose a strong password and remember it for future use.
+4. Once the installation is complete, start the MySQL server and verify that it is running correctly.
+
+### Installing PostgreSQL
+
+To install PostgreSQL on your local machine, follow these steps:
+
+1. Download the PostgreSQL installer from the [official PostgreSQL website](https://www.postgresql.org/download/).
+2. Run the installer and follow the on-screen instructions to install PostgreSQL on your machine.
+3. During the installation process, you will be prompted to set a password for the default PostgreSQL user (postgres). Make sure to choose a strong password and remember it for future use.
+4. Once the installation is complete, start the PostgreSQL server and verify that it is running correctly.
+
+> **Note:** The installation process may vary depending on your operating system. Make sure to follow the official installation instructions for MySQL or PostgreSQL for your specific operating system.
+
+## Creating a Sample Database
+
+After installing MySQL or PostgreSQL, the next step is to create a sample database that you can use to practice your SQL skills. we will create a sample database called `employees` that contains a single table `employees` with the following columns:
+
+- `id` (INT): Unique identifier for each employee.
+- `name` (VARCHAR): Name of the employee.
+- `department` (VARCHAR): Department in which the employee works.
+- `salary` (DECIMAL): Salary of the employee.
+
+To create the `employees` database and table, follow these steps:
+
+1. Open a terminal or command prompt and connect to the MySQL or PostgreSQL server using the appropriate command-line client (`mysql` for MySQL or `psql` for PostgreSQL).
+2. Run the following SQL commands to create the `employees` database and table:
+
+```sql
+-- For MySQL
+CREATE DATABASE employees;
+USE employees;
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(50),
+    salary DECIMAL(10, 2)
+);
+
+-- For PostgreSQL
+CREATE DATABASE employees;
+\c employees
+CREATE TABLE employees (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(50),
+    salary DECIMAL(10, 2)
+);
+```
+
+3. Insert some sample data into the `employees` table to get started:
+
+```sql
+-- For MySQL
+INSERT INTO employees (id, name, department, salary) VALUES
+(1, 'Alice', 'Engineering', 75000.00),
+(2, 'Bob', 'Marketing', 60000.00),
+(3, 'Charlie', 'Sales', 55000.00);
+
+-- For PostgreSQL
+INSERT INTO employees (name, department, salary) VALUES
+('Alice', 'Engineering', 75000.00),
+('Bob', 'Marketing', 60000.00),
+('Charlie', 'Sales', 55000.00);
+```
+
+Congratulations! You have successfully set up your SQL environment and created a sample database to work with. You are now ready to start practicing your SQL skills and learning more about database management.
