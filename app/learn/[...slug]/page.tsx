@@ -76,8 +76,8 @@ export async function generateMetadata({
 
   if (!data?.content) {
     return {
-      title: "Article Not Found - System Node",
-      description: "The requested article could not be found on System Node.",
+      title: "Article Not Found - Nevo Code",
+      description: "The requested article could not be found on Nevo Code.",
     };
   }
 

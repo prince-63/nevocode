@@ -8,20 +8,20 @@ export default function Page() {
         <div className="mb-8">
           <H3 className="text-primary text-center py-8">Our Story</H3>
           <P>
-            In 2025, System Node was born from a simple yet powerful idea, to
-            make learning programming and system design clear, distraction-free,
-            and deeply impactful. As aspiring developers ourselves, we saw
-            students struggling, not just with what to learn, but also why it
-            matters and how to apply it in the real world. The vast sea of
-            information, combined with constant distractions, made focused
-            learning incredibly hard. That&apos;s why we built System Node, a
-            platform designed to cut through the noise and provide structured,
+            In 2025, Nevo Code was born from a simple yet powerful idea, to make
+            learning programming and system design clear, distraction-free, and
+            deeply impactful. As aspiring developers ourselves, we saw students
+            struggling, not just with what to learn, but also why it matters and
+            how to apply it in the real world. The vast sea of information,
+            combined with constant distractions, made focused learning
+            incredibly hard. That&apos;s why we built Nevo Code, a platform
+            designed to cut through the noise and provide structured,
             no-nonsense explanations of programming, system design, and core
             computer science concepts. Our mission is to help students grow
             faster by making learning engaging, practical, and distraction-free.
           </P>
           <P className="mt-1">
-            Behind System Node is a team of passionate, experienced, and highly
+            Behind Nevo Code is a team of passionate, experienced, and highly
             productive minds, committed to creating the best possible learning
             experience. Whether you&apos;re a beginner or an advanced developer,
             we&apos;re here to simplify complex topics, provide real-world

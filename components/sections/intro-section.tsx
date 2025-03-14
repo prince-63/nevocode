@@ -16,8 +16,8 @@ const IntroSection = () => {
           up, I knew something had to change.
         </Lead>
         <P className={`${pt_sans.className} text-lg py-2`}>
-          That’s why I built systemnode.dev—a place for clear, practical guides
-          on system design, design patterns, DSA, DBMS, OS, and software
+          That’s why I built nevocode.com—a place for clear, practical guides on
+          system design, design patterns, DSA, DBMS, OS, and software
           engineering best practices. No fluff, just real knowledge you can
           apply.
         </P>

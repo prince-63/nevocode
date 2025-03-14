@@ -6,11 +6,11 @@ import { Provider } from "./provider";
 
 export const metadata: Metadata = {
   title: {
-    default: "System Node - Master Programming & System Design",
-    template: "%s | System Node",
+    default: "Nevo Code - Master Programming & System Design",
+    template: "%s | Nevo Code",
   },
   description:
-    "System Node empowers you to understand programming, design patterns, system design, and core computer science concepts through expert guides, in-depth coding explanations, and real-world problem-solving strategies. Level up your coding skills and stay ahead in tech and productivity!",
+    "Nevo Code empowers you to understand programming, design patterns, system design, and core computer science concepts through expert guides, in-depth coding explanations, and real-world problem-solving strategies. Level up your coding skills and stay ahead in tech and productivity!",
   keywords: [
     "programming tutorials",
     "system design",
@@ -18,12 +18,12 @@ export const metadata: Metadata = {
     "coding challenges",
     "software development",
     "computer science",
-    "System Node",
+    "Nevo Code",
     "design patterns",
     "data structures and algorithms",
   ],
   openGraph: {
-    title: "System Node - Master Programming & System Design",
+    title: "Nevo Code - Master Programming & System Design",
     description:
       "Learn programming, system design, and computer science with structured guides, coding explanations, and real-world problem-solving strategies.",
     url: "https://systemnode.dev",
@@ -33,14 +33,14 @@ export const metadata: Metadata = {
         url: "https://systemnode.dev/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "System Node - Master Programming & System Design",
+        alt: "Nevo Code - Master Programming & System Design",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@systemnode",
-    title: "systemnode - Master Programming & System Design",
+    site: "@nevocode",
+    title: "Nevo Code - Master Programming & System Design",
     description:
       "Explore programming, system design, and computer science through expert guides, coding explanations, and hands-on problem-solving.",
     images: ["https://systemnode.dev/og-image.jpg"],

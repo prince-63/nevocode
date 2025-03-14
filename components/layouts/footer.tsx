@@ -16,7 +16,7 @@ const Footer = () => {
           <Logo />
           <Muted>Understand. Build. Succeed.</Muted>
           <Muted className="opacity-80">
-            © 2025 - {new Date().getFullYear()} SystemNode.dev. All rights
+            © 2025 - {new Date().getFullYear()} nevocode.com. All rights
             reserved.
           </Muted>
         </div>

@@ -9,7 +9,7 @@ export default function Page() {
           Last updated: {new Date().toLocaleDateString()}
         </P>
         <P>
-          System Node (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is
+          Nevo Code (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is
           committed to protecting your privacy. This Privacy Policy explains how
           we collect, use, disclose, and safeguard your information when you
           visit our website or use our services.
@@ -53,7 +53,7 @@ export default function Page() {
           If you have any questions about this Privacy Policy, please contact us
           at{" "}
           <Muted className="text-md text-primary dark:text-primary">
-            hello@systemnode.dev
+            hello@nevocode.com
           </Muted>
           .
         </P>
