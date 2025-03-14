@@ -1,0 +1,118 @@
+---
+guideId: DBMS-101
+moduleId: DBMS-15
+title: Cloud Databases & AWS RDS
+description: Learn about cloud databases and AWS RDS.
+author: Prince Kumar Prasad
+author_url: https://www.linkedin.com/in/prince63/
+---
+
+# Cloud Databases & AWS RDS
+
+Imagine you’ve built a social media app that is growing. Every second, thousands of users are signing up, posting updates, and uploading images. Suddenly, your database struggles to handle the load.
+
+You start facing issue such as:
+-  Your app takes too long to load.
+-  Too many requests overload your database.
+-  Data loss due to server crashes.
+
+To solve these challenges, you need a scalable, reliable, and cost-efficient solution. This is where cloud databases come in!
+
+## What is the Cloud?
+
+Think about your personal laptop. You store files, install software, and run applications. But what happens if you need more storage or computing power?
+
+Let’s say you’re a photographer with 500GB of high-resolution images. You can either:
+- Buy a new external hard drive (limited, expensive, and at risk of damage).
+- Use Google Drive, Dropbox, or OneDrive (scalable, accessible from anywhere).
+
+Cloud computing works the same way! Instead of buying and maintaining expensive physical servers, companies use cloud providers like AWS, Google Cloud, or Azure to store and process data over the internet.
+
+## What is Cloud Database?
+
+A cloud database is a database that runs on cloud servers instead of physical machines. Unlike traditional databases where you install and manage the database software yourself, cloud databases are:
+
+- No need to install or update software.
+- Expand storage or compute power as your needs grow.
+- Data is stored across multiple locations to prevent downtime.
+- Built-in encryption, access control, and backup features.
+
+> Netflix, Spotify, and Instagram all use cloud databases to store massive amounts of data while ensuring seamless user experiences across the globe.
+
+## Types of Cloud Databases
+
+1. **SQL Database**: Structured Query Language (SQL) databases store data in tables with rows and columns. Examples include MySQL, PostgreSQL, and SQL Server.
+
+2. **NoSQL Database**: NoSQL databases store data in flexible, non-tabular formats. Examples include MongoDB, Cassandra, and Redis.
+
+3. **NewSQL Database**: NewSQL databases combine the scalability of NoSQL with the ACID properties of SQL databases. Examples include Google Spanner and CockroachDB.
+
+4. **In-Memory Database**: In-memory databases store data in memory for faster access. Examples include Redis, Memcached, and VoltDB.
+
+5. **Graph Database**: Graph databases store data in nodes and edges to represent relationships. Examples include Neo4j, Amazon Neptune, and ArangoDB.
+
+## Popular Cloud Database Providers
+
+1. **Amazon Web Services (AWS)**: Amazon RDS, Amazon Aurora, Amazon DynamoDB.
+
+2. **Google Cloud Platform (GCP)**: Google Cloud SQL, Google Cloud Bigtable, Google Firestore.
+
+3. **Microsoft Azure**: Azure SQL Database, Azure Cosmos DB, Azure Table Storage.
+
+4. **IBM Cloud**: IBM Db2 on Cloud, IBM Cloudant, IBM Compose.
+
+5. **Oracle Cloud**: Oracle Autonomous Database, Oracle NoSQL Database, Oracle MySQL Database Service.
+
+## Why choose a cloud database?
+
+here how cloud databases solve real-world challenges:
+
+| Challenge | Solution |
+|-----------|----------|
+|  Database slows down under heavy traffic | Cloud databases automatically scale to handle more users |
+|  A single server failure can erase data | Cloud databases replicate data across multiple locations |
+|  Cyberattacks and unauthorized access | Cloud databases offer built-in encryption and access control |
+| Buying and maintaining servers is expensive | Cloud databases use a pay-as-you-go model, reducing costs |
+| Slow queries and bottlenecks | Cloud databases optimize performance with caching and indexing |
+| Patching, backups, and updates | Cloud databases are fully managed, saving time and effort |
+
+## AWS RDS: The Future of Cloud Databases
+Amazon Relational Database Service (Amazon RDS) is a fully managed service that helps you easily set up, operate, and scale relational databases in the cloud. 
+
+## Why Use AWS RDS?
+
+- *Automated Backups* – RDS automatically backs up your data.
+- *High Availability* – Databases are replicated across multiple AWS regions.
+- *Security* – Encrypted connections, IAM roles, and VPC isolation.
+- *Performance Optimization* – Supports caching, read replicas, and auto-scaling.
+
+## Supported Database Engines
+AWS RDS lets you choose from six major relational database engines:
+
+1. *Amazon Aurora* – AWS’s own high-performance database (5x faster than MySQL).
+2. *PostgreSQL* – Open-source database with advanced features.
+3. *MySQL* – Popular and widely used relational database.
+4. *MariaDB* – Fork of MySQL with extra enhancements.
+5. *Oracle Database* – Enterprise-grade database solution.
+6. *Microsoft SQL Server* – Best for Microsoft-based applications.
+
+## How AWS RDS Works (Simple Architecture)
+
+1. You select a database engine (e.g., MySQL).
+2. AWS automatically provisions the server and configures it.
+3. You connect your application to the cloud-hosted database.
+4. AWS handles backups, scaling, and security for you!
+
+## AWS RDS vs. Google Cloud SQL: Which One to Choose?
+
+| Feature | AWS RDS | Google Cloud SQL |
+|---------|--------|----------------|
+| Database Engines | 6 (Aurora, MySQL, PostgreSQL, etc.) | 3 (MySQL, PostgreSQL, SQL Server) |
+| Performance | Supports more instance types & optimized for high performance | Optimized for Google Cloud workloads |
+| Pricing Model | Pay-as-you-go, reserved instances for cost-saving | Similar pricing with sustained-use discounts |
+| Multi-Region Support | Strong cross-region replication | Multi-regional options but more limited |
+| Ease of Use | Fully managed with automated backups | Simpler setup but fewer customization options |
+
+> _Use AWS RDS_ if you need high scalability, multiple database choices, and better performance tuning options.
+
+> _Use Google Cloud SQL_ if you're already using Google Cloud services and need easier integration.
