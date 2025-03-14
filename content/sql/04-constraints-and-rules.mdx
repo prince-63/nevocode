@@ -6,3 +6,106 @@ description: Learn about PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK, and NOT NULL c
 author: Prince Kumar Prasad
 author_url: https://www.linkedin.com/in/prince63/
 ---
+
+# SQL Constraints & Rules
+
+In SQL, constraints are rules that are enforced on the data stored in a table to maintain the integrity and consistency of the database. Constraints define certain conditions that must be satisfied for the data to be valid and acceptable. They help in preventing invalid data from being inserted into the database and ensure that the data remains accurate and reliable.
+
+## Common Constraints in SQL
+
+SQL supports various types of constraints that can be applied to columns in a table. Some of the common constraints include:
+
+- **PRIMARY KEY**: Ensures that each row in a table is uniquely identified by a specific column or combination of columns. The primary key constraint enforces the uniqueness and non-nullability of the specified column(s).
+
+```sql
+CREATE TABLE students (
+    id INT PRIMARY KEY, -- id is the primary key making each student unique
+    name VARCHAR(50),
+    age INT
+);
+
+INSERT INTO students (id, name, age) VALUES (1, 'Alice', 20); -- Insert a row with a unique id
+```
+
+- **FOREIGN KEY**: Establishes a relationship between two tables by linking a column in one table to a column in another table. The foreign key constraint ensures referential integrity by enforcing that the values in the foreign key column must exist in the referenced table's primary key column.
+
+```sql
+CREATE TABLE products (
+    id INT PRIMARY KEY, -- id is the primary key of the products table
+    name VARCHAR(50),
+    price DECIMAL(10, 2)
+);
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    product_id INT,
+    quantity INT,
+    FOREIGN KEY (product_id) REFERENCES products(id) -- product_id is a foreign key referencing the id column in the products table
+);
+
+INSERT INTO products (id, name, price) VALUES (1, 'Laptop', 999.99); -- Insert a product
+INSERT INTO orders (order_id, product_id, quantity) VALUES (1, 1, 2); -- Insert an order with a valid product_id
+```
+
+- **UNIQUE**: Ensures that the values in a column or a group of columns are unique across all rows in the table. The unique constraint enforces the uniqueness of the specified column(s) but allows null values.
+
+```sql
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    email VARCHAR(50) UNIQUE, -- email must be unique across all employees
+    name VARCHAR(50)
+);
+
+INSERT INTO employees (id, email, name) VALUES (1, 'hello@gmail.com', 'Alice'); -- Insert an employee with a unique email
+```
+
+- **CHECK**: Defines a condition that must be satisfied by the values in a column. The check constraint enforces the specified condition on the column(s) to ensure that only valid data is inserted.
+
+```sql
+CREATE TABLE products (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    price DECIMAL(10, 2) CHECK (price > 0) -- price must be greater than 0
+);
+
+INSERT INTO products (id, name, price) VALUES (1, 'Laptop', 999.99); -- Insert a product with a valid price
+```
+
+- **NOT NULL**: Ensures that a column does not contain null values. The not null constraint enforces the non-nullability of the specified column(s).
+
+```sql
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL, -- name cannot be null
+    department VARCHAR(50)
+);
+
+INSERT INTO employees (id, name, department) VALUES (1, 'Alice', 'HR'); -- Insert an employee with a non-null name
+```
+
+- **DEFAULT**: Specifies a default value for a column when no value is provided during insertion. The default constraint assigns the specified default value to the column if no value is explicitly provided.
+
+```sql
+CREATE TABLE students (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT DEFAULT 18 -- age defaults to 18 if not provided
+);
+
+INSERT INTO students (id, name) VALUES (1, 'Alice'); -- Insert a student with the default age
+```
+
+- **INDEX**: Improves the performance of queries by creating an index on one or more columns in a table. The index constraint allows faster retrieval of data based on the indexed columns.
+
+```sql
+CREATE TABLE products (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    price DECIMAL(10, 2),
+    INDEX idx_name (name) -- Create an index on the name column
+);
+
+INSERT INTO products (id, name, price) VALUES (1, 'Laptop', 999.99); -- Insert a product
+
+SELECT * FROM products WHERE name = 'Laptop'; -- Retrieve products using the indexed column
+```
