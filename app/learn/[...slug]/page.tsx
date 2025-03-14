@@ -5,6 +5,7 @@ import RenderContent from "@/components/mdx/render-content";
 import ContentMobileHeader from "@/components/layouts/content-mobile-header";
 import { Metadata } from "next";
 import GuidePagination from "@/components/general/guide-pagination";
+import ThanksMessage from "@/components/general/thank-message";
 
 interface PageParams {
   params: Promise<{ slug: string }>;
@@ -62,6 +63,12 @@ export default async function Home({ params }: PageParams) {
                 guide={data.content}
               />
             )}
+          </div>
+          <div>
+            <ThanksMessage
+              author={renderContent.content.author}
+              author_url={renderContent.content.author_url ?? "#"}
+            />
           </div>
         </div>
       </div>
