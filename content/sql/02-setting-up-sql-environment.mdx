@@ -37,54 +37,82 @@ To install PostgreSQL on your local machine, follow these steps:
 
 ## Creating a Sample Database
 
-After installing MySQL or PostgreSQL, the next step is to create a sample database that you can use to practice your SQL skills. we will create a sample database called `employees` that contains a single table `employees` with the following columns:
+After installing MySQL or PostgreSQL, the next step is to create a sample database that you can use to practice your SQL skills. we will create a sample database called **employees** that contains a single table **employees** with the following columns:
 
-- `id` (INT): Unique identifier for each employee.
-- `name` (VARCHAR): Name of the employee.
-- `department` (VARCHAR): Department in which the employee works.
-- `salary` (DECIMAL): Salary of the employee.
+- **id** (INT): Unique identifier for each employee.
+- **name** (VARCHAR): Name of the employee.
+- **department** (VARCHAR): Department in which the employee works.
+- **salary** (DECIMAL): Salary of the employee.
 
-To create the `employees` database and table, follow these steps:
+To create the employees database and table, follow these steps:
 
-1. Open a terminal or command prompt and connect to the MySQL or PostgreSQL server using the appropriate command-line client (`mysql` for MySQL or `psql` for PostgreSQL).
-2. Run the following SQL commands to create the `employees` database and table:
+1. Open a terminal or command prompt and connect to the MySQL or PostgreSQL server using the appropriate command-line client (**mysql** for MySQL or **psql** for PostgreSQL).
+2. Run the following SQL commands to create the employees database and table:
 
 ```sql
 -- For MySQL
-CREATE DATABASE employees;
-USE employees;
-CREATE TABLE employees (
-    id INT PRIMARY KEY,
-    name VARCHAR(50),
-    department VARCHAR(50),
-    salary DECIMAL(10, 2)
+CREATE DATABASE employees; -- Create a new database called employees
+USE employees; -- Switch to the employees database
+CREATE TABLE employees ( -- Create a new table called employees
+    id INT PRIMARY KEY, -- Primary key column
+    name VARCHAR(50), -- Name column
+    department VARCHAR(50), -- Department column
+    salary DECIMAL(10, 2) -- Salary column
 );
 
 -- For PostgreSQL
-CREATE DATABASE employees;
-\c employees
-CREATE TABLE employees (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(50),
-    department VARCHAR(50),
-    salary DECIMAL(10, 2)
+CREATE DATABASE employees; -- Create a new database called employees
+\c employees -- Connect to the employees database
+CREATE TABLE employees ( -- Create a new table called employees
+    id SERIAL PRIMARY KEY, -- Primary key column
+    name VARCHAR(50), -- Name column
+    department VARCHAR(50), -- Department column
+    salary DECIMAL(10, 2) -- Salary column
 );
 ```
 
-3. Insert some sample data into the `employees` table to get started:
+> **Note:** The SQL commands for creating databases and tables may vary slightly between MySQL and PostgreSQL. Make sure to use the appropriate syntax for the DBMS you are working with.
+
+```
+Output:
+```
+
+| id | name    | department   | salary   |
+|----|---------|--------------|----------|
+
+3. Insert some sample data into the **employees** table to get started:
 
 ```sql
 -- For MySQL
-INSERT INTO employees (id, name, department, salary) VALUES
-(1, 'Alice', 'Engineering', 75000.00),
+INSERT INTO employees (id, name, department, salary) VALUES -- Insert sample data into the employees table
+(1, 'Alice', 'Engineering', 75000.00), 
 (2, 'Bob', 'Marketing', 60000.00),
 (3, 'Charlie', 'Sales', 55000.00);
 
 -- For PostgreSQL
-INSERT INTO employees (name, department, salary) VALUES
+INSERT INTO employees (name, department, salary) VALUES -- Insert sample data into the employees table
 ('Alice', 'Engineering', 75000.00),
 ('Bob', 'Marketing', 60000.00),
 ('Charlie', 'Sales', 55000.00);
 ```
+
+4. Verify that the data has been inserted into the **employees** table by running a SELECT query:
+
+```sql
+-- For MySQL
+SELECT * FROM employees;
+
+-- For PostgreSQL
+SELECT * FROM employees;
+```
+
+5. You should see the following output, which indicates that the sample data has been successfully inserted into the **employees** table:
+
+| id | name    | department   | salary   |
+|----|---------|--------------|----------|
+| 1  | Alice   | Engineering  | 75000.00 |
+| 2  | Bob     | Marketing    | 60000.00 |
+| 3  | Charlie | Sales        | 55000.00 |
+
 
 Congratulations! You have successfully set up your SQL environment and created a sample database to work with. You are now ready to start practicing your SQL skills and learning more about database management.

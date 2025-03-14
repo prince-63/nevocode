@@ -22,88 +22,154 @@ SQL supports a wide range of data types that can be broadly categorized into the
 
 Let's explore each of these data types in more detail.
 
-## Numeric Data Types
-
-Numeric data types are used to store numeric values such as integers, decimals, and floating-point numbers. The most common numeric data types in SQL include:
+### Numeric Data Types
 
 - **INT**: Used to store whole numbers (integers) within a specific range.
-- **DECIMAL**: Used to store fixed-point numbers with a specified precision and scale.
-- **FLOAT**: Used to store floating-point numbers with a specified precision.
-- **DOUBLE**: Used to store double-precision floating-point numbers.
-
-Here is an example of defining a column with a numeric data type in SQL:
 
 ```sql
 CREATE TABLE products (
     id INT PRIMARY KEY,
-    price DECIMAL(10, 2),
-    quantity INT
+    quantity INT -- the quantity is an integer
 );
+
+INSERT INTO products (id, quantity) VALUES (1, 10); -- Insert an integer
 ```
 
-In this example, the `price` column is defined as a `DECIMAL` data type with a precision of 10 digits and a scale of 2 decimal places, while the `quantity` column is defined as an `INT` data type to store whole numbers.
+- **DECIMAL**: Used to store fixed-point numbers with a specified precision and scale.
+```sql
+CREATE TABLE products (
+    id INT PRIMARY KEY,
+    price DECIMAL(10, 2) -- the price is a decimal number with 10 digits and 2 decimal places
+);
 
-## String Data types
+INSERT INTO products (id, price) VALUES (1, 19.99); -- Insert a decimal number
+```
 
-String data types are used to store character strings such as text and alphanumeric values. The most common string data types in SQL include:
+- **FLOAT**: Used to store floating-point numbers with a specified precision.
+
+```sql
+CREATE TABLE products (
+    id INT PRIMARY KEY,
+    weight FLOAT -- the weight is a floating-point number
+);
+
+INSERT INTO products (id, weight) VALUES (1, 2.5); -- Insert a floating-point number
+```
+
+- **DOUBLE**: Used to store double-precision floating-point numbers.
+```sql
+CREATE TABLE products (
+    id INT PRIMARY KEY,
+    value DOUBLE -- the value is a double-precision floating-point number
+);
+
+INSERT INTO products (id, value) VALUES (1, 123.45); -- Insert a double-precision floating-point number
+```
+
+### String Data types
 
 - **CHAR**: Used to store fixed-length character strings.
-- **VARCHAR**: Used to store variable-length character strings.
-- **TEXT**: Used to store large text values.
-
-Here is an example of defining a column with a string data type in SQL:
 
 ```sql
 CREATE TABLE customers (
     id INT PRIMARY KEY,
-    name VARCHAR(50),
-    email VARCHAR(100),
-    address TEXT
+    name CHAR(50) -- the name is a fixed-length string with a maximum length of 50 characters
 );
+
+INSERT INTO customers (id, name) VALUES (1, 'John'); -- Insert a fixed-length string
 ```
 
-In this example, the `name` and `email` columns are defined as `VARCHAR` data types with a maximum length of 50 and 100 characters, respectively, while the `address` column is defined as a `TEXT` data type to store large text values.
+> **Note:** whenever you define a **CHAR** data type, it will always store the fixed length of characters. If you store a string with fewer characters, it will pad the remaining characters with spaces. like if you store a string 'John' in a **CHAR(10)** column, it will be stored as 'John--------' (padded with spaces).
 
-## Date/Time Data types
+- **VARCHAR**: Used to store variable-length character strings.
+    
+```sql
+CREATE TABLE customers (
+    id INT PRIMARY KEY,
+    email VARCHAR(100) -- the email is a variable-length string with a maximum length of 100 characters
+);
 
-Date/Time data types are used to store date and time values. The most common date/time data types in SQL include:
+INSERT INTO customers (id, email) VALUES (1, 'hello@gmail.com'); -- Insert a variable-length string
+```
 
-- **DATE**: Used to store date values in the format `YYYY-MM-DD`.
+> **Note:** **VARCHAR** data type is used when you want to store a string with a variable length. It will only store the actual length of the string without any padding. For example, if you store a string 'John' in a **VARCHAR(10)** column, it will be stored as 'John' (without any padding).
 
-- **TIME**: Used to store time values in the format `HH:MM:SS`.
+- **TEXT**: Used to store large text values.
 
-- **DATETIME**: Used to store date and time values in the format `YYYY-MM-DD HH:MM:SS`.
+```sql
+CREATE TABLE customers (
+    id INT PRIMARY KEY,
+    address TEXT -- the address is a large text value
+);
 
-Here is an example of defining a column with a date/time data type in SQL:
+INSERT INTO customers (id, address) VALUES (1, '123 Main Street, City, Country'); -- Insert a large text value
+```
+
+### Date/Time Data types
+
+- **DATE**: Used to store date values in the format **YYYY-MM-DD**.
 
 ```sql
 CREATE TABLE orders (
     id INT PRIMARY KEY,
-    order_date DATE,
-    delivery_time TIME,
-    created_at DATETIME
+    order_date DATE -- the order_date is a date value
 );
+
+INSERT INTO orders (id, order_date) VALUES (1, '2022-10-15'); -- Insert a date value
 ```
 
-In this example, the `order_date` column is defined as a `DATE` data type to store date values, the `delivery_time` column is defined as a `TIME` data type to store time values, and the `created_at` column is defined as a `DATETIME` data type to store date and time values.
-
-## Special Data types
-
-Special data types are used to store special values such as binary data, JSON, and XML. Some common special data types in SQL include:
-
-- **BLOB**: Used to store binary large objects such as images and multimedia files.
-- **JSON**: Used to store JSON (JavaScript Object Notation) data.
-- **XML**: Used to store XML (eXtensible Markup Language) data.
-
-Here is an example of defining a column with a special data type in SQL:
+- **TIME**: Used to store time values in the format **HH:MM:SS**.
 
 ```sql
-CREATE TABLE documents (
+CREATE TABLE orders (
     id INT PRIMARY KEY,
-    content BLOB,
-    metadata JSON,
-    config XML
+    delivery_time TIME -- the delivery_time is a time value
 );
+
+INSERT INTO orders (id, delivery_time) VALUES (1, '14:30:00'); -- Insert a time value
 ```
 
-In this example, the `content` column is defined as a `BLOB` data type to store binary data, the `metadata` column is defined as a `JSON` data type to store JSON data, and the `config` column is defined as an `XML` data type to store XML data.
+- **DATETIME**: Used to store date and time values in the format **YYYY-MM-DD HH:MM:SS**.
+
+```sql
+CREATE TABLE orders (
+    id INT PRIMARY KEY,
+    created_at DATETIME -- the created_at is a date and time value
+);
+
+INSERT INTO orders (id, created_at) VALUES (1, '2022-10-15 14:30:00'); -- Insert a date and time value
+```
+
+### Special Data types
+- **BLOB**: Used to store binary large objects such as images and multimedia files.
+
+```sql
+CREATE TABLE products (
+    id INT PRIMARY KEY,
+    image BLOB -- the image is a binary large object
+);
+
+INSERT INTO products (id, image) VALUES (1, 'binary data'); -- Insert binary data
+```
+
+- **JSON**: Used to store JSON (JavaScript Object Notation) data.
+
+```sql
+CREATE TABLE products (
+    id INT PRIMARY KEY,
+    details JSON -- the details are JSON data
+);
+
+INSERT INTO products (id, details) VALUES (1, '{"name": "Product 1", "price": 19.99}'); -- Insert JSON data
+```
+
+- **XML**: Used to store XML (eXtensible Markup Language) data.
+
+```sql
+CREATE TABLE products (
+    id INT PRIMARY KEY,
+    description XML -- the description is XML data
+);
+
+INSERT INTO products (id, description) VALUES (1, '<product><name>Product 1</name><price>19.99</price></product>'); -- Insert XML data
+```
