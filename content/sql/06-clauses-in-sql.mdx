@@ -9,9 +9,9 @@ author_url: https://www.linkedin.com/in/prince63/
 
 # SQL Clauses
 
-In SQL (Structured Query Language), clauses are used to filter, group, and sort the data retrieved from a database. Clauses are used in conjunction with SQL commands to perform specific operations on the data. Some common clauses used in SQL queries include:
+In SQL (Structured Query Language), clauses are used to filter, group, and sort the data retrieved from a database. Clauses are used in conjunction with SQL commands to perform specific operations on the data.
 
-1. **WHERE Clause**
+## WHERE Clause
 
 The **WHERE** clause is used to filter records based on a specified condition. It is used to retrieve only those records that satisfy the specified condition. The **WHERE** clause is commonly used with **SELECT**, **UPDATE**, and **DELETE** statements.
 
@@ -24,7 +24,7 @@ WHERE
   emp_salary > 50000;
 ```
 
-2. **GROUP BY Clause**
+## GROUP BY Clause
 
 The **GROUP BY** clause is used to group the result set based on one or more columns. It is used in conjunction with aggregate functions like **COUNT**, **SUM**, **AVG**, etc. The **GROUP BY** clause is commonly used with the **SELECT** statement.
 
@@ -38,7 +38,7 @@ GROUP BY
   emp_dept;
 ```
 
-3. **HAVING Clause**
+## HAVING Clause
 
 The **HAVING** clause is used to filter the result set based on aggregate functions. It is used to filter the groups created by the **GROUP BY** clause. The **HAVING** clause is commonly used with the **SELECT** statement.
 
@@ -54,7 +54,9 @@ HAVING
   AVG(emp_salary) > 50000;
 ```
 
-4. **ORDER BY Clause**
+> **Note:** The **HAVING** clause is used to filter groups, whereas the **WHERE** clause is used to filter rows.
+
+## ORDER BY Clause
 
 The **ORDER BY** clause is used to sort the result set based on one or more columns. It is used to specify the order in which the result set should be displayed. The **ORDER BY** clause is commonly used with the **SELECT** statement.
 
@@ -67,7 +69,9 @@ ORDER BY
   emp_salary DESC;
 ```
 
-5. **LIMIT Clause**
+> **Note:** The **ORDER BY** clause can be used to sort the result set in ascending (**ASC**) or descending (**DESC**) order. by default, it sorts in ascending order.
+
+## LIMIT Clause
 
 The **LIMIT** clause is used to limit the number of rows returned by a query. It is used to restrict the number of rows in the result set. The **LIMIT** clause is commonly used with the **SELECT** statement.
 
@@ -80,7 +84,7 @@ LIMIT
   10;
 ```
 
-6. **OFFSET Clause**
+## OFFSET Clause
 
 The **OFFSET** clause is used to skip a specified number of rows before returning the result set. It is used in conjunction with the **LIMIT** clause to implement pagination. The **OFFSET** clause is commonly used with the **SELECT** statement.
 
@@ -92,3 +96,4 @@ FROM
 LIMIT
   10 OFFSET 20;
 ```
+

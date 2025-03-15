@@ -18,31 +18,31 @@ SQL supports various types of constraints that can be applied to columns in a ta
 - **PRIMARY KEY**: Ensures that each row in a table is uniquely identified by a specific column or combination of columns. The primary key constraint enforces the uniqueness and non-nullability of the specified column(s).
 
 ```sql
-CREATE TABLE students 
-(
-    -- id is the primary key making each student unique
-    id INT PRIMARY KEY, 
-    name VARCHAR(50),
-    age INT
+CREATE TABLE students (
+  -- id is the primary key making each student unique
+  id INT PRIMARY KEY,
+  name VARCHAR(50),
+  age INT
 );
 ```
 
 - **FOREIGN KEY**: Establishes a relationship between two tables by linking a column in one table to a column in another table. The foreign key constraint ensures referential integrity by enforcing that the values in the foreign key column must exist in the referenced table's primary key column.
 
 ```sql
-CREATE TABLE products 
-(
-    -- id is the primary key of the products table
-    id INT PRIMARY KEY, 
-    name VARCHAR(50),
-    price DECIMAL(10, 2)
+CREATE TABLE products (
+  -- id is the primary key of the products table
+  id INT PRIMARY KEY,
+  name VARCHAR(50),
+  price DECIMAL(10, 2)
 );
 
 CREATE TABLE orders (
-    order_id INT PRIMARY KEY,
-    product_id INT,
-    quantity INT,
-    FOREIGN KEY (product_id) REFERENCES products(id) -- product_id is a foreign key referencing the id column in the products table
+  order_id INT PRIMARY KEY,
+  product_id INT,
+  quantity INT,
+  -- product_id is a foreign key referencing the id column in the products table
+  FOREIGN KEY (product_id) 
+  REFERENCES products(id) 
 );
 ```
 
@@ -50,48 +50,44 @@ CREATE TABLE orders (
 
 ```sql
 CREATE TABLE employees (
-    id INT PRIMARY KEY,
-    email VARCHAR(50) UNIQUE, -- email must be unique across all employees
-    name VARCHAR(50)
+  id INT PRIMARY KEY,
+  -- email must be unique for each employee
+  email VARCHAR(50) UNIQUE,
+  name VARCHAR(50)
 );
-
-INSERT INTO employees (id, email, name) VALUES (1, 'hello@gmail.com', 'Alice'); -- Insert an employee with a unique email
 ```
 
 - **CHECK**: Defines a condition that must be satisfied by the values in a column. The check constraint enforces the specified condition on the column(s) to ensure that only valid data is inserted.
 
 ```sql
 CREATE TABLE products (
-    id INT PRIMARY KEY,
-    name VARCHAR(50),
-    price DECIMAL(10, 2) CHECK (price > 0) -- price must be greater than 0
+  id INT PRIMARY KEY,
+  name VARCHAR(50),
+  -- price must be greater than 0
+  price DECIMAL(10, 2) CHECK (price > 0)
 );
-
-INSERT INTO products (id, name, price) VALUES (1, 'Laptop', 999.99); -- Insert a product with a valid price
 ```
 
 - **NOT NULL**: Ensures that a column does not contain null values. The not null constraint enforces the non-nullability of the specified column(s).
 
 ```sql
 CREATE TABLE employees (
-    id INT PRIMARY KEY,
-    name VARCHAR(50) NOT NULL, -- name cannot be null
-    department VARCHAR(50)
+  id INT PRIMARY KEY,
+  -- name cannot be null
+  name VARCHAR(50) NOT NULL,
+  department VARCHAR(50)
 );
-
-INSERT INTO employees (id, name, department) VALUES (1, 'Alice', 'HR'); -- Insert an employee with a non-null name
 ```
 
 - **DEFAULT**: Specifies a default value for a column when no value is provided during insertion. The default constraint assigns the specified default value to the column if no value is explicitly provided.
 
 ```sql
 CREATE TABLE students (
-    id INT PRIMARY KEY,
-    name VARCHAR(50),
-    age INT DEFAULT 18 -- age defaults to 18 if not provided
+  id INT PRIMARY KEY,
+  name VARCHAR(50),
+  -- age defaults to 18 if not provided
+  age INT DEFAULT 18
 );
-
-INSERT INTO students (id, name) VALUES (1, 'Alice'); -- Insert a student with the default age
 ```
 
 - **INDEX**: Improves the performance of queries by creating an index on one or more columns in a table. The index constraint allows faster retrieval of data based on the indexed columns.
@@ -101,10 +97,13 @@ CREATE TABLE products (
     id INT PRIMARY KEY,
     name VARCHAR(50),
     price DECIMAL(10, 2),
-    INDEX idx_name (name) -- Create an index on the name column
+    -- Create an index on the name column
+    INDEX idx_name (name)
 );
 
-INSERT INTO products (id, name, price) VALUES (1, 'Laptop', 999.99); -- Insert a product
+-- Insert a product into the table
+INSERT INTO products (id, name, price) VALUES (1, 'Laptop', 999.99); 
 
-SELECT * FROM products WHERE name = 'Laptop'; -- Retrieve products using the indexed column
+-- Retrieve the product using the indexed column
+SELECT * FROM products WHERE name = 'Laptop';
 ```

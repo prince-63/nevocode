@@ -1,0 +1,327 @@
+---
+guideId: SQL-101
+moduleId: SQL-07
+title: Operators in SQL
+description: Learn about different operators in SQL and their usage.
+author: Prince Kumar Prasad
+author_url: https://www.linkedin.com/in/prince63/
+---
+
+# Operators in SQL
+
+Operators are special symbols or keywords that are used to perform operations on one or more operands in SQL. They are used to perform arithmetic, comparison, logical, and other operations in SQL queries.
+
+Here are some of the commonly used operators in SQL:
+
+## 1. Arithmetic Operators
+
+Arithmetic operators are used to perform mathematical operations on numeric data. The following are the arithmetic operators in SQL:
+
+### Addition (+)
+
+The addition operator (+) is used to add two values together.
+
+```sql
+SELECT 10 + 5;
+```
+
+### Subtraction (-)
+
+The subtraction operator (-) is used to subtract one value from another.
+
+```sql
+SELECT 10 - 5;
+```
+
+### Multiplication (*)
+
+The multiplication operator (*) is used to multiply two values.
+
+```sql
+SELECT 10 * 5;
+```
+
+### Division (/)
+
+The division operator (/) is used to divide one value by another.
+
+```sql
+SELECT 10 / 5;
+```
+
+### Modulus (%)
+
+The modulus operator (%) returns the remainder of a division.
+
+```sql
+SELECT 10 % 3;
+```
+
+## 2. Comparison Operators
+
+Comparison operators are used to compare two values. The following are the comparison operators in SQL:
+
+### Equal to (=)
+
+Checks if two values are equal.
+
+```sql
+SELECT
+  *
+FROM
+  employees
+WHERE
+  emp_salary = 50000;
+```
+
+### Not equal to (!= or &lt;&gt;)
+
+Checks if two values are not equal.
+
+```sql
+SELECT
+  *
+FROM
+  employees
+WHERE
+  emp_salary != 50000;
+```
+
+### Greater than (>)
+
+Checks if one value is greater than another.
+
+```sql
+SELECT
+  *
+FROM
+  employees
+WHERE
+  emp_salary > 50000;
+```
+
+### Less than (&lt;)
+
+Checks if one value is less than another.
+
+```sql
+SELECT
+  *
+FROM
+  employees
+WHERE
+  emp_salary < 50000;
+```
+
+### Greater than or equal to (>=)
+
+Checks if one value is greater than or equal to another.
+
+```sql
+SELECT
+  *
+FROM
+  employees
+WHERE
+  emp_salary >= 50000;
+```
+
+### Less than or equal to (&lt;=)
+
+Checks if one value is less than or equal to another.
+
+```sql
+SELECT
+  *
+FROM
+  employees
+WHERE
+  emp_salary <= 50000;
+```
+
+## 3. Logical Operators
+
+Logical operators are used to combine multiple conditions. The following are the logical operators in SQL:
+
+### AND
+
+Returns true if both conditions are true.
+
+```sql
+SELECT
+  *
+FROM
+  employees
+WHERE
+  emp_salary > 50000
+  AND emp_dept = 'IT';
+```
+
+### OR
+
+Returns true if at least one condition is true.
+
+```sql
+SELECT
+  *
+FROM
+  employees
+WHERE
+  emp_salary > 50000
+  OR emp_dept = 'IT';
+```
+
+### NOT
+
+Returns true if the condition is false.
+
+```sql
+SELECT
+  *
+FROM
+  employees
+WHERE
+  NOT emp_dept = 'IT';
+```
+
+## 4. String Operators
+
+String operators are used to perform operations on string values. The following are the string operators in SQL:
+
+### Concatenation (||)
+
+Concatenates two strings.
+
+```sql
+SELECT
+  first_name || ' ' || last_name
+FROM
+  employees;
+```
+
+## 5. Other Operators
+
+### LIKE
+
+Used to search for a specified pattern in a column.
+
+```sql
+SELECT
+  *
+FROM
+  employees
+WHERE
+  first_name LIKE 'J%';
+```
+
+### IN
+
+Used to specify multiple values in a WHERE clause.
+
+```sql
+SELECT
+  *
+FROM
+  employees
+WHERE
+  emp_dept IN ('IT', 'HR', 'Finance');
+```
+
+### BETWEEN
+
+Used to search for a range of values.
+
+```sql
+SELECT
+  *
+FROM
+  employees
+WHERE
+  emp_salary BETWEEN 40000
+  AND 60000;
+```
+
+### IS NULL
+
+Used to check if a value is NULL.
+
+```sql
+SELECT
+  *
+FROM
+  employees
+WHERE
+  emp_manager IS NULL;
+```
+
+### IS NOT NULL
+
+Used to check if a value is not NULL.
+
+```sql
+SELECT
+  *
+FROM
+  employees
+WHERE
+  emp_manager IS NOT NULL;
+```
+
+### EXISTS
+
+Used to check if a subquery returns any rows.
+
+```sql
+SELECT
+  *
+FROM
+  employees
+WHERE
+  EXISTS (
+    SELECT
+      *
+    FROM
+      departments
+    WHERE
+      employees.emp_dept = departments.dept_name
+  );
+```
+
+### ALL
+
+Used to compare a value to all values in a list.
+
+```sql
+SELECT
+  *
+FROM
+  employees
+WHERE
+  emp_salary > ALL (50000, 60000, 70000);
+```
+
+### ANY
+
+Used to compare a value to any value in a list.
+
+```sql
+SELECT
+  *
+FROM
+  employees
+WHERE
+  emp_salary > ANY (50000, 60000, 70000);
+```
+
+### SOME
+
+Used to compare a value to some values in a list.
+
+```sql
+SELECT
+  *
+FROM
+  employees
+WHERE
+  emp_salary > SOME (50000, 60000, 70000);
+```
