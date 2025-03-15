@@ -1,8 +1,3 @@
-export interface PlatformLinkType {
-  name: string;
-  href: string;
-}
-
 export interface ResourcesType {
   name: string;
   href: string;
@@ -18,26 +13,15 @@ export interface LegalType {
   href: string;
 }
 
-export const platformLinkList: PlatformLinkType[] = [
-  {
-    name: "Guides",
-    href: "/home",
-  },
-  {
-    name: "Topics",
-    href: "/home",
-  },
-];
-
 export const resourcesList: ResourcesType[] = [
   {
     name: "DBMS",
     href: "/learn/dbms/01-introduction-to-dbms",
   },
-  // {
-  //   name: "SQL",
-  //   href: "sql/01-introduction-to-sql",
-  // },
+  {
+    name: "SQL",
+    href: "/learn/sql/01-introduction-to-sql",
+  },
 ];
 
 export const companyList: CompanyType[] = [
