@@ -56,11 +56,11 @@ export default async function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
       <Provider>
-        <body className={`${karla.className} `}>
+        <body
+          className={`${karla.className} relative flex bg-lightBg dark:bg-darkBg text-textLight dark:text-textDark w-full flex-col`}
+        >
           <Providers>
-            <main className="relative flex bg-lightBg dark:bg-darkBg text-textLight dark:text-textDark w-full flex-col">
-              {children}
-            </main>
+            <main>{children}</main>
           </Providers>
           <Analytics />
         </body>
