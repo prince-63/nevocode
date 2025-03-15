@@ -3,6 +3,7 @@ import "@/style/globals.css";
 import { karla } from "@/utils/general/fonts";
 import { Providers } from "@/lib/providers";
 import { Provider } from "./provider";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: {
@@ -61,6 +62,7 @@ export default async function RootLayout({
               {children}
             </main>
           </Providers>
+          <Analytics />
         </body>
       </Provider>
     </html>
