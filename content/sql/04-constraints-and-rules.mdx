@@ -18,20 +18,22 @@ SQL supports various types of constraints that can be applied to columns in a ta
 - **PRIMARY KEY**: Ensures that each row in a table is uniquely identified by a specific column or combination of columns. The primary key constraint enforces the uniqueness and non-nullability of the specified column(s).
 
 ```sql
-CREATE TABLE students (
-    id INT PRIMARY KEY, -- id is the primary key making each student unique
+CREATE TABLE students 
+(
+    -- id is the primary key making each student unique
+    id INT PRIMARY KEY, 
     name VARCHAR(50),
     age INT
 );
-
-INSERT INTO students (id, name, age) VALUES (1, 'Alice', 20); -- Insert a row with a unique id
 ```
 
 - **FOREIGN KEY**: Establishes a relationship between two tables by linking a column in one table to a column in another table. The foreign key constraint ensures referential integrity by enforcing that the values in the foreign key column must exist in the referenced table's primary key column.
 
 ```sql
-CREATE TABLE products (
-    id INT PRIMARY KEY, -- id is the primary key of the products table
+CREATE TABLE products 
+(
+    -- id is the primary key of the products table
+    id INT PRIMARY KEY, 
     name VARCHAR(50),
     price DECIMAL(10, 2)
 );
@@ -42,9 +44,6 @@ CREATE TABLE orders (
     quantity INT,
     FOREIGN KEY (product_id) REFERENCES products(id) -- product_id is a foreign key referencing the id column in the products table
 );
-
-INSERT INTO products (id, name, price) VALUES (1, 'Laptop', 999.99); -- Insert a product
-INSERT INTO orders (order_id, product_id, quantity) VALUES (1, 1, 2); -- Insert an order with a valid product_id
 ```
 
 - **UNIQUE**: Ensures that the values in a column or a group of columns are unique across all rows in the table. The unique constraint enforces the uniqueness of the specified column(s) but allows null values.

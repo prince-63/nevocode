@@ -27,16 +27,19 @@ Data Definition Language (DDL) commands are used to define the structure of the 
 
 ```sql
 CREATE TABLE employees (
-    emp_id INT PRIMARY KEY,
-    emp_name VARCHAR(50),
-    emp_salary DECIMAL(10, 2)
+  emp_id INT PRIMARY KEY,
+  emp_name VARCHAR(50),
+  emp_salary DECIMAL(10, 2)
 );
 ```
 
 - **ALTER**: Used to modify the structure of existing database objects.
     
 ```sql
-ALTER TABLE employees ADD COLUMN emp_dept VARCHAR(50);
+ALTER TABLE
+  employees
+ADD
+  COLUMN emp_dept VARCHAR(50);
 ```
 
 - **DROP**: Used to delete database objects.
@@ -58,19 +61,30 @@ Data Manipulation Language (DML) commands are used to manipulate the data stored
 - **INSERT**: Used to insert new records into a table.
 
 ```sql
-INSERT INTO employees (emp_id, emp_name, emp_salary) VALUES (1, 'Alice', 50000);
+INSERT INTO
+  employees (emp_id, emp_name, emp_salary)
+VALUES
+  (1, 'Alice', 50000);
 ```
 
 - **UPDATE**: Used to update existing records in a table.
 
 ```sql
-UPDATE employees SET emp_salary = 55000 WHERE emp_id = 1;
+UPDATE
+  employees
+SET
+  emp_salary = 55000
+WHERE
+  emp_id = 1;
 ```
 
 - **DELETE**: Used to delete records from a table.
 
 ```sql
-DELETE FROM employees WHERE emp_id = 1;
+DELETE FROM
+  employees
+WHERE
+  emp_id = 1;
 ```
 
 - **SELECT**: Used to retrieve data from a table.
@@ -84,7 +98,13 @@ SELECT * FROM employees;
 Data Query Language (DQL) commands are used to retrieve data from the database. The most common DQL command is the **SELECT** statement, which is used to retrieve data from one or more tables based on certain conditions.
 
 ```sql
-SELECT emp_name, emp_salary FROM employees WHERE emp_salary > 50000;
+SELECT
+  emp_name,
+  emp_salary
+FROM
+  employees
+WHERE
+  emp_salary > 50000;
 ```
 
 ## 4. Data Control Language (DCL)
@@ -94,14 +114,24 @@ Data Control Language (DCL) commands are used to control access to the database.
 - **GRANT**: Used to grant privileges to users or roles.
 
 ```sql
-GRANT SELECT, INSERT ON employees TO
-    user1, user2;
+GRANT
+SELECT
+,
+INSERT
+  ON employees TO user1,
+  user2;
 ```
 
 - **REVOKE**: Used to revoke privileges from users or roles.
 
 ```sql
-REVOKE SELECT, INSERT ON employees FROM user1;
+REVOKE
+SELECT
+,
+INSERT
+  ON employees
+FROM
+  user1;
 ```
 
 ## 5. Transaction Control Language (TCL)

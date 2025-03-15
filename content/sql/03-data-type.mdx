@@ -28,42 +28,81 @@ Let's explore each of these data types in more detail.
 
 ```sql
 CREATE TABLE products (
-    id INT PRIMARY KEY,
-    quantity INT -- the quantity is an integer
+  id INT PRIMARY KEY,
+  -- the quantity is an integer
+  quantity INT
 );
 
-INSERT INTO products (id, quantity) VALUES (1, 10); -- Insert an integer
+/*
+ inserting a product with
+ id = 1 and quantity = 10
+ the quantity is stored as 10
+ */
+INSERT INTO
+  products (id, quantity)
+VALUES
+  (1, 10);
 ```
 
 - **DECIMAL**: Used to store fixed-point numbers with a specified precision and scale.
 ```sql
 CREATE TABLE products (
-    id INT PRIMARY KEY,
-    price DECIMAL(10, 2) -- the price is a decimal number with 10 digits and 2 decimal places
+  id INT PRIMARY KEY,
+  /*
+   the price is a decimal number 
+   with 10 digits and 2 decimal places
+   */
+  price DECIMAL(10, 2)
 );
 
-INSERT INTO products (id, price) VALUES (1, 19.99); -- Insert a decimal number
+/*
+ inserting a product with
+ id = 1 and price = 19.99
+ the price is stored as 19.99
+ */
+INSERT INTO
+  products (id, price)
+VALUES
+  (1, 19.99);
 ```
 
 - **FLOAT**: Used to store floating-point numbers with a specified precision.
 
 ```sql
 CREATE TABLE products (
-    id INT PRIMARY KEY,
-    weight FLOAT -- the weight is a floating-point number
+  id INT PRIMARY KEY,
+  -- the weight is a floating-point number
+  weight FLOAT
 );
 
-INSERT INTO products (id, weight) VALUES (1, 2.5); -- Insert a floating-point number
+/*
+ inserting a product with
+ id = 1 and weight = 2.5
+ the weight is stored as 2.5
+ */
+INSERT INTO
+  products (id, weight)
+VALUES
+  (1, 2.5);
 ```
 
 - **DOUBLE**: Used to store double-precision floating-point numbers.
 ```sql
 CREATE TABLE products (
-    id INT PRIMARY KEY,
-    value DOUBLE -- the value is a double-precision floating-point number
+  id INT PRIMARY KEY,
+  -- the value is a double-precision floating-point number
+  value DOUBLE
 );
 
-INSERT INTO products (id, value) VALUES (1, 123.45); -- Insert a double-precision floating-point number
+/*
+ inserting a product with
+ id = 1 and value = 123.45
+ the value is stored as 123.45
+ */
+INSERT INTO
+  products (id, value)
+VALUES
+  (1, 123.45);
 ```
 
 ### String Data types
@@ -72,11 +111,23 @@ INSERT INTO products (id, value) VALUES (1, 123.45); -- Insert a double-precisio
 
 ```sql
 CREATE TABLE customers (
-    id INT PRIMARY KEY,
-    name CHAR(50) -- the name is a fixed-length string with a maximum length of 50 characters
+  id INT PRIMARY KEY,
+  /*
+   the name is a fixed-length string 
+   with a maximum length of 50 characters
+   */
+  name CHAR(50)
 );
 
-INSERT INTO customers (id, name) VALUES (1, 'John'); -- Insert a fixed-length string
+/*
+ inserting a customer with
+ id = 1 and name = 'John'
+ the name is stored as 'John__________' (padded with spaces)
+ */
+INSERT INTO
+  customers (id, name)
+VALUES
+  (1, 'John');
 ```
 
 > **Note:** whenever you define a **CHAR** data type, it will always store the fixed length of characters. If you store a string with fewer characters, it will pad the remaining characters with spaces. like if you store a string 'John' in a **CHAR(10)** column, it will be stored as 'John--------' (padded with spaces).
@@ -85,11 +136,23 @@ INSERT INTO customers (id, name) VALUES (1, 'John'); -- Insert a fixed-length st
     
 ```sql
 CREATE TABLE customers (
-    id INT PRIMARY KEY,
-    email VARCHAR(100) -- the email is a variable-length string with a maximum length of 100 characters
+  id INT PRIMARY KEY,
+  /*
+   the email is a variable-length string
+   with a maximum length of 100 characters
+   */
+  email VARCHAR(100)
 );
 
-INSERT INTO customers (id, email) VALUES (1, 'hello@gmail.com'); -- Insert a variable-length string
+/*
+ inserting a customer with
+ id = 1 and email = 'hello@gmail.com'
+ the email is stored as 'hello@gmail.com'
+ */
+INSERT INTO
+  customers (id, email)
+VALUES
+  (1, 'hello@gmail.com');
 ```
 
 > **Note:** **VARCHAR** data type is used when you want to store a string with a variable length. It will only store the actual length of the string without any padding. For example, if you store a string 'John' in a **VARCHAR(10)** column, it will be stored as 'John' (without any padding).
@@ -98,11 +161,20 @@ INSERT INTO customers (id, email) VALUES (1, 'hello@gmail.com'); -- Insert a var
 
 ```sql
 CREATE TABLE customers (
-    id INT PRIMARY KEY,
-    address TEXT -- the address is a large text value
+  id INT PRIMARY KEY,
+  -- the address is a large text value
+  address TEXT
 );
 
-INSERT INTO customers (id, address) VALUES (1, '123 Main Street, City, Country'); -- Insert a large text value
+/*
+ inserting a customer with
+ id = 1 and address = '123 Main Street, City, Country'
+ the address is stored as '123 Main Street, City, Country'
+ */
+INSERT INTO
+  customers (id, address)
+VALUES
+  (1, '123 Main Street, City, Country');
 ```
 
 ### Date/Time Data types
@@ -111,33 +183,69 @@ INSERT INTO customers (id, address) VALUES (1, '123 Main Street, City, Country')
 
 ```sql
 CREATE TABLE orders (
-    id INT PRIMARY KEY,
-    order_date DATE -- the order_date is a date value
+  id INT PRIMARY KEY,
+  /*
+   the order_date is a date value
+   format: YYYY-MM-DD
+   */
+  order_date DATE
 );
 
-INSERT INTO orders (id, order_date) VALUES (1, '2022-10-15'); -- Insert a date value
+/*
+ inserting an order with
+ id = 1 and order_date = '2022-10-15'
+ the order_date is stored as '2022-10-15'
+ */
+INSERT INTO
+  orders (id, order_date)
+VALUES
+  (1, '2022-10-15');
 ```
 
 - **TIME**: Used to store time values in the format **HH:MM:SS**.
 
 ```sql
 CREATE TABLE orders (
-    id INT PRIMARY KEY,
-    delivery_time TIME -- the delivery_time is a time value
+  id INT PRIMARY KEY,
+  /*
+   the delivery_time is a time value
+   format: HH:MM:SS
+   */
+  delivery_time TIME
 );
 
-INSERT INTO orders (id, delivery_time) VALUES (1, '14:30:00'); -- Insert a time value
+/*
+ inserting an order with
+ id = 1 and delivery_time = '14:30:00'
+ the delivery_time is stored as '14:30:00'
+ */
+INSERT INTO
+  orders (id, delivery_time)
+VALUES
+  (1, '14:30:00');
 ```
 
 - **DATETIME**: Used to store date and time values in the format **YYYY-MM-DD HH:MM:SS**.
 
 ```sql
 CREATE TABLE orders (
-    id INT PRIMARY KEY,
-    created_at DATETIME -- the created_at is a date and time value
+  id INT PRIMARY KEY,
+  /*
+   the created_at is a date and time value
+   format: YYYY-MM-DD HH:MM:SS
+   */
+  created_at DATETIME
 );
 
-INSERT INTO orders (id, created_at) VALUES (1, '2022-10-15 14:30:00'); -- Insert a date and time value
+/*
+ inserting an order with
+ id = 1 and created_at = '2022-10-15
+ the created_at is stored as '2022-10-15 14:30:00'
+ */
+INSERT INTO
+  orders (id, created_at)
+VALUES
+  (1, '2022-10-15 14:30:00');
 ```
 
 ### Special Data types
@@ -145,31 +253,61 @@ INSERT INTO orders (id, created_at) VALUES (1, '2022-10-15 14:30:00'); -- Insert
 
 ```sql
 CREATE TABLE products (
-    id INT PRIMARY KEY,
-    image BLOB -- the image is a binary large object
+  id INT PRIMARY KEY,
+  -- the image is a binary large object
+  image BLOB
 );
 
-INSERT INTO products (id, image) VALUES (1, 'binary data'); -- Insert binary data
+/*
+ inserting a product with
+ id = 1 and image = 'binary data'
+ the image is stored as 'binary data'
+ */
+INSERT INTO
+  products (id, image)
+VALUES
+  (1, 'binary data');
 ```
 
 - **JSON**: Used to store JSON (JavaScript Object Notation) data.
 
 ```sql
 CREATE TABLE products (
-    id INT PRIMARY KEY,
-    details JSON -- the details are JSON data
+  id INT PRIMARY KEY,
+  -- the details is JSON data
+  details JSON
 );
 
-INSERT INTO products (id, details) VALUES (1, '{"name": "Product 1", "price": 19.99}'); -- Insert JSON data
+/*
+ inserting a product with
+ id = 1 and details = '{"name": "Product 1", "price": 19.99}'
+ the details are stored as '{"name": "Product 1", "price": 19.99}'
+ */
+INSERT INTO
+  products (id, details)
+VALUES
+  (1, '{"name": "Product 1", "price": 19.99}');
 ```
 
 - **XML**: Used to store XML (eXtensible Markup Language) data.
 
 ```sql
 CREATE TABLE products (
-    id INT PRIMARY KEY,
-    description XML -- the description is XML data
+  id INT PRIMARY KEY,
+  -- the description is XML data
+  description XML
 );
 
-INSERT INTO products (id, description) VALUES (1, '<product><name>Product 1</name><price>19.99</price></product>'); -- Insert XML data
+/*
+ inserting a product with
+ id = 1 and description = '<product><name>Product 1</name><price>19.99</price></product>'
+ the description is stored as '<product><name>Product 1</name><price>19.99</price></product>'
+ */
+INSERT INTO
+  products (id, description)
+VALUES
+  (
+    1,
+    '<product><name>Product 1</name><price>19.99</price></product>'
+  );
 ```

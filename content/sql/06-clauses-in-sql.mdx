@@ -16,7 +16,12 @@ In SQL (Structured Query Language), clauses are used to filter, group, and sort 
 The **WHERE** clause is used to filter records based on a specified condition. It is used to retrieve only those records that satisfy the specified condition. The **WHERE** clause is commonly used with **SELECT**, **UPDATE**, and **DELETE** statements.
 
 ```sql
-SELECT * FROM employees WHERE emp_salary > 50000;
+SELECT
+  *
+FROM
+  employees
+WHERE
+  emp_salary > 50000;
 ```
 
 2. **GROUP BY Clause**
@@ -24,7 +29,13 @@ SELECT * FROM employees WHERE emp_salary > 50000;
 The **GROUP BY** clause is used to group the result set based on one or more columns. It is used in conjunction with aggregate functions like **COUNT**, **SUM**, **AVG**, etc. The **GROUP BY** clause is commonly used with the **SELECT** statement.
 
 ```sql
-SELECT emp_dept, COUNT(*) FROM employees GROUP BY emp_dept;
+SELECT
+  emp_dept,
+  COUNT(*)
+FROM
+  employees
+GROUP BY
+  emp_dept;
 ```
 
 3. **HAVING Clause**
@@ -32,7 +43,15 @@ SELECT emp_dept, COUNT(*) FROM employees GROUP BY emp_dept;
 The **HAVING** clause is used to filter the result set based on aggregate functions. It is used to filter the groups created by the **GROUP BY** clause. The **HAVING** clause is commonly used with the **SELECT** statement.
 
 ```sql
-SELECT emp_dept, AVG(emp_salary) FROM employees GROUP BY emp_dept HAVING AVG(emp_salary) > 50000;
+SELECT
+  emp_dept,
+  AVG(emp_salary)
+FROM
+  employees
+GROUP BY
+  emp_dept
+HAVING
+  AVG(emp_salary) > 50000;
 ```
 
 4. **ORDER BY Clause**
@@ -40,7 +59,12 @@ SELECT emp_dept, AVG(emp_salary) FROM employees GROUP BY emp_dept HAVING AVG(emp
 The **ORDER BY** clause is used to sort the result set based on one or more columns. It is used to specify the order in which the result set should be displayed. The **ORDER BY** clause is commonly used with the **SELECT** statement.
 
 ```sql
-SELECT * FROM employees ORDER BY emp_salary DESC;
+SELECT
+  *
+FROM
+  employees
+ORDER BY
+  emp_salary DESC;
 ```
 
 5. **LIMIT Clause**
@@ -48,7 +72,12 @@ SELECT * FROM employees ORDER BY emp_salary DESC;
 The **LIMIT** clause is used to limit the number of rows returned by a query. It is used to restrict the number of rows in the result set. The **LIMIT** clause is commonly used with the **SELECT** statement.
 
 ```sql
-SELECT * FROM employees LIMIT 10;
+SELECT
+  *
+FROM
+  employees
+LIMIT
+  10;
 ```
 
 6. **OFFSET Clause**
@@ -56,5 +85,10 @@ SELECT * FROM employees LIMIT 10;
 The **OFFSET** clause is used to skip a specified number of rows before returning the result set. It is used in conjunction with the **LIMIT** clause to implement pagination. The **OFFSET** clause is commonly used with the **SELECT** statement.
 
 ```sql
-SELECT * FROM employees LIMIT 10 OFFSET 20;
+SELECT
+  *
+FROM
+  employees
+LIMIT
+  10 OFFSET 20;
 ```

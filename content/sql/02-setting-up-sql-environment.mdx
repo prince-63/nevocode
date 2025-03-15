@@ -9,11 +9,11 @@ author_url: https://www.linkedin.com/in/prince63/
 
 # Setting Up SQL Environment
 
-Before you can start working with SQL, you need to set up your SQL environment. This involves installing and configuring a database management system (DBMS) such as MySQL or PostgreSQL and creating a sample database to work with.
+Before you can start working with SQL, you need to set up your SQL environment. This involves installing and configuring a database management system (DBMS) such as MySQL and creating a sample database to work with.
 
-## Installing MySQL or PostgreSQL
+## Installing MySQL 
 
-The first step in setting up your SQL environment is to install a DBMS such as MySQL or PostgreSQL on your local machine. Both MySQL and PostgreSQL are popular open-source database management systems that are widely used in the industry.
+The first step in setting up your SQL environment is to install a DBMS such as MySQL on your local machine. MySQL is popular open-source database management systems that are widely used in the industry.
 
 ### Installing MySQL
 
@@ -24,20 +24,9 @@ To install MySQL on your local machine, follow these steps:
 3. During the installation process, you will be prompted to set a root password for the MySQL server. Make sure to choose a strong password and remember it for future use.
 4. Once the installation is complete, start the MySQL server and verify that it is running correctly.
 
-### Installing PostgreSQL
-
-To install PostgreSQL on your local machine, follow these steps:
-
-1. Download the PostgreSQL installer from the [official PostgreSQL website](https://www.postgresql.org/download/).
-2. Run the installer and follow the on-screen instructions to install PostgreSQL on your machine.
-3. During the installation process, you will be prompted to set a password for the default PostgreSQL user (postgres). Make sure to choose a strong password and remember it for future use.
-4. Once the installation is complete, start the PostgreSQL server and verify that it is running correctly.
-
-> **Note:** The installation process may vary depending on your operating system. Make sure to follow the official installation instructions for MySQL or PostgreSQL for your specific operating system.
-
 ## Creating a Sample Database
 
-After installing MySQL or PostgreSQL, the next step is to create a sample database that you can use to practice your SQL skills. we will create a sample database called **employees** that contains a single table **employees** with the following columns:
+After installing MySQL, the next step is to create a sample database that you can use to practice your SQL skills. we will create a sample database called **employees** that contains a single table **employees** with the following columns:
 
 - **id** (INT): Unique identifier for each employee.
 - **name** (VARCHAR): Name of the employee.
@@ -46,63 +35,44 @@ After installing MySQL or PostgreSQL, the next step is to create a sample databa
 
 To create the employees database and table, follow these steps:
 
-1. Open a terminal or command prompt and connect to the MySQL or PostgreSQL server using the appropriate command-line client (**mysql** for MySQL or **psql** for PostgreSQL).
+1. Open a terminal or command prompt and connect to the MySQL server using the appropriate command-line client (**mysql** for MySQL).
 2. Run the following SQL commands to create the employees database and table:
 
 ```sql
--- For MySQL
-CREATE DATABASE employees; -- Create a new database called employees
-USE employees; -- Switch to the employees database
-CREATE TABLE employees ( -- Create a new table called employees
-    id INT PRIMARY KEY, -- Primary key column
-    name VARCHAR(50), -- Name column
-    department VARCHAR(50), -- Department column
-    salary DECIMAL(10, 2) -- Salary column
-);
+-- Create a new database called employees
+CREATE DATABASE employees;
 
--- For PostgreSQL
-CREATE DATABASE employees; -- Create a new database called employees
-\c employees -- Connect to the employees database
-CREATE TABLE employees ( -- Create a new table called employees
-    id SERIAL PRIMARY KEY, -- Primary key column
-    name VARCHAR(50), -- Name column
-    department VARCHAR(50), -- Department column
-    salary DECIMAL(10, 2) -- Salary column
+-- Switch to the employees database
+USE employees;
+
+-- Create a new table called employees
+CREATE TABLE employees (
+  -- Primary key column
+  id INT PRIMARY KEY,
+  -- Name column
+  name VARCHAR(50),
+  -- Department column
+  department VARCHAR(50),
+  -- Salary column
+  salary DECIMAL(10, 2)
 );
 ```
-
-> **Note:** The SQL commands for creating databases and tables may vary slightly between MySQL and PostgreSQL. Make sure to use the appropriate syntax for the DBMS you are working with.
-
-```
-Output:
-```
-
-| id | name    | department   | salary   |
-|----|---------|--------------|----------|
 
 3. Insert some sample data into the **employees** table to get started:
 
 ```sql
--- For MySQL
-INSERT INTO employees (id, name, department, salary) VALUES -- Insert sample data into the employees table
-(1, 'Alice', 'Engineering', 75000.00), 
-(2, 'Bob', 'Marketing', 60000.00),
-(3, 'Charlie', 'Sales', 55000.00);
-
--- For PostgreSQL
-INSERT INTO employees (name, department, salary) VALUES -- Insert sample data into the employees table
-('Alice', 'Engineering', 75000.00),
-('Bob', 'Marketing', 60000.00),
-('Charlie', 'Sales', 55000.00);
+-- Insert sample data into the employees table
+INSERT INTO
+  employees (id, name, department, salary)
+VALUES
+  (1, 'Alice', 'Engineering', 75000.00),
+  (2, 'Bob', 'Marketing', 60000.00),
+  (3, 'Charlie', 'Sales', 55000.00);
 ```
 
 4. Verify that the data has been inserted into the **employees** table by running a SELECT query:
 
 ```sql
--- For MySQL
-SELECT * FROM employees;
-
--- For PostgreSQL
 SELECT * FROM employees;
 ```
 
@@ -113,6 +83,5 @@ SELECT * FROM employees;
 | 1  | Alice   | Engineering  | 75000.00 |
 | 2  | Bob     | Marketing    | 60000.00 |
 | 3  | Charlie | Sales        | 55000.00 |
-
 
 Congratulations! You have successfully set up your SQL environment and created a sample database to work with. You are now ready to start practicing your SQL skills and learning more about database management.
