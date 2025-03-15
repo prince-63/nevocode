@@ -12,11 +12,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgb(231, 231, 231);
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -24,14 +21,6 @@ body {
   border: 3px solid rgba(var(--app-gray-200), 1);
   border-radius: 50px 50px 50px 50px;
 }
-
-/* .dark ::-webkit-scrollbar-thumb {
-  background-color: rgb(55, 65, 81);
-}
-
-.dark ::-webkit-scrollbar-track {
-  background: white;
-} */
 
 :root {
   --sidebar-background: 210 20% 98%;
@@ -56,11 +45,6 @@ body {
   --sidebar-ring: 220 14% 19%;
   --sidebar-hover: 0 0% 12%;
 }
-
-/* mdx style */
-/* strong {
-  font-weight: 500;
-} */
 
 code[data-line-numbers] {
   counter-reset: line;

@@ -11,6 +11,9 @@ const tailwindConfig = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "380px",
+      },
       colors: {
         primary: "#388E3C",
         secondary: "#F59E0B",

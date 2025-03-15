@@ -13,7 +13,7 @@ const ContentMobileHeader = () => {
   return (
     <header
       className={cn(
-        "md:hidden  h-[60px] flex items-center justify-between w-full bg-lightBg dark:bg-darkBg  border-b  border-darkBg/10 dark:border-lightBg/10 px-3",
+        "md:hidden h-[60px] flex items-center justify-between bg-lightBg dark:bg-darkBg border-b border-darkBg/10 dark:border-lightBg/10 px-3",
       )}
     >
       <div className="flex items-center gap-2">

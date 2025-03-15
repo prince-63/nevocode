@@ -48,12 +48,12 @@ export default async function Home({ params }: PageParams) {
   const renderContent = await filterRenderContent(data);
 
   return (
-    <div className="h-screen flex">
+    <div className="sm:h-screen sm:flex">
       <AppSidebar content={data.content} />
-      <div className="h-screen flex-1 overflow-y-auto" id="main_side_view_area">
+      <div className="flex-1 sm:overflow-y-auto" id="main_side_view_area">
         <div>
           <ContentMobileHeader />
-          <div className="px-4">
+          <div className="px-2 sm:px-4">
             <RenderContent mdxContent={renderContent.content.body.code ?? ""} />
           </div>
           <div className="sm:hidden mb-4">

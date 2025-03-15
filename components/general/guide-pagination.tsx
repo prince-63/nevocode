@@ -17,7 +17,7 @@ const GuidePagination = ({
   const router = useRouter();
 
   function handleNavigate(url: string) {
-    router.replace(url);
+    router.push(url);
   }
 
   return (

@@ -28,10 +28,10 @@ export default makeSource({
         rehypePrettyCode,
         {
           theme: {
-            dark: "github-dark-dimmed",
-            light: "github-light",
+            dark: "one-light",
+            light: "one-light",
           },
-          bypassInlineCode: false,
+          bypassInlineCode: true,
           keepBackground: true,
           defaultLang: {
             block: "plaintext",

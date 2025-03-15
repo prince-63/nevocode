@@ -8,7 +8,7 @@ export const mdxComponent: MDXComponents = {
   h1: ({ className, ...props }) => (
     <h1
       className={cn(
-        "scroll-m-20 font-bold tracking-wide text-2xl justify-center my-4",
+        "scroll-m-20 font-bold tracking-wide text-2xl justify-center my-4 text-wrap",
         pt_sans.className,
         className,
       )}
@@ -18,7 +18,7 @@ export const mdxComponent: MDXComponents = {
   h2: ({ className, ...props }) => (
     <h2
       className={cn(
-        "my-3 text-xl font-bold tracking-wide scroll-m-20",
+        "my-3 text-xl font-bold tracking-wide scroll-m-20 text-wrap",
         pt_sans.className,
         className,
       )}
@@ -28,7 +28,7 @@ export const mdxComponent: MDXComponents = {
   h3: ({ className, ...props }) => (
     <h3
       className={cn(
-        "my-2 text-lg tracking-wide scroll-m-20 font-bold",
+        "my-2 text-lg tracking-wide scroll-m-20 font-bold text-wrap",
         pt_sans.className,
         className,
       )}
@@ -38,7 +38,7 @@ export const mdxComponent: MDXComponents = {
   h4: ({ className, ...props }) => (
     <h4
       className={cn(
-        "my-1 scroll-m-20 tracking-wide text-base font-bold",
+        "my-1 scroll-m-20 tracking-wide text-base font-bold text-wrap",
         pt_sans.className,
         className,
       )}
@@ -46,7 +46,7 @@ export const mdxComponent: MDXComponents = {
     />
   ),
   a: ({ href, className, ...props }) => {
-    const customClassName = "text-blue-500 hover:text-blue-700";
+    const customClassName = "text-blue-500 hover:text-blue-700 text-wrap";
     if (href?.startsWith("/")) {
       return (
         <Link
@@ -78,7 +78,7 @@ export const mdxComponent: MDXComponents = {
   p: ({ className, ...props }) => (
     <p
       className={cn(
-        "leading-7 text-base tracking-wide font-normal [&:not(:first-child)]:my-2",
+        "leading-7 text-base tracking-wide font-normal [&:not(:first-child)]:my-2 text-wrap",
         pt_sans.className,
         className,
       )}
@@ -87,23 +87,31 @@ export const mdxComponent: MDXComponents = {
   ),
   ul: ({ className, ...props }) => (
     <ul
-      className={cn("ml-4 my-2 list-disc", pt_sans.className, className)}
+      className={cn(
+        "ml-4 my-2 list-disc text-wrap",
+        pt_sans.className,
+        className,
+      )}
       {...props}
     />
   ),
   ol: ({ className, ...props }) => (
     <ol
-      className={cn("ml-4 my-1 list-decimal", pt_sans.className, className)}
+      className={cn(
+        "ml-4 my-2 list-decimal text-wrap",
+        pt_sans.className,
+        className,
+      )}
       {...props}
     />
   ),
   li: ({ className, ...props }) => (
-    <li className={cn(pt_sans.className, className, "my-1")} {...props} />
+    <li className={cn(pt_sans.className, className, "my-2")} {...props} />
   ),
   blockquote: ({ className, ...props }) => (
     <blockquote
       className={cn(
-        "my-1 border-l-2 pl-2 italic [&>*]:text-muted-foreground",
+        "my-2 border-l-2 pl-2 italic [&>*]:text-muted-foreground text-wrap",
         pt_sans.className,
         className,
       )}
@@ -136,17 +144,12 @@ export const mdxComponent: MDXComponents = {
     );
   },
   table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
-    <div className="my-6 w-full overflow-y-auto">
-      <table
-        className={cn("w-full", pt_sans.className, className)}
-        {...props}
-      />
-    </div>
+    <table className={cn("w-full", className)} {...props} />
   ),
   tr: ({ className, ...props }: React.HTMLAttributes<HTMLTableRowElement>) => (
     <tr
       className={cn(
-        "m-0 border-t p-0 even:bg-muted",
+        "border-t even:bg-muted text-wrap",
         pt_sans.className,
         className,
       )}
@@ -156,7 +159,7 @@ export const mdxComponent: MDXComponents = {
   th: ({ className, ...props }) => (
     <th
       className={cn(
-        "border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
+        "border px-2 text-wrap sm:px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
         pt_sans.className,
         className,
       )}
@@ -166,7 +169,7 @@ export const mdxComponent: MDXComponents = {
   td: ({ className, ...props }) => (
     <td
       className={cn(
-        "border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
+        "border px-2 text-wrap sm:px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
         pt_sans.className,
         className,
       )}
@@ -174,23 +177,22 @@ export const mdxComponent: MDXComponents = {
     />
   ),
   pre: ({ className, ...props }) => (
-    <pre
+    <pre className={cn(className)} {...props} />
+  ),
+  code: ({ className, ...props }) => (
+    <code
       className={cn(
-        "w-full overflow-auto",
-
+        "relative font-mono overflow-x-auto bg-gray-600 dark:bg-lightBg px-1 text-textDark dark:text-textLight text-wrap",
         className,
       )}
       {...props}
     />
   ),
-  code: ({ className, ...props }) => (
-    <code className={cn("relative font-mono", className)} {...props} />
-  ),
   figure: ({ className, ...props }) => (
     <figure
       data-theme="github-dark-dimmed github-light"
       className={cn(
-        "overflow-x-auto rounded-md p-2 dark:bg-[#22272e] bg-[#24292e]",
+        "rounded-md my-2 p-2 bg-[#FAFAFA] border text-wrap",
         className,
       )}
       {...props}

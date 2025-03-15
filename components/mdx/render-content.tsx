@@ -11,7 +11,7 @@ const RenderContent: React.FC<RenderContentProps> = ({ mdxContent }) => {
   const MdxContent = useMDXComponent(mdxContent);
 
   return (
-    <div className="max-w-full">
+    <div>
       <MdxContent components={mdxComponent} />
     </div>
   );
