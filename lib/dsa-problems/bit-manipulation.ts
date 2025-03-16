@@ -2,7 +2,7 @@ import { DSASheetProblemType } from "../../utils/dsa-sheet-type";
 
 export const BIT_MANIPULATION: DSASheetProblemType[] = [
   {
-    id: "102",
+    id: "bit-manipulation-1",
     name: "Counting Bits",
     description: "",
     link: "https://leetcode.com/problems/counting-bits/",
@@ -10,7 +10,7 @@ export const BIT_MANIPULATION: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "59",
+    id: "bit-manipulation-2",
     name: "Pow(x, n)",
     description: "",
     link: "https://leetcode.com/problems/powx-n/",
@@ -18,7 +18,7 @@ export const BIT_MANIPULATION: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "61",
+    id: "bit-manipulation-3",
     name: "Reverse Bits",
     description: "",
     link: "https://leetcode.com/problems/reverse-bits/",
@@ -26,7 +26,7 @@ export const BIT_MANIPULATION: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "57",
+    id: "bit-manipulation-4",
     name: "Bitwise AND of Numbers Range",
     description: "",
     link: "https://leetcode.com/problems/bitwise-and-of-numbers-range/",
@@ -34,7 +34,7 @@ export const BIT_MANIPULATION: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "153",
+    id: "bit-manipulation-5",
     name: "Single Number",
     description: "",
     link: "https://leetcode.com/problems/single-number/",
@@ -42,7 +42,7 @@ export const BIT_MANIPULATION: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "154",
+    id: "bit-manipulation-6",
     name: "Counting Bits",
     description: "",
     link: "https://leetcode.com/problems/counting-bits/",
@@ -50,7 +50,7 @@ export const BIT_MANIPULATION: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "201",
+    id: "bit-manipulation-7",
     name: "XOR Queries of a Subarray",
     description: "",
     link: "https://leetcode.com/problems/xor-queries-of-a-subarray/",
@@ -58,7 +58,7 @@ export const BIT_MANIPULATION: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "202",
+    id: "bit-manipulation-8",
     name: "Power of Four",
     description: "",
     link: "https://leetcode.com/problems/power-of-four/",
@@ -66,7 +66,7 @@ export const BIT_MANIPULATION: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "252",
+    id: "bit-manipulation-9",
     name: "Counting Bits",
     description: "",
     link: "https://leetcode.com/problems/counting-bits/",
@@ -74,7 +74,7 @@ export const BIT_MANIPULATION: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "253",
+    id: "bit-manipulation-10",
     name: "Reverse Bits",
     description: "",
     link: "https://leetcode.com/problems/reverse-bits/",
@@ -82,7 +82,7 @@ export const BIT_MANIPULATION: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "254",
+    id: "bit-manipulation-11",
     name: "Single Number",
     description: "",
     link: "https://leetcode.com/problems/single-number/",

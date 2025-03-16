@@ -2,7 +2,7 @@ import { DSASheetProblemType } from "../../utils/dsa-sheet-type";
 
 export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
   {
-    id: "52",
+    id: "dynamic-programming-1",
     name: "Climbing Stairs",
     description: "",
     link: "https://leetcode.com/problems/climbing-stairs/",
@@ -10,7 +10,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "53",
+    id: "dynamic-programming-2",
     name: "House Robber",
     description: "",
     link: "https://leetcode.com/problems/house-robber/",
@@ -18,7 +18,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "54",
+    id: "dynamic-programming-3",
     name: "Longest Increasing Subsequence",
     description: "",
     link: "https://leetcode.com/problems/longest-increasing-subsequence/",
@@ -26,7 +26,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "55",
+    id: "dynamic-programming-4",
     name: "Partition Equal Subset Sum",
     description: "",
     link: "https://leetcode.com/problems/partition-equal-subset-sum/",
@@ -34,7 +34,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "56",
+    id: "dynamic-programming-5",
     name: "Word Break",
     description: "",
     link: "https://leetcode.com/problems/word-break/",
@@ -42,7 +42,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "96",
+    id: "dynamic-programming-6",
     name: "Decode Ways",
     description: "",
     link: "https://leetcode.com/problems/decode-ways/",
@@ -50,7 +50,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "97",
+    id: "dynamic-programming-7",
     name: "Unique Paths",
     description: "",
     link: "https://leetcode.com/problems/unique-paths/",
@@ -58,7 +58,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "98",
+    id: "dynamic-programming-8",
     name: "Coin Change",
     description: "",
     link: "https://leetcode.com/problems/coin-change/",
@@ -66,7 +66,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "99",
+    id: "dynamic-programming-9",
     name: "Longest Palindromic Subsequence",
     description: "",
     link: "https://leetcode.com/problems/longest-palindromic-subsequence/",
@@ -74,7 +74,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "100",
+    id: "dynamic-programming-10",
     name: "Wildcard Matching",
     description: "",
     link: "https://leetcode.com/problems/wildcard-matching/",
@@ -82,7 +82,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "138",
+    id: "dynamic-programming-11",
     name: "Fibonacci Number",
     description: "",
     link: "https://leetcode.com/problems/fibonacci-number/",
@@ -90,7 +90,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "139",
+    id: "dynamic-programming-12",
     name: "Climbing Stairs",
     description: "",
     link: "https://leetcode.com/problems/climbing-stairs/",
@@ -98,7 +98,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "140",
+    id: "dynamic-programming-13",
     name: "Longest Increasing Subsequence",
     description: "",
     link: "https://leetcode.com/problems/longest-increasing-subsequence/",
@@ -106,7 +106,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "141",
+    id: "dynamic-programming-14",
     name: "Edit Distance",
     description: "",
     link: "https://leetcode.com/problems/edit-distance/",
@@ -114,7 +114,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "142",
+    id: "dynamic-programming-15",
     name: "Word Break",
     description: "",
     link: "https://leetcode.com/problems/word-break/",
@@ -122,7 +122,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "143",
+    id: "dynamic-programming-16",
     name: "House Robber",
     description: "",
     link: "https://leetcode.com/problems/house-robber/",
@@ -130,7 +130,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "144",
+    id: "dynamic-programming-17",
     name: "Maximum Subarray",
     description: "",
     link: "https://leetcode.com/problems/maximum-subarray/",
@@ -138,7 +138,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "145",
+    id: "dynamic-programming-18",
     name: "Unique Paths II",
     description: "",
     link: "https://leetcode.com/problems/unique-paths-ii/",
@@ -146,7 +146,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "146",
+    id: "dynamic-programming-19",
     name: "Longest Palindromic Substring",
     description: "",
     link: "https://leetcode.com/problems/longest-palindromic-substring/",
@@ -154,7 +154,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "188",
+    id: "dynamic-programming-20",
     name: "Decode Ways",
     description: "",
     link: "https://leetcode.com/problems/decode-ways/",
@@ -162,7 +162,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "189",
+    id: "dynamic-programming-21",
     name: "Coin Change",
     description: "",
     link: "https://leetcode.com/problems/coin-change/",
@@ -170,7 +170,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "190",
+    id: "dynamic-programming-22",
     name: "Longest Common Subsequence",
     description: "",
     link: "https://leetcode.com/problems/longest-common-subsequence/",
@@ -178,7 +178,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "191",
+    id: "dynamic-programming-23",
     name: "House Robber II",
     description: "",
     link: "https://leetcode.com/problems/house-robber-ii/",
@@ -186,7 +186,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "192",
+    id: "dynamic-programming-24",
     name: "Partition Equal Subset Sum",
     description: "",
     link: "https://leetcode.com/problems/partition-equal-subset-sum/",
@@ -194,7 +194,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "193",
+    id: "dynamic-programming-25",
     name: "Distinct Subsequences",
     description: "",
     link: "https://leetcode.com/problems/distinct-subsequences/",
@@ -202,7 +202,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "194",
+    id: "dynamic-programming-26",
     name: "Maximum Profit in Job Scheduling",
     description: "",
     link: "https://leetcode.com/problems/maximum-profit-in-job-scheduling/",
@@ -210,7 +210,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "236",
+    id: "dynamic-programming-27",
     name: "Shortest Bridge",
     description: "",
     link: "https://leetcode.com/problems/shortest-bridge/",
@@ -218,7 +218,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "237",
+    id: "dynamic-programming-28",
     name: "Network Delay Time",
     description: "",
     link: "https://leetcode.com/problems/network-delay-time/",
@@ -226,7 +226,7 @@ export const DYNAMIC_PROGRAMMING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "238",
+    id: "dynamic-programming-29",
     name: "Critical Connections in a Network",
     description: "",
     link: "https://leetcode.com/problems/critical-connections-in-a-network/",

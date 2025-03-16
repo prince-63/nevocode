@@ -2,7 +2,7 @@ import { DSASheetProblemType } from "../../utils/dsa-sheet-type";
 
 export const BINARY_SEARCH: DSASheetProblemType[] = [
   {
-    id: "1",
+    id: "binary-search-1",
     name: "Binary Search",
     description:
       "Implement binary search to find the target value in a sorted array.",
@@ -11,7 +11,7 @@ export const BINARY_SEARCH: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "2",
+    id: "binary-search-2",
     name: "Search in Rotated Sorted Array",
     description: "Search for a target value in a rotated sorted array.",
     link: "https://leetcode.com/problems/search-in-rotated-sorted-array/",
@@ -19,7 +19,7 @@ export const BINARY_SEARCH: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "3",
+    id: "binary-search-3",
     name: "Koko Eating Bananas",
     description:
       "Determine the minimum eating speed to finish all bananas within a given time.",
@@ -28,7 +28,7 @@ export const BINARY_SEARCH: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "4",
+    id: "binary-search-4",
     name: "Find Minimum in Rotated Sorted Array",
     description: "Find the minimum element in a rotated sorted array.",
     link: "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
@@ -36,7 +36,7 @@ export const BINARY_SEARCH: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "5",
+    id: "binary-search-5",
     name: "Time Based Key-Value Store",
     description: "Design a time-based key-value store.",
     link: "https://leetcode.com/problems/time-based-key-value-store/",
@@ -44,7 +44,7 @@ export const BINARY_SEARCH: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "6",
+    id: "binary-search-6",
     name: "Median of Two Sorted Arrays",
     description: "Find the median of two sorted arrays.",
     link: "https://leetcode.com/problems/median-of-two-sorted-arrays/",
@@ -52,7 +52,7 @@ export const BINARY_SEARCH: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "7",
+    id: "binary-search-7",
     name: "Find Peak Element",
     description: "Find a peak element in an array.",
     link: "https://leetcode.com/problems/find-peak-element/",
@@ -60,7 +60,7 @@ export const BINARY_SEARCH: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "8",
+    id: "binary-search-8",
     name: "Search a 2D Matrix",
     description: "Search for a target value in a 2D matrix.",
     link: "https://leetcode.com/problems/search-a-2d-matrix/",
@@ -68,7 +68,7 @@ export const BINARY_SEARCH: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "9",
+    id: "binary-search-9",
     name: "Find First and Last Position of Element in Sorted Array",
     description:
       "Find the first and last position of a target value in a sorted array.",
@@ -77,7 +77,7 @@ export const BINARY_SEARCH: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "10",
+    id: "binary-search-10",
     name: "Find Minimum in Rotated Sorted Array",
     description: "Find the minimum element in a rotated sorted array.",
     link: "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
@@ -85,7 +85,7 @@ export const BINARY_SEARCH: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "11",
+    id: "binary-search-11",
     name: "Search in Rotated Sorted Array",
     description: "Search for a target value in a rotated sorted array.",
     link: "https://leetcode.com/problems/search-in-rotated-sorted-array/",
@@ -93,7 +93,7 @@ export const BINARY_SEARCH: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "12",
+    id: "binary-search-12",
     name: "Median of Two Sorted Arrays",
     description: "Find the median of two sorted arrays.",
     link: "https://leetcode.com/problems/median-of-two-sorted-arrays/",
@@ -101,7 +101,7 @@ export const BINARY_SEARCH: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "13",
+    id: "binary-search-13",
     name: "Search a 2D Matrix",
     description: "Search for a target value in a 2D matrix.",
     link: "https://leetcode.com/problems/search-a-2d-matrix/",
@@ -109,7 +109,7 @@ export const BINARY_SEARCH: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "14",
+    id: "binary-search-14",
     name: "Find Peak Element",
     description: "Find a peak element in an array.",
     link: "https://leetcode.com/problems/find-peak-element/",
@@ -117,7 +117,7 @@ export const BINARY_SEARCH: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "15",
+    id: "binary-search-15",
     name: "Find Minimum in Rotated Sorted Array",
     description: "Find the minimum element in a rotated sorted array.",
     link: "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
@@ -125,7 +125,7 @@ export const BINARY_SEARCH: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "16",
+    id: "binary-search-16",
     name: "Find Kth Smallest Pair Distance",
     description: "Find the k-th smallest distance among all pairs in an array.",
     link: "https://leetcode.com/problems/find-k-th-smallest-pair-distance/",
@@ -133,7 +133,7 @@ export const BINARY_SEARCH: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "17",
+    id: "binary-search-17",
     name: "Split Array Largest Sum",
     description:
       "Split an array into m subarrays such that the largest sum among them is minimized.",

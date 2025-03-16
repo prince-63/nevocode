@@ -2,7 +2,7 @@ import { DSASheetProblemType } from "../../utils/dsa-sheet-type";
 
 export const INTERVALS: DSASheetProblemType[] = [
   {
-    id: "149",
+    id: "intervals-1",
     name: "Non-overlapping Intervals",
     description: "",
     link: "https://leetcode.com/problems/non-overlapping-intervals/",
@@ -10,7 +10,7 @@ export const INTERVALS: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "150",
+    id: "intervals-2",
     name: "Meeting Rooms",
     description: "",
     link: "https://leetcode.com/problems/meeting-rooms/",
@@ -18,7 +18,7 @@ export const INTERVALS: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "197",
+    id: "intervals-3",
     name: "Meeting Rooms II",
     description: "",
     link: "https://leetcode.com/problems/meeting-rooms-ii/",
@@ -26,7 +26,7 @@ export const INTERVALS: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "198",
+    id: "intervals-4",
     name: "Employee Free Time",
     description: "",
     link: "https://leetcode.com/problems/employee-free-time/",
@@ -34,7 +34,7 @@ export const INTERVALS: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "249",
+    id: "intervals-5",
     name: "Non-overlapping Intervals",
     description: "",
     link: "https://leetcode.com/problems/non-overlapping-intervals/",

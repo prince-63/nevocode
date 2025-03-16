@@ -2,7 +2,7 @@ import { DSASheetProblemType } from "../../utils/dsa-sheet-type";
 
 export const STACK: DSASheetProblemType[] = [
   {
-    id: "1",
+    id: "stack-1",
     name: "Valid Parentheses",
     description: "Check if the input string is valid parentheses.",
     link: "https://leetcode.com/problems/valid-parentheses/",
@@ -10,7 +10,7 @@ export const STACK: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "2",
+    id: "stack-2",
     name: "Min Stack",
     description:
       "Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.",
@@ -19,7 +19,7 @@ export const STACK: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "3",
+    id: "stack-3",
     name: "Evaluate Reverse Polish Notation",
     description:
       "Evaluate the value of an arithmetic expression in Reverse Polish Notation.",
@@ -28,7 +28,7 @@ export const STACK: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "4",
+    id: "stack-4",
     name: "Daily Temperatures",
     description:
       "Given a list of daily temperatures, return a list such that, for each day, tells you how many days you would have to wait until a warmer temperature.",
@@ -37,7 +37,7 @@ export const STACK: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "5",
+    id: "stack-5",
     name: "Car Fleet",
     description:
       "N cars are going to the same destination along a one-lane road. Find the number of car fleets that will arrive at the destination.",
@@ -46,7 +46,7 @@ export const STACK: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "6",
+    id: "stack-6",
     name: "Largest Rectangle in Histogram",
     description: "Find the largest rectangle in a histogram.",
     link: "https://leetcode.com/problems/largest-rectangle-in-histogram/",
@@ -54,7 +54,7 @@ export const STACK: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "7",
+    id: "stack-7",
     name: "Next Greater Element I",
     description:
       "Find the next greater element for each element in the first array.",
@@ -63,7 +63,7 @@ export const STACK: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "8",
+    id: "stack-8",
     name: "Next Greater Element II",
     description:
       "Find the next greater element for each element in a circular array.",
@@ -72,7 +72,7 @@ export const STACK: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "9",
+    id: "stack-9",
     name: "Decode String",
     description: "Decode a string encoded with a specific pattern.",
     link: "https://leetcode.com/problems/decode-string/",
@@ -80,7 +80,7 @@ export const STACK: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "10",
+    id: "stack-10",
     name: "Largest Rectangle in Histogram",
     description: "Find the largest rectangle in a histogram.",
     link: "https://leetcode.com/problems/largest-rectangle-in-histogram/",
@@ -88,7 +88,7 @@ export const STACK: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "11",
+    id: "stack-11",
     name: "Min Stack",
     description:
       "Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.",
@@ -97,7 +97,7 @@ export const STACK: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "12",
+    id: "stack-12",
     name: "Daily Temperatures",
     description:
       "Given a list of daily temperatures, return a list such that, for each day, tells you how many days you would have to wait until a warmer temperature.",
@@ -106,7 +106,7 @@ export const STACK: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "13",
+    id: "stack-13",
     name: "Largest Rectangle in Histogram",
     description: "Find the largest rectangle in a histogram.",
     link: "https://leetcode.com/problems/largest-rectangle-in-histogram/",
@@ -114,7 +114,7 @@ export const STACK: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "14",
+    id: "stack-14",
     name: "Simplify Path",
     description: "Simplify a given absolute path for a file in Unix-style.",
     link: "https://leetcode.com/problems/simplify-path/",
@@ -122,7 +122,7 @@ export const STACK: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "15",
+    id: "stack-15",
     name: "Evaluate Reverse Polish Notation",
     description:
       "Evaluate the value of an arithmetic expression in Reverse Polish Notation.",
@@ -131,7 +131,7 @@ export const STACK: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "16",
+    id: "stack-16",
     name: "Next Greater Element I",
     description:
       "Find the next greater element for each element in the first array.",
@@ -140,7 +140,7 @@ export const STACK: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "17",
+    id: "stack-17",
     name: "Next Greater Element II",
     description:
       "Find the next greater element for each element in a circular array.",
@@ -149,7 +149,7 @@ export const STACK: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "18",
+    id: "stack-18",
     name: "Basic Calculator II",
     description:
       "Implement a basic calculator to evaluate a simple expression string.",
@@ -158,7 +158,7 @@ export const STACK: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "19",
+    id: "stack-19",
     name: "Min Stack",
     description:
       "Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.",

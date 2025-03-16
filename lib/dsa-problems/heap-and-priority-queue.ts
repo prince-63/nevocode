@@ -2,7 +2,7 @@ import { DSASheetProblemType } from "../../utils/dsa-sheet-type";
 
 export const HEAP_AND_PRIORITY_QUEUE: DSASheetProblemType[] = [
   {
-    id: "1",
+    id: "heap-and-priority-queue-1",
     name: "Kth Largest Element in a Stream",
     description: "Find the kth largest element in a stream.",
     link: "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
@@ -10,7 +10,7 @@ export const HEAP_AND_PRIORITY_QUEUE: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "2",
+    id: "heap-and-priority-queue-2",
     name: "K Closest Points to Origin",
     description: "Find the k closest points to the origin.",
     link: "https://leetcode.com/problems/k-closest-points-to-origin/",
@@ -18,7 +18,7 @@ export const HEAP_AND_PRIORITY_QUEUE: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "3",
+    id: "heap-and-priority-queue-3",
     name: "Task Scheduler",
     description: "Schedule tasks with a cooldown period.",
     link: "https://leetcode.com/problems/task-scheduler/",
@@ -26,7 +26,7 @@ export const HEAP_AND_PRIORITY_QUEUE: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "4",
+    id: "heap-and-priority-queue-4",
     name: "Find Median from Data Stream",
     description: "Find the median from a data stream.",
     link: "https://leetcode.com/problems/find-median-from-data-stream/",
@@ -34,7 +34,7 @@ export const HEAP_AND_PRIORITY_QUEUE: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "5",
+    id: "heap-and-priority-queue-5",
     name: "Top K Frequent Words",
     description: "Find the top k frequent words in a list.",
     link: "https://leetcode.com/problems/top-k-frequent-words/",
@@ -42,7 +42,7 @@ export const HEAP_AND_PRIORITY_QUEUE: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "6",
+    id: "heap-and-priority-queue-6",
     name: "Find K Pairs with Smallest Sums",
     description: "Find k pairs with the smallest sums.",
     link: "https://leetcode.com/problems/find-k-pairs-with-smallest-sums/",
@@ -50,7 +50,7 @@ export const HEAP_AND_PRIORITY_QUEUE: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "7",
+    id: "heap-and-priority-queue-7",
     name: "Kth Largest Element in an Array",
     description: "Find the kth largest element in an array.",
     link: "https://leetcode.com/problems/kth-largest-element-in-an-array/",
@@ -58,7 +58,7 @@ export const HEAP_AND_PRIORITY_QUEUE: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "8",
+    id: "heap-and-priority-queue-8",
     name: "K Closest Points to Origin",
     description: "Find the k closest points to the origin.",
     link: "https://leetcode.com/problems/k-closest-points-to-origin/",
@@ -66,7 +66,7 @@ export const HEAP_AND_PRIORITY_QUEUE: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "9",
+    id: "heap-and-priority-queue-9",
     name: "Merge K Sorted Lists",
     description:
       "Merge k sorted linked lists and return it as one sorted list.",
@@ -75,7 +75,7 @@ export const HEAP_AND_PRIORITY_QUEUE: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "10",
+    id: "heap-and-priority-queue-10",
     name: "Top K Frequent Elements",
     description: "Find the top k frequent elements in an array.",
     link: "https://leetcode.com/problems/top-k-frequent-elements/",
@@ -83,7 +83,7 @@ export const HEAP_AND_PRIORITY_QUEUE: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "11",
+    id: "heap-and-priority-queue-11",
     name: "Kth Largest Element in an Array",
     description: "Find the kth largest element in an array.",
     link: "https://leetcode.com/problems/kth-largest-element-in-an-array/",
@@ -91,7 +91,7 @@ export const HEAP_AND_PRIORITY_QUEUE: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "12",
+    id: "heap-and-priority-queue-12",
     name: "Find Median from Data Stream",
     description: "Find the median from a data stream.",
     link: "https://leetcode.com/problems/find-median-from-data-stream/",
@@ -99,7 +99,7 @@ export const HEAP_AND_PRIORITY_QUEUE: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "13",
+    id: "heap-and-priority-queue-13",
     name: "K Closest Points to Origin",
     description: "Find the k closest points to the origin.",
     link: "https://leetcode.com/problems/k-closest-points-to-origin/",
@@ -107,7 +107,7 @@ export const HEAP_AND_PRIORITY_QUEUE: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "14",
+    id: "heap-and-priority-queue-14",
     name: "Find K Pairs with Smallest Sums",
     description: "Find k pairs with the smallest sums.",
     link: "https://leetcode.com/problems/find-k-pairs-with-smallest-sums/",
@@ -115,7 +115,7 @@ export const HEAP_AND_PRIORITY_QUEUE: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "15",
+    id: "heap-and-priority-queue-15",
     name: "Merge K Sorted Lists",
     description:
       "Merge k sorted linked lists and return it as one sorted list.",
@@ -124,7 +124,7 @@ export const HEAP_AND_PRIORITY_QUEUE: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "16",
+    id: "heap-and-priority-queue-16",
     name: "Sliding Window Maximum",
     description: "Find the maximum value in each sliding window of size k.",
     link: "https://leetcode.com/problems/sliding-window-maximum/",

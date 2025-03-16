@@ -2,7 +2,7 @@ import { DSASheetProblemType } from "../../utils/dsa-sheet-type";
 
 export const MATH_AND_GEOMETRY: DSASheetProblemType[] = [
   {
-    id: "103",
+    id: "math-and-geometry-1",
     name: "Happy Number",
     description: "",
     link: "https://leetcode.com/problems/happy-number/",
@@ -10,7 +10,7 @@ export const MATH_AND_GEOMETRY: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "104",
+    id: "math-and-geometry-2",
     name: "Sieve of Eratosthenes",
     description: "",
     link: "https://leetcode.com/problems/count-primes/",
@@ -18,7 +18,7 @@ export const MATH_AND_GEOMETRY: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "60",
+    id: "math-and-geometry-3",
     name: "Integer to Roman",
     description: "",
     link: "https://leetcode.com/problems/integer-to-roman/",
@@ -26,7 +26,7 @@ export const MATH_AND_GEOMETRY: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "58",
+    id: "math-and-geometry-4",
     name: "Single Number",
     description: "",
     link: "https://leetcode.com/problems/single-number/",
@@ -34,7 +34,7 @@ export const MATH_AND_GEOMETRY: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "101",
+    id: "math-and-geometry-5",
     name: "Sum of Two Integers",
     description: "",
     link: "https://leetcode.com/problems/sum-of-two-integers/",
@@ -42,7 +42,7 @@ export const MATH_AND_GEOMETRY: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "151",
+    id: "math-and-geometry-6",
     name: "Spiral Matrix",
     description: "",
     link: "https://leetcode.com/problems/spiral-matrix/",
@@ -50,7 +50,7 @@ export const MATH_AND_GEOMETRY: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "152",
+    id: "math-and-geometry-7",
     name: "Power of Two",
     description: "",
     link: "https://leetcode.com/problems/power-of-two/",
@@ -58,7 +58,7 @@ export const MATH_AND_GEOMETRY: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "199",
+    id: "math-and-geometry-8",
     name: "Valid Number",
     description: "",
     link: "https://leetcode.com/problems/valid-number/",
@@ -66,7 +66,7 @@ export const MATH_AND_GEOMETRY: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "200",
+    id: "math-and-geometry-9",
     name: "Angle Between Hands of a Clock",
     description: "",
     link: "https://leetcode.com/problems/angle-between-hands-of-a-clock/",
@@ -74,7 +74,7 @@ export const MATH_AND_GEOMETRY: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "250",
+    id: "math-and-geometry-10",
     name: "Count Primes",
     description: "",
     link: "https://leetcode.com/problems/count-primes/",
@@ -82,7 +82,7 @@ export const MATH_AND_GEOMETRY: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "251",
+    id: "math-and-geometry-11",
     name: "Happy Number",
     description: "",
     link: "https://leetcode.com/problems/happy-number/",

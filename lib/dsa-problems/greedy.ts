@@ -2,7 +2,7 @@ import { DSASheetProblemType } from "../../utils/dsa-sheet-type";
 
 export const GREEDY: DSASheetProblemType[] = [
   {
-    id: "147",
+    id: "greedy-1",
     name: "Jump Game",
     description: "",
     link: "https://leetcode.com/problems/jump-game/",
@@ -10,7 +10,7 @@ export const GREEDY: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "148",
+    id: "greedy-2",
     name: "Jump Game II",
     description: "",
     link: "https://leetcode.com/problems/jump-game-ii/",
@@ -18,7 +18,7 @@ export const GREEDY: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "195",
+    id: "greedy-3",
     name: "Task Scheduler",
     description: "",
     link: "https://leetcode.com/problems/task-scheduler/",
@@ -26,7 +26,7 @@ export const GREEDY: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "196",
+    id: "greedy-4",
     name: "Minimum Number of Arrows to Burst Balloons",
     description: "",
     link: "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/",
@@ -34,7 +34,7 @@ export const GREEDY: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "239",
+    id: "greedy-5",
     name: "Jump Game",
     description: "",
     link: "https://leetcode.com/problems/jump-game/",
@@ -42,7 +42,7 @@ export const GREEDY: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "240",
+    id: "greedy-6",
     name: "Edit Distance",
     description: "",
     link: "https://leetcode.com/problems/edit-distance/",
@@ -50,7 +50,7 @@ export const GREEDY: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "241",
+    id: "greedy-7",
     name: "Palindromic Substrings",
     description: "",
     link: "https://leetcode.com/problems/palindromic-substrings/",
@@ -58,7 +58,7 @@ export const GREEDY: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "242",
+    id: "greedy-8",
     name: "Wildcard Matching",
     description: "",
     link: "https://leetcode.com/problems/wildcard-matching/",
@@ -66,7 +66,7 @@ export const GREEDY: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "243",
+    id: "greedy-9",
     name: "Buy and Sell Stock with Cooldown",
     description: "",
     link: "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/",
@@ -74,7 +74,7 @@ export const GREEDY: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "244",
+    id: "greedy-10",
     name: "Maximum Product Subarray",
     description: "",
     link: "https://leetcode.com/problems/maximum-product-subarray/",
@@ -82,7 +82,7 @@ export const GREEDY: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "245",
+    id: "greedy-11",
     name: "Minimum Path Sum",
     description: "",
     link: "https://leetcode.com/problems/minimum-path-sum/",
@@ -90,7 +90,7 @@ export const GREEDY: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "246",
+    id: "greedy-12",
     name: "Unique Paths II",
     description: "",
     link: "https://leetcode.com/problems/unique-paths-ii/",
@@ -98,7 +98,7 @@ export const GREEDY: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "247",
+    id: "greedy-13",
     name: "Jump Game II",
     description: "",
     link: "https://leetcode.com/problems/jump-game-ii/",
@@ -106,7 +106,7 @@ export const GREEDY: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "248",
+    id: "greedy-14",
     name: "Gas Station",
     description: "",
     link: "https://leetcode.com/problems/gas-station/",

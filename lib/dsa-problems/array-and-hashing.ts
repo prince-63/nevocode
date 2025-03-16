@@ -2,7 +2,7 @@ import { DSASheetProblemType } from "../../utils/dsa-sheet-type";
 
 export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
   {
-    id: "1",
+    id: "array-and-hashing-1",
     name: "Two Sum",
     description: "Find two numbers that add up to a specific target.",
     link: "https://leetcode.com/problems/two-sum/",
@@ -10,7 +10,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "2",
+    id: "array-and-hashing-2",
     name: "Valid Anagram",
     description: "Check if two strings are anagrams of each other.",
     link: "https://leetcode.com/problems/valid-anagram/",
@@ -18,7 +18,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "3",
+    id: "array-and-hashing-3",
     name: "Contains Duplicate",
     description: "Check if any value appears at least twice in the array.",
     link: "https://leetcode.com/problems/contains-duplicate/",
@@ -26,7 +26,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "4",
+    id: "array-and-hashing-4",
     name: "Product of Array Except Self",
     description: "Find the product of the array except self.",
     link: "https://leetcode.com/problems/product-of-array-except-self/",
@@ -34,7 +34,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "5",
+    id: "array-and-hashing-5",
     name: "Encode and Decode Strings",
     description: "Encode and decode a list of strings.",
     link: "https://leetcode.com/problems/encode-and-decode-strings/",
@@ -42,7 +42,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "6",
+    id: "array-and-hashing-6",
     name: "Group Anagrams",
     description: "Group anagrams together.",
     link: "https://leetcode.com/problems/group-anagrams/",
@@ -50,7 +50,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "7",
+    id: "array-and-hashing-7",
     name: "Top K Frequent Elements",
     description: "Find the top k frequent elements.",
     link: "https://leetcode.com/problems/top-k-frequent-elements/",
@@ -58,7 +58,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "8",
+    id: "array-and-hashing-8",
     name: "Longest Consecutive Sequence",
     description: "Find the longest consecutive sequence.",
     link: "https://leetcode.com/problems/longest-consecutive-sequence/",
@@ -66,7 +66,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "9",
+    id: "array-and-hashing-9",
     name: "4Sum",
     description: "Find four numbers that add up to a specific target.",
     link: "https://leetcode.com/problems/4sum/",
@@ -74,7 +74,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "10",
+    id: "array-and-hashing-10",
     name: "Subarray Sum Equals K",
     description: "Find the number of subarrays that sum to k.",
     link: "https://leetcode.com/problems/subarray-sum-equals-k/",
@@ -82,7 +82,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "11",
+    id: "array-and-hashing-11",
     name: "Longest Subarray with Sum K",
     description: "Find the longest subarray with sum k.",
     link: "https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/",
@@ -90,7 +90,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "12",
+    id: "array-and-hashing-12",
     name: "Count Subarrays with Given XOR",
     description: "Count the number of subarrays with a given XOR.",
     link: "https://www.interviewbit.com/problems/subarray-with-given-xor/",
@@ -98,7 +98,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "13",
+    id: "array-and-hashing-13",
     name: "Missing Number",
     description: "Find the missing number in the array.",
     link: "https://leetcode.com/problems/missing-number/",
@@ -106,7 +106,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "14",
+    id: "array-and-hashing-14",
     name: "Maximum Product Subarray",
     description: "Find the maximum product of a subarray.",
     link: "https://leetcode.com/problems/maximum-product-subarray/",
@@ -114,7 +114,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "15",
+    id: "array-and-hashing-15",
     name: "Sort Colors",
     description: "Sort an array with colors represented by numbers.",
     link: "https://leetcode.com/problems/sort-colors/",
@@ -122,7 +122,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "16",
+    id: "array-and-hashing-16",
     name: "Majority Element",
     description: "Find the majority element in the array.",
     link: "https://leetcode.com/problems/majority-element/",
@@ -130,7 +130,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "17",
+    id: "array-and-hashing-17",
     name: "Find the Duplicate Number",
     description: "Find the duplicate number in the array.",
     link: "https://leetcode.com/problems/find-the-duplicate-number/",
@@ -138,7 +138,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "18",
+    id: "array-and-hashing-18",
     name: "Set Matrix Zeroes",
     description: "Set matrix zeroes based on conditions.",
     link: "https://leetcode.com/problems/set-matrix-zeroes/",
@@ -146,7 +146,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "19",
+    id: "array-and-hashing-19",
     name: "Rotate Image",
     description: "Rotate an image represented by a matrix.",
     link: "https://leetcode.com/problems/rotate-image/",
@@ -154,7 +154,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "20",
+    id: "array-and-hashing-20",
     name: "Pascal’s Triangle",
     description: "Generate Pascal’s Triangle.",
     link: "https://leetcode.com/problems/pascals-triangle/",
@@ -162,7 +162,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "21",
+    id: "array-and-hashing-21",
     name: "3Sum",
     description: "Find three numbers that add up to a specific target.",
     link: "https://leetcode.com/problems/3sum/",
@@ -170,7 +170,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "22",
+    id: "array-and-hashing-22",
     name: "Maximum Consecutive Ones",
     description: "Find the maximum number of consecutive ones in the array.",
     link: "https://leetcode.com/problems/max-consecutive-ones/",
@@ -178,7 +178,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "23",
+    id: "array-and-hashing-23",
     name: "Largest Rectangle in Histogram",
     description: "Find the largest rectangle in a histogram.",
     link: "https://leetcode.com/problems/largest-rectangle-in-histogram/",
@@ -186,7 +186,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "24",
+    id: "array-and-hashing-24",
     name: "Insert Interval",
     description: "Insert a new interval into a list of intervals.",
     link: "https://leetcode.com/problems/insert-interval/",
@@ -194,7 +194,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "25",
+    id: "array-and-hashing-25",
     name: "Merge Intervals",
     description: "Merge overlapping intervals.",
     link: "https://leetcode.com/problems/merge-intervals/",
@@ -202,7 +202,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "26",
+    id: "array-and-hashing-26",
     name: "Candy",
     description: "Distribute candies to children.",
     link: "https://leetcode.com/problems/candy/",
@@ -210,7 +210,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "27",
+    id: "array-and-hashing-27",
     name: "Valid Sudoku",
     description: "Check if a Sudoku board is valid.",
     link: "https://leetcode.com/problems/valid-sudoku/",
@@ -218,7 +218,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "28",
+    id: "array-and-hashing-28",
     name: "First Missing Positive",
     description: "Find the first missing positive integer.",
     link: "https://leetcode.com/problems/first-missing-positive/",
@@ -226,7 +226,7 @@ export const ARRAY_AND_HASHING: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "29",
+    id: "array-and-hashing-29",
     name: "Count Number of Nice Subarrays",
     description: "Count the number of nice subarrays.",
     link: "https://leetcode.com/problems/count-number-of-nice-subarrays/",

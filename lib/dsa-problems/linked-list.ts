@@ -2,7 +2,7 @@ import { DSASheetProblemType } from "../../utils/dsa-sheet-type";
 
 export const LINKED_LIST: DSASheetProblemType[] = [
   {
-    id: "1",
+    id: "linked-list-1",
     name: "Reverse a Linked List",
     description: "Reverse a singly linked list.",
     link: "https://leetcode.com/problems/reverse-linked-list/",
@@ -10,7 +10,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "2",
+    id: "linked-list-2",
     name: "Merge Two Sorted Lists",
     description:
       "Merge two sorted linked lists and return it as a new sorted list.",
@@ -19,7 +19,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "3",
+    id: "linked-list-3",
     name: "Reorder List",
     description: "Reorder a linked list in a specific manner.",
     link: "https://leetcode.com/problems/reorder-list/",
@@ -27,7 +27,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "4",
+    id: "linked-list-4",
     name: "Remove Nth Node From End of List",
     description: "Remove the nth node from the end of a linked list.",
     link: "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
@@ -35,7 +35,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "5",
+    id: "linked-list-5",
     name: "Add Two Numbers",
     description: "Add two numbers represented by linked lists.",
     link: "https://leetcode.com/problems/add-two-numbers/",
@@ -43,7 +43,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "6",
+    id: "linked-list-6",
     name: "LRU Cache",
     description:
       "Design and implement a data structure for Least Recently Used (LRU) cache.",
@@ -52,7 +52,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "7",
+    id: "linked-list-7",
     name: "Merge K Sorted Lists",
     description:
       "Merge k sorted linked lists and return it as one sorted list.",
@@ -61,7 +61,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "8",
+    id: "linked-list-8",
     name: "Copy List with Random Pointer",
     description: "Copy a linked list with random pointer.",
     link: "https://leetcode.com/problems/copy-list-with-random-pointer/",
@@ -69,7 +69,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "9",
+    id: "linked-list-9",
     name: "Detect Cycle in Linked List",
     description: "Detect if a cycle exists in a linked list.",
     link: "https://leetcode.com/problems/linked-list-cycle/",
@@ -77,7 +77,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "10",
+    id: "linked-list-10",
     name: "Intersection of Two Linked Lists",
     description: "Find the intersection node of two singly linked lists.",
     link: "https://leetcode.com/problems/intersection-of-two-linked-lists/",
@@ -85,7 +85,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "11",
+    id: "linked-list-11",
     name: "Flatten a Multilevel Doubly Linked List",
     description: "Flatten a multilevel doubly linked list.",
     link: "https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/",
@@ -93,7 +93,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "12",
+    id: "linked-list-12",
     name: "Odd Even Linked List",
     description: "Group all odd nodes together followed by the even nodes.",
     link: "https://leetcode.com/problems/odd-even-linked-list/",
@@ -101,7 +101,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "13",
+    id: "linked-list-13",
     name: "Reverse Nodes in k-Group",
     description: "Reverse nodes in k-group.",
     link: "https://leetcode.com/problems/reverse-nodes-in-k-group/",
@@ -109,7 +109,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "14",
+    id: "linked-list-14",
     name: "Reverse a Linked List",
     description: "Reverse a singly linked list.",
     link: "https://leetcode.com/problems/reverse-linked-list/",
@@ -117,7 +117,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "15",
+    id: "linked-list-15",
     name: "Merge Two Sorted Lists",
     description:
       "Merge two sorted linked lists and return it as a new sorted list.",
@@ -126,7 +126,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "16",
+    id: "linked-list-16",
     name: "Reorder List",
     description: "Reorder a linked list in a specific manner.",
     link: "https://leetcode.com/problems/reorder-list/",
@@ -134,7 +134,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "17",
+    id: "linked-list-17",
     name: "Remove Nth Node From End of List",
     description: "Remove the nth node from the end of a linked list.",
     link: "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
@@ -142,7 +142,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "18",
+    id: "linked-list-18",
     name: "Detect Cycle in Linked List",
     description: "Detect if a cycle exists in a linked list.",
     link: "https://leetcode.com/problems/linked-list-cycle/",
@@ -150,7 +150,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "19",
+    id: "linked-list-19",
     name: "Odd Even Linked List",
     description: "Group all odd nodes together followed by the even nodes.",
     link: "https://leetcode.com/problems/odd-even-linked-list/",
@@ -158,7 +158,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "20",
+    id: "linked-list-20",
     name: "LRU Cache",
     description:
       "Design and implement a data structure for Least Recently Used (LRU) cache.",
@@ -167,7 +167,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "21",
+    id: "linked-list-21",
     name: "Reverse Nodes in k-Group",
     description: "Reverse nodes in k-group.",
     link: "https://leetcode.com/problems/reverse-nodes-in-k-group/",
@@ -175,7 +175,7 @@ export const LINKED_LIST: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "22",
+    id: "linked-list-22",
     name: "Flatten a Multilevel Doubly Linked List",
     description: "Flatten a multilevel doubly linked list.",
     link: "https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/",

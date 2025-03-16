@@ -2,7 +2,7 @@ import { DSASheetProblemType } from "../../utils/dsa-sheet-type";
 
 export const GRAPHS: DSASheetProblemType[] = [
   {
-    id: "1",
+    id: "graph-1",
     name: "Number of Islands",
     description: "Count the number of islands in a grid.",
     link: "https://leetcode.com/problems/number-of-islands/",
@@ -10,7 +10,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "2",
+    id: "graph-2",
     name: "Rotten Oranges",
     description: "Determine the time required to rot all oranges.",
     link: "https://leetcode.com/problems/rotting-oranges/",
@@ -18,7 +18,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "3",
+    id: "graph-3",
     name: "Course Schedule",
     description: "Determine if you can finish all courses given prerequisites.",
     link: "https://leetcode.com/problems/course-schedule/",
@@ -26,7 +26,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "4",
+    id: "graph-4",
     name: "Alien Dictionary (Topological Sort)",
     description: "Determine the order of characters in an alien language.",
     link: "https://leetcode.com/problems/alien-dictionary/",
@@ -34,7 +34,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "5",
+    id: "graph-5",
     name: "Word Ladder",
     description:
       "Find the length of the shortest transformation sequence from start to end.",
@@ -43,7 +43,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "6",
+    id: "graph-6",
     name: "Dijkstra’s Algorithm",
     description:
       "Find the shortest path from a source to all vertices in a weighted graph.",
@@ -52,7 +52,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "7",
+    id: "graph-7",
     name: "Surrounded Regions",
     description: "Capture all regions surrounded by 'X'.",
     link: "https://leetcode.com/problems/surrounded-regions/",
@@ -60,7 +60,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "8",
+    id: "graph-8",
     name: "Shortest Path in a Grid with Obstacles Elimination",
     description: "Find the shortest path in a grid with obstacles elimination.",
     link: "https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/",
@@ -68,7 +68,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "9",
+    id: "graph-9",
     name: "Word Ladder II",
     description:
       "Find all shortest transformation sequences from start to end.",
@@ -77,7 +77,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "10",
+    id: "graph-10",
     name: "Course Schedule II",
     description:
       "Find the order of courses you should take to finish all courses.",
@@ -86,7 +86,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "11",
+    id: "graph-11",
     name: "Redundant Connection",
     description: "Find the redundant connection in a graph.",
     link: "https://leetcode.com/problems/redundant-connection/",
@@ -94,7 +94,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "12",
+    id: "graph-12",
     name: "Number of Connected Components in an Undirected Graph",
     description:
       "Count the number of connected components in an undirected graph.",
@@ -103,7 +103,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "13",
+    id: "graph-13",
     name: "Shortest Bridge",
     description: "Find the shortest bridge between two islands.",
     link: "https://leetcode.com/problems/shortest-bridge/",
@@ -111,7 +111,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "14",
+    id: "graph-14",
     name: "Network Delay Time",
     description: "Find the time it takes for all nodes to receive a signal.",
     link: "https://leetcode.com/problems/network-delay-time/",
@@ -119,7 +119,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "15",
+    id: "graph-15",
     name: "Minimum Cost to Reach Destination in Time",
     description: "Find the minimum cost to reach the destination in time.",
     link: "https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/",
@@ -127,7 +127,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "16",
+    id: "graph-16",
     name: "Alien Dictionary (Topological Sort)",
     description: "Determine the order of characters in an alien language.",
     link: "https://www.geeksforgeeks.org/given-sorted-dictionary-find-precedence-characters/",
@@ -135,7 +135,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "17",
+    id: "graph-17",
     name: "Cheapest Flights Within K Stops",
     description:
       "Find the cheapest price from source to destination with at most k stops.",
@@ -144,7 +144,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "18",
+    id: "graph-18",
     name: "Find the Town Judge",
     description: "Find the town judge in a town of n people.",
     link: "https://leetcode.com/problems/find-the-town-judge/",
@@ -152,7 +152,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Easy",
   },
   {
-    id: "19",
+    id: "graph-19",
     name: "Shortest Path in Binary Matrix",
     description: "Find the shortest path in a binary matrix.",
     link: "https://leetcode.com/problems/shortest-path-in-binary-matrix/",
@@ -160,7 +160,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "20",
+    id: "graph-20",
     name: "Minimum Spanning Tree (Prim’s Algorithm)",
     description: "Find the minimum spanning tree using Prim’s algorithm.",
     link: "https://www.geeksforgeeks.org/prims-minimum-spanning-tree-mst-greedy-algo-5/",
@@ -168,7 +168,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "21",
+    id: "graph-21",
     name: "Kruskal’s Algorithm for MST",
     description: "Find the minimum spanning tree using Kruskal’s algorithm.",
     link: "https://www.geeksforgeeks.org/kruskals-algorithm-simple-implementation-for-mst/",
@@ -176,7 +176,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Hard",
   },
   {
-    id: "22",
+    id: "graph-22",
     name: "Pacific Atlantic Water Flow",
     description:
       "Find the cells where water can flow to both the Pacific and Atlantic ocean.",
@@ -185,7 +185,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "23",
+    id: "graph-23",
     name: "Course Schedule II",
     description:
       "Find the order of courses you should take to finish all courses.",
@@ -194,7 +194,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "24",
+    id: "graph-24",
     name: "Redundant Connection",
     description: "Find the redundant connection in a graph.",
     link: "https://leetcode.com/problems/redundant-connection/",
@@ -202,7 +202,7 @@ export const GRAPHS: DSASheetProblemType[] = [
     difficultyLevel: "Medium",
   },
   {
-    id: "25",
+    id: "graph-25",
     name: "Number of Connected Components in an Undirected Graph",
     description:
       "Count the number of connected components in an undirected graph.",
