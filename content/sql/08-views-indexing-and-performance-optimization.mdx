@@ -1,0 +1,454 @@
+---
+guideId: SQL-101
+moduleId: SQL-08
+title: SQL Views, Indexing & Performance Optimization
+description: Learn how to create views, use indexing, and optimize query performance.
+author: Prince Kumar Prasad
+author_url: https://www.linkedin.com/in/prince63/
+---
+
+# SQL Views, Indexing & Performance Optimization
+
+SQL databases play a crucial role in application development, data analysis, and business intelligence. To work effectively with SQL databases, it is essential to understand how to create views, use indexing, and optimize query performance.
+
+## What is a View?
+
+To understand views, let's imagine a scenario where you have a database table containing customer information. You want to retrieve only the `customer_id`, `first_name`, and `last_name` columns from the table. 
+
+```sql
+SELECT
+  customer_id,
+  first_name,
+  last_name
+FROM
+  customers;
+```
+
+Instead of querying the entire table every time you need this information, you can create a view that contains only the required columns.
+
+basic syntax for creating a view:
+
+```sql
+CREATE VIEW view_name AS
+SELECT
+  column1,
+  column2,
+...
+FROM
+  table_name
+WHERE
+  condition;
+```
+
+For example, let's create a view named `customer_view` that contains the `customer_id`, `first_name`, and `last_name` columns from the `customers` table:
+
+```sql
+CREATE VIEW customer_view AS
+SELECT
+  customer_id,
+  first_name,
+  last_name
+FROM
+  customers;
+```
+
+Now, you can query the `customer_view` view to retrieve the required information:
+
+```sql
+SELECT
+  *
+FROM
+  customer_view;
+```
+
+This approach simplifies complex queries and improves query performance by reducing the amount of data retrieved from the database.
+
+### Update a View
+
+To update a view, you can use the `CREATE OR REPLACE VIEW` statement. Here is the syntax to update a view:
+
+```sql
+CREATE
+OR REPLACE VIEW view_name AS
+SELECT
+  column1,
+  column2,
+...
+FROM
+  table_name
+WHERE
+  condition;
+```
+
+For example, let's update the `customer_view` view to include the `email` column from the `customers` table:
+
+```sql
+CREATE
+OR REPLACE VIEW customer_view AS
+SELECT
+  customer_id,
+  first_name,
+  last_name,
+  email
+FROM
+  customers;
+```
+
+After updating the view, you can query the `customer_view` view to retrieve the updated information.
+
+### Drop a View
+
+To drop a view, you can use the `DROP VIEW` statement. Here is the syntax to drop a view:
+
+```sql
+DROP VIEW view_name;
+```
+
+For example, let's drop the `customer_view` view:
+
+```sql
+DROP VIEW customer_view;
+```
+
+After dropping the view, you will no longer be able to query the view or retrieve data from it.
+
+## Why Use Views?
+
+Views provide several benefits when working with SQL databases:
+
+1. **Data Security**: Views can restrict access to sensitive data by exposing only the required columns to users.
+2. **Data Abstraction**: Views simplify complex queries by abstracting the underlying table structure.
+3. **Query Reusability**: Views allow you to reuse query logic across multiple queries and applications.
+4. **Performance Optimization**: Views can improve query performance by reducing the amount of data retrieved from the database.
+
+## Indexing
+
+Indexing is a way or technique to optimize the performance of a database by reducing the number of disk accesses required when a query is processed. Indexes are created on columns in database tables to speed up data retrieval operations.
+
+let's assume, you have a table named `customers` with the following columns:
+
+| customer_id | first_name | last_name |
+|-------------|------------|-----------| 
+| 1           | John       | Doe       |
+| 2           | Jane       | Smith     |
+| 3           | Alice      | Johnson   |
+| 4           | Bob        | Brown     |
+| 5           | Mary       | Davis     |
+| 6           | David      | Wilson    |
+| 7           | Sarah      | Lee       |
+| 8           | Michael    | Clark     |
+| 9           | Laura      | Hall      |
+| 10          | James      | Allen     |
+
+If you want to retrieve the `customer_id` of a specific customer, you can use the following query:
+
+```sql
+SELECT
+  customer_id
+FROM
+  customers
+WHERE
+  first_name = 'John'
+  AND last_name = 'Doe';
+```
+
+Without an index, the database engine would have to scan the entire `customers` table to find the matching row. This can be inefficient, especially for large tables.
+
+By creating an index on the `first_name` and `last_name` columns, you can improve the performance of the query:
+
+```sql
+CREATE INDEX name_index ON customers (first_name, last_name);
+```
+
+Now, when you run the query, the database engine can use the index to quickly locate the matching row without scanning the entire table.
+
+> **Note**: Indexes can improve the performance of data retrieval operations but can also slow down data modification operations (such as `INSERT`, `UPDATE`, and `DELETE`). Therefore, it is essential to use indexes wisely based on the specific requirements of your application.
+
+To drop an index, you can use the `DROP INDEX` statement. Here is the syntax to drop an index:
+
+```sql
+DROP INDEX index_name ON table_name;
+```
+
+For example, let's drop the `name_index` index from the `customers` table:
+
+```sql
+DROP INDEX name_index ON customers;
+```
+
+## Types of Indexes
+
+There are several types of indexes that can be used to optimize the performance of SQL queries:
+
+### Single-Column Index
+An index created on a single column of a database table. It is used to speed up data retrieval operations based on the indexed column. To create a single-column index, you can use the following syntax:
+
+```sql
+CREATE INDEX index_name ON table_name (column_name);
+```
+
+For example, let's create a single-column index named `email_index` on the `email` column of the `customers` table:
+
+```sql
+CREATE INDEX email_index ON customers (email);
+```
+
+### Composite Index
+An index created on multiple columns of a database table. It is used to speed up data retrieval operations based on the indexed columns. To create a composite index, you can use the following syntax:
+
+```sql
+CREATE INDEX index_name ON table_name (column1, column2, ...);
+```
+
+For example, let's create a composite index named `name_phone_index` on the `first_name`, `last_name`, and `phone_number` columns of the `customers` table:
+
+```sql
+CREATE INDEX name_phone_index ON customers (first_name, last_name, phone_number);
+```
+
+### Unique Index
+An index that enforces the uniqueness of values in one or more columns of a database table. It is used to prevent duplicate values in the indexed columns. To create a unique index, you can use the following syntax:
+
+```sql
+CREATE UNIQUE INDEX index_name ON table_name (column1, column2, ...);
+```
+
+For example, let's create a unique index named `customer_id_index` on the `customer_id` column of the `customers` table:
+
+```sql
+CREATE UNIQUE INDEX customer_id_index ON customers (customer_id);
+```
+
+### Clustered Index
+
+A clustered index is an index that sorts and stores the data rows in the table or view based on the key values. Each table can have only one clustered index because the data rows themselves can be sorted in only one order. The leaf nodes of a clustered index contain the data pages. The data pages are arranged in a B-tree structure. Here is the syntax to create a clustered index:
+
+```sql
+CREATE CLUSTERED INDEX index_name ON table_name (column1, column2, ...);
+```
+
+For example, let's create a clustered index named `customer_id_index` on the `customer_id` column of the `customers` table:
+
+```sql
+CREATE CLUSTERED INDEX customer_id_index ON customers (customer_id);
+```
+
+### Non-Clustered Index
+
+A non-clustered index is an index that contains the key columns of the table with a pointer to the actual data rows. Each table can have multiple non-clustered indexes. The leaf nodes of a non-clustered index do not contain the data pages. Here is the syntax to create a non-clustered index:
+
+```sql
+CREATE NONCLUSTERED INDEX index_name ON table_name (column1, column2, ...);
+```
+
+For example, let's create a non-clustered index named `email_index` on the `email` column of the `customers` table:
+
+```sql
+CREATE NONCLUSTERED INDEX email_index ON customers (email);
+```
+
+## Why Use Indexes?
+
+Indexes provide several benefits when working with SQL databases:
+
+1. **Improved Performance**: Indexes speed up data retrieval operations by reducing the number of disk accesses required to locate data.
+1. **Data Integrity**: Unique indexes enforce the uniqueness of values in one or more columns, preventing duplicate values.
+1. **Query Optimization**: Indexes optimize query performance by providing the database engine with efficient access paths to data.
+1. **Data Consistency**: Indexes ensure data consistency by maintaining the order of data in the database tables.
+1. **Reduced Disk I/O**: Indexes reduce disk I/O operations by storing data in a sorted order, improving data retrieval efficiency.
+
+
+## Performance Optimization
+
+Optimizing query performance is essential for ensuring that your SQL database performs efficiently. Here are some best practices for optimizing query performance:
+
+### Use SELECT Columns Instead of SELECT (*)
+
+When writing SQL queries, it is best to specify the columns you want to retrieve explicitly instead of using `SELECT *`. This practice reduces the amount of data retrieved from the database and improves query performance.
+
+For example, instead of using:
+
+```sql
+SELECT
+  *
+FROM
+  customers;
+```
+
+You can use:
+
+```sql
+SELECT
+  customer_id,
+  first_name,
+  last_name
+FROM
+  customers;
+```
+
+### Use WHERE Clause to Filter Data
+
+When querying a large database table, it is essential to use the `WHERE` clause to filter the data based on specific conditions. This practice reduces the number of rows scanned by the database engine and improves query performance.    
+
+For example, instead of using:
+
+```sql
+SELECT
+  customer_id,
+  first_name,
+  last_name
+FROM
+  customers
+WHERE
+  first_name = 'John';
+```
+
+You can use:
+
+```sql
+SELECT
+  customer_id,
+  first_name,
+  last_name
+FROM
+  customers
+WHERE
+  first_name = 'John'
+  AND last_name = 'Doe';
+```
+
+### Use WHERE Instead of HAVING (When Possible)
+
+When filtering data based on aggregate functions, it is best to use the `WHERE` clause instead of the `HAVING` clause. The `WHERE` clause filters rows before grouping, while the `HAVING` clause filters rows after grouping. Using the `WHERE` clause can improve query performance by reducing the number of rows processed by the database engine.
+
+For example, instead of using:
+
+```sql
+SELECT
+  department,
+  AVG(salary) AS avg_salary
+FROM
+  employees
+GROUP BY
+  department
+HAVING
+  AVG(salary) > 50000;
+```
+
+You can use:
+
+```sql
+SELECT
+  department,
+  AVG(salary) AS avg_salary
+FROM
+  employees
+WHERE
+  salary > 50000
+GROUP BY
+  department;
+```
+
+### Use Indexing for Faster Lookups
+
+As discussed earlier, indexing can significantly improve query performance by reducing the number of disk accesses required to locate data. By creating indexes on columns that are frequently used in `WHERE` clauses or `JOIN` conditions, you can speed up data retrieval operations.
+
+### Avoid Using Functions in WHERE Clause
+
+When writing SQL queries, it is best to avoid using functions in the `WHERE` clause. Functions can prevent the database engine from using indexes efficiently, leading to slower query performance. If possible, calculate the values outside the `WHERE` clause and use the calculated values in the query.
+
+For example, instead of using:
+
+```sql
+SELECT
+  customer_id,
+  first_name,
+  last_name
+FROM
+  customers
+WHERE
+  UPPER(first_name) = 'JOHN';
+```
+
+You can use:
+
+```sql
+DECLARE @first_name_upper VARCHAR(255);
+
+SET
+  @first_name_upper = UPPER('John');
+
+SELECT
+  customer_id,
+  first_name,
+  last_name
+FROM
+  customers
+WHERE
+  first_name_upper = @first_name_upper;
+```
+
+### Use JOIN Instead of Subqueries
+
+When querying data from multiple tables, it is best to use `JOIN` operations instead of subqueries. `JOIN` operations are more efficient than subqueries and can improve query performance significantly.
+
+For example, instead of using:
+
+```sql
+SELECT
+  customer_id,
+  first_name,
+  last_name
+FROM
+  customers
+WHERE
+  customer_id IN (
+    SELECT
+      customer_id
+    FROM
+      orders
+  );
+```
+
+You can use:
+
+```sql
+SELECT
+  c.customer_id,
+  c.first_name,
+  c.last_name
+FROM
+  customers c
+  JOIN orders o ON c.customer_id = o.customer_id;
+```
+
+### Limit the Number of Rows Returned
+
+When querying a large database table, it is best to limit the number of rows returned by the query. This practice reduces the amount of data retrieved from the database and improves query performance.
+
+```sql
+SELECT
+  customer_id,
+  first_name,
+  last_name
+FROM
+  customers
+LIMIT
+  10;
+```
+
+### Use EXPLAIN to Analyze Query Performance
+
+The `EXPLAIN` statement can be used to analyze the execution plan of a query and identify potential performance bottlenecks. By examining the output of the `EXPLAIN` statement, you can optimize query performance by making informed decisions about indexing, query structure, and data retrieval operations.
+
+```sql
+EXPLAIN
+SELECT
+  customer_id,
+  first_name,
+  last_name
+FROM
+  customers
+WHERE
+  first_name = 'John';
+```
