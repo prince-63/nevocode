@@ -13,7 +13,7 @@ const iconMap: Record<string, LucideIcon> = {
 
 const GuideSection = () => {
   return (
-    <main className="flex-1 container mx-auto px-4 py-8 md:px-6 lg:px-8">
+    <main className="flex-1 md:container mx-auto px-4 py-8 md:px-6 lg:px-8">
       <H3 className={`text-primary text-center`}>Learning Guides</H3>
       <div className="max-w-4xl mx-auto">
         <P className="text-center">

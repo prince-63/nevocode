@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Table } from "@/components/ui/table";
 import { H3, Muted, P } from "@/components/ui/typography";
 import { DSA_SHEET } from "@/data/dsa-sheet";
@@ -8,11 +8,13 @@ import { pt_sans } from "@/utils/general/fonts";
 import DSASheetTableData from "@/components/general/dsa-sheet-table-data";
 import DSASheetTableHeader from "@/components/general/dsa-sheet-table-header";
 import { ChevronDownIcon, ChevronUpIcon } from "lucide-react";
+import axios from "axios";
 
 export default function Page() {
   const [expandedTopics, setExpandedTopics] = useState<{
     [key: string]: boolean;
   }>({});
+  const [statusList, setStatusList] = useState<string[]>([]);
 
   const toggleTopic = (topicId: string) => {
     setExpandedTopics((prev) => ({
@@ -21,14 +23,22 @@ export default function Page() {
     }));
   };
 
+  const getProblemStatus = async () => {
+    const response = await axios.get("/api/dsa-sheet");
+    setStatusList((data) => [...data, ...response.data.data]);
+  };
+
+  useEffect(() => {
+    getProblemStatus();
+  }, []);
+
   return (
-    <section className="mx-auto px-4 mb-8">
-      <div className="py-8">
+    <section className="px-3 mb-8">
+      <div className="py-5 md:py-8">
         <H3 className="text-primary text-center  mb-1">DSA Sheet</H3>
         <P className="text-center sm:mx-8 md:mx-16 lg:mx-28">
-          This curated set of 250+ DSA problems from LeetCode, Codeforces, and
-          GeeksforGeeks covers all key algorithms and data structures to sharpen
-          your understanding and problem-solving skills.
+          A 250+ DSA problem set covering key algorithms and data structures
+          from top platforms.
         </P>
       </div>
       <div className="sm:mx-4 md:mx-8 lg:mx-16 mt-4 prose border border-gray-200 dark:border-green-100 dark:border-opacity-20 rounded-md p-4">
@@ -56,11 +66,12 @@ export default function Page() {
             {expandedTopics[topic.topicId] && (
               <Table className="w-full">
                 <DSASheetTableHeader />
-                {topic.problems.map((problem, index) => (
+                {topic.problems.map((problem) => (
                   <DSASheetTableData
                     key={problem.id}
                     problem={problem}
-                    index={index}
+                    statusList={statusList}
+                    setStatusList={setStatusList}
                   />
                 ))}
               </Table>

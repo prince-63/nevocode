@@ -1,3 +1,5 @@
+"use client";
+
 import { DSASheetProblemType } from "@/utils/dsa-sheet-type";
 import { TableBody, TableCell, TableRow } from "../ui/table";
 import { pt_sans } from "@/utils/general/fonts";
@@ -6,15 +8,31 @@ import { ExternalLink } from "lucide-react";
 import { Checkbox } from "../ui/checkbox";
 import axios from "axios";
 import { problemDifficultyColor } from "@/utils/general/problem-difficulty-color";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 interface DSASheetTableDataProps {
   problem: DSASheetProblemType;
-  index: number;
+  statusList: string[];
+  setStatusList: (statusList: string[]) => void;
 }
 
-const DSASheetTableData = ({ problem, index }: DSASheetTableDataProps) => {
+const DSASheetTableData = ({
+  problem,
+  statusList,
+  setStatusList,
+}: DSASheetTableDataProps) => {
+  const { status } = useSession();
+  const router = useRouter();
+
   const toggleStatus = async (id: string) => {
-    const response = await axios.post(
+    const updatedStatus = statusList.includes(id)
+      ? statusList.filter((problemId) => problemId !== id)
+      : [...statusList, id];
+
+    setStatusList(updatedStatus);
+
+    await axios.post(
       "/api/dsa-sheet",
       {
         problemId: id,
@@ -25,18 +43,21 @@ const DSASheetTableData = ({ problem, index }: DSASheetTableDataProps) => {
         },
       },
     );
-    console.log("response: ", response);
+
+    router.refresh();
   };
 
   return (
-    <TableBody
-      key={index}
-      className="border-t border-gray-200 dark:border-green-100 dark:border-opacity-20"
-    >
+    <TableBody className="border-t border-gray-200 dark:border-green-100 dark:border-opacity-20">
       <TableRow>
-        <TableCell className={`${pt_sans.className}`}>
-          <Checkbox checked={true} onClick={() => toggleStatus(problem.id)} />
-        </TableCell>
+        {status === "authenticated" && (
+          <TableCell className={`${pt_sans.className}`}>
+            <Checkbox
+              checked={statusList.includes(problem.id)}
+              onClick={() => toggleStatus(problem.id)}
+            />
+          </TableCell>
+        )}
         <TableCell className={`${pt_sans.className}`}>{problem.name}</TableCell>
         <TableCell
           className={`${pt_sans.className} ${problemDifficultyColor[problem.difficultyLevel as "Easy" | "Medium" | "Hard"]}`}
