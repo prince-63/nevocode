@@ -1,0 +1,76 @@
+---
+guideId: OOPS-101
+moduleId: OOPS-02
+title: Understanding Classes and Objects
+description: Dive deeper into classes and objects in object-oriented programming (OOP) with real-world examples and analogies.
+author: Prince Kumar Prasad
+author_url: https://www.linkedin.com/in/prince63/
+---
+
+# Understanding Classes and Objects
+
+In the world of object-oriented programming (OOP), **classes** and **objects** are the building blocks that help us model real-world entities. Understanding these concepts is crucial for writing efficient and maintainable code.
+
+## Classes and Objects: An Analogy
+
+Imagine you want to bake a cake. You follow a recipe that provides instructions on how to make the cake. In this analogy:
+
+- **Recipe**: The recipe is like a **class**. It defines the ingredients and steps required to bake a cake.
+- **Cake**: The cake you bake is like an **object**. It is a specific instance created using the recipe.
+
+Just as you can bake multiple cakes using the same recipe, you can create multiple objects from a single class.
+
+## Classes: Blueprints for Objects
+
+A **class** in OOP is a blueprint or template that defines the structure and behavior of objects. It encapsulates data (properties) and functions (methods) that operate on that data.
+
+Here's an example of a simple class in Java that represents a `Person`:
+
+```java
+// Defining a class "Person" (a blueprint for creating person objects)
+class Person {
+    // Properties (attributes) of the person
+    String name;    // Holds the person's name
+    int age;        // Holds the person's age
+
+    // Behaviors (methods) of the person
+    void greet() {
+        System.out.println("Hello, I am " + name + "!");
+    }
+}
+```
+
+In this class:
+
+- The **class `Person`** defines the structure of a person object.
+- **Properties (`name`, `age`)** store information about the person.
+- **Methods (`greet()`)** define actions the person can perform.
+
+## Objects: Instances of Classes
+
+An **object** is an instance of a class. When you create an object, you are creating a specific instance of that class with its own unique data.
+
+Here's how you can create an object of the `Person` class and use it:
+
+```java
+// Creating an object of the Person class and assigning it to person1 variable
+Person person1 = new Person();
+
+// Setting the name properties of person1
+person1.name = "Alice";
+
+// Accessing the greet method of person1
+person1.greet();
+```
+
+In this code snippet:
+
+- `person1` is an object of the `Person` class.
+- We set its properties (`name`) and call the `greet()` method to display a message.
+
+## Key Differences Between Classes and Objects
+
+- **Classes** are blueprints that define the structure and behavior of objects.
+- **Objects** are specific instances created from classes.
+- **Classes** define properties and methods, while **objects** store data and perform actions.
+- You can create multiple objects from a single class.

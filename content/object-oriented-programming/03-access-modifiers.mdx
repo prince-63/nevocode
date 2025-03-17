@@ -1,0 +1,59 @@
+---
+guideId: OOPS-101
+moduleId: OOPS-03
+title: Access Modifiers
+description: Learn about access modifiers in object-oriented programming (OOP) and how they control the visibility and accessibility of class members.
+author: Prince Kumar Prasad
+author_url: https://www.linkedin.com/in/prince63/
+---
+
+# Access Modifiers in Object-Oriented Programming
+
+An Access Modifier in object-oriented programming (OOP) is a keyword that specifies the visibility and accessibility of class members (fields, methods, constructors) within a class or from outside the class. Access modifiers help enforce encapsulation and control the interaction between different parts of a program.
+
+## Types of Access Modifiers
+
+In Java, there are four types of access modifiers:
+
+1. **Private**: The `private` modifier restricts access to the member within the same class. It is the most restrictive access level.
+1. **Default (Package-Private)**: If no access modifier is specified, the member has default access within the same package. It is also known as package-private access.
+1. **Protected**: The `protected` modifier allows access to the member within the same package and by subclasses (even if they are in different packages).
+1. **Public**: The `public` modifier allows unrestricted access to the member from any other class.
+
+## Access Modifiers Example
+
+Let's see how access modifiers work in practice with an example:
+
+```java
+// Defining a class "Person" with private, default, protected, and public members
+class Person {
+    private String name;        // Private member
+    String address;             // Default member (package-private)
+    protected int age;          // Protected member
+    public String phoneNumber;  // Public member
+}
+```
+
+In this example:
+
+- The `name` field is **private**, so it can only be accessed within the `Person` class.
+- The `address` field has **default** access, allowing access within the same package.
+- The `age` field is **protected**, enabling access within the same package and by subclasses.
+- The `phoneNumber` field is **public**, making it accessible from any class.
+
+## Benefits of Access Modifiers
+
+Access modifiers offer several benefits in OOP:
+
+1. **Encapsulation**: Access modifiers help encapsulate the internal state of an object by controlling access to its members.
+1. **Security**: By restricting access to certain members, access modifiers enhance security and prevent unauthorized access or modification.
+1. **Flexibility**: Access modifiers provide flexibility in designing classes and controlling the visibility of members based on the requirements.
+1. **Code Maintainability**: Access modifiers make code more maintainable by clearly defining the scope and accessibility of class members.
+
+## Best Practices
+
+When using access modifiers, consider the following best practices:
+
+1. **Minimize Exposure**: Limit the visibility of class members to only what is necessary to maintain encapsulation.
+1. **Use the Most Restrictive Modifier**: Choose the most restrictive access level that meets the requirements of the class design.
+1. **Avoid Public Fields**: Prefer using private fields with public getter and setter methods to maintain control over data access.

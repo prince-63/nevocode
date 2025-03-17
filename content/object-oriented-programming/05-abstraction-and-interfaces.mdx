@@ -1,0 +1,177 @@
+---
+guideId: OOPS-101
+moduleId: OOPS-05
+title: Abstraction and Interfaces
+description: Explore the concepts of abstraction and interfaces in object-oriented programming (OOP) with examples and best practices.
+author: Prince Kumar Prasad
+author_url: https://www.linkedin.com/in/prince63/
+---
+
+# Abstraction and Interfaces
+
+In object-oriented programming (OOP), **abstraction** and **interfaces** are key concepts that help in designing flexible and maintainable code. They allow you to focus on what an object does rather than how it does it, promoting a high level of decoupling between components.
+
+## Abstraction in OOP
+
+Imagine you are driving a car. You don't need to know the intricate details of how the engine works to drive the car. You interact with the car at a high level, using the steering wheel, pedals, and gear shift. This is abstraction in action.
+
+**Abstraction** in OOP involves hiding the complex implementation details of an object and exposing only the essential features or functionalities. It allows you to work with objects at a higher level of understanding without worrying about the internal complexities.
+
+### Example:
+
+Let's create an abstract class `Shape` in Java to represent different geometric shapes:
+
+```java
+// Defining an abstract class "Shape" to represent geometric shapes
+abstract class Shape {
+    // Abstract method to calculate the area of the shape
+    abstract double calculateArea();
+}
+```
+
+Let's use the `Shape` class to create concrete subclasses like `Circle` and `Rectangle` that provide specific implementations for calculating the area of these shapes.
+
+```java
+// Concrete subclass "Circle" extending the abstract class "Shape"
+class Circle extends Shape {
+    private double radius;
+
+    Circle(double radius) {
+        this.radius = radius;
+    }
+
+    // Override the abstract method to calculate the area of a circle
+    @Override
+    double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+}
+
+// Concrete subclass "Rectangle" extending the abstract class "Shape"
+class Rectangle extends Shape {
+    private double length;
+    private double width;
+
+    Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    @Override
+    double calculateArea() {
+        return length * width;
+    }
+}
+```
+
+Let's create instances of `Circle` and `Rectangle` and calculate their areas:
+
+```java
+// Creating objects of Circle and Rectangle classes
+Circle circle = new Circle(5.0);
+Rectangle rectangle = new Rectangle(4.0, 3.0);
+
+// Calculating and printing the areas of the shapes
+System.out.println("Area of Circle: " + circle.calculateArea());
+System.out.println("Area of Rectangle: " + rectangle.calculateArea());
+```
+
+In this example:
+
+- The `Shape` class defines an abstract method `calculateArea()` that must be implemented by its concrete subclasses.
+- The `Circle` and `Rectangle` classes provide specific implementations for calculating the area of these shapes.
+- We create instances of `Circle` and `Rectangle` and call the `calculateArea()` method to get the areas of these shapes.
+
+## Interfaces in OOP
+
+An **interface** in OOP is a reference type that defines a set of abstract methods that a class must implement. It specifies what a class can do without providing the implementation details. Interfaces help in achieving multiple inheritance and defining contracts for classes.
+
+### Example:
+
+Let's define an interface `Shape` in Java that specifies the behavior of geometric shapes:
+
+```java
+// Defining an interface "Shape" to represent geometric shapes
+interface Shape {
+    // Abstract method to calculate the area of the shape
+    double calculateArea();
+}
+```
+
+Let's create classes like `Circle` and `Rectangle` that implement the `Shape` interface to provide specific implementations for calculating the area of these shapes.
+
+```java
+// Class "Circle" implementing the "Shape" interface
+class Circle implements Shape {
+    private double radius;
+
+    Circle(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+}
+
+// Class "Rectangle" implementing the "Shape" interface
+class Rectangle implements Shape {
+    private double length;
+    private double width;
+
+    Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    @Override
+    public double calculateArea() {
+        return length * width;
+    }
+}
+```
+
+Let's create instances of `Circle` and `Rectangle` and calculate their areas using the `Shape` interface:
+
+```java
+// Creating objects of Circle and Rectangle classes
+Shape circle = new Circle(5.0);
+Shape rectangle = new Rectangle(4.0, 3.0);
+
+// Calculating and printing the areas of the shapes
+System.out.println("Area of Circle: " + circle.calculateArea());
+System.out.println("Area of Rectangle: " + rectangle.calculateArea());
+```
+
+In this example:
+
+- The `Shape` interface defines an abstract method `calculateArea()` that must be implemented by classes that implement the interface.
+- The `Circle` and `Rectangle` classes implement the `Shape` interface and provide specific implementations for calculating the area of these shapes.
+- We create instances of `Circle` and `Rectangle` using the `Shape` interface and call the `calculateArea()` method to get the areas of these shapes.
+
+> **Note**: Interfaces can also contain constant fields, default methods, and static methods in addition to abstract methods.
+
+## Differences Between Abstraction and Interfaces
+
+- **Abstraction** focuses on hiding the implementation details and exposing only the essential features of an object.
+- **Interfaces** define a contract that classes must adhere to by implementing the specified methods.
+- Abstraction can be achieved using abstract classes, while interfaces provide a way to achieve abstraction and multiple inheritance in Java.
+
+## Benefits of Abstraction and Interfaces
+
+- **Flexibility**: Abstraction and interfaces allow you to design flexible and extensible systems by decoupling components.
+- **Modularity**: By abstracting away implementation details, you can create modular and reusable code.
+- **Multiple Inheritance**: Interfaces enable classes to implement multiple interfaces, providing a way to achieve multiple inheritance in Java.
+- **Code Maintainability**: Abstraction and interfaces make code more maintainable by promoting separation of concerns and reducing dependencies.
+
+## Best Practices
+
+When using abstraction and interfaces in OOP, consider the following best practices:
+
+1. **Design for Change**: Use abstraction and interfaces to design systems that can adapt to changing requirements.
+2. **Follow the Single Responsibility Principle**: Ensure that each class or interface has a single responsibility, focusing on a specific aspect of the system.
+3. **Use Descriptive Names**: Choose meaningful names for abstract classes and interfaces to convey their purpose clearly.
+4. **Favor Composition over Inheritance**: Prefer composition over inheritance to achieve code reuse and maintainability. It means favoring object composition (has-a relationship) over class inheritance (is-a relationship).
+
+By leveraging abstraction and interfaces effectively, you can build robust and scalable object-oriented systems that are easy to maintain and extend.

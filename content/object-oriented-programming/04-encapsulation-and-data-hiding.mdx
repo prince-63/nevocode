@@ -1,0 +1,115 @@
+---
+guideId: OOPS-101
+moduleId: OOPS-04
+title: Encapsulation and Data Hiding
+description: Dive into the concepts of encapsulation and data hiding in object-oriented programming (OOP) with examples and best practices.
+author: Prince Kumar Prasad
+author_url: https://www.linkedin.com/in/prince63/
+---
+
+# Encapsulation and Data Hiding
+
+Imagine you have a bank account. You wouldn't want just anyone to access or modify your account balance, right? This is where **encapsulation** and **data hiding** come into play in object-oriented programming (OOP).
+
+## Encapsulation: Protecting Data
+
+Encapsulation is like putting your valuables in a safe. It protects your data from unauthorized access by combining data and methods within a class and controlling access to the data.
+
+In OOP, we use private access modifiers to restrict access to the data members of a class. This ensures that the internal state of an object is not directly accessible from outside the class.
+
+### Example:
+
+Let's encapsulate a `BankAccount` class in Java:
+
+```java
+// Defining a class "BankAccount" to encapsulate account details
+class BankAccount {
+    // Private data members (properties)
+    private double balance;
+    private String accountNumber; 
+
+    // Public methods to access and modify the private data
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double newBalance) {
+        if (newBalance >= 0) {
+            balance = newBalance;
+        }
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(String newAccountNumber) {
+        accountNumber = newAccountNumber;
+    }
+
+    // Other methods to perform account operations
+}
+```
+
+### Breaking it down:
+
+- The `BankAccount` class encapsulates the account details (`balance`, `accountNumber`) and provides public methods to access and modify them.
+- The data members (`balance`, `accountNumber`) are declared as **private**, making them accessible only within the class.
+- Public methods (`getBalance()`, `setBalance()`, `getAccountNumber()`, `setAccountNumber()`) allow controlled access to the private data.
+
+## Data Hiding: Securing Data
+
+**Data hiding** is a key aspect of encapsulation that involves hiding the internal state of an object and restricting direct access to it. By making data members private, you prevent external code from directly modifying the object's state.
+
+### Example:
+
+Let's modify the `BankAccount` class to demonstrate data hiding:
+
+```java
+// Defining a class "BankAccount" with data hiding
+class BankAccount {
+    // Private data members (properties)
+    private double balance;  // Holds the account balance
+    private String accountNumber;  // Holds the account number
+
+    // Public methods to access and modify the private data
+    public double getBalance() {
+        return balance;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+        }
+    }
+
+    // Other methods to perform account operations
+}
+```
+
+### Breaking it down:
+
+- The `balance` and `accountNumber` data members are declared as **private**, making them inaccessible outside the class.
+- Public methods (`getBalance()`, `deposit()`, `withdraw()`) provide controlled access to the private data, ensuring secure operations on the account balance.
+
+## Benefits of Encapsulation and Data Hiding
+
+1. **Security**: By hiding the internal state of an object, you prevent unauthorized access and modification, enhancing security.
+2. **Flexibility**: Encapsulation allows you to change the internal implementation of a class without affecting its external interface.
+3. **Modularity**: Encapsulation promotes modularity by grouping related data and methods together, making the code more organized and maintainable.
+4. **Reusability**: Encapsulated classes can be reused in different parts of the codebase without worrying about data corruption.
+
+## Best Practices
+
+1. **Use Access Modifiers**: Declare data members as private and provide public methods to access and modify them.
+2. **Encapsulate Related Data and Methods**: Group related data and behaviors within a class to improve code organization.
+3. **Follow the Single Responsibility Principle**: Each class should have a single responsibility, focusing on a specific aspect of the system.
+4. **Avoid Excessive Getter and Setter Methods**: Only expose the necessary data and operations to maintain control over the class's internal state.
+
+By leveraging encapsulation and data hiding, you can build secure, maintainable, and flexible object-oriented systems that adhere to best practices in software development.

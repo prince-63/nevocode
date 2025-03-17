@@ -18,7 +18,6 @@ const problemDifficultyColor: {
   Hard: "text-red-800 dark:text-red-400",
 };
 
-
 interface DSASheetTableDataProps {
   problem: DSASheetProblemType;
   statusList: string[];
