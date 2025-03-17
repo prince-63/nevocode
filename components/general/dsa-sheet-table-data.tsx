@@ -7,9 +7,17 @@ import Link from "../navigation/link";
 import { ExternalLink } from "lucide-react";
 import { Checkbox } from "../ui/checkbox";
 import axios from "axios";
-import { problemDifficultyColor } from "@/utils/general/problem-difficulty-color";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+
+const problemDifficultyColor: {
+  [key in "Easy" | "Medium" | "Hard"]: string;
+} = {
+  Easy: "text-green-800 dark:text-green-400",
+  Medium: "text-yellow-800 dark:text-yellow-400",
+  Hard: "text-red-800 dark:text-red-400",
+};
+
 
 interface DSASheetTableDataProps {
   problem: DSASheetProblemType;
