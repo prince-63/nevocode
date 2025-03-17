@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { AppSidebar } from "@/components/layouts/app-side-bar";
-import { guides, GuideType } from "@/lib/guides-data";
+import { guides, GuideType } from "@/data/guides-data";
 import RenderContent from "@/components/mdx/render-content";
 import ContentMobileHeader from "@/components/layouts/content-mobile-header";
 import { Metadata } from "next";

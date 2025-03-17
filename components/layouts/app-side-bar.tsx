@@ -20,7 +20,7 @@ import Link from "../navigation/link";
 import ThemeSwitcher from "../general/theme-switcher";
 import IconButton from "../general/icon-button";
 import { Muted } from "../ui/typography";
-import { GuideType } from "@/lib/guides-data";
+import { GuideType } from "@/data/guides-data";
 import { pt_sans } from "@/utils/general/fonts";
 
 interface AppSidebarProps {

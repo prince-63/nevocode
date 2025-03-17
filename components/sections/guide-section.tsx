@@ -1,6 +1,6 @@
 import Link from "@/components/navigation/link";
 import { H3, Lead, P } from "@/components/ui/typography";
-import { guides } from "@/lib/guides-data";
+import { guides } from "@/data/guides-data";
 import { Code, Cpu, Database, LucideIcon, Network, Server } from "lucide-react";
 
 const iconMap: Record<string, LucideIcon> = {

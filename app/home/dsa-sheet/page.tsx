@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Table } from "@/components/ui/table";
 import { H3, Muted, P } from "@/components/ui/typography";
-import { DSA_SHEET } from "@/lib/dsa-sheet";
+import { DSA_SHEET } from "@/data/dsa-sheet";
 import { pt_sans } from "@/utils/general/fonts";
 import DSASheetTableData from "@/components/general/dsa-sheet-table-data";
 import DSASheetTableHeader from "@/components/general/dsa-sheet-table-header";

@@ -4,13 +4,8 @@ import { pt_sans } from "@/utils/general/fonts";
 import Link from "../navigation/link";
 import { ExternalLink } from "lucide-react";
 import { Checkbox } from "../ui/checkbox";
-
-const problemDifficultyColor: { [key in "Easy" | "Medium" | "Hard"]: string } =
-  {
-    Easy: "text-green-800 dark:text-green-400",
-    Medium: "text-yellow-800 dark:text-yellow-400",
-    Hard: "text-red-800 dark:text-red-400",
-  };
+import axios from "axios";
+import { problemDifficultyColor } from "@/utils/general/problem-difficulty-color";
 
 interface DSASheetTableDataProps {
   problem: DSASheetProblemType;
@@ -18,6 +13,22 @@ interface DSASheetTableDataProps {
 }
 
 const DSASheetTableData = ({ problem, index }: DSASheetTableDataProps) => {
+  
+  const toggleStatus = async (id: string) => {
+    const response = await axios.post(
+      "/api/dsa-sheet",
+      {
+        problemId: id,
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      },
+    );
+    console.log("response: ", response);
+  };
+
   return (
     <TableBody
       key={index}
@@ -25,7 +36,7 @@ const DSASheetTableData = ({ problem, index }: DSASheetTableDataProps) => {
     >
       <TableRow>
         <TableCell className={`${pt_sans.className}`}>
-          <Checkbox checked={true} />
+          <Checkbox checked={true} onClick={() => toggleStatus(problem.id)} />
         </TableCell>
         <TableCell className={`${pt_sans.className}`}>{problem.name}</TableCell>
         <TableCell

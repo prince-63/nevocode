@@ -1,7 +1,7 @@
 import Link from "../navigation/link";
 import { Muted } from "../ui/typography";
 import Logo from "../general/logo";
-import { companyList, LegalList, resourcesList } from "@/lib/footer-data";
+import { companyList, LegalList, resourcesList } from "@/data/footer-data";
 
 const Footer = () => {
   return (

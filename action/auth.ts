@@ -51,6 +51,7 @@ export const authOptions: NextAuthOptions = {
               "providerAccountId",
               account?.providerAccountId || "",
             );
+            cookieStore.set("userEmail", existingUser.email);
             return true;
           }
 
@@ -69,6 +70,7 @@ export const authOptions: NextAuthOptions = {
             "providerAccountId",
             account?.providerAccountId || "",
           );
+          cookieStore.set("userEmail", existingUser.email);
           return true;
         }
 
@@ -91,6 +93,7 @@ export const authOptions: NextAuthOptions = {
 
         cookieStore.set("provider", account?.provider || "");
         cookieStore.set("providerAccountId", account?.providerAccountId || "");
+        cookieStore.set("userEmail", newUser.email || "");
         return true;
       } catch (error) {
         console.error(error);

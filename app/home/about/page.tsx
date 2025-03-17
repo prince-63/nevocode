@@ -1,5 +1,5 @@
 import { H3, Lead, P } from "@/components/ui/typography";
-import { ourValueData } from "@/lib/about-data";
+import { ourValueData } from "@/data/about-data";
 
 export default function Page() {
   return (

@@ -1,6 +1,6 @@
 "use client";
 
-import { GuideType } from "@/lib/guides-data";
+import { GuideType } from "@/data/guides-data";
 import { Button } from "../ui/button";
 import { MoveLeft, MoveRight } from "lucide-react";
 import { useRouter } from "next/navigation";
