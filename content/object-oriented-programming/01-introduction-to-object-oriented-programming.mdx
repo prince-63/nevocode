@@ -1,0 +1,95 @@
+---
+guideId: OOPS-101
+moduleId: OOPS-01
+title: Introduction to Object-Oriented Programming
+description: Dive into the fundamentals of object-oriented programming (OOP) with practical, real-world examples.
+author: Prince Kumar Prasad
+author_url: https://www.linkedin.com/in/prince63/
+---
+
+# Introduction to Object-Oriented Programming  
+
+In our daily lives, we interact with numerous objects—a car, a dog, a pen, or even a mobile phone. Each of these objects has specific **properties** (characteristics) and **behaviors** (actions).  
+
+For example:  
+- A **car** has properties like color and model, and behaviors like start, stop, and move.  
+- A **dog** has properties like breed and color, and behaviors like barking, eating, and sleeping.  
+
+Object-Oriented Programming (OOP) is built on this very concept. It is a programming paradigm that structures code around **objects**, which encapsulate **data (properties)** and **functions (behaviors)**.  
+
+## Object-Oriented Programming in Action  
+
+Imagine you want to represent a **car** in your program. In OOP, we can define a **Car** as an object and represent its properties (**color, model**) and behaviors (**start, stop, move**) in code.  
+
+Here's how it looks in Java:  
+
+```java
+// Defining a class "Car" (a blueprint for creating car objects)
+class Car {
+    // Properties (attributes) of the car
+    String color;  // Holds the car's color
+    int model;     // Holds the car's model year
+
+    // Behaviors (methods) of the car
+    void start() {
+        System.out.println("Car has started.");
+    }
+    
+    void stop() {
+        System.out.println("Car has stopped.");
+    }
+    
+    void move() {
+        System.out.println("Car is moving.");
+    }
+}
+```
+
+### Breaking it down:  
+- The **class `Car`** is a blueprint for creating car objects.  
+- **Properties (`color`, `model`)** store information about the car.  
+- **Methods (`start()`, `stop()`, `move()`)** define what actions the car can perform.  
+
+Now, let's create a **car object** using this blueprint:  
+
+```java
+// Creating an object of the Car class and assigning it to myCar variable
+Car myCar = new Car();
+
+// Setting the color and model properties of myCar
+myCar.color = "Red";
+myCar.model = 2022;
+
+// Calling the start method on myCar
+myCar.start();
+
+// Output: Car has started.
+```
+
+In this example, `myCar` is an object of the `Car` class. We set its properties (`color`, `model`) and perform actions (`start()`).  
+
+## Procedural vs Object-Oriented Programming
+
+In procedural programming, code is structured around procedures, using functions to perform tasks. It focuses on the sequence of steps to be executed.
+
+In contrast, Object-Oriented Programming focuses on objects and their interactions. It helps in modeling real-world entities more effectively.
+
+## Key Concepts of OOP
+
+The journey of object-oriented programming is divided into four key concepts:
+
+- Encapsulation
+- Abstraction
+- Inheritance
+- Polymorphism
+
+## Benefits of Object-Oriented Programming
+
+There are several benefits to OOP, which is why it is so popular:
+
+- Breaking down complex problems into smaller, manageable parts (objects).
+- Reusing existing classes to create new classes.
+- Modifying and extending classes without affecting other parts of the code.
+- Making code easier to maintain and update.
+
+In this series of guides on Object-Oriented Programming, we will delve into these concepts in detail and understand how to apply them in real-world scenarios. Stay tuned!

@@ -5,6 +5,7 @@ import {
   allSqls,
   allDbms,
   DocumentTypes,
+  allObjectOrientedProgrammings,
 } from "@/.contentlayer/generated";
 
 export interface GuideType {
@@ -34,6 +35,15 @@ export const guides: GuideType[] = [
     docs: allSqls,
     slug: "sql",
     href: "/learn/sql/01-introduction-to-sql",
+  },
+  {
+    title: "Object-Oriented Programming",
+    description:
+      "Learn the principles of object-oriented programming and how to apply them.",
+    icon: "Code",
+    docs: allObjectOrientedProgrammings,
+    slug: "object-oriented-programming",
+    href: "/learn/object-oriented-programming/01-introduction-to-object-oriented-programming",
   },
   // {
   //   title: "Data Structure",

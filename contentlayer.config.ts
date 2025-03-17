@@ -10,13 +10,11 @@ import { transformerNotationDiff } from "@shikijs/transformers";
 import imageSize from "rehype-img-size";
 import DBMS from "./utils/content/dbms";
 import SQL from "./utils/content/sql";
-import CLEAN_CODE from "./utils/content/clean-code";
-import DESIGN_PATTERN from "./utils/content/design-pattern";
-import DATA_STRUCTURE from "./utils/content/data-structure";
+import OBJECT_ORIANTED_PROGRAMMING from "./utils/content/object-orianted-programming";
 
 export default makeSource({
   contentDirPath: "content",
-  documentTypes: [DBMS, SQL, CLEAN_CODE, DESIGN_PATTERN, DATA_STRUCTURE],
+  documentTypes: [DBMS, SQL, OBJECT_ORIANTED_PROGRAMMING],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
