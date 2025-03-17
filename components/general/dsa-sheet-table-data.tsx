@@ -13,7 +13,6 @@ interface DSASheetTableDataProps {
 }
 
 const DSASheetTableData = ({ problem, index }: DSASheetTableDataProps) => {
-  
   const toggleStatus = async (id: string) => {
     const response = await axios.post(
       "/api/dsa-sheet",
