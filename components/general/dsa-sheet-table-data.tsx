@@ -65,7 +65,7 @@ const DSASheetTableData = ({
             />
           </TableCell>
         )}
-        <TableCell className={`${pt_sans.className}`}>{problem.name}</TableCell>
+        <TableCell className={`${pt_sans.className} w-full sm:w-1/2  md:w-2/3 lg:w-3/4`}>{problem.name}</TableCell>
         <TableCell
           className={`${pt_sans.className} ${problemDifficultyColor[problem.difficultyLevel as "Easy" | "Medium" | "Hard"]}`}
         >

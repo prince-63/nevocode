@@ -37,11 +37,13 @@ export default function Page() {
       <div className="py-5 md:py-8">
         <H3 className="text-primary text-center  mb-1">DSA Sheet</H3>
         <P className="text-center sm:mx-8 md:mx-16 lg:mx-28">
-          A 250+ DSA problem set covering key algorithms and data structures
-          from top platforms.
+          {/* A 250+ DSA problem set covering key algorithms and data structures
+          from top platforms. */}
+          An Ultimate DSA Sheet with 250+ problems, covering all patterns and
+          algorithms.
         </P>
       </div>
-      <div className="sm:mx-4 md:mx-8 lg:mx-16 mt-4 prose border border-gray-200 dark:border-green-100 dark:border-opacity-20 rounded-md p-4">
+      <div className="sm:mx-4 md:mx-8 lg:mx-16 mt-4">
         {DSA_SHEET.map((topic) => (
           <div
             key={topic.topicId}
