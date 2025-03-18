@@ -182,7 +182,7 @@ export const mdxComponent: MDXComponents = {
   code: ({ className, ...props }) => (
     <code
       className={cn(
-        "relative font-mono overflow-x-auto bg-gray-600 dark:bg-lightBg px-1 text-textDark dark:text-textLight text-wrap",
+        "relative font-mono overflow-x-auto px-1 text-wrap [&:not(:first-child)]:bg-gray-200 [&:not(:first-child)]:shadow-lg [&:not(:first-child)]:dark:bg-primary/20 [&:not(:first-child)]:font-light",
         className,
       )}
       {...props}
@@ -190,9 +190,8 @@ export const mdxComponent: MDXComponents = {
   ),
   figure: ({ className, ...props }) => (
     <figure
-      data-theme="github-dark-dimmed github-light"
       className={cn(
-        "rounded-md my-2 p-2 bg-[#FAFAFA] border text-wrap",
+        "rounded-md my-2 p-2 shadow-md bg-gray-800 border-opacity-50  text-wrap",
         className,
       )}
       {...props}

@@ -25,12 +25,8 @@ export default makeSource({
       [
         rehypePrettyCode,
         {
-          theme: {
-            dark: "one-light",
-            light: "one-light",
-          },
           bypassInlineCode: true,
-          keepBackground: true,
+          keepBackground: false,
           defaultLang: {
             block: "plaintext",
             inline: "plaintext",
