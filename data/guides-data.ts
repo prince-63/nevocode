@@ -5,7 +5,7 @@ import {
   allSqls,
   allDbms,
   DocumentTypes,
-  allObjectOrientedProgrammings,
+  // allObjectOrientedProgrammings,
 } from "@/.contentlayer/generated";
 
 export interface GuideType {
