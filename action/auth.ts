@@ -18,6 +18,17 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: "jwt",
   },
+  cookies: {
+    sessionToken: {
+      name: `__Secure-next-auth.session-token`,
+      options: {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production", // Secure only in production
+        sameSite: "lax",
+        path: "/",
+      },
+    },
+  },
   callbacks: {
     async signIn({ user, account }) {
       const cookieStore = await cookies();
